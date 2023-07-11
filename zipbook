@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd book
+find . -name \* | zip ../book.zip -@
