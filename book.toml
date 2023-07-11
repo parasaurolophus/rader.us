@@ -1,0 +1,6 @@
+[book]
+authors = ["parasaurolophus"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Kirk Rader"
