@@ -19,3 +19,5 @@ renderer = ["html"]
 [output.html]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 mathjax-support = true
+preferred-dark-theme = "coal"
+prefers-color-scheme = "dark"

@@ -1,3 +1,4 @@
+```ruby
 # Copyright 2023 Kirk Rader. All rights reserved.
 
 # Ghostly Reminiscences
@@ -32,3 +33,4 @@ live_loop :plingk do
     sample :loop_drone_g_97, rate: rrand(0.2, 2)
     sleep 7.5
   end
+  ```

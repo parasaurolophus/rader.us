@@ -1,3 +1,4 @@
+```ruby
 # Copyright 2023 Kirk Rader. All rights reserved.
 
 # Au Quai
@@ -32,3 +33,4 @@ end
 randomatic(45, 75, 0.25, 0.75)
 sleep 100
 terminate = true
+```
