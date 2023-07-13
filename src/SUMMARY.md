@@ -18,3 +18,7 @@
 # Software
 
 - [SDLC](sdlc.md)
+
+# Philosophy of Science
+
+- [How the Parallel Postulate Changed the World](philosophy/computability.md)
