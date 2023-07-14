@@ -21,4 +21,4 @@
 
 # Philosophy of Science
 
-- [How the Parallel Postulate Changed the World](philosophy/computability.md)
+- [How the Parallel Postulate Changed Everything](philosophy/computability.md)
