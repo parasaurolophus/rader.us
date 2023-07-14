@@ -8,15 +8,29 @@
 >
 > _Or search for "Kirk Rader" on the music service you prefer._
 
-I started creating electronic music on the West Coast, in the "West Coast Style," long before I knew that there was such a thing. My musical tastes have always been outside the mainstream. The first album I purchased with my "own" money was a vinyl recording (there were no other commercially significant recording media for sale in the mid 1960's) of Schubert's _Unfinished Symphony_ which I had worn the grooves out of by the time I turned 7 years old. When I was studying formal linguistics and teaching myself to program computers in my late teens and early twenties, I did so to a personal soundtrack that featured Lou Reed's _Metal Machine Music_ (yes, the album consisting of 4 LP sides-worth of electric guitar feedback and effects pedal noise that literally ended his career just as it was beginning to take off in the mid 70's and then went on to become the stuff of legend decades later).
+I started creating electronic music on the West Coast, in the "West Coast
+Style," long before I knew that there was such a thing. My musical tastes
+have always been outside the mainstream. The first album I purchased with my
+"own" money was a vinyl recording (there were no other commercially significant
+recording media for sale in the mid 1960's) of Schubert's _Unfinished Symphony_
+which I had worn the grooves out of by the time I turned 7 years old. When I was
+studying formal linguistics and teaching myself to program computers in my late
+teens and early twenties, I did so to a personal soundtrack that featured Lou
+Reed's _Metal Machine Music_ (yes, the album consisting of 4 LP sides-worth of
+electric guitar feedback and effects pedal noise that literally ended his career
+just as it was beginning to take off in the mid 70's and then went on to become
+the stuff of legend decades later).
 
-My favorite composers include Tallis, Monteverdi, Vivaldi, Bach, Handel, Beethoven, Glass and Byrne as well as hard-core mid-century experimentalists like Stockhausen and Subotnick. If you have never heard any of my own stuff, consider the combination of those influences as fair warning.
+My favorite composers include Tallis, Monteverdi, Vivaldi, Bach, Handel,
+Beethoven, Glass and Byrne as well as hard-core mid-century experimentalists
+like Stockhausen and Subotnick. If you have never heard any of my own stuff,
+consider the combination of those influences as fair warning.
 
 ---
 
 ## Undecidable[<sup>*</sup>](#undecidable_note)
 
-![](Undecidable.png)
+![Undecidable](Undecidable.png)
 
 **UPC:** 885767506688
 
@@ -35,7 +49,7 @@ My favorite composers include Tallis, Monteverdi, Vivaldi, Bach, Handel, Beethov
 
 ## Dum Vivimus
 
-![](Vivimus.png)
+![Dum Vivimus](Vivimus.png)
 
 **UPC:** 198015910503
 
@@ -56,7 +70,7 @@ My favorite composers include Tallis, Monteverdi, Vivaldi, Bach, Handel, Beethov
 
 ## Untitled
 
-![](Untitled.png)
+![Untitle](Untitled.png)
 
 **UPC:** 198015912095
 
@@ -72,7 +86,7 @@ My favorite composers include Tallis, Monteverdi, Vivaldi, Bach, Handel, Beethov
 
 ## Songs Not Yet and No Longer Sung
 
-![](Songs.png)
+![Songs Not Yet and No Longer Sung](Songs.png)
 
 **UPC:** 198015955498
 
@@ -94,7 +108,7 @@ My favorite composers include Tallis, Monteverdi, Vivaldi, Bach, Handel, Beethov
 
 ## March
 
-![](March.png)
+![March](March.png)
 
 **UPC:** 198025013270
 
@@ -110,7 +124,7 @@ My favorite composers include Tallis, Monteverdi, Vivaldi, Bach, Handel, Beethov
 
 ## April
 
-![](April.png)
+![April](April.png)
 
 **UPC:** 198025078903
 
@@ -130,7 +144,7 @@ My favorite composers include Tallis, Monteverdi, Vivaldi, Bach, Handel, Beethov
 
 ## No Chatbots Were Harmed in the Making of This Album
 
-![](Chatbots.png)
+![No Chatbots Were Harmed in the Making of This Album](Chatbots.png)
 
 **UPC:** 198025252013
 
@@ -152,7 +166,7 @@ My favorite composers include Tallis, Monteverdi, Vivaldi, Bach, Handel, Beethov
 
 ## Ambivalence
 
-![](Ambivalence.png)
+![Ambivalence](Ambivalence.png)
 
 **UPC:** 198025421488
 
@@ -175,8 +189,7 @@ My favorite composers include Tallis, Monteverdi, Vivaldi, Bach, Handel, Beethov
 
 ## The Modern Temple of Amusement
 
-![](Modern.png)
-
+![The Modern Temple of Amusement](Modern.png)
 
 **UPC:** 198025591679
 
@@ -235,7 +248,13 @@ My favorite composers include Tallis, Monteverdi, Vivaldi, Bach, Handel, Beethov
 
 ---
 
-<a id="undecidable_note">*</a> Even though you didn't ask and probably weren't wondering, the title _Undecidable_ and its cover art featuring a formula of the [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus) is an inside joke with myself in reference to my studying formal linguistics and symbolic logic at UCLA &mdash; including taking classes from [Alonzo Church](https://en.wikipedia.org/wiki/Alonzo_Church), himself &mdash; during the period when many of those tracks were recorded.
+<a id="undecidable_note">*</a> Even though you didn't ask and probably weren't
+wondering, the title _Undecidable_ and its cover art featuring a formula of the
+[lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus) is an inside
+joke with myself in reference to my studying formal linguistics and symbolic
+logic at UCLA &mdash; including taking classes from
+[Alonzo Church](https://en.wikipedia.org/wiki/Alonzo_Church), himself &mdash;
+during the period when many of those tracks were recorded.
 
 Given:
 
@@ -246,6 +265,32 @@ Given:
 \end{align*}
 \\)
 
-The value of \\(\Omega\\) is "undecidable" according to the rules of the lambda calculus because the calculation of \\(\lambda x.x \hskip0.25em x\\) never terminates when applied to itself. I experimented a lot with feedback from the signal path back into the control path (the sort of thing you can really only do with modular analog synthesizers) so I adopted this self-referential mathematical formula as a logo. This resonated (pun intended) with me because undecidability due to self-reference is the key not only to the ancient [liar's paradox](https://en.wikipedia.org/wiki/Liar_paradox), it is also the basis of Goedel's [incompleteness proof](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems) in formal linguistics, the explanation of why there is no general solution to the [halting problem](https://en.wikipedia.org/wiki/Halting_problem) in computer science and underlies many other similarly consequential results in math and science, while feedback (a physical manifestation of "self reference") is a way to produce complex (and often catastrophic) results from simple mechanical or electronic systems.
+The value of \\(\Omega\\) is "undecidable" according to the rules of the lambda
+calculus because the calculation of \\(\lambda x.x \hskip0.25em x\\) never
+terminates when applied to itself. I experimented a lot with feedback from the
+signal path back into the control path (the sort of thing you can really only
+do with modular analog synthesizers) so I adopted this self-referential
+mathematical formula as a logo. This resonated (pun intended) with me because
+undecidability due to self-reference is the key not only to the ancient
+[liar's paradox](https://en.wikipedia.org/wiki/Liar_paradox), it is also the
+basis of Goedel's
+[incompleteness proof](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems)
+in formal linguistics, the explanation of why there is no general solution to
+the [halting problem](https://en.wikipedia.org/wiki/Halting_problem) in computer
+science and underlies many other similarly consequential results in math and
+science, while feedback (a physical manifestation of "self reference") is a way
+to produce complex (and often catastrophic) results from simple mechanical or
+electronic systems.
 
-As an even less relevant aside, I chose \\(\Omega\\) (the last letter of the Greek alphabet) as the name of the undecidable result because that is the variable name traditionally used when referring to the cardinality of the set of natural numbers and that, according to accepted wisdom, is the smallest infinite magnitude. It also happens to be the "stack depth" of an infinitely recursive function. Why is that amusing? Well, I was also teaching myself computer programming later in the same period that I was creating those tracks, so... maybe it isn't all that amusing. But it makes me smile to think that the most abstruse branches of "pure" mathematics like [computability theory](https://en.wikipedia.org/wiki/Computability_theory) can inadvertently produce literally world-changing effects such as the post-industrial "Information Age."
+As an even less relevant aside, I chose \\(\Omega\\) (the last letter of the
+Greek alphabet) as the name of the undecidable result because that is the
+variable name traditionally used when referring to the cardinality of the set of
+natural numbers and that, according to accepted wisdom, is the smallest infinite
+magnitude. It also happens to be the "stack depth" of an infinitely recursive
+function. Why is that amusing? Well, I was also teaching myself computer
+programming later in the same period that I was creating those tracks, so...
+maybe it isn't all that amusing. But it makes me smile to think that the most
+abstruse branches of "pure" mathematics like
+[computability theory](https://en.wikipedia.org/wiki/Computability_theory) can
+inadvertently produce literally world-changing effects such as the
+post-industrial "Information Age."
