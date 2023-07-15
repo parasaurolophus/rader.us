@@ -17,7 +17,9 @@
 
 # Software
 
-- [SDLC](sdlc.md)
+- [SDLC](software/sdlc.md)
+- [Career Advice](software/advice.md)
+- [Tail Recursion in Scheme](software/scheme-tail-recursion.md)
 
 # Philosophy of Science
 
