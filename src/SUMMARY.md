@@ -19,7 +19,12 @@
 
 - [SDLC](software/sdlc.md)
 - [Career Advice](software/advice.md)
-- [Tail Recursion in Scheme](software/scheme-tail-recursion.md)
+- [Scheme](software/scheme/scheme.md)
+  - [Tail Recursion](software/scheme/tail-recursion.md)
+  - [Lexical Closures](software/scheme/lexical-closures.md)
+  - [First Class Continuations](software/scheme/call-cc.md)
+  - [dynamic-wind](software/scheme/dynamic-wind.md)
+  - [Engines from Continuations](software/scheme/engines.md)
 
 # Philosophy of Science
 

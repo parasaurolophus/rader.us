@@ -141,9 +141,10 @@ essentially identical sequences of operations. Anywhere you would use `while`,
 `for` etc. in _Java_, _C_ or the like you can use tail recursion in _Scheme_
 instead. Further, tail call optimization applies whenever a function is invoked
 in tail position, not just cases of loops implemented using functions that call
-themselves. For example, first-class continuations can be invoked in tail
-position to implement a true continuation passing style without recourse to
-special forms like _trampolines_. But that is a discussion for another time....
+themselves. For example, [first-class continuations](./call-cc.md) can be
+invoked in tail position to implement a true continuation passing style without
+recourse to special forms like _trampolines_. But that is a discussion for
+another time....
 
 ---
 
@@ -173,24 +174,24 @@ or indirectly.
 <a id="stack"></a>
 
 <sup>**</sup>The way that function call and return is implemented conventionally
-in programming languages targeting
-[Von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture)
-machines is via a _stack_. A program must have a way to remember the current
-state of a computation before invoking a subroutine. It must also be able to
-restore that state so that it can continue from where it left off after the
-subroutine completes its work. This is done by pushing a _stack frame_
-containing a snapshot of certain critical information about a program's current
-state as the top-most entry in a special area of memory, the _stack_. The stack
-frame includes information about where the program should resume after the
-subroutine completes its work. It then invokes the subroutine and the subroutine
-consults the stack frame in order to return to the point from which it was
-called. The stack frame is popped off the stack and execution continues. If
-routine A calls subroutine B and subroutine B calls subroutine C before
-returning to A, the stack must have enough free capacity to store frames for
-both B and C for the duration of the execution of C. If the program detects that
-there is no more room on the stack at the point at which it is about to call a
-subroutine, it signals a "stack overflow" error and the current computation is
-aborted. Given the definition of `fibonacci` shown above, the stack would need
-room for at least `n` frames whenever it is called. Since computer memory is a
-finite resource, it does not require enormously large values of `n` to cause a
-stack overflow for most real world hardware.
+in programming languages targeting [Von Neumann
+architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture) machines
+is via a _stack_. A program must have a way to remember the current state of a
+computation before invoking a subroutine. It must also be able to restore that
+state so that it can continue from where it left off after the subroutine
+completes its work. This is done by pushing a _stack frame_ containing a
+snapshot of certain critical information about a program's current state as the
+top-most entry in a special area of memory, the _stack_. The stack frame
+includes information about where the program should resume after the subroutine
+completes its work. It then invokes the subroutine and the subroutine consults
+the stack frame in order to return to the point from which it was called. The
+stack frame is popped off the stack and execution continues. If routine A calls
+subroutine B and subroutine B calls subroutine C before returning to A, the
+stack must have enough free capacity to store frames for both B and C for the
+duration of the execution of C. If the program detects that there is no more
+room on the stack at the point at which it is about to call a subroutine, it
+signals a "stack overflow" error and the current computation is aborted. Given
+the definition of `factorial` shown above, the stack would need room for at
+least `n` frames whenever it is called. Since computer memory is a finite
+resource, it does not require enormously large values of `n` to cause a stack
+overflow for most real world hardware.
