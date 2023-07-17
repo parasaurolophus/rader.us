@@ -145,8 +145,8 @@ instead. Further, tail call optimization applies whenever a function is invoked
 in tail position, not just cases of loops implemented using functions that call
 themselves. For example, [first-class continuations](./call-cc.md) can be
 invoked in tail position to implement a true continuation passing style without
-recourse to special forms like _trampolines_. But that is a discussion for
-another time....
+recourse to special forms like _trampolines_. But that is a discussion [for
+another time...](engines.md).
 
 ---
 
@@ -193,7 +193,7 @@ stack must have enough free capacity to store frames for both B and C for the
 duration of the execution of C. If the program detects that there is no more
 room on the stack at the point at which it is about to call a subroutine, it
 signals a "stack overflow" error and the current computation is aborted. Given
-the definition of `factorial` shown above, the stack would need room for at
-least `n` frames whenever it is called. Since computer memory is a finite
+the first definition of `factorial` shown above, the stack would need room for
+at least `n` frames whenever it is called. Since computer memory is a finite
 resource, it does not require enormously large values of `n` to cause a stack
 overflow for most real world hardware.

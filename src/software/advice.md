@@ -97,7 +97,7 @@ decades, the software engineering industry grew increasingly complacent
 regarding performance and resource management. Generations of programmers have
 come of age without ever having been expected to think too hard about how the
 code they write in programming languages like Javascript, or even Go or C,
-actually work from the point of view of the hardware on which it is running and
+actually works from the point of view of the hardware on which it is running and
 the networks over which their data is transported. The demands of Big Data and
 now LLM's are forcing a re-evaluation of this attitude. If you are looking for a
 competitive edge in the hiring process, be able to talk confidently about the
@@ -127,9 +127,9 @@ of object-oriented programming: consider the old Lisp programmer's adage,
 they talk about anonymous functions as "lambdas," to experience directly what is
 possible using continuations as a first-class programming construct, to be able
 to really comprehend how _any_ programming construct, from [simple
-loops](scheme-tail-recursion.md) to [asynchronous co-routines](engines.md), can
-be implemented (as they are, under the covers, by compilers) as a set of
-mutually recursive functions... learn Scheme.
+loops](scheme/tail-recursion.md) to [asynchronous
+co-routines](scheme/engines.md), can be implemented (as they are, under the
+covers, by compilers) as a set of mutually recursive functions... learn Scheme.
 
 ## Practicing What I Preach
 
@@ -144,7 +144,7 @@ mutually recursive functions... learn Scheme.
       (described below)
     - Accesses API's provided by Philips Hue and Hunter-Douglas devices
       using HTTP and _eventsource_ based services
-  - Includes Vue / Vueitfy based front-end code
+  - Includes Vue / Vuetify based front-end code
     - <https://github.com/parasaurolophus/home-automation/tree/main/dashboard>
   - Demonstrates
     - Separation of concerns
@@ -158,7 +158,7 @@ mutually recursive functions... learn Scheme.
     - The other is <https://github.com/parasaurolophus/node-red-dnssd>
   - Published to NPM and in the Node-RED flow library so that it can be used by
     the Node-RED community
-  - Passes all quality checks performed by the Node-RED flow library
+  - Passes all automated quality checks performed by the Node-RED flow library
   - _README.md_ with screenshot, usage instructions
 - <https://www.rader.us/music/digital.html>
   - And now for something completely different: Ruby source code as musical "scores"
