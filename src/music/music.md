@@ -1,4 +1,8 @@
+&copy; Copyright Kirk Rader 2023. All rights reserved.
+
 # Music
+
+---
 
 Over the years I have used a variety of traditional
 instruments and electronic gear to make, er, um, "music?"
@@ -6,15 +10,21 @@ Yes, let's call it "music."
 
 - [Musicography](musicography/musicography.md)
 
+---
+
 ## Studio Setups
 
 - [Yesterday](yesterday.md)
 - [Today](today.md)
 
+---
+
 ## Approaches & Techniques
 
 - [Mostly Analog](analog.md)
 - [More Than a Little Digital](digital.md)
+
+---
 
 ## Sonic Pi Ruby Code
 

@@ -1,3 +1,5 @@
+&copy; Copyright Kirk Rader 2023. All rights reserved.
+
 # How the Parallel Postulate Changed Everything
 
 <!-- toc -->
@@ -279,9 +281,9 @@ exploration of infinite quantity simply by stipulating that the set of natural
 numbers when defined by intention has a cardinality, often denoted using the
 last letter of the Greek alphabet, \\(\Omega\\), or the symbol
 \\(|\mathbb{N}|\\). Since there is no limit to the number of times you can add 1
-to a natural number, \\(\Omega\\) represents an infinite quantity. But is
-\\(\Omega\\) "all there is" when it comes to infinite quantities, as in the
-school-yard intuition regarding \\(\infty\\)?
+to a natural number, \\(|\mathbb{N}|\\) represents an infinite quantity. But is
+\\(|\mathbb{N}|\\) "all there is" when it comes to infinite quantities, as in
+the school-yard intuition regarding \\(\infty\\)?
 
 Cantor's answer, as it turns out, is, "no, there are infinitely many infinite
 quantities which differ in magnitude in the same way that the magnitudes of
@@ -358,17 +360,17 @@ computing the element of that set which corresponds to any given natural number
 using the bijectie function, i.e. conceptually producing an infinitely long list
 of pairs that looks similar to the one above for the 26 letters of the alphabet.
 Since the cardinalities for any two sets are the same if they have a bijective
-mapping, the cardinality of every countable set is \\(\Omega\\).
+mapping, the cardinality of every countable set is \\(|\mathbb{N}|\\).
 
 For Cantor, the test of the school-yard intuition that once you reach
 \\(\infty\\), that is as big as a quantity can be thus became: is the
-cardinality of every infinite set equal to \\(\Omega\\), i.e. are all infinite
-sets countable? His answer was that while some infinite sets are countable,
-others are not. For example, the sets of integers and of rational numbers are
-countable, even though the former includes negative numbers and the latter
-consists of pairs of natural numbers and so each might have been assumed to have
-a larger cardinality than \\(\Omega\\). Score one for naive intuition regarding
-\\(\infty\\)!
+cardinality of every infinite set equal to \\(|\mathbb{N}|\\), i.e. are all
+infinite sets countable? His answer was that while some infinite sets are
+countable, others are not. For example, the sets of integers and of rational
+numbers are countable, even though the former includes negative numbers and the
+latter consists of pairs of natural numbers and so each might have been assumed
+to have a larger cardinality than \\(|\mathbb{N}|\\). Score one for naive
+intuition regarding \\(\infty\\)!
 
 On the other hand, see
 <https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument> for a description
@@ -382,8 +384,8 @@ Therefore there are infinitely more real numbers between any two points on the
 number line than there are natural numbers, no matter how close together you
 choose the end points of the segment of the number line to start with. If we
 accept Cantor's argument then the cardinality of the set of real numbers,
-\\(|\mathbb{R}|\\), is infinitely larger than \\(\Omega\\). So much for naive
-intuition.
+\\(|\mathbb{R}|\\), is infinitely larger than \\(|\mathbb{N}|\\). So much for
+naive intuition.
 
 ## The Computability Problem
 
@@ -471,20 +473,21 @@ while saying nothing at all about non-computable ones, other than by implicitly
 excluding them. In fact, rather than explaining Cantor's results, Computability
 Theory when considered on its own seems to imply that the set of real numbers
 actually is countable using some ordering of the formulas of the Lambda Calculus
-to drive the 1:1 mapping function.
-[That such an ordering is possible is another consequence of G&ouml;del's work.](https://en.wikipedia.org/wiki/G%C3%B6del_numbering)
-Generations of mathematicians and philosophers have accepted that Cantor's
-argument is valid, but the success of Computability Theory begs the question:
-how "real" is a number that can't be computed?
+to drive the 1:1 mapping function. [That such an ordering is possible is another
+consequence of G&ouml;del's
+work.](https://en.wikipedia.org/wiki/G%C3%B6del_numbering) Generations of
+mathematicians and philosophers have accepted that Cantor's argument is valid,
+but the success of Computability Theory begs the question: how "real" is a
+number that can't be computed?
 
 Taken strictly in its own terms, Cantor's argument is air tight. But from the
 historically more traditional, empiricist view of mathematics it is deeply
 circular. Cantor begins by stipulating that concepts like the "set of natural
 numbers" and "set of real numbers" make sense and that such sets have
 cardinalities. Further, you can never literally carry out his procedure for
-showing that \\(|\mathbb{R}| > \Omega\\) since you would first have to produce a
-"completed infinity" of representations of real numbers, each of which was a
-"completed infinity" of digits and finally produce yet another "completed
+showing that \\(|\mathbb{R}| > |\mathbb{N}|\\) since you would first have to
+produce a "completed infinity" of representations of real numbers, each of which
+was a "completed infinity" of digits and finally produce yet another "completed
 infinity" of digits using the "slash" procedure. So, while Cantor's results and
 all the results that followed from it are logically valid, the only
 meta-mathematical realities to which they lead are represented by the countably

@@ -1,3 +1,5 @@
+&copy; Copyright Kirk Rader 2023. All rights reserved.
+
 # Musicography
 
 > - <https://kirkrader.bandcamp.com/music>

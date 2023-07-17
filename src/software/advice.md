@@ -1,3 +1,5 @@
+&copy; Copyright Kirk Rader 2023. All rights reserved.
+
 # Career Advice for Software Engineers
 
 <!-- toc -->

@@ -1,3 +1,5 @@
+&copy; Copyright Kirk Rader 2023. All rights reserved.
+
 # Tail Recursion and Loops in Scheme
 
 Consider the traditional definition of the _factorial function_:

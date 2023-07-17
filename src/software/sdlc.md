@@ -1,4 +1,23 @@
-# Software Development Life-Cycle
+&copy; Copyright Kirk Rader 2023. All rights reserved.
+
+# Software
+
+---
+
+- [Career Advice](advice.md)
+
+---
+
+## Scheme
+
+- [Scheme](scheme/scheme.md)
+  - [Tail Recursion](scheme/tail-recursion.md)
+  - [Lexical Closures](scheme/lexical-closures.md)
+  - [First Class Continuations](scheme/call-cc.md)
+  - [dynamic-wind](scheme/dynamic-wind.md)
+  - [Engines from Continuations](scheme/engines.md)
+
+---
 
 ```mermaid
 graph LR
