@@ -17,7 +17,7 @@
 
 # Software
 
-- [Software](software/sdlc.md)
+- [Software](software/software.md)
   - [Career Advice](software/advice.md)
   - [Scheme](software/scheme/scheme.md)
     - [Tail Recursion](software/scheme/tail-recursion.md)
