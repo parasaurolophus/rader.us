@@ -162,7 +162,7 @@ mutually recursive functions... learn Scheme.
   - _README.md_ with screenshot, usage instructions
 - <https://www.rader.us/music/digital.html>
   - And now for something completely different: Ruby source code as musical "scores"
-- <https://www.rader.us/software/scheme-tail-recursion.html>
+- <https://www.rader.us/software/scheme/tail-recursion.html>
   - One of many possible examples of why every programmer should learn
     [Scheme](https://en.wikipedia.org/wiki/Scheme_(programming_language))
     (along with the assembly language of at least one microprocessor) if they
