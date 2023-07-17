@@ -4,6 +4,7 @@
 
 ---
 
+- [Portfolio](https://github.com/parasaurolophus)
 - [Career Advice](advice.md)
 
 ---
@@ -18,6 +19,8 @@
   - [Engines from Continuations](scheme/engines.md)
 
 ---
+
+## The Real SDLC
 
 ```mermaid
 graph LR

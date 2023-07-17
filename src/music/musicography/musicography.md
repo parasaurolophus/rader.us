@@ -8,7 +8,7 @@
 > - <https://music.youtube.com/channel/UCp__q4DYBXYhq9uiD2Y8vUg>
 > - <https://open.spotify.com/artist/06lMz4EjJn3pYej2kGIL5t>
 >
-> _Or search for "Kirk Rader" on the music service you prefer._
+> _Or search for "Kirk Rader" on the music service you prefer_
 
 I started creating electronic music on the West Coast, in the "West Coast
 Style," long before I knew that there was such a thing. My musical tastes
