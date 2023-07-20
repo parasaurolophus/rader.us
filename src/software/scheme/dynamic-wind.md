@@ -3,17 +3,17 @@
 # dynamic-wind
 
 The built-in `dynamic-wind` procedure is Scheme's equivalent to Common Lisp's
-`unwind-protect` or the `try ... finally ...` construct in languages like C#
-Java. The name of Scheme's version takes into account that certain code blocks
-must be protected not only when the stack is being "unwound" upon exit from a
-function but also, thanks to first-class continuations, when the stack is being
-"rewound" upon re-entry. Both `unwind-protect` and `try... finally...` (the
-latter was modeled on the former) define two sections of code: a section being
-protected and a section that is guaranteed to execute when the protected section
-is exited, even in case of exit due to non-sequential flow of control. Scheme's
-`dynamic-wind` adds a third section that is guaranteed to execute before the
-protected section begins, no matter how many times control flows in and out of
-it.
+`unwind-protect` or the `try ... finally ...` construct in languages like C#,
+Java or JavaScript. The name of Scheme's version takes into account that certain
+code blocks must be protected not only when the stack is being "unwound" upon
+exit from a function but also, thanks to first-class continuations, when the
+stack is being "rewound" upon re-entry. Both `unwind-protect` and `try...
+finally...` (the latter was modeled on the former) define two sections of code:
+a section being protected and a section that is guaranteed to execute when the
+protected section is exited, even in case of exit due to non-sequential flow of
+control. Scheme's `dynamic-wind` adds a third section that is guaranteed to
+execute before the protected section begins, no matter how many times control
+flows in and out of it.
 
 ```scheme
 ;; before-thunk will execute before protected-thunk
@@ -29,9 +29,10 @@ it.
 
 X-Ray Flourescence (XRF) spectrometry is used to determine the composition of
 materials, for example in scrap yards and recyclying facilities. An industrial
-XRF scanner can emit levels of radiation that would be quite dangerous. Imagine
-a program to control to control such a device. It might have a function,
-`scan-sample` which is the main entry-point, with the following requirements:
+XRF scanner can emit levels of radiation that are quite dangerous if, for
+example, someone were to expose a hand or other body part to it. Imagine a
+program to control such a device. It might have a function, `scan-sample` as the
+main entry-point, with the following requirements:
 
 1. The sample chamber must have a door which prevents users from reaching inside
    when it is locked
@@ -60,8 +61,7 @@ must be repositioned within the chamber in order to obtain a complete
 spectrogram. In that case, it needs to be able to interrupt the scanning
 process, request that the user reposition the material within the chamber and
 then resume from where it left off. Scheme continuations can be used to support
-such requirement so long as sufficient care is taken to do so without violating
-safety requirements.
+such requirements.
 
 What follows is a complete implementation of a simulation of `scan-sample` that
 uses `stdout` to log the simulated operations. It uses continuations to throw
