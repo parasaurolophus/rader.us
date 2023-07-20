@@ -16,166 +16,185 @@ protected section begins, no matter how many times control flows in and out of
 it.
 
 ```scheme
-// before-thunk will execute before protected-thunk
-// every time protected-thunk is entered
-//
-// after-thunk will execute after protected-thunk
-// every time protected-thunk exits
-//
-// dynamic-wind returns whatever is returned by
-// protected-thunk each time it exits
+;; before-thunk will execute before protected-thunk
+;; every time protected-thunk's body is entered
+;;
+;; after-thunk will execute after protected-thunk
+;; every time protected-thunk exits
+;;
+;; dynamic-wind returns whatever is returned by
+;; protected-thunk each time it exits
 (dynamic-wind before-thunk protected-thunk after-thunk)
 ```
 
-Imagine a program to control a CNC drill press. It might have a function,
-`drill-hole`, as the main entry point for &mdash; you guessed it! &mdash;
-drilling a hole. Drilling a hole with a mechanical press is a complicated,
-multi-step process:
+X-Ray Flourescence (XRF) spectrometry is used to determine the composition of
+materials, for example in scrap yards and recyclying facilities. An industrial
+XRF scanner can emit levels of radiation that would be quite dangerous. Imagine
+a program to control to control such a device. It might have a function,
+`scan-sample` which is the main entry-point, with the following requirements:
 
-1. The drill must be raised to make it possible to position material under the bit
+1. The sample chamber must have a door which prevents users from reaching inside
+   when it is locked
 
-2. The motor must be stopped for safety before placing, moving or removing
-   material under the bit
+2. The X-Ray emitter can only be turned on when the door is locked
 
-3. The motor must be started before the bit is lowered
+3. The XRF spectrogram is recorded and made available to the user after a
+   successful scan
 
-4. The motor should keep running while the bit is being lowered or raised
-
-One can imagine helper functions, called by `drill-hole`, for each of these operations:
+One can imagine helper functions, called by `scan-sample`, for each of these operations:
 
 ```scheme
-# naive (unsafe!) implementation of drill-hole
-(define (drill-hole)
-    (start-motor)
-    (lower-bit)
-    (raise-bit)
-    (stop-motor))
+;; naive (unsafe!) implementation of scan-sample
+(define (scan-sample)
+    (lock-door)
+    (energise-emitter)
+    (record-data)
+    (de-energize-emitter)
+    (unlock-door))
 ```
 
-As long as everything proceeds as expected, the naive definition implements
-the requirements for drilling a hole laid out above. But sometimes unexpected
-things can happen. Imagine that the CNC drill press has safety features like a
-temperature sensor that should cause the bit to automatically retract if it starts
-to overheat. This might be implemented in Scheme by having `lower-bit` return a
-continuation such that the operation could be resumed after the drill has cooled
-off. To support that, we would need to alter the implementation of
-`drill-hole` so that:
+As long as everything proceeds as expected, the naive definition implements the
+requirements for scanning a sample laid out above. But sometimes unexpected
+things can happen. Imagine that the XRF scanner is able to detect when a sample
+must be repositioned within the chamber in order to obtain a complete
+spectrogram. In that case, it needs to be able to interrupt the scanning
+process, request that the user reposition the material within the chamber and
+then resume from where it left off. Scheme continuations can be used to support
+such requirement so long as sufficient care is taken to do so without violating
+safety requirements.
 
-- The return value of `drill-hole` is whatever is returned by `lower-bit` (in
-  case it is a continuation)
-
-- `raise-bit` and `stop-motor` still get called before `drill-hole` returns, no
-  matter what happens during the execution of `lower-bit`
-
-- `start-motor` will always get called before the execution of `lower-bit`
-   begins, even if it begins multiple times by way of continuation passing
-
-Here is a complete implementation of a simulation of `drill-hole` that uses
-`stdout` to log the simulated operations:
+What follows is a complete implementation of a simulation of `scan-sample` that
+uses `stdout` to log the simulated operations. It uses continuations to throw
+resumable exceptions when user intervention is required together with
+`dynamic-wind` to ensure that the emitter is always off when the door is
+unlocked.
 
 <a id="drill-hole"></a>
 
 ```scheme
-;; -*- geiser-scheme-implementation: guile -*-
-
-;; display message indicating start-motor was called
-(define (start-motor)
-  (display 'start-motor)
-  (newline))
-
-;; display message indicating stop-motor was called
-(define (stop-motor)
-  (display 'stop-motor)
-  (newline))
-
-;; display message indicating raise-bit was called
-(define (raise-bit)
-  (display 'raise-bit)
-  (newline))
-
-;; simulate lowering the bit while the motor is running
+;; demonstrates:
 ;;
-;; along the way, display two overheat exception messages and
-;; interrupt the drilling, using continuations to allow resumption
+;; - continuations for non-sequential flow-of-control
 ;;
-;; return 'hole-drilled
-(define (lower-bit)
-  ;; get the continuation to use for returning early from this
-  ;; procedure
-  (call/cc
-   (lambda (return)
-     ;; display a message indicating the first overheat condition
-     (display 'overheating-1)
-     (newline)
-     ;; return a continuation to allow drilling to resume
-     (display (call/cc (lambda (k) (return k))))
-     (newline)
-     ;; display a message indicating the second overheat condition
-     (display 'overheating-2)
-     (newline)
-     ;; return another continuation to allow drilling to resume
-     (display (call/cc (lambda (k) (return k))))
-     (newline)
-     ;; return 'hole-drilled as the final result
-     'hole-drilled)))
+;; - dynamic-wind to protect blocks of code when using non-sequential flows-of-control
+;;
+;; - locally defined variables for encapsulation
+;;
+;; - macros for modularity
 
-;; wrap calls to the complete drilling sequence in dynamic-wind
-(define (drill-hole)
-  (dynamic-wind
-    ;; before
-    start-motor
-    ;; protected
-    lower-bit
-    ;; after
-    (lambda ()
-      ;; use inner dynamic-wind to ensure that
-      ;; even if all else fails, the motor will
-      ;; be stopped
-      (dynamic-wind
-        (lambda () #nil)
-            raise-bit
-            stop-motor))))
+;; note from the output that the emitter is only on when the door is locked and the
+;; sample is only repositioned when the door is unlocked. note also that the counter
+;; shows that not only are the safety constraints being respected, the operations are
+;; being done in the correct order
 
-;; display message indicating that the drill signaled an overheat
-;; exception
-(define (wait-for-drill-to-cool)
-  (display 'wait-for-drill-to-cool)
-  (newline))
+(define (scan-sample)
 
-;; implement the end-to-end simulated drilling scenario, including
-;; exception handling and retries using continuations
-(define (simulate-drilling)
-  (let ((k (drill-hole)))
-    (if (procedure? k)
-        (begin
-            (wait-for-drill-to-cool)
-            (k 'resume))
-        k)))
+  (let ((display-message (lambda (message sample)
+                           ;; common helper that prints a message to stdout
+                           (display (string-join (list message (number->string sample) "\n") "")))))
+
+    ;; deliberately not mutually-callable procedures representing various states of the xrf
+    ;; spectrometer hardware
+    (let ((lock-door (lambda ()
+                       ;; simulate locking the sample chamber door
+                       (display "door locked\n")))
+          (energize-emitter (lambda ()
+                              ;; simulate turning on the x-ray emitter
+                              (display "emitter energized\n")))
+          (de-energize-emitter (lambda ()
+                                 ;; simulate turning off the x-ray emitter
+                                 (display "emitter de-energized\n")))
+          (unlock-door (lambda ()
+                         ;; simulate unlocking the sample chamber door
+                         (display "door unlocked\n")))
+          (record-data (lambda (sample)
+                         ;; simulate recording a xrf spectrogram
+                         (call/cc (lambda (return)
+                                    (display-message "scanning " sample)
+                                    (display "please reposition sample\n")
+                                    (set! sample (call/cc (lambda (resume) (return resume))))
+                                    (display-message "scanning " sample)
+                                    (display "please reposition sample\n")
+                                    (set! sample (call/cc (lambda (resume) (return resume))))
+                                    (display-message "scanning " sample)
+                                    (display "data recorded\n"))))))
+
+      (let-syntax ((with-emitter-energized (syntax-rules ()
+                                             ;; ensure x-ray emitter is on only while the protected
+                                             ;; forms are executing
+                                             ((with-emitter-energized protected ...)
+                                              (dynamic-wind
+                                                energize-emitter
+                                                (lambda () protected ...)
+                                                de-energize-emitter))))
+                   (with-door-locked (syntax-rules ()
+                                       ;; ensure the sample chamber door is locked while the
+                                       ;; protected forms are executing
+                                       ((with-door-locked protected ...)
+                                        (dynamic-wind
+                                          lock-door
+                                          (lambda () protected ...)
+                                          unlock-door)))))
+
+        (letrec ((count 1)
+                 (resume (with-door-locked (with-emitter-energized (record-data count)))))
+          ;; keep scanning and following prompts to reposition the sample until record-data
+          ;; signals it is finished by not returning a continuation
+          (if (procedure? resume)
+              (begin
+                (display-message "repositioning " count)
+                (set! count (+ count 1))
+                (resume count))
+              (display-message "samples scanned: " count)))))))
 ```
 
-Here is the result of invoking `simulate-drilling`:
+See [xrf.scm](xrf.scm)
+
+
+While all of the subroutines and helpers are defined inside the body of
+`scan-sample` for encapsulation, the various `let`, `let-syntax` and `letrec`
+forms are nested in ways that also helps enforce the requirements. In
+particular, none of the main subroutines, `lock-door`, `energize-emitter` and so
+on, can call one another because they are all deliberately defined in a single
+`let` (_not_ `letrec`). Only the `display-message` helper is visible to the
+entire body of `scan-sample` because it is in its own outermost `let`. The only
+`letrec` is the innermost scope, and it is used instead of `let` only to allow
+the invocation of `record-data` to receive `count` as a parameter without having
+to introduce yet another level of lexical scope nesting.
+
+Here is the result of invoking `(scan-sample)`:
 
 ```
-scheme@(guile-user)> (simulate-drilling)
-start-motor
-overheating-1
-raise-bit
-stop-motor
-wait-for-drill-to-cool
-start-motor
-resume
-overheating-2
-raise-bit
-stop-motor
-wait-for-drill-to-cool
-start-motor
-resume
-raise-bit
-stop-motor
-$14 = hole-drilled
+> (scan-sample)
+door locked
+emitter energized
+scanning 1
+please reposition sample
+emitter de-energized
+door unlocked
+repositioning 1
+door locked
+emitter energized
+scanning 2
+please reposition sample
+emitter de-energized
+door unlocked
+repositioning 2
+door locked
+emitter energized
+scanning 3
+data recorded
+emitter de-energized
+door unlocked
+samples scanned: 3
 ```
 
-As can be seen from the output, `start-motor` is called before `lower-bit` and
-both `raise-bit` and `stop-motor` are called after, each time it is invoked,
-whether through normal, sequential flow of control or due to calling
-continuations.
+As can be seen from the output, the correct set of operations are performed, in
+the correct order relative to one another so as to conform to the safety
+requirements. The numeric counter shows that the operations are also carried out
+in the correct order in regards to the end-to-end flow. This means that
+`record-data` is actually completely sequential from its own point of view while
+the body of `scan-sample` uses the [invocation of a continuation in tail
+position](tail-recursion.md) to turn itself into a loop. The invocations of the
+_before_ and _after_ logic by the various subroutines is encapsulated in the
+`with-door-locked` and `with-emitter-energized` special forms.
