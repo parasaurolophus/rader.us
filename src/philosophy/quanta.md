@@ -67,8 +67,8 @@ electrons by analogy to classical mechanics. It is no surprise, then, that
 physicists may detect particle-like and wave-like properties in things that are
 neither particles nor waves using tools and techniques that can only ever
 measure indirectly some specific aspect of a thing they can never, even in
-principle, see exactly for what it is in the way we can literally see ordinary
-matter.
+principle, see exactly for what it is in the way we can literally see dust
+particles or ocean waves.
 
 A billiard ball resting on a level surface will sit in perfect stillness and
 smug solidity when viewed at the scale at which human senses operate, right up
@@ -98,7 +98,7 @@ is made from parts that are, themselves, not at all clock-like. Stop talking or
 thinking about sub-atomic particles as being particles and suddenly things seem
 a lot less weird.
 
-A consequence is that apparent paradoxes like the "tail problem" are not
+A corollary is that apparent paradoxes like the "tail problem" are not
 particularly problematic after all. Supposedly, quantum indeterminacy means that
 there is always some chance, even if only an ultra microscopically small chance,
 of some physical object acting in some observably non-classical way. Ask any
@@ -111,7 +111,7 @@ time because their games of chance are designed to pay out at a certain rate
 even while _not_ being rigged in the sense of outright cheating. The chance of a
 casino going broke because it had to pay too many jackpots all at once is
 transcendently higher than the chance of seeing some billiard ball start rolling
-around on its own due to quantum indeterminacy. Do not hold your breath wating
+around on its own due to quantum indeterminacy. Do not hold your breath waiting
 to see either of those events in the real world.
 
 More signficantly, the "tail problem" looks at the indeterminacy of some state
@@ -150,26 +150,28 @@ too seriously while applying it in a reductionist fashion.
 
 [Though a digression, the same could be said about General Relativity and the
 "problem" of "time's arrow." General Relativity is true enough that it can make
-accurate predictions and must be accounted for by aerospace engineers working on
-satellite based systems and the like. One of its basic premises is that time is
-just another interchangeable dimension of spacetime along with width, height and
-depth. But if that is true, then the inexorable and unidirectional passage of
-time and our very different experience of it compared to our experience of the
-other three dimensions of spacetime seems to need explanation. Einstein famously
-quipped that the passage of time is a "persistent illusion." Given his penchant
-for metaphor and sarcasm ("God does not play dice with the universe," "the
-definition of insanity is performing the same experiment over and over and
-expecting different results" and the like), there is no reason to doubt
-Einstein's sanity in this regard. I imagine he was employing irony to point out
-that while his own mathematical model allows us to treat spacetime usefully and
-effectively as a four-dimensional plenum for the purposes of General Relativity,
-that cannot actually be all there is to a complete understanding of the nature
-of time. Attempts to supplement the reduction of space and time to spacetime
-with reference to something like entropy to account for "time's arrow" do not
-help and actually just highlight the real problem. Meta-mathematical models are
-by definition reductionist and so can be relied upon to produce the kind of
+accurate predictions regarding astronomical observations like gravitational
+lensing and time dilation must be accounted for by aerospace engineers working
+on satellite based systems and the like. One of its basic premises is that time
+is just another mathematically interchangeable dimension of spacetime along with
+width, height and depth. But if that were all there were to say about time, then
+the inexorable and unidirectional passage of time and our very different
+experience of it compared to our experience of the other three dimensions of
+spacetime seems to need explanation. Einstein famously quipped that the passage
+of time is a "persistent illusion." Given his penchant for metaphor and sarcasm
+("God does not play dice with the universe," "the definition of insanity is
+performing the same experiment over and over and expecting different results"
+and the like), there is no reason to doubt Einstein's sanity in this regard. I
+imagine he was employing irony to point out that while his own mathematical
+model allows us to treat spacetime usefully and effectively as a
+four-dimensional plenum for the purposes of General Relativity, that cannot
+actually be all there is to a complete understanding of the nature of time.
+Attempts to supplement the reduction of space and time to spacetime with
+reference to something like entropy to account for "time's arrow" do not help
+and actually just highlight the real problem. Meta-mathematical models are by
+definition reductionist and so can be relied upon to produce the kind of
 "paradoxes" that arise when observations of the real world focus on phenomena
-outside the domain of discourse of a given model. Einsteins model only looks at
+outside the domain of discourse of a given model. Einstein's model only looks at
 time as a dimension of spacetime and does not even attempt to pull into its
 description other properties of time that are not relevant to General
 Relativity, in particular those properties that make it quite different from

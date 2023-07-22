@@ -99,10 +99,12 @@ without adding a new one of its own. Thus, the only limit on the value of `n`
 that exists for this second version of `factorial` is the maximum range of the
 `bigint` data type that is the result of the innermost invocation of `(* a n)`.
 
-This special handling of recursion in tail position means that you do not need
-explicit looping constructs like `while`, `do`, `for` etc. in _Scheme_. The
-standard idiom for loops in _Scheme_ is to use _named `let`_. Here is the
-preceding example, rewritten more idiomatically using a named `let`:
+This special handling of recursion in tail position means that you do not
+need[<sup>***</sup>](#loop-constructs) explicit looping constructs like `while`,
+`do`, `for` etc. in _Scheme_. The standard idiom for loops in the functional
+programming paradigm is to use tail recursion. Scheme facilitates this with
+_named `let`_. Here is the preceding example, rewritten more idiomatically using
+a named `let`:
 
 ```scheme
 (define (factorial n)
@@ -197,3 +199,17 @@ the first definition of `factorial` shown above, the stack would need room for
 at least `n` frames whenever it is called. Since computer memory is a finite
 resource, it does not require enormously large values of `n` to cause a stack
 overflow for most real world hardware.
+
+---
+
+<a id="loop-constructs"></a>
+
+<sup>***</sup>Emphasis here on _need_. Early versions of Scheme actually had no
+explicit loop constructs but a few were added over time due to popular demand.
+The first such, the `do` special form, is modeled on C/C++/Java etc. `for` loops
+but uses a syntax that is so tortured that one wonders whether or not the
+original authors were trying to make a point and steer people toward tail
+recursion based loops or continuation passing by making `do` much harder to use.
+In other words, the "popular demand" mostly came from people trying to learn
+Scheme and the functional paradigm after having already become very used to
+procedureal programming using so-called "structured" languages.

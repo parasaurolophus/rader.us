@@ -6,7 +6,12 @@
 
 - [Music](music/music.md)
   - [Musicography](music/musicography/musicography.md)
-  - [Yesterday](music/yesterday.md)
+    - [Amazon Music](music/musicography/amazon.md)
+    - [Apple Music](music/musicography/apple.md)
+    - [Bandcamp](music/musicography/bandcamp.md)
+    - [Spotify](music/musicography/spotify.md)
+    - [Youtube Music](music/musicography/youtube.md)
+  - [Yesterday](music//yesterday.md)
   - [Today](music/today.md)
   - [Mostly Analog](music/analog.md)
   - [More Than a Little Digital](music/digital.md)
