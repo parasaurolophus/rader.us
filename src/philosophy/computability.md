@@ -212,10 +212,9 @@ mathematical inquiry.
 Symbolic Logic is a mathematical system for determining whether or not a set of
 statements are mutually consistent, i.e. form a valid argument. Set Theory is an
 extension of Symbolic Logic that considers the mathematical properties of
-collections of "things" without regard to the properties of the things
-themselves. Formal Linguistics is the study of the properties of the sets of
-symbols and rules for combining them used to express mathematical formulas (or,
-later, computer programs) in meaningful and useful ways.
+collections of things. Formal Linguistics is the study of the properties of the
+sets of symbols and rules for combining them used to express mathematical
+formulas (or, later, computer programs) in meaningful and useful ways.
 
 [Cantor](https://en.wikipedia.org/wiki/Georg_Cantor) used this new freedom and
 these novel approaches to consider the following question: is there more than
@@ -250,22 +249,39 @@ hesitant to refer to infinite quantities as "numbers," so a different term was
 invented for "number of members" when that number's magnitude was potentially
 infinite.
 
-The set of "letters of the alphabet" is defined by _extension_, as demonstrated
-by the "...now I've learned my A, B, C's..." chant every American grade-schooler
-is taught. I.e. what makes `{A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q,
-R, S, T, U, V, W, X, Y, Z}` the set of "letters of the alphabet" is simply the
-assertion that the explicitly given list _is_ the given set. This is what it
+> There is a lot more underlying these distinctions of terminology related to
+> the original motivation for creating Set Theory in relation to ideas regarding
+> the nature of numbers and of mathematics, itself. Mathemeticians use terms
+> like "cardinal numbers," "cardinality" when talking about magnitudes, i.e.
+> quantities. They use terms like "ordinal numbers," "ordinality" when talking
+> about the relationships (ordering) among such magnitudes. Sets composed of
+> ordered magnitudes can be shown to have specific properties of great use in
+> Set Theory.
+
+Sets are defined by enclosing their contents in curly braces \\(\left(\\{ \dots
+\\}\right)\\) in Set Theory. For a set defined by _extension_, what is inside the
+curly braces is an explicit list. For example the set of "letters of the
+alphabet" as used in English is
+
+\\[
+\\{A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z\\}
+\\]
+
+as demonstrated by the "...now I've learned my A, B, C's..." chant every
+American grade-schooler is taught. What makes the preceding collection of
+letters enclosed in curly braces "the set of letters of the alphabet" is simply
+the assertion that the explicitly given list _is_ the given set. This is what it
 means to define a set by extension. Only finite sets can be defined by
 extension, because only a finite number of items can be listed explicitly.
 
-But what about a set like the natural numbers? Prior to Cantor's day, the answer
-would have been, "there is no such thing as the set of natural numbers because
-that would represent a completed infinity." But the new interest in things like
-Set Theory and the new freedom to explore valid theories whether or not they
-could be empirically verified allows one to define "the set of natural numbers"
-by _intension_. That is to define rules by which anything can be tested to
-determine whether or not it belongs in the set. So the set of natural numbers
-can be defined by intension using a rule.
+But what about a set like that of all the natural numbers? Prior to Cantor's
+day, the answer would have been, "there is no such thing as the set of natural
+numbers because that would represent a completed infinity." But the new interest
+in things like Set Theory and the new freedom to explore valid theories whether
+or not they could be empirically verified allows one to define "the set of
+natural numbers" by _intension_. That is to define rules by which anything in
+the universe can be tested to determine whether or not it belongs in the set. So
+the set of natural numbers can be defined by intension using a rule.
 
 > Definition of the set of natural numbers by intention:
 >
@@ -279,22 +295,45 @@ Using the formal language of Set Theory, the preceding definition becomes:
 \\{ x | (x = 0) \lor \exists y ((y \in \mathbb{N}) \land (x = y + 1)) \\}
 \\]
 
-This would be read in English as, "\\(\mathbb{N}\\) is the set of all \\(x\\)
-such that \\(x\\) equals 0 or there is a \\(y\\) such that \\(y\\) is an element
-of \\(\mathbb{N}\\) and \\(x\\) equals \\(y + 1\\)."
+The preceding formula of Set Theory would be read in English as "the of all
+\\(x\\)'s such that \\(x\\) equals zero or there is a \\(y\\) where \\(y\\) is
+an element of \\(N\\) and \\(x\\) equals \\(y\\) plus one."
+
+- \\(|\\) - "such that" when defining a set by intenstion
+- \\(\lor\\) - disjunction, i.e. "inclusive or"
+- \\(\land\\) - conjunction, i.e. "and"
+- \\(\exists\\) - existential generalization, i.e. "there is" or "there exists"
+- \\(\in\\) - set membership, i.e. "is a member of" or "in"
 
 By the preceding rule, 1 is in the set of natural numbers because it is the
 result of \\(0 + 1\\). Given that, so is 2, because it is the result of \\(1 +
-1\\). And so on. The number 1.5 is not a natural number because there is no way
-to produce it by adding 1 to any natural number. This allows "the set of natural
-numbers" to be well defined, but what about its cardinality? Cantor begins his
-exploration of infinite quantity simply by stipulating that the set of natural
-numbers when defined by intention has a cardinality, often denoted using the
-last letter of the Greek alphabet (\\(\Omega\\)), aleph-null (\\(\aleph_{0}\\)),
-or the Set Theory notation \\(|\mathbb{N}|\\):
+1\\). The number 1.5 is not a natural number because there is no way to produce
+it by adding 1 to any natural number. The letter "A" is not a natural number
+because the arithmetic addition operation does not even apply to it. And so on
+for everything in the universe, including abstractions like numbers.
+
+> Note that the preceding rule is self-referential in that it refers to the set
+> \\(N\\) when defining \\(N\\) by intension. Such self-reference is
+> characteristic of the definitions of infinite sets, but must be used with
+> care. Self-referential definitions can easily slip into circular arguments
+> when abused. They can also lead to problems like the "liar paradox." The
+> sentence, "I am lying," is a well-formed utterance in English. It consists of
+> meaningful English words, correctly arranged according the rules of English
+> syntax and grammar. But it cannot be said to be either true or false. If it
+> were true, then I would be lying. But since what I am saying is that I am
+> lying, to be true it must be false and vice versa. It cannot be both true and
+> false, so it must be neither. Later, we will see how such paradoxical
+> self-reference came to be used to prove important things about the nature of
+> sets of numbers and, by [G&ouml;del](https://en.wikipedia.org/wiki/Kurt_G%C3%B6del),
+> the nature of formal languages by treating them as sets of numbers.
+
+This allows "the set of natural numbers" to be well defined, but what about its
+cardinality? Cantor begins his exploration of infinite quantity simply by
+stipulating that the set of natural numbers when defined by intention has a
+cardinality, which he called (\\(\aleph_{0}\\)) (pronounced "aleph null"):
 
 \\[
-\Omega = \aleph_{0} = |\mathbb{N}|
+\aleph_{0} = |\mathbb{N}|
 \\]
 
 where the "magnitude" bars surrounding the name of a set refers to its
@@ -308,9 +347,10 @@ set \\(\mathbb{N}\\)."
 > from pure Logic. Sets with their cardinalities became the "proxies"
 > for numbers with their magnitudes in that context. (And that is why
 > a different term, "cardinality," for "number of members" was introduced
-> in the first place, as well.) That whole enterprise
-> failed, but in a far more interesting way than if it had succeeded.
-> What was actually shown was not that Logic, Arithmetic, Algebra,
+> in the first place, as well; i.e. to avoid circularity when using the concept
+> of cardinality when providing a definition of the concept of number.) That
+> whole enterprise failed, but in a far more interesting way than if it had
+> succeeded. What was actually shown was not that Logic, Arithmetic, Algebra,
 > Geometry, Calculus etc. existed in a hierarchy where each level in
 > the hierarchy was somehow derivable from the next level down. (But that
 > is where the term "higher math" comes from, which you will still hear
@@ -385,13 +425,13 @@ mapping from \\(n\\) to \\(l\\) would be:
 \end{align*}
 \\]
 
-This is simply associating each letter with its position in the conventional
-ordering when reciting the "A, B, C" song, which is also the normal sorting
-order when alphabetizing entries in a telephone directory, a book's index or the
-like. This kind of pairing-off between elements of sets is called a "mapping."
-The set from which the first member of each pair comes is called the "domain" of
-the mapping. The set from which the second member of each pair comes is called
-the "co-domain" or "range." Another name for a mapping is a "function."
+This is simply associating each letter with its ordering when reciting the "A,
+B, C" song, which is also the conventional sorting order when alphabetizing
+entries in a telephone directory, a book's index or the like. This kind of
+pairing-off between elements of sets is called a "mapping." The set from which
+the first member of each pair comes is called the "domain" of the mapping. The
+set from which the second member of each pair comes is called the "co-domain" or
+"range." Another name for a mapping is a "function."
 
 Mappings are categorized by how they associate members of the domain and range.
 Any "pairing off" between elements of two sets is a mapping, no matter how
@@ -414,11 +454,12 @@ _surjective_ or "onto" mapping. Since it is both injective and surjective, it is
 a _bijective_ or "one-to-one" mapping. Mappings that are injective or surjective
 have special properties that can make them useful in making claims about the
 nature of relationships between sets. Bijective sets have the most interesting
-relationships. A bijective mapping represents some function or computation that,
-given any element of either set, allows you to choose or compute exactly the
-member of the other set to which it corresponds. In particular, two sets must
-have exactly the same cardinality in order for there to be a bijective mapping
-because every element of both sets is included exactly once.
+and powerful relationships. A bijective mapping represents some function or
+computation that, given any element of either set, allows you to choose or
+compute exactly the member of the other set to which it corresponds. In
+particular, two sets must have exactly the same cardinality in order for there
+to be a bijective mapping because every element of both sets is included in the
+mapping exactly once.
 
 As defined, \\(\alpha\\) is bijective because \\(n\\) only includes the subset
 of natural numbers from 1 through 26 which gives it the same cardinality as
@@ -449,90 +490,127 @@ you can arrange the members of that set in their natural order and then map the
 first element to 0, the second element to 1 and so on.
 
 > A "naturally ordered" set is simply one for which its elements have some kind
-> of sorting order. Sets of numbers are ordered by the "less than" operation.
-> If one accepts the "A, B, C" song as canonical, English words can be sorted
-> alphabetically, and so on.
+> of intrinsic sorting order. Sets of numbers are ordered by the "less than"
+> operation. If one accepts the "A, B, C" song as canonical, English words can
+> be sorted alphabetically, and so on.
 
 For Cantor, the test of the school-yard intuition that once you reach
 \\(\infty\\), that is as big as a quantity can be thus became: is the
-cardinality of every infinite set equal to \\(|\mathbb{N}|\\)? For sets of
-numbers, which are ordered, this is equivalent to asking if every such set is
-countably infinite. His answer was that while some infinite sets are countable,
-others are not. For example, the sets of integers and of rational numbers are
-infinitely countable, even though the former includes negative numbers and the
-latter consists of pairs of natural numbers and so each might have been assumed
-to have a larger cardinality than \\(|\mathbb{N}|\\). So far, so good for naive
-intuition regarding \\(\infty\\)!
+cardinality of every infinite set equal to \\(|\mathbb{N}|\\) (which referred to
+as \\(\aleph_0\\)? For sets of numbers, which are ordered, this is equivalent to
+asking if every such set is countably infinite. His answer was that while some
+infinite sets are countable, others are not. For example, the sets of integers
+and of rational numbers are infinitely countable, even though the former
+includes negative numbers and the latter consists of pairs of natural numbers
+and so each might have been assumed to have a larger cardinality than
+\\(|\mathbb{N}|\\). So far, so good for naive intuition regarding \\(\infty\\)!
 
 Cantor's approach hinged on identifying sets that were infinite and naturally
-ordered but not countable. See
-<https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument> for a description
-of Cantor's argument that the set of real numbers is not countable. To summarize
-it briefly: Assume that you have a countably infinite set of real numbers
-between any two points on the number line. It is possible to apply a procedure
-for generating an infinite sequence of digits representing a real number that
-cannot be in your original list. Throw that additional number into your list and
-you can apply the same procedure to produce yet another number that cannot
-already be included, even in the expanded list. There is no limit to how many
-times you can apply that procedure for generating additional real numbers that
-cannot already be in any existing list. Therefore there are infinitely more real
-numbers between any two points on the number line than there are natural
-numbers, no matter how close together you choose the end points of the segment
-of the number line to start with. If we accept Cantor's argument then the
-cardinality of the set of real numbers, \\(|\mathbb{R}|\\), is infinitely larger
-than \\(|\mathbb{N}|\\). So much for naive intuition.
+ordered but not countable. To show that the set of real numbers,
+\\(\mathbb{R}\\), is such a set, start by assuming that you can define a
+countable set of real numbers between any two real numbers in the continuum
+(points on the number line). It does not matter what rule you use to construct
+this list, since the point of Cantor's argument is to show that any such rule
+cannot represent all the points of the real number line between the chosen end
+points. As for any countable set, we can look at it as a mapping from natural
+numbers to elements of our set. Real numbers are represented as potentially
+infinite sequences of digits, as in:
 
-Note some interesting aspects to Cantor's argument. It assumes that the "real
-number line" is infinitely subdivisable, i.e. there are an infinite number of
-real numbers between any two real numbers. It also assumes that any sequence of
-digit symbols corresponds to a real number and that any two real numbers with
-distinct magnitudes will be represented by distinct sequences of digits. We know
-that some real numbers, like \\(\pi\\) would require an infinitely long sequence
-of digits to represent precisely. So Cantor's argument turns on being able to
-reason sensibly about infinite sets of infinitely long sequences of digits, none
-of which could actually be produced in the real world in a finite amount of
-time. Some people say that "Cantor proved that distinct infinite quantities
-exist." What he actually proved is that "if infinite quantities are assumed to
-exist at all, they must have certain characteristics including that there are
-more than one of them" which is not at all the same thing. An empricist does not
-have to disagree with the validity of Cantor's argument to still object to the
-literal reality of "completed infinities." This distinction is important to keep
-in mind when talking about meta-mathematical theories. [When constructing
-mathematical models of reality, there is always the danger of mistaking features
-of the model with features of reality.](quanta.md)
+\\[
+\begin{align*}
+<0, \\ &0.427 \dots> \\\\
+<1, \\ &0.613 \dots> \\\\
+<2, \\ &0.590 \dots> \\\\
+\vdots &
+\end{align*}
+\\]
+
+Cantor's argument for showing that any such list cannot include all the real
+numbers within the selected range proceeds by constructing a new sequence of
+digits representing a real number that cannot already be in our list. He does so
+by applying a simple for adding each successive digit to the new real number
+based on the sequences of digits representing the real numbers that are already
+included. Specifically, the rule is that the \\(n \text{th}\\) digit in the new
+sequence must differ from the \\(n \text{th}\\) digit in the \\(n \text{th}\\)
+entry in the original list.
+
+\\[
+\begin{align*}
+<0, \\ &0.\mathbf{4}27 \dots> \\\\
+<1, \\ &0.6\mathbf{1}3 \dots> \\\\
+<2, \\ &0.59\mathbf{0} \dots> \\\\
+\vdots & \\\\
+\hline
+<r, \\ &0.\mathbf{502 \dots}>
+\end{align*}
+\\]
+
+The preceding example, the first digit in our new sequence, \\(r\\), is 5. The
+only signfigance to 5 here is that it is different from 4, the first digit in
+the first entry in the original list. The second digit is 0, which differs from
+the second digit, 1, in the second entry. The third digit is 2, which differs
+from the third digit, 0, in the third row. And so on. The new sequence of digits
+is guaranteed to differ in at least one decimal place from every sequence in the
+original list, so it cannot already be included. If we add \\(r\\) to our list,
+we can repeat the procedure to construct yet another new sequence, _ad
+infinitum_. This means that there are infinitely more real numbers between any
+two given ones than can be bijectively mapped to the natural numbers.
+\\(|\mathbb{R}|\\) is infinitely larger than \\(|\mathbb{n}|\\). So much for
+naive intuition regarding \\(\infty\\).
+
+Note some interesting aspects to Cantor's argument. It assumes that the
+continuum, i.e. the "real number line," is infinitely subdivisable, i.e. there
+are an infinite number of real numbers between any two real numbers. It also
+assumes that any sequence of digit symbols corresponds to a real number and that
+any two real numbers with distinct magnitudes will be represented by distinct
+sequences of digits. We know that some real numbers, like \\(\pi\\) would
+require an infinitely long sequence of digits to represent precisely. So
+Cantor's argument turns on being able to reason sensibly about infinite sets of
+infinitely long sequences of digits, none of which could actually be produced in
+the real world in a finite amount of time. Some people say that "Cantor proved
+that distinct infinite quantities exist." What he actually proved is that "if
+infinite quantities are assumed to exist at all, they must have certain
+characteristics including that there are more than one of them" which is not at
+all the same thing. An empricist does not have to disagree with the validity of
+Cantor's argument to still object to the literal reality of "completed
+infinities." This distinction is important to keep in mind when talking about
+meta-mathematical theories. [When constructing mathematical models of reality,
+there is always the danger of mistaking features of the model with features of
+reality.](quanta.md)
 
 ## The Computability Problem
 
-As stated above, the definition of a countable set is that there is a bijective
-(1:1) function that maps natural numbers to elements of that set. Since the set
-of real numbers is not countable because any mapping from the natural numbers is
-at best injective and can never be surjective, that means that there are more
-real numbers, in some sense, than natural numbers. Infinitely more. In fact, a
-consequence of Cantor's arguments is that the percentage of real numbers for
-which an injective mapping function is possible is so small compared to the real
-numbers denoted by all the points on the number line, the ones that do
-correspond to a countable set must be very special in some way. And so a new
-branch of mathematics was born, Computability Theory.
+As stated above, the definition of a countably infinite set is that there is a
+bijective (one-to-one) function that maps natural numbers to elements of that
+set. Since the set of real numbers is not countable because any mapping from the
+natural numbers is at best injective and can never be surjective, that means
+that there are more real numbers, in some sense, than natural numbers.
+Infinitely more. In fact, a consequence of Cantor's arguments is that the
+percentage of real numbers for which an injective mapping function is possible
+is so small compared to the real numbers denoted by the continuum (all the
+points on the number line), the ones that do correspond to a countable set must
+be very special in some way. And so a new branch of mathematics was born,
+Computability Theory.
 
 To fully understand the motivation for Computability Theory, you first must know
 something about Formal Linguistics. As already noted, Formal Linguistics is the
 study of the kinds of artifical languages used to express mathematical formulas
-(and, some time after Cantor, computer programs). Among the most famous results
-in Formal Linguistics are [G&ouml;del's](https://en.wikipedia.org/wiki/Kurt_G%C3%B6del)
-"incompleteness theorems." One of the things proven along the way is that the
-number of well-formed formulas for any language of the kind used for
-mathematical purposes is countable. I.e. given a finite set of symbols like
-numeric digits, decimal points, operators (e.g. \\(+, -, \times, /\\)) and the
-rules for combining them into useful mathematical formulas, you will only ever
+and computer programs. Among the most famous results in Formal Linguistics are
+[G&ouml;del's](https://en.wikipedia.org/wiki/Kurt_G%C3%B6del) "incompleteness
+theorems." One of the things proven along the way is that the number of
+well-formed formulas for any language of the kind used for mathematical purposes
+is countable. I.e. given a finite set of symbols like numeric digits, the
+decimal point, operators (e.g. \\(+, \\ -, \\ \times, \\ \divide \\)) and the
+rules for combining them into useful formulas of arithmetic, you will only ever
 be able to produce countably many well-formed formulas in that formal language.
 
 This means that one can re-frame the understanding that "the set of real numbers
 is not countable" as "most real numbers are not computable" &mdash; i.e. there
-are no formulas for computing their values. This is because there are only
-countably many formulas but the set of all real numbers is not countable so
-there are uncountably many real numbers for which there is no formula on the
-basis of which they could be computed. Computability Theory attempts to answer
-the question, "what makes a real number computable?"
+are no mathematical formulas for computing their values. This is because there
+are only countably many formulas but the set of all real numbers is not
+countable so there are uncountably many real numbers for which there is no
+formula on the basis of which they could be computed. Computability Theory
+attempts to answer the question, "what makes a real number computable?"
 
 ## Computability Theory to the Rescue?
 
@@ -557,24 +635,24 @@ first half of the 20th Century (Church was Turing's Doctoral advisor).
 - Turing's approach starts with thought experiments involving hypothetical
   "[Turing Machines](https://en.wikipedia.org/wiki/Turing_machine)." (Turing
   called these "a-machines" in his dissertation and they are now recognized as being
-  a particular type of "finite state automaton"; it was Church who first referred
-  to them as "Turing Machines.") In this way, Turing's work actually fits well
-  with the classical, "empiricist" view of mathematics. A Turing Machine is a
-  theoretical mechanical device built according to certain rules and which
-  produces a particular sequence of symbols (e.g. digits in the representation of
-  a real number) as the result of its operation. If Turing Machines could be
-  constructed (which they could not be in reality because each would require an
-  infinitely long paper tape), Turing's thesis is that the outputs of all possible
-  such machines would be the set of computable numbers.
+  a particular type of "finite state automaton." It was Church who first referred
+  to them as "Turing Machines.") In this way, Turing's work actually aligns well
+  with the classical, "empiricist" view of mathematics, at least conceptually.
+  A Turing Machine is a theoretical mechanical device built according to certain
+  rules and which produces a particular sequence of symbols (e.g. digits in the
+  representation of a real number) as the result of its operation. If Turing
+  Machines could be constructed (which they could not be in reality because each
+  would require an infinitely long paper tape), Turing's thesis is that the
+  outputs of all possible such machines would be the set of computable numbers.
 
 Computability Theory was considered settled and the world moved on to other
 interests when it was shown that Church's and Turing's theses are mathematically
 equivalent: the behavior of any possible Turing Machine can be described using a
 formula of the Lambda Calculus, and any formula of the Lambda Calculus can be
 used as the "blueprint" for a Turing Machine. Since two intuitively compelling
-definitions of "computability" were shown to produce the same set, the consensus
-among those interested in this question was that the "problem" was solved, and
-there was much rejoicing.
+definitions of "computability" were shown to produce the same results, the
+consensus among those interested in this question was that the "problem" was
+solved, and there was much rejoicing.
 
 As a side-effect, Turing and Church had between them provided the mathematical
 model and mental framework for programmable digital computers and for the
@@ -592,7 +670,7 @@ another consequence of G&ouml;del's
 work.](https://en.wikipedia.org/wiki/G%C3%B6del_numbering) Generations of
 mathematicians and philosophers have accepted that Cantor's argument is valid,
 but the success of Computability Theory begs the question: how "real" is a
-number that can't be computed?
+number that cannot be computed?
 
 Taken strictly in its own terms, Cantor's argument is air tight. But from the
 historically more traditional, empiricist view of mathematics it is deeply
@@ -607,37 +685,48 @@ all the results that followed from it are logically valid, the only
 meta-mathematical realities to which they lead are represented by the countably
 many real numbers described by Computability Theory.
 
-That there are tensions between "pure" and "applied" mathematics became
-inevitable once mathematicians embraced validity over truth. What is remarkable
-is, despite that tension, how often what begins as an exploration of a pure
-mathematical abstraction, e.g. Computability Theory, yields results with
+That there are these sorts of tensions between "pure" and "applied" mathematics
+became inevitable once mathematicians embraced validity over truth. What is
+remarkable is, despite that tension, how often what begins as an exploration of
+a pure mathematical abstraction, e.g. Computability Theory, yields results with
 powerful and even world-changing applications, e.g. Computer Science. Similar
-examples can be found in other scientific domains. For another example,
-Non-Euclidean Geometries have found practical (for some definition of
-"practical") use in various branches of Physics rather than remaining solely the
-province of abstract considerations of Euclid's axioms.
+examples can be found in other scientific domains. Non-Euclidean Geometries have
+found practical (for some definition of "practical") use in various branches of
+Physics rather than remaining solely the province of abstract considerations of
+Euclid's axioms.
 
 Programmers use the term "lambda" to refer to an anonymous function because of
 Church's Lambda Calculus and, more importantly, the Lambda Calculus is the
 original model for all so-called "Turing complete" programming languages. Turing
 Machines were the original model for the [Von Neumann
 Architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture) on which
-all current programmable electronic computing devices are based. Conversely,
+all current electronic programmable computing devices are based. Conversely,
 Cantor's non-computable real numbers can only ever remain the stuff of abstract
 considerations of the theoretical properties of an infinitely subdivisable
 number line. But the same embrace of infinite quantities Cantor pioneered has
 been useful in both abstract and applied math in quite concrete ways. Division
 by zero, which once was regarded as an anomalous discontinuity, now is
-understood to have a definite result: \\(\pm\infty\\). That is,
+understood to have a definite result: \\(\pm\infty\\):
 
-\\[\lim_{n \to 0}{1 \over n} = \infty\\]
-
-since it is simply the inverse of
-
-\\[\lim_{n \to \infty}{1 \over n} = 0\\]
+\\[
+\lim_{x \to \infty}{1 \over x} = 0 \iff \lim_{x \to 0}{1 \over x} = \infty
+\\]
 
 The preceding is baked into the [IEEE
 754](https://en.wikipedia.org/wiki/IEEE_754) standard for floating-point
 arithmetic, along with the special `NaN` value for remaining cases of undefined
 operations such as \\(0 \over 0\\) or attempting to calculate the square root of
 a negative number.
+
+\\[
+\frac x {\pm 0} =
+    \begin{cases}
+                  \mathtt{NaN} & \text{where } x = \pm 0 \\\\
+        \pm \mathtt{INFINITY} & \text{otherwise}
+    \end{cases}
+\\]
+
+where `NaN` is the IEEE 754 constant meaning "Not a Number," `INFINITY` is the
+IEEE 754 constant meaning \\(\infty\\). Also, 0 and `INFINITY` are signed in the
+IEEE 754 specification and follow the usual rules for sign agreement in
+division.
