@@ -510,7 +510,7 @@ ordered but not countable. To show that the set of real numbers,
 \\(\mathbb{R}\\), is such a set, start by assuming that you can define a
 countable set of real numbers between any two real numbers in the continuum
 (points on the number line). It does not matter what rule you use to construct
-this list, since the point of Cantor's argument is to show that any such rule
+this list, since the crux of Cantor's argument is to show that any such rule
 cannot represent all the points of the real number line between the chosen end
 points. As for any countable set, we can look at it as a mapping from natural
 numbers to elements of our set. Real numbers are represented as potentially
@@ -545,18 +545,18 @@ entry in the original list.
 \end{align*}
 \\]
 
-The preceding example, the first digit in our new sequence, \\(r\\), is 5. The
-only signfigance to 5 here is that it is different from 4, the first digit in
-the first entry in the original list. The second digit is 0, which differs from
-the second digit, 1, in the second entry. The third digit is 2, which differs
-from the third digit, 0, in the third row. And so on. The new sequence of digits
-is guaranteed to differ in at least one decimal place from every sequence in the
-original list, so it cannot already be included. If we add \\(r\\) to our list,
-we can repeat the procedure to construct yet another new sequence, _ad
-infinitum_. This means that there are infinitely more real numbers between any
-two given ones than can be bijectively mapped to the natural numbers.
-\\(|\mathbb{R}|\\) is infinitely larger than \\(|\mathbb{n}|\\). So much for
-naive intuition regarding \\(\infty\\).
+In the preceding example, the first digit in our new sequence, \\(r\\), is 5.
+The only signfigance to 5 here is that it is different from 4, the first digit
+in the first entry in the original list. The second digit is 0, which differs
+from the second digit, 1, in the second entry. The third digit is 2, which
+differs from the third digit, 0, in the third row. And so on. The new sequence
+of digits is guaranteed to differ in at least one decimal place from every
+sequence in the original list, so it cannot already be included. If we add
+\\(r\\) to our list, we can repeat the procedure to construct yet another new
+sequence, _ad infinitum_. This means that there are infinitely more real numbers
+between any two given ones than can be bijectively mapped to the natural
+numbers. \\(|\mathbb{R}|\\) is infinitely larger than \\(|\mathbb{N}|\\). So
+much for naive intuition regarding \\(\infty\\).
 
 Note some interesting aspects to Cantor's argument. It assumes that the
 continuum, i.e. the "real number line," is infinitely subdivisable, i.e. there
