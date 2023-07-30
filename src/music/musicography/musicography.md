@@ -234,7 +234,11 @@ consider the combination of those influences as fair warning.
 
 ## Album 10
 
-**Not yet released**
+![Album 10](covers/AlbumX.png)
+
+**UPC:** 198025739965
+
+**Released:** 2023
 
 | Track No | Track                | ISRC            |
 | -------- | -------------------- | --------------- |
@@ -249,6 +253,29 @@ consider the combination of those influences as fair warning.
 | 9        | Recapitulation       | QZ-XKT-23-00079 |
 | 10       | Reductio ad absurdum | QZ-XKT-23-00080 |
 | 11       | Epilogue             | QZ-XKT-23-00081 |
+
+## Rhythms
+
+![Rhythms](covers/Rhythms.png)
+
+**UPC:** 198025759802
+
+**Released:** 2023
+
+| Track No | Track                                                | ISRC            |
+| -------- | ---------------------------------------------------- | --------------- |
+| 1        | Rhythm 1                                             | QZ-XKT-23-00082 |
+| 2        | Rhythm 2                                             | QZ-XKT-23-00083 |
+| 3        | Rhythm 3                                             | QZ-XKT-23-00083 |
+| 4        | Rhythm 4                                             | QZ-XKT-23-00085 |
+| 5        | Rhythm 5                                             | QZ-XKT-23-00086 |
+| 6        | Rhythm 6                                             | QZ-XKT-23-00087 |
+| 7        | Euclidean Tablas and Random Drones                   | QZ-XKT-23-00088 |
+| 8        | Sinfonietta for Cowbell Orchestra                    | QZ-XKT-23-00089 |
+| 9        | Concerto for Cowbell, Low Percussion and Manic Choir | QZ-XKT-23-00090 |
+| 10       | Farandole in Tempore Belli                           | QZ-XKT-23-00091 |
+
+- [Sonic Pi source for _Fanrandole in Tempore Belli_](../sonicpi/Farandole_in_Tempore_Belli.md)
 
 ---
 
