@@ -25,6 +25,7 @@
     - [Au_Quai.rb](music/sonicpi/Au_Quai.md)
     - [Decommisioned.rb](music/sonicpi/Decommisioned.md)
     - [Farandole_Lamentoso.rb](music/sonicpi/Farandole_Lamentoso.md)
+    - [Farandole_in_Tempore_Belli.rb](music/sonicpi/Farandole_in_Tempore_Belli.md)
     - [Ghostly_Reminiscences.rb](music/sonicpi/Ghostly_Reminiscences.md)
 
 ---

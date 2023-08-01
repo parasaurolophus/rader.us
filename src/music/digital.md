@@ -31,4 +31,5 @@ my "West Coast" approach applied to using "East Coast" inspired gear and softwar
 - [Au_Quai.rb](sonicpi/Au_Quai.md)
 - [Decommisioned.rb](sonicpi/Decommisioned.md)
 - <a id="farandole"></a>[Farandole_Lamentoso.rb](sonicpi/Farandole_Lamentoso.md)
+- [Farandole_in_Tempore_Belli.rb](sonicpi/Farandole_in_Tempore_Belli.md)
 - [Ghostly_Reminiscences.rb](sonicpi/Ghostly_Reminiscences.md)
