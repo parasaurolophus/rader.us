@@ -18,6 +18,10 @@
   - [dynamic-wind](scheme/dynamic-wind.md)
   - [Engines from Continuations](scheme/engines.md)
 
+## Home Automation
+
+- [Home Automation](home-automation/home-automation.md)
+
 ---
 
 ## The Real SDLC

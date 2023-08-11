@@ -41,6 +41,7 @@
     - [First Class Continuations](software/scheme/call-cc.md)
     - [dynamic-wind](software/scheme/dynamic-wind.md)
     - [Engines from Continuations](software/scheme/engines.md)
+  - [Home Automation](software/home-automation/home-automation.md)
 
 ---
 
