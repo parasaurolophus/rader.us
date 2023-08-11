@@ -84,20 +84,26 @@ does that mean, exactly?
 Note that in the first implementation of `factorial`, the function calls itself
 inside an invocation of `*` within the "else" clause of an `if` special form. In
 such a case the _Scheme_ compiler, just as that for any programming language,
-must arrange to remember the sequence of calls made before each inner call to
-`factorial` so that it can perform the `*` calculation before returning from the
-outer call. The second implementation of `factorial`, which uses the locally
-defined helper function `f`, performs the same mathematical operations arranged
-in a slightly different sequence. In that case, both the subtraction in
-`(- n 1)` and multiplication in `(* a n)` are fully evaluated _before_ the inner
-call to `f`. At each invocation of `f`, the value returned from the outer
-invocation is simply that which is returned by the inner invocation without any
-additional computation. Such an inner invocation is said to be in "tail
-position" and it is not necessary to grow the stack when making the inner call.
-In effect, the inner call re-uses the existing stack frame of the outer call
-without adding a new one of its own. Thus, the only limit on the value of `n`
-that exists for this second version of `factorial` is the maximum range of the
-`bigint` data type that is the result of the innermost invocation of `(* a n)`.
+must arrange to remember the sequence of invocations of `factorial` so that it
+can perform the `*` calculation to the value returned by each inner call to
+`factorial` before returning from the outer call. The second implementation of
+`factorial`, which uses the locally defined helper function `f`, performs the
+same mathematical operations arranged in a slightly different sequence. In that
+case, both the subtraction in `(- n 1)` and multiplication in `(* a n)` are
+fully evaluated _before_ the inner call to `f`. At each invocation of `f`, the
+value returned from the outer invocation is simply that which is returned by the
+inner invocation without any additional computation. Such an inner invocation is
+said to be in "tail position" and it is not necessary to grow the stack when
+making the inner call. In effect, the inner call re-uses the existing stack
+frame of the outer call without adding a new one of its own. Thus, the only
+limit on the value of `n` that exists for this second version of `factorial` is
+the maximum range of the `bigint` data type that is the result of the innermost
+invocation of `(* a n)`. Another way to look at the difference is that the
+tail-call version of `factorial` "remembers" the sequence of calculations using
+the accumulated value in the variable `a` so that it does not have to be saved
+on the stack. This is an important concept for functional programming generally:
+never use an object or stack frame to store state that could more efficiently be
+retained in a variable within some closed-over lexical environment.
 
 This special handling of recursion in tail position means that you do not
 need[<sup>***</sup>](#loop-constructs) explicit looping constructs like `while`,
@@ -212,4 +218,4 @@ original authors were trying to make a point and steer people toward tail
 recursion based loops or continuation passing by making `do` much harder to use.
 In other words, the "popular demand" mostly came from people trying to learn
 Scheme and the functional paradigm after having already become very used to
-procedureal programming using so-called "structured" languages.
+procedural programming using so-called "structured" languages.

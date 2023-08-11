@@ -135,14 +135,14 @@ being concerned with _validity_ (internal consistency) rather than (empirical)
 _truth_. Euclid's theorems do not merely form an interesting set of mutually
 consistent mathematical formulas. Euclid's reliance on "constructions"
 demonstrate that his theorems describe properties of objects and operations
-carried out in the real world. Non-Eudclidean Geometries have no such
+carried out in the real world. Non-Euclidean Geometries have no such
 correspondence to observable reality (at least not at the scale at which human
 senses operate). Not only does every valid Non-Euclidean Geometry contradict
 Euclid's "common sense" Geometry, each contradicts every other. But if validity
 is the goal rather than correspondence to empirical truth, that does not matter
 at all. A "mathematical truth" was accepted as proven even though that required
-abandoning the need for, or ability to, assert anything at all about empirical
-truth solely on the basis of mathematics.
+abandoning the need or ability to assert anything at all about empirical truth
+solely on the basis of mathematics.
 
 This is more than a mere matter of terminology (substituting "validity" as if it
 were a synonym of "truth"). Mathematicians knew they could not have their cake
@@ -157,13 +157,12 @@ for validity even becomes relevant. The term _meta-mathematics_ was coined to
 refer to what now had to be regarded as special cases where a given mathematical
 theory could be shown to correspond in some way to empirical reality. Euclid's
 constructions provide the meta-mathematical theory that connects it to common
-sense experience and that is not available to Non-Euclidean Geometries (at least
-outside a physics laboratory).
+sense experience that is not available to Non-Euclidean Geometries.
 
 ## Formal Linguistics, Set Theory and Infinite Quantities
 
 The change in outlook from truth to validity opened the way to vast new realms
-of mathematical enquiry. If mathematicians could no longer rely on counting
+of mathematical inquiry. If mathematicians could no longer rely on counting
 their fingers or drawing constructions to prove the correctness of their
 formulas, they needed a new set of robust tools to replace empiricism. Suddenly,
 the nature of "validity," itself, became a subject of study along with an
@@ -191,8 +190,9 @@ quantities or any other formerly forbidden category of mathematical object. So
 long as your results are internally consistent then your mathematics are valid.
 There may or may not be a meta-mathematical theory mapping your results to
 properties of the real world. If so, that may be a serendipitous side-effect, of
-potential use to scientists and engineers, but such a corresondence to reality
-is no concern of "pure" math in this new way of looking at things.
+potential use to scientists and engineers (among whom mathematicians could no
+longer count themselves), but such a corresondence to reality is no concern of
+"pure" math in this new way of looking at things.
 
 Simultaneously, the new emphasis on validity begged the question: what exactly
 is "validity," in the first place? Previously, it had been considered both
@@ -207,7 +207,7 @@ something about classical Geometry, such empiricism was no longer necessary nor
 sufficient. The nature of mathematics and mathematical formulas in and of
 themselves suddenly became a topic of great interest to mathematicians. Thus
 were Symbolic Logic, Set Theory and Formal Linguistics born as areas of intense
-mathematical inquiry.
+mathematical interest.
 
 Symbolic Logic is a mathematical system for determining whether or not a set of
 statements are mutually consistent, i.e. form a valid argument. Set Theory is an
@@ -256,7 +256,10 @@ infinite.
 > quantities. They use terms like "ordinal numbers," "ordinality" when talking
 > about the relationships (ordering) among such magnitudes. Sets composed of
 > ordered magnitudes can be shown to have specific properties of great use in
-> Set Theory.
+> Set Theory. At a deeper level, separating the concept of "cardinality" from
+> the concept of "number" allowed early Set Theoreticians to use the concept of
+> "cardinality of a set" to _define_ the concept of "number" in purely Set
+> Theoretical terms. But I digress....
 
 Sets are defined by enclosing their contents in curly braces \\(\left(\\{ \dots
 \\}\right)\\) in Set Theory. For a set defined by _extension_, what is inside the
@@ -295,7 +298,7 @@ Using the formal language of Set Theory, the preceding definition becomes:
 \\{ x | (x = 0) \lor \exists y ((y \in \mathbb{N}) \land (x = y + 1)) \\}
 \\]
 
-The preceding formula of Set Theory would be read in English as "the of all
+The preceding formula of Set Theory would be read in English as "the set of all
 \\(x\\)'s such that \\(x\\) equals zero or there is a \\(y\\) where \\(y\\) is
 an element of \\(N\\) and \\(x\\) equals \\(y\\) plus one."
 
@@ -313,8 +316,8 @@ because the arithmetic addition operation does not even apply to it. And so on
 for everything in the universe, including abstractions like numbers.
 
 > Note that the preceding rule is self-referential in that it refers to the set
-> \\(N\\) when defining \\(N\\) by intension. Such self-reference is
-> characteristic of the definitions of infinite sets, but must be used with
+> \\(\mathbb{N}\\) when defining \\(\mathbb{N}\\) by intension. Such self-reference
+> is characteristic of the definitions of infinite sets, but must be used with
 > care. Self-referential definitions can easily slip into circular arguments
 > when abused. They can also lead to problems like the "liar paradox." The
 > sentence, "I am lying," is a well-formed utterance in English. It consists of
@@ -496,13 +499,13 @@ first element to 0, the second element to 1 and so on.
 
 For Cantor, the test of the school-yard intuition that once you reach
 \\(\infty\\), that is as big as a quantity can be thus became: is the
-cardinality of every infinite set equal to \\(|\mathbb{N}|\\) (which referred to
-as \\(\aleph_0\\)? For sets of numbers, which are ordered, this is equivalent to
-asking if every such set is countably infinite. His answer was that while some
-infinite sets are countable, others are not. For example, the sets of integers
-and of rational numbers are infinitely countable, even though the former
-includes negative numbers and the latter consists of pairs of natural numbers
-and so each might have been assumed to have a larger cardinality than
+cardinality of every infinite set equal to \\(|\mathbb{N}|\\) (which Cantor
+referred to as \\(\aleph_0\\))? For sets of numbers, which are ordered, this is
+equivalent to asking if every such set is countably infinite. His answer was
+that while some infinite sets are countable, others are not. For example, the
+sets of integers and of rational numbers are infinitely countable, even though
+the former includes negative numbers and the latter consists of pairs of natural
+numbers and so each might have been assumed to have a larger cardinality than
 \\(|\mathbb{N}|\\). So far, so good for naive intuition regarding \\(\infty\\)!
 
 Cantor's approach hinged on identifying sets that were infinite and naturally
@@ -526,13 +529,13 @@ infinite sequences of digits, as in:
 \\]
 
 Cantor's argument for showing that any such list cannot include all the real
-numbers within the selected range proceeds by constructing a new sequence of
-digits representing a real number that cannot already be in our list. He does so
-by applying a simple for adding each successive digit to the new real number
-based on the sequences of digits representing the real numbers that are already
-included. Specifically, the rule is that the \\(n \text{th}\\) digit in the new
-sequence must differ from the \\(n \text{th}\\) digit in the \\(n \text{th}\\)
-entry in the original list.
+numbers within the selected range proceeds by describing a rule for constructing
+a new sequence of digits representing a real number that cannot already be in
+our list. In particular, he presents a simple rule for adding each successive
+digit to the new real number based on the sequences of digits representing the
+real numbers that are already included. Specifically, the rule is that the \\(n
+\text{th}\\) digit in the new sequence must differ from the \\(n \text{th}\\)
+digit in the \\(n \text{th}\\) entry in the original list.
 
 \\[
 \begin{align*}
@@ -568,39 +571,43 @@ require an infinitely long sequence of digits to represent precisely. So
 Cantor's argument turns on being able to reason sensibly about infinite sets of
 infinitely long sequences of digits, none of which could actually be produced in
 the real world in a finite amount of time. Some people say that "Cantor proved
-that distinct infinite quantities exist." What he actually proved is that "if
+that distinct infinite quantities exist." What he actually claimed is that "if
 infinite quantities are assumed to exist at all, they must have certain
 characteristics including that there are more than one of them" which is not at
 all the same thing. An empricist does not have to disagree with the validity of
 Cantor's argument to still object to the literal reality of "completed
 infinities." This distinction is important to keep in mind when talking about
-meta-mathematical theories. [When constructing mathematical models of reality,
+meta-mathematical theories. When constructing mathematical models of reality,
 there is always the danger of mistaking features of the model with features of
-reality.](quanta.md)
+reality. In fact, one could as easily interpret Cantor's argument as a _reductio
+ad absurdum_ argument for why the "set of real numbers" cannot actually be said
+to exist.
+
+Let me explain.
 
 ## The Computability Problem
 
 As stated above, the definition of a countably infinite set is that there is a
 bijective (one-to-one) function that maps natural numbers to elements of that
-set. Since the set of real numbers is not countable because any mapping from the
-natural numbers is at best injective and can never be surjective, that means
-that there are more real numbers, in some sense, than natural numbers.
-Infinitely more. In fact, a consequence of Cantor's arguments is that the
-percentage of real numbers for which an injective mapping function is possible
-is so small compared to the real numbers denoted by the continuum (all the
-points on the number line), the ones that do correspond to a countable set must
-be very special in some way. And so a new branch of mathematics was born,
-Computability Theory.
+set. The accepted understanding of Cantor's arguments is that the set of real
+numbers is not countable because any mapping from the natural numbers is at best
+injective and can never be surjective. That means that there are more real
+numbers, in some sense, than natural numbers. Infinitely more. In fact, a
+consequence of Cantor's argument is that the percentage of real numbers for
+which an injective mapping function is possible is so small compared to the real
+numbers denoted by the continuum (all the points on the number line), the ones
+that do correspond to a countable set must be very special in some way. And so a
+new branch of mathematics was born, Computability Theory.
 
 To fully understand the motivation for Computability Theory, you first must know
 something about Formal Linguistics. As already noted, Formal Linguistics is the
 study of the kinds of artifical languages used to express mathematical formulas
 and computer programs. Among the most famous results in Formal Linguistics are
 [G&ouml;del's](https://en.wikipedia.org/wiki/Kurt_G%C3%B6del) "incompleteness
-theorems." One of the things proven along the way is that the number of
-well-formed formulas for any language of the kind used for mathematical purposes
-is countable. I.e. given a finite set of symbols like numeric digits, the
-decimal point, operators (e.g. \\(+, \\ -, \\ \times, \\ \divide \\)) and the
+theorems." One of the things G&ouml;del proved along the way is that the number
+of well-formed formulas for any language of the kind used for mathematical
+purposes is countable. I.e. given a finite set of symbols like numeric digits,
+the decimal point, operators (e.g. \\(+, \\ -, \\ \times, \\ \div \\)) and the
 rules for combining them into useful formulas of arithmetic, you will only ever
 be able to produce countably many well-formed formulas in that formal language.
 
@@ -614,15 +621,15 @@ attempts to answer the question, "what makes a real number computable?"
 
 ## Computability Theory to the Rescue?
 
-But how does one go about characterizing what distinguishes a computable number
-from the vastly larger population of real numbers, generally? (Leaving aside,
-for now, the question of how "real" a number can be if it cannot be computed,
-i.e. identified or characterized in any way.) Starting in the late 19th
-Century, various philosophers of mathematics and philosophically-inclined
+But how does one go about characterizing what makes a number computable?
+(Leaving aside, for now, the question of how "real" a number can be if it cannot
+be computed, i.e. identified or characterized in any way.) Starting in the late
+19th Century, various philosophers of mathematics and philosophically-inclined
 mathematicians worked on this question. The question was considered settled when
-the work of two such people, [Church](https://en.wikipedia.org/wiki/Alonzo_Church)
-and [Turing](https://en.wikipedia.org/wiki/Alan_Turing), converged during the
-first half of the 20th Century (Church was Turing's Doctoral advisor).
+the work of two such people,
+[Church](https://en.wikipedia.org/wiki/Alonzo_Church) and
+[Turing](https://en.wikipedia.org/wiki/Alan_Turing), converged during the first
+half of the 20th Century (Church was Turing's Doctoral advisor).
 
 - Church's approach was purely formal. He invented a mathematical language, the
   [Lambda Calculus](https://en.wikipedia.org/wiki/Lambda_calculus), for defining
@@ -630,70 +637,104 @@ first half of the 20th Century (Church was Turing's Doctoral advisor).
   is the set of results of evaluating all well-formed formulas of the Lambda
   Calculus. This way of characterizing computability is very much in keeping with
   what had by then become the mainstream "all that matters is validity" view of
-  mathematics.
+  mathematics, which encourages such formalism.
 
 - Turing's approach starts with thought experiments involving hypothetical
-  "[Turing Machines](https://en.wikipedia.org/wiki/Turing_machine)." (Turing
-  called these "a-machines" in his dissertation and they are now recognized as being
-  a particular type of "finite state automaton." It was Church who first referred
-  to them as "Turing Machines.") In this way, Turing's work actually aligns well
-  with the classical, "empiricist" view of mathematics, at least conceptually.
-  A Turing Machine is a theoretical mechanical device built according to certain
-  rules and which produces a particular sequence of symbols (e.g. digits in the
-  representation of a real number) as the result of its operation. If Turing
-  Machines could be constructed (which they could not be in reality because each
-  would require an infinitely long paper tape), Turing's thesis is that the
-  outputs of all possible such machines would be the set of computable numbers.
+"[Turing Machines](https://en.wikipedia.org/wiki/Turing_machine)." (Turing
+called these "a-machines" in his dissertation and they are now recognized as
+being a particular type of "finite state automaton." It was Church who first
+referred to them as "Turing Machines.") In this way, Turing's work actually
+aligns well with the classical, "empiricist" view of mathematics, at least
+conceptually. A Turing Machine is a theoretical mechanical device built
+according to certain rules and which produces a particular sequence of symbols
+(e.g. digits in the representation of a real number) as the result of its
+operation. If Turing Machines could be constructed (which they could not be in
+reality because each would require an infinitely long paper tape on which to
+print its output), Turing's thesis is that the outputs of all possible such
+machines would be the set of computable numbers.
 
 Computability Theory was considered settled and the world moved on to other
 interests when it was shown that Church's and Turing's theses are mathematically
-equivalent: the behavior of any possible Turing Machine can be described using a
-formula of the Lambda Calculus, and any formula of the Lambda Calculus can be
-used as the "blueprint" for a Turing Machine. Since two intuitively compelling
-definitions of "computability" were shown to produce the same results, the
-consensus among those interested in this question was that the "problem" was
-solved, and there was much rejoicing.
+equivalent: given the rules governing the behavior of any possible Turing
+Machine, one can define a formula of the Lambda Calculus that will carry out the
+equivalent calculation and produce the same result. Any formula of the Lambda
+Calculus can be used as the "blueprint" for "building" a Turing Machine. Since
+two intuitively compelling definitions of "computability" were shown to produce
+the same results (by way of the now-familiar reasoning based bijective mappings
+between infinite sets), the consensus among those interested in this question
+was that the "problem" was solved, and there was, once again, much rejoicing.
 
-As a side-effect, Turing and Church had between them provided the mathematical
-model and mental framework for programmable digital computers and for the
-programming languages used to control them. But before we delve further into the
-ongoing legacy of their work, note something interesting: neither Church's nor
-Turing's work actually directly addresses what makes computable numbers
-different from all those other supposedly-real-but-not-computable ones. Instead,
-they provide a means for characterizing an exhaustive set of computable numbers
-while saying nothing at all about non-computable ones, other than by implicitly
-excluding them. In fact, rather than explaining Cantor's results, Computability
-Theory when considered on its own seems to imply that the set of real numbers
-actually is countably infinite using some ordering of the formulas of the Lambda
-Calculus to drive the bijective function. [That such an ordering is possible is
-another consequence of G&ouml;del's
+As an unintended side-effect, Turing and Church had between them provided the
+mathematical model and mental framework for programmable digital computers and
+for the programming languages used to control them. But before we delve further
+into the ongoing legacy of their work, note something interesting: neither
+Church's nor Turing's work actually directly addresses what makes computable
+numbers different from all those other supposedly-real-but-not-computable ones.
+Instead, they provide a means for characterizing an exhaustive set of computable
+numbers while saying nothing at all about non-computable ones, other than by
+implicitly excluding them. In fact, rather than explaining Cantor's results,
+Computability Theory when considered on its own seems to imply that the set of
+real numbers actually is countably infinite using some ordering of the formulas
+of the Lambda Calculus to drive the bijective function. That such an ordering is
+possible is another consequence of [G&ouml;del's
 work.](https://en.wikipedia.org/wiki/G%C3%B6del_numbering) Generations of
 mathematicians and philosophers have accepted that Cantor's argument is valid,
-but the success of Computability Theory begs the question: how "real" is a
+but the very success of Computability Theory begs the question: how "real" is a
 number that cannot be computed?
 
 Taken strictly in its own terms, Cantor's argument is air tight. But from the
 historically more traditional, empiricist view of mathematics it is deeply
 circular. Cantor begins by stipulating that concepts like the "set of natural
 numbers" and "set of real numbers" make sense and that such sets have
-cardinalities. Further, you can never literally carry out his procedure for
-showing that \\(|\mathbb{R}| > |\mathbb{N}|\\) since you would first have to
-produce a "completed infinity" of representations of real numbers, each of which
-was a "completed infinity" of digits and finally produce yet another "completed
-infinity" of digits using the "slash" procedure. So, while Cantor's results and
-all the results that followed from it are logically valid, the only
-meta-mathematical realities to which they lead are represented by the countably
-many real numbers described by Computability Theory.
-
-That there are these sorts of tensions between "pure" and "applied" mathematics
-became inevitable once mathematicians embraced validity over truth. What is
-remarkable is, despite that tension, how often what begins as an exploration of
-a pure mathematical abstraction, e.g. Computability Theory, yields results with
-powerful and even world-changing applications, e.g. Computer Science. Similar
-examples can be found in other scientific domains. Non-Euclidean Geometries have
-found practical (for some definition of "practical") use in various branches of
-Physics rather than remaining solely the province of abstract considerations of
-Euclid's axioms.
+cardinalities. Only on that basis can you even pose the question as to whether
+and how their cardinalities differ. Even accepting those premises, you can never
+literally carry out his procedure for showing that \\(|\mathbb{R}| >
+|\mathbb{N}|\\) since you would first have to produce a "completed infinity" of
+representations of real numbers, each of which was a "completed infinity" of
+digits and finally produce yet another "completed infinity" of digits using the
+"slash" procedure. So, while Cantor's results and all the results that followed
+from it are logically valid, the only meta-mathematical realities to which they
+lead are represented by the countably many real numbers described by
+Computability Theory. Consider the opposite interpretation, for a moment.
+Viewing Cantor's argument as showing not that the cardinality of the continuum
+is greater than that of the set of natural numbers but, rather, that the
+continuum does not have a cardinality in any meaningful sense helps address
+quite a number of problems, including the so-called "tail problem" of Quantum
+Physics. More fundamentally, the continuum cannot be real in the same sense as
+physical reality since there is no such thing as an infinitely subdivisible
+physical substance. Subdivide any real substance into smaller segments enough
+and you reach a point at which you must start pulling molecules apart, then
+atoms, subatomic particles, quarks and eventually, if some popular theories
+hold, you reach the level of the "strings" of "string theory" which could then
+not be subdivided any further. Long before then, of course, the structural
+integrity of whatever object you began with would have broken down so far that
+the pieces into which it had been split would no longer be meaningfully
+understood to be smaller segments of a formerly single object made of a single
+substance. E.g. cut an actual macroscopic string in half, then each of the
+halves in half and so on. Long before you reach the level of molecules the
+fibers out of which the string was made would stop being at all string-like and
+so you would no longer be cutting strings in half as you continued to "subdivide
+a piece of string". At the sub-microscopic scale, the whole point of Quantum
+Physics is that physical matter is an agglomeration of discrete constituents,
+each of which can be observed to be in a specific, computable state when
+observed under the correct conditions. The "real number line" with its
+infinitely large number of points between any two points can only be understood
+as a mathematical object with no direct meta-mathematical correspondence to
+anything in the real world. Unless almost everything contemporary Physicists
+believe is wrong, the number of possible states of all the subatomic particles
+in the real world is not even infinite, much less uncountably so even as they
+use mathematics involving the continuum to reason about it. As already pointed
+out, the risk is in mistaking features of a mathematical model for features of
+the thing being modeled by some meta-mathematical theory. That there are these
+sorts of tensions between "pure" and "applied" mathematics became inevitable
+once mathematicians embraced validity over truth. What is remarkable, despite
+that tension, is how often what begins as an exploration of a pure mathematical
+abstraction, e.g. Computability Theory, yields results with powerful and even
+world-changing applications, e.g. Computer Science. Similar examples can be
+found in other scientific domains. Non-Euclidean Geometries have found practical
+(for some definition of "practical") use in various branches of Physics rather
+than remaining solely the province of abstract considerations of Euclid's
+axioms.
 
 Programmers use the term "lambda" to refer to an anonymous function because of
 Church's Lambda Calculus and, more importantly, the Lambda Calculus is the
@@ -726,7 +767,7 @@ a negative number.
     \end{cases}
 \\]
 
-where `NaN` is the IEEE 754 constant meaning "Not a Number," `INFINITY` is the
-IEEE 754 constant meaning \\(\infty\\). Also, 0 and `INFINITY` are signed in the
-IEEE 754 specification and follow the usual rules for sign agreement in
+where `NaN` is the IEEE 754 constant meaning "Not a Number" and `INFINITY` is
+the IEEE 754 constant meaning \\(\infty\\). Also, 0 and `INFINITY` are signed in
+the IEEE 754 specification and follow the usual rules for sign agreement in
 division.

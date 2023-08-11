@@ -71,8 +71,8 @@ Scheme's `if` special form behaves the way you would expect. It executes one of
 two branches of code depending on the result of evaluating an expression:
 
 ```scheme
-// invoke `do-if-true` if `test` returns a value other than #f,
-// otherwise, invoke `do-otherwise`
+;; invoke `do-if-true` if `test` returns a value other than #f,
+;; otherwise, invoke `do-otherwise`
 (if (test)
     (do-if-true)
     (do-otherwise))
@@ -86,10 +86,10 @@ represents the continuation of the flow of control of the original call to
 `call/cc`:
 
 ```scheme
-// the given lambda is invoked by call/cc
-//
-// k is a procedure which, when invoked,
-// causes the invocation of call/cc to return
+;; the given lambda is invoked by call/cc
+;;
+;; k is a procedure which, when invoked,
+;; causes the invocation of call/cc to return
 (call/cc (lambda (k) ...))
 ```
 
@@ -225,7 +225,7 @@ There are a number of things to note about the preceding:
 
 - _A given contination can be invoked from multiple points in a flow_
 
-  See the [drill-hole](dynamic-wind.md#drill-hole) example, which is a more
+  See the [scan-sample](dynamic-wind.md#scan-sample) example, which is a more
   elaborate version of `fn1` / `fn2`
 
 - _Multiple continuations can exist for different points in the flow through an
@@ -256,6 +256,7 @@ Continuations can also be used to re-enter a previously exited context. This the
 purpose of [dynamic-wind](dynamic-wind.md) is semantically similar to
 `unwind-protect`, except with support for running code both before and after the
 protected code every time the protected code is entered or exited. See
-[drill-hole](dynamic-wind.md#drill-hole) for a much further elaborated exception
-handling example demonstrating how the relationship between `fn1` and `fn2`
-shown above can be extended to handle something closer to a real world use case.
+[scan-sample](dynamic-wind.md#scan-sample) for a much further elaborated
+exception handling example demonstrating how the relationship between `fn1` and
+`fn2` shown above can be extended to handle something closer to a real world use
+case.

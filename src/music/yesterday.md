@@ -1,8 +1,9 @@
 # Yesterday
 
-Here is the setup I used when creating tracks in the 70's and 80's, a few of
-which eventually were published as the album _Undecidable_ in 2011, once
-self-publishing music started to become a thing:
+Here is the setup I used when creating tracks in the 70's and 80's, a
+few of which eventually were published as the album
+[_Undecidable_](musicography/musicography.md#undecidable) in 2011,
+once self-publishing music started to become a thing:
 
 ```mermaid
 graph LR

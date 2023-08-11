@@ -69,7 +69,7 @@ resumable exceptions when user intervention is required together with
 `dynamic-wind` to ensure that the emitter is always off when the door is
 unlocked.
 
-<a id="drill-hole"></a>
+<a id="scan-sample"></a>
 
 ```scheme
 ;; demonstrates:

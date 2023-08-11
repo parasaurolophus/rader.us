@@ -11,7 +11,7 @@
     - [Bandcamp](music/musicography/bandcamp.md)
     - [Spotify](music/musicography/spotify.md)
     - [Youtube Music](music/musicography/youtube.md)
-  - [Yesterday](music//yesterday.md)
+  - [Yesterday](music/yesterday.md)
   - [Today](music/today.md)
   - [Mostly Analog](music/analog.md)
   - [More Than a Little Digital](music/digital.md)
