@@ -280,6 +280,25 @@ influences as fair warning.
 
 - [Sonic Pi source for _Fanrandole in Tempore Belli_](../sonicpi/Farandole_in_Tempore_Belli.md)
 
+## Digitalis
+
+![Digitalis](covers/Digitalis.png)
+
+**UPC:** 859777027563
+
+**Released:** 2023
+
+| Track No | Track                                                | ISRC            |
+| -------- | ---------------------------------------------------- | --------------- |
+| 1        | Digitalis in C Minor                                 | QZ-XKT-23-00092 |
+| 2        | Poison                                               | QZ-XKT-23-00093 |
+| 3        | Synaesthesia                                         | QZ-XKT-23-00093 |
+| 4        | Chromatic Parrots                                    | QZ-XKT-23-00095 |
+| 5        | Shuffle Off                                          | QZ-XKT-23-00096 |
+| 6        | Tethyc Tempo                                         | QZ-XKT-23-00097 |
+| 7        | Tethyc Melody                                        | QZ-XKT-23-00098 |
+| 8        | Arise, Fair Sun                                      | QZ-XKT-23-00099 |
+
 ---
 
 <a id="undecidable_note">*</a> Even though you didn't ask and probably weren't
