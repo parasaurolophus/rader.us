@@ -10,7 +10,7 @@ graph TB
 
         subgraph "My Basement"
 
-            keyboard[\"Akai Pro MPK261"/]
+            keyboard["Akai Pro MPK261"]
             b2600["Behringer 2600"]
 
             eurorack["Various\nEurorack\nModules"]
@@ -28,32 +28,32 @@ graph TB
                 sonicpi --> flac
             end
 
-            monitor[/"PA / Headphones"\]
+            monitor["PA / Headphones"]
 
         end
 
         subgraph cloud["Online Publishers"]
             cdbaby["cdbaby.com /\ntunecore.com"]
-            bandcamp[/"bandcamp.com"\]
+            bandcamp["bandcamp.com"]
         end
 
         subgraph "Streaming Services (plus many more not shown)"
-            itunes[/"iTunes"\]
-            youtube[/"YouTube Music"\]
-            spotify[/"Spotify"\]
-            amazon[/"Amazon Music"\]
+            itunes["iTunes"]
+            youtube["YouTube Music"]
+            spotify["Spotify"]
+            amazon["Amazon Music"]
         end
 
         subgraph "Licensing & Royalty Collection"
-            soundexchange[/"SoundExchange"\]
+            soundexchange["SoundExchange"]
         end
 
-        adc -- "MIDI\n(DIN)" --> b2600
-        keyboard -- "MIDI\n(USB)" --> computer
+        keyboard -- "MIDI\n(DIN)" --> b2600
         b2600 <-- "trigger,\ngate,\ncontrol voltage,\nanalog audio" --> eurorack
         b2600 -- "analog\naudio" --> adc
         adc <-- "digital audio,\nMIDI\n(USB)" --> computer
         adc -- "monitor" --> monitor
+        computer <-- "MIDI\n(USB)" --> keyboard
         computer -- "publish" --> cdbaby
         computer -- "publish" --> bandcamp
         cdbaby -- "distribute" --> itunes
