@@ -33,7 +33,7 @@ graph TB
         end
 
         subgraph cloud["Online Publishers"]
-            cdbaby["cdbaby.com"]
+            cdbaby["cdbaby.com /\ntunecore.com"]
             bandcamp[/"bandcamp.com"\]
         end
 

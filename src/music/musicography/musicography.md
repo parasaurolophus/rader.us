@@ -35,7 +35,33 @@ influences as fair warning.
 
 ---
 
-## Undecidable[<sup>*</sup>](#undecidable_note)
+## Ringtones
+
+### Analogy in C Major (Ringtone)
+
+![Analogy in C Major (Ringtone)](covers/Analogy_in_C_Major_Ringtone.png)
+
+**UPC:** 859777027563
+
+**ISRC:** QZ-XKT-23-00101
+
+**Released:** 2023
+
+## Singles
+
+### Undine
+
+![Undine](covers/Undine.png)
+
+**UPC:** 859777066418
+
+**ICRC:** QZ-XKT-23-00100
+
+**Released:** 2023
+
+## Albums
+
+### Undecidable[<sup>*</sup>](#undecidable_note)
 
 ![Undecidable](covers/Undecidable.png)
 
@@ -54,7 +80,7 @@ influences as fair warning.
 
 ---
 
-## Dum Vivimus
+### Dum Vivimus
 
 ![Dum Vivimus](covers/Vivimus.png)
 
@@ -75,7 +101,7 @@ influences as fair warning.
 
 ---
 
-## Untitled
+### Untitled
 
 ![Untitle](covers/Untitled.png)
 
@@ -91,7 +117,7 @@ influences as fair warning.
 
 ---
 
-## Songs Not Yet and No Longer Sung
+### Songs Not Yet and No Longer Sung
 
 ![Songs Not Yet and No Longer Sung](covers/Songs.png)
 
@@ -113,7 +139,7 @@ influences as fair warning.
 
 ---
 
-## March
+### March
 
 ![March](covers/March.png)
 
@@ -129,7 +155,7 @@ influences as fair warning.
 
 ---
 
-## April
+### April
 
 ![April](covers/April.png)
 
@@ -149,7 +175,7 @@ influences as fair warning.
 
 ---
 
-## No Chatbots Were Harmed in the Making of This Album
+### No Chatbots Were Harmed in the Making of This Album
 
 ![No Chatbots Were Harmed in the Making of This Album](covers/Chatbots.png)
 
@@ -171,7 +197,7 @@ influences as fair warning.
 
 ---
 
-## Ambivalence
+### Ambivalence
 
 ![Ambivalence](covers/Ambivalence.png)
 
@@ -194,7 +220,7 @@ influences as fair warning.
 
 ---
 
-## The Modern Temple of Amusement
+### The Modern Temple of Amusement
 
 ![The Modern Temple of Amusement](covers/Modern.png)
 
@@ -202,7 +228,7 @@ influences as fair warning.
 
 **Released:** 2023
 
-### Volume 1
+#### Volume 1
 
 | Track No | Track                            | ISRC            |
 | -------- | -------------------------------- | --------------- |
@@ -218,7 +244,7 @@ influences as fair warning.
 | 10       | Foggy River                      | QZ-XKT-23-00059 |
 | 11       | Decommissioned                   | QZ-XKT-23-00060 |
 
-### Volume 2
+#### Volume 2
 
 | Track No | Track            | ISRC            |
 | -------- | ---------------- | --------------- |
@@ -235,7 +261,7 @@ influences as fair warning.
 
 ---
 
-## Album 10
+### Album 10
 
 ![Album 10](covers/AlbumX.png)
 
@@ -257,7 +283,7 @@ influences as fair warning.
 | 10       | Reductio ad absurdum | QZ-XKT-23-00080 |
 | 11       | Epilogue             | QZ-XKT-23-00081 |
 
-## Rhythms
+### Rhythms
 
 ![Rhythms](covers/Rhythms.png)
 
@@ -280,7 +306,7 @@ influences as fair warning.
 
 - [Sonic Pi source for _Fanrandole in Tempore Belli_](../sonicpi/Farandole_in_Tempore_Belli.md)
 
-## Digitalis
+### Digitalis
 
 ![Digitalis](covers/Digitalis.png)
 
