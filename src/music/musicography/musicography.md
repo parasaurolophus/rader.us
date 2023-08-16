@@ -53,9 +53,9 @@ influences as fair warning.
 
 ![Undine](covers/Undine.png)
 
-**UPC:** 859777066418
+**UPC:** _TBD_
 
-**ICRC:** QZ-XKT-23-00100
+**ISRC:** QZ-XKT-23-00100
 
 **Released:** 2023
 
@@ -310,7 +310,7 @@ influences as fair warning.
 
 ![Digitalis](covers/Digitalis.png)
 
-**UPC:** 859777027563
+**UPC:** 198025865497
 
 **Released:** 2023
 
