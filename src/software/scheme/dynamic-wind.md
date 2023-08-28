@@ -148,7 +148,7 @@ unlocked.
               (display-message "samples scanned: " count)))))))
 ```
 
-See [xrf.scm](xrf.scm)
+See [xrf.ss](xrf.ss)
 
 
 While all of the subroutines and helpers are defined inside the body of

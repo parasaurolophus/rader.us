@@ -1,4 +1,5 @@
-;; -*- geiser-scheme-implementation: guile -*-
+#!r6rs
+(import (rnrs))
 
 ;; simulated xrf scanner referred to in
 ;; https://www.rader.us/software/scheme/dynamic-wind.html
@@ -48,7 +49,7 @@
 
   (let ((display-message (lambda (message sample)
                            ;; common helper that prints a message to stdout
-                           (display (string-join (list message (number->string sample) "\n") "")))))
+                           (display (string-append message (number->string sample) "\n")))))
 
     ;; deliberately not mutually-callable procedures representing various states of the xrf
     ;; spectrometer hardware
@@ -81,20 +82,20 @@
                                              ;; forms are executing
                                              ((with-emitter-energized protected ...)
                                               (dynamic-wind
-                                                energize-emitter
-                                                (lambda () protected ...)
-                                                de-energize-emitter))))
+                                               energize-emitter
+                                               (lambda () protected ...)
+                                               de-energize-emitter))))
                    (with-door-locked (syntax-rules ()
                                        ;; ensure the sample chamber door is locked while the
                                        ;; protected forms are executing
                                        ((with-door-locked protected ...)
                                         (dynamic-wind
-                                          lock-door
-                                          (lambda () protected ...)
-                                          unlock-door)))))
+                                         lock-door
+                                         (lambda () protected ...)
+                                         unlock-door)))))
 
-        (letrec ((count 1)
-                 (resume (with-door-locked (with-emitter-energized (record-data count)))))
+        (let* ((count 1)
+               (resume (with-door-locked (with-emitter-energized (record-data count)))))
           ;; keep scanning and following prompts to reposition the sample until record-data
           ;; signals it is finished by not returning a continuation
           (if (procedure? resume)
