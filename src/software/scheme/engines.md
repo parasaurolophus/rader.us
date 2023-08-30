@@ -5,7 +5,7 @@
 A practical application of continuations to implement sophisticated flows of
 control.
 
-- [engines.ss](engines.ss)
+- [engines.scm](engines.scm)
 
 In <a href="ftp://www.cs.indiana.edu/pub/techreports/TR254.pdf">Engines from
 Continuations</a>, Dybvig and Hieb [1988] describe how the flow of control

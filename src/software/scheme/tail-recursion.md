@@ -191,20 +191,21 @@ computation before invoking a subroutine. It must also be able to restore that
 state so that it can continue from where it left off after the subroutine
 completes its work. This is done by pushing a _stack frame_ containing a
 snapshot of certain critical information about a program's current state as the
-top-most entry in a special area of memory, the _stack_. The stack frame
-includes information about where the program should resume after the subroutine
-completes its work. It then invokes the subroutine and the subroutine consults
-the stack frame in order to return to the point from which it was called. The
-stack frame is popped off the stack and execution continues. If routine A calls
-subroutine B and subroutine B calls subroutine C before returning to A, the
-stack must have enough free capacity to store frames for both B and C for the
-duration of the execution of C. If the program detects that there is no more
-room on the stack at the point at which it is about to call a subroutine, it
-signals a "stack overflow" error and the current computation is aborted. Given
-the first definition of `factorial` shown above, the stack would need room for
-at least `n` frames whenever it is called. Since computer memory is a finite
-resource, it does not require enormously large values of `n` to cause a stack
-overflow for most real world hardware.
+top-most entry in a special area of memory, the _stack_, which is organized as a
+LIFO (Last In, First Out) queue. The stack frame includes information about
+where the program should resume after the subroutine completes its work. It then
+invokes the subroutine and the subroutine consults the stack frame in order to
+return to the point from which it was called. The stack frame is popped off the
+stack and execution continues. If program A calls subroutine B and subroutine B
+calls subroutine C before returning to A, the stack must have enough free
+capacity to store frames for both B and C for the duration of the execution of
+C. If the program detects that there is no more room on the stack at the point
+at which it is about to call a subroutine, it signals a "stack overflow" error
+and the current computation is aborted. Given the first definition of
+`factorial` shown above, the stack would need room for at least `n` frames
+whenever it is called. Since computer memory is a finite resource, it does not
+require enormously large values of `n` to cause a stack overflow for most real
+world hardware.
 
 ---
 

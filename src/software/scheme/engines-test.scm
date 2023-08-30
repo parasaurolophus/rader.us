@@ -1,4 +1,7 @@
+; -*- mode: Racket; -*-
+
 #!r6rs
+
 (import (rnrs) (engines))
 
 ;; Copyright 2016-2023 Kirk Rader

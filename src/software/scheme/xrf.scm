@@ -1,3 +1,5 @@
+; -*- mode: Racket; -*-
+
 #!r6rs
 (import (rnrs))
 
