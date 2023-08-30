@@ -1,7 +1,4 @@
-; -*- mode: Racket; -*-
-
 #!r6rs
-
 (import (rnrs) (return))
 
 ;; unit tests for return.scm library

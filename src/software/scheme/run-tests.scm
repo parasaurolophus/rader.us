@@ -1,9 +1,5 @@
-; -*- mode: Racket; -*-
-
 #!r6rs
-
 (library
-
  (run-tests)
 
  (export assert-true assert-false assert-equal assert-eqv assert-eq fail run-tests)

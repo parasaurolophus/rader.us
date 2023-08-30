@@ -1,9 +1,5 @@
-; -*- mode: Racket; -*-
-
 #!r6rs
-(import
- (rnrs)
- (run-tests))
+(import (rnrs) (run-tests))
 
 (define (run-tests-test)
   (run-tests
