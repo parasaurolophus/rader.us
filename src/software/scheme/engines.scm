@@ -100,7 +100,7 @@
   ;; fails to call decrement-timer! often enough in inner loops.
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  (export decrement-timer! make-engine engine-return)
+  (export decrement-timer! make-engine engine-block engine-return)
 
   (import (rnrs))
 
@@ -228,12 +228,22 @@
   ;;                 (display "given new-engine to resume")
   ;;                 (newline))))
   ;;
-  ;; See: engine-return
+  ;; See: engine-block, engine-return
   (define (make-engine thunk)
     (new-engine
      (lambda (ticks)
        (start-timer! ticks timer-handler)
        (engine-return (thunk)))))
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; Function: (engine-block)
+  ;;
+  ;; Cause the currently executing engine to immediately yield to its
+  ;; expiration handler as if its fuel had run out.
+  ;;
+  ;; See: make-engine, engine-return
+  (define (engine-block)
+    (call/cc (lambda (resume) (do-expire))))
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Function: (engine-return value)
@@ -247,7 +257,7 @@
   ;;
   ;; Usage: (engine-return 'my-value)
   ;;
-  ;; See: make-engine
+  ;; See: make-engine, engine-block
   (define (engine-return value)
     (if active?
         (let ((ticks (stop-timer!)))
