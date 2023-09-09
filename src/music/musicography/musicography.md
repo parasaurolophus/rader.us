@@ -325,6 +325,51 @@ influences as fair warning.
 | 7        | Tethyc Melody                                        | QZ-XKT-23-00098 |
 | 8        | Arise, Fair Sun                                      | QZ-XKT-23-00099 |
 
+### XIII
+
+![XIII](covers/XIII.png)
+
+**UPC:** 198053826262
+
+**Released:** 2023
+
+| Track No | Track                   | ISRC            |
+|----------|-------------------------|-----------------|
+| 1        | Undine                  | QZ-XKT-23-00100 |
+| 2        | I Alone Am Left         | QZ-XKT-23-00102 |
+| 3        | Whistling Gongs         | QZ-XKT-23-00103 |
+| 4        | Y. A. M. P.             | QZ-XKT-23-00104 |
+| 5        | Tower of Sines          | QZ-XKT-23-00105 |
+| 6        | Lean To                 | QZ-XKT-23-00106 |
+| 7        | Contrary Trigonometry   | QZ-XKT-23-00107 |
+| 8        | Growling Bells          | QZ-XKT-23-00108 |
+| 9        | Schoenbergian Steampunk | QZ-XKT-23-00109 |
+| 10       | Twelvish Tones          | QZ-XKT-23-00110 |
+| 11       | Twelvish More Tones     | QZ-XKT-23-00111 |
+| 12       | Without Indication      | QZ-XKT-23-00112 |
+| 13       | XII                     | QZ-XKT-23-00113 |
+
+### Empyrean
+
+![Empyrean](covers/Empyrean.png)
+
+**UPC:** 198027297876
+
+**Released:** 2023
+
+| Track No | Track                              | ISRC            |
+|----------|------------------------------------|-----------------|
+| 1        | Whome the Gods Destroy             | QZ-XKT-23-00114 |
+| 2        | They First Make Mad                | QZ-XKT-23-00115 |
+| 3        | Steady State                       | QZ-XKT-23-00116 |
+| 4        | Traces Through the Cloud Chamber   | QZ-XKT-23-00117 |
+| 5        | Unstead State (Steady State Redux) | QZ-XKT-23-00118 |
+| 6        | Noisy Melody                       | QZ-XKT-23-00119 |
+| 7        | Ready, Steady                      | QZ-XKT-23-00120 |
+| 8        | Airy Fairy                         | QZ-XKT-23-00121 |
+| 9        | March of the Airy Fairies          | QZ-XKT-23-00122 |
+| 10       | Migration                          | QZ-XKT-23-00123 |
+
 ---
 
 <a id="undecidable_note"><sup>*</sup></a> Even though you didn't ask and

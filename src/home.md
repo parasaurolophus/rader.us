@@ -49,4 +49,3 @@
 
 - [Philosophy of Science](philosophy/philosophy.md)
   - [How the Parallel Postulate Changed Everything](philosophy/computability.md)
-  - [Quantum Physcists Just Need to Get Over It](philosophy/quanta.md)
