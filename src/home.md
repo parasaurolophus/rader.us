@@ -49,3 +49,9 @@
 
 - [Philosophy of Science](philosophy/philosophy.md)
   - [How the Parallel Postulate Changed Everything](philosophy/computability.md)
+
+---
+
+## Er, Um... Hits?
+
+- [Less Outr&eacute; Music](hits/hits.md)

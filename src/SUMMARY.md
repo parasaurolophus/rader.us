@@ -38,3 +38,7 @@
 - [Philosophy of Science](philosophy/philosophy.md)
   - [How the Parallel Postulate Changed Everything](philosophy/computability.md)
   - [Quantum Physicists Just Need to Get Over It](philosophy/quanta.md)
+
+# Er, Um... Hits?
+
+- [Less Outr&eacute; Music](hits/hits.md)
