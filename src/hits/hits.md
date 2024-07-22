@@ -21,7 +21,9 @@ of them as aural palette cleansers.
 |  5 | [segnahC cigaM](./05%20segnahC%20cigaM.mp3)                               | Stupid tape tricks recorded on a TASCAM PortaStudio ca 1980 |
 |  6 | [Farandole Lamentoso (2600)](./06%20Farandole%20Lamentoso%20-%202600.mp3) | Jaunty rhythm in a minor key                                |
 |  7 | [Farandole in Tempore Belli](./07%20Farandole%20in%20Tempore%20Belli.mp3) | Same, but with sampled drums                                |
-|  8 | [Analogy in C Major](./08%20Analogy%20in%20C%20Major.mp3)                 | Major mode variation on track 1                             |
+|  8 | [Crouched for Employment](./08%20Crouched%20for%20Employment.mp3)         |                                                             |
+|  9 | [Rainy Day Fanfare](./09%20Rainy%20Day%20Fanfare.mp3)                     |                                                             |
+| 10 | [Analogy in C Major](./08%20Analogy%20in%20C%20Major.mp3)                 | Major mode variation on track 1                             |
 
 ## Not Quite as Weird as Most
 
@@ -31,11 +33,11 @@ definitely an acquired taste.
 
 |  # | MP3                                                                                                     | Liner Notes                     |
 |---:|---------------------------------------------------------------------------------------------------------|---------------------------------|
-|  9 | [McFarland Souvenir (for Sean and Mary)](./09%20McFarland%20Souvenir%20-%20for%20Sean%20and%20Mary.mp3) | Demoing my process to relatives |
-| 10 | [Steady State](./10%20Steady%20State.mp3)                                                               |                                 |
-| 11 | [Unsteady State (Steady State Redux)](./11%20Unsteady%20State%20(Steady%20State%20Redux).mp3)           |                                 |
-| 12 | [Ready, Steady](./12%20Ready,%20Steady.mp3)                                                             |                                 |
-| 13 | [Triad](./13%20Triad.mp3)                                                                               |                                 |
-| 14 | [Arise, Fair Sun](./14%20Arise%20Fair%20Sun.mp3)                                                        |                                 |
-| 15 | [Air Fairy](./15%20Airy%20Fairy.mp3)                                                                    |                                 |
-| 16 | [March of the Airy Fairies](./16%20March%20of%20the%20Airy%20Fairies.mp3)                               |                                 |
+| 11 | [McFarland Souvenir (for Sean and Mary)](./09%20McFarland%20Souvenir%20-%20for%20Sean%20and%20Mary.mp3) | Demoing my process to relatives |
+| 12 | [Steady State](./10%20Steady%20State.mp3)                                                               |                                 |
+| 13 | [Unsteady State (Steady State Redux)](./11%20Unsteady%20State%20(Steady%20State%20Redux).mp3)           |                                 |
+| 14 | [Ready, Steady](./12%20Ready,%20Steady.mp3)                                                             |                                 |
+| 15 | [Triad](./13%20Triad.mp3)                                                                               |                                 |
+| 16 | [Arise, Fair Sun](./14%20Arise%20Fair%20Sun.mp3)                                                        |                                 |
+| 17 | [Air Fairy](./15%20Airy%20Fairy.mp3)                                                                    |                                 |
+| 18 | [March of the Airy Fairies](./16%20March%20of%20the%20Airy%20Fairies.mp3)                               |                                 |
