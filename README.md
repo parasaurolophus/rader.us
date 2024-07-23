@@ -4,12 +4,12 @@ mdbook sources for a personal web page
 
 ## Install
 
-| Package        | Instructions                                                 |
-|----------------|--------------------------------------------------------------|
-| Rust           | <https://www.rust-lang.org/tools/install>                    |
-| mdbook         | <https://rust-lang.github.io/mdBook/guide/installation.html> |
-| mdbook-toc     | <https://lib.rs/crates/mdbook-toc>                           |
-| mdbook-mermaid | <https://lib.rs/crates/mdbook-mermaid>                       |
+| Package        | Instructions                              |
+|----------------|-------------------------------------------|
+| Rust           | <https://www.rust-lang.org/tools/install> |
+| mdbook         | <hhttps://lib.rs/crates/mdbook>           |
+| mdbook-toc     | <https://lib.rs/crates/mdbook-toc>        |
+| mdbook-mermaid | <https://lib.rs/crates/mdbook-mermaid>    |
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
