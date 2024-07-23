@@ -6,11 +6,11 @@ The albums I have been publishing more recently have been created using
 variations of this setup:
 
 ```mermaid
-graph TB
+graph BT
 
         subgraph "My Basement"
 
-            keyboard["Akai Pro MPK261"]
+            keyboard(["Akai Pro MPK261"])
             b2600["Behringer 2600"]
 
             eurorack["Various\nEurorack\nModules"]
@@ -28,12 +28,12 @@ graph TB
                 sonicpi --> flac
             end
 
-            monitor["PA / Headphones"]
+            monitor(["PA / Headphones"])
 
         end
 
         subgraph cloud["Online Publishers"]
-            cdbaby["cdbaby.com"]
+            cdbaby["cdbaby.com\ndistrokid.com\netc."]
             bandcamp["bandcamp.com"]
         end
 
