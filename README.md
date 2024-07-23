@@ -6,9 +6,17 @@ mdbook sources for a personal web page
 
 | Package        | Instructions                                                 |
 |----------------|--------------------------------------------------------------|
-| Rust           | <https://rust-lang.github.io/mdBook/guide/installation.html> |
+| Rust           | <https://www.rust-lang.org/tools/install>                    |
 | mdbook         | <https://rust-lang.github.io/mdBook/guide/installation.html> |
+| mdbook-toc     | <https://lib.rs/crates/mdbook-toc>                           |
 | mdbook-mermaid | <https://lib.rs/crates/mdbook-mermaid>                       |
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+cargo install mdbook
+cargo install mdbook-toc
+cargo install mdbook-mermaid
+```
 
 ## Test
 
