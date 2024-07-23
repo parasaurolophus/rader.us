@@ -1,3 +1,0 @@
-#!/bin/bash
-
-curl https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js > mermaid.min.js

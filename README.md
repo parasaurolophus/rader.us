@@ -26,29 +26,60 @@ See [Notes](#notes) for additional configuration information.
 
 ## Test
 
+### Test Manual
+
+This will open your default browser
+
 ```bash
 mdbook clean ; mdbook serve --open
 ```
 
+### Test Using Makefile
+
+```bash
+make clean test
+```
+
 ## Build
+
+HTML output will be in the _book_ subdirectory.
+
+### Build Manually
 
 ```bash
 mdbook clean ; mdbook build
 ```
 
-HTML output will be in the _book_ subdirectory.
+### Build Using Makefile
+
+```bash
+make clean build
+```
 
 ## Deploy
 
-Upload the contents of the _book_ subdirectory to the server's root directory.
+After [testing](#test) and [building](#build), upload the contents of the
+_book_ subdirectory to the server's root directory. As a convenience, you can
+create a zip archive of the deployment directory using:
 
 ```bash
-./zipbook
+# just archive the current contents of the build output directory
+make zip
+
+# create an archive after completely cleaning and rebuilding:
+make all
 ```
 
-As a convenience, the _zipbook_ bash script will clean, build and then create a
-zip archive of the _book_ directory named _book.zip_ which can then be
-unzippped in the web server's root directory
+## Update _mermaid.min.js_
+
+To update to the latest version of Mermaid:
+
+```bash
+make mermaid
+```
+
+(But beware of breaking changes to Mermaid diagram or initialization script
+syntax.)
 
 ## Notes
 
@@ -75,5 +106,3 @@ unzippped in the web server's root directory
   command = "mdbook-graphviz"
   output-to-file = false # defaults to false, change to true to create SVG files instead of rendering them inline
   ```
-
-* Use `./update_mermaid` to upgrade to the latest version of mermaid
