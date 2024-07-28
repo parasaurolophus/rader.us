@@ -21,21 +21,21 @@ No, really.
 
 ## Euclid's Parallel Postulate
 
-Once upon a time, mathematicians in the Western tradition regarded themselves as
-engaged in a science, not different in kind from chemistry or physics. In this
-way of regarding mathematical truth, the fact that \\( 2 + 2 = 4 \\) is proven
-by empirical observation: if I hold two pebbles in my hand then pick up two
-more, I will be holding a total of four pebbles. This empiricism was used not
-only to justify claims about which mathematical statements were true and which
-were not, it guided the way that mathematical problems were posed and solved. As
-mathematical theories advanced and techniques expanded to include an ever
-increasing degree of abstraction, they remained for a very long time rooted in
-empiricism. Negative numbers, for example, were initially justified by using the
-kind of reasoning modern bookkeepers would recognize as a double-entry ledger.
-(e.g. \\(-3 + 2 = -1\\) is like telling someone who is holding $2 that they owe
-you $3; after they pay you all they have, they still owe you $1 &mdash; and that
-is how ancient generations of mathematicians actually justified introducing
-negative numbers into their calculations).
+Once upon a time, mathematicians in the Western tradition regarded themselves
+as engaged in a science, not different in kind from chemistry or physics. In
+this way of regarding mathematical truth, the fact that \\( 2 + 2 = 4 \\) is
+proven by empirical observation: if I hold two pebbles in my hand then pick up
+two more, I will be holding a total of four pebbles. This empiricism was used
+not only to justify claims about which mathematical statements were true and
+which were not, it guided the way that mathematical problems were posed and
+solved. As mathematical theories advanced and techniques expanded to include an
+ever increasing degree of abstraction, they remained for a very long time
+rooted in empiricism. Negative numbers, for example, were initially justified
+by using the kind of reasoning modern bookkeepers would recognize as a
+double-entry ledger. For example, \\(-3 + 2 = -1\\) is like telling someone who
+is holding $2 that they owe you $3; after they pay you all they have, they
+still owe you $1 &mdash; and that is how ancient generations of mathematicians
+actually justified introducing negative numbers into their calculations.
 
 Euclid's _Elements_ epitomizes this view of the nature and practice of
 mathematics. While providing the model for an axiomitic approach to mathematical
@@ -55,12 +55,12 @@ compared to the other axioms and postulates.
 
 > Euclid's parallel postulate:
 >
-> If a line segment intersects two straight lines forming two
-> interior angles on the same side that are less than two right
-> angles, then the two lines, if extended indefinitely, meet on
-> that side on which the angles sum to less than two right angles.
-
-![Euclid's Fifth Postulate](fifth_postulate_diagram.png)
+> If a line segment intersects two straight lines forming two interior angles
+> on the same side that are less than two right angles, then the two lines, if
+> extended indefinitely, meet on that side on which the angles sum to less than
+> two right angles.
+>
+> ![Euclid's Fifth Postulate](fifth_postulate_diagram.png)
 
 From Euclid's time right into the start of the modern era, mathematicians were
 not happy about this. Over the course of millenia, countless attempts were made
@@ -72,27 +72,27 @@ axioms. For example:
 
 > Alternative formulation of the parallel postulate:
 >
-> Given a line and a point not on that line, there is exactly
-> one line that can be drawn through the given point that
-> does not meet the given line when both lines are
-> extended indefinitely in both directions.
+> Given a line and a point not on that line, there is exactly one line that can
+> be drawn through the given point that does not meet the given line when both
+> lines are extended indefinitely in both directions.
+>
+> ![Alternate Parallel Postulate](alternate_fifth_postulate_diagram.gif)
 
-![Alternate Parallel Postulate](alternate_fifth_postulate_diagram.gif)
-
-After enough time and failed attempts, Western mathematicians eventually shifted
-their focus away from trying to prove that the parallel postulate was really a
-theorem. Instead they strove to produce a formal definition of why it is
-actually an axiom. By the early 19th Century, mathematical techniques had
+After enough time and failed attempts, Western mathematicians eventually
+shifted their focus away from trying to prove that the parallel postulate was
+really a theorem. Instead they strove to produce a formal explanation of why it
+is actually an axiom. By the early 19th Century, mathematical techniques had
 evolved to the point that allowed the following kind of indirect proof to be
 carried out:
 
 1. Assume some different axiom that contradicts Euclid's parallel postulate in
    some specific way.
 
-2. Show that the equivalent of Euclid's constructions and proofs that can be
-   carried out using this different version of the parallel postulate are just
-   as _internally consistent_ (i.e. produce no self-contradictions) as Euclid's
-   "classical" proofs.
+2. Show that the equivalent of Euclid's proofs that can be carried out using
+   this different version of the parallel postulate are just as _internally
+   consistent_ (i.e. produce no self-contradictions) as Euclid's "classical"
+   proofs based on observations of how pictures are formed in the real world
+   using physical tools like straight-edges and compasses.
 
 If the second step of the preceding argument can be accomplished for one or more
 variations from the parallel postulate assumed in the first step, then this
@@ -127,8 +127,9 @@ Mathematicians of their day rejoiced at Bolyai's, Lobachevsky's and Riemann's
 accomplishments for multiple reasons. They could finally regard the whole
 question pertaining to the status of the parallel postulate as satisfactorily
 settled. They could start playing with the new mathematical techiques developed
-for this enterprise, seeking additional areas of mathematical exploration. But
-there was a reckoning to be made as well: in order to accept this highly
+for this enterprise, seeking additional areas of mathematical exploration.
+
+But there was a reckoning to be made as well: in order to accept this highly
 desirable result, mathematicians were forced to alter fundamentally their
 understanding of their own profession. Mathematics came to be understood as
 being concerned with _validity_ (internal consistency) rather than (empirical)
@@ -189,25 +190,25 @@ embraced the consequences: go ahead and construct proofs based on infinite
 quantities or any other formerly forbidden category of mathematical object. So
 long as your results are internally consistent then your mathematics are valid.
 There may or may not be a meta-mathematical theory mapping your results to
-properties of the real world. If so, that may be a serendipitous side-effect, of
-potential use to scientists and engineers (among whom mathematicians could no
-longer count themselves), but such a corresondence to reality is no concern of
-"pure" math in this new way of looking at things.
+properties of the real world. If so, that may be a serendipitous side-effect,
+of potential use to scientists and engineers (among whom mathematicians could
+no longer count themselves), but such a corresondence to reality is no concern
+of "pure" math in this new way of looking at things.
 
 Simultaneously, the new emphasis on validity begged the question: what exactly
 is "validity," in the first place? Previously, it had been considered both
-necessary and sufficient to demonstrate the correctness of a mathematical theory
-to show how it described properties of real things. Even abstrations like
-negative numbers were justified by treating them the way that bookkeepers treat
-balance sheets. Oddities like what happens when you try to divide any number by
-zero were regarded as special cases needing no further explanation or inquiry
-than, "that can't happen in the real world, so just skip over it." But once
-approaches were accepted like those which used Non-Euclidean Geometries to prove
-something about classical Geometry, such empiricism was no longer necessary nor
-sufficient. The nature of mathematics and mathematical formulas in and of
-themselves suddenly became a topic of great interest to mathematicians. Thus
-were Symbolic Logic, Set Theory and Formal Linguistics born as areas of intense
-mathematical interest.
+necessary and sufficient to demonstrate the correctness of a mathematical
+theory to show how it described properties of real things. Even abstrations
+like negative numbers were justified by treating them the way that bookkeepers
+treat balance sheets. Oddities like what happens when you try to divide any
+number by zero were regarded as special cases needing no further explanation or
+inquiry than, "that can't happen in the real world, so just skip over it." But
+once approaches were accepted like those which used Non-Euclidean Geometries to
+prove something about classical Geometry, such empiricism was no longer
+necessary nor sufficient. The nature of mathematics and mathematical formulas
+in and of themselves suddenly became a topic of great interest to
+mathematicians. Thus were Symbolic Logic, Set Theory and Formal Linguistics
+born as areas of intense mathematical interest.
 
 Symbolic Logic is a mathematical system for determining whether or not a set of
 statements are mutually consistent, i.e. form a valid argument. Set Theory is an
@@ -228,43 +229,43 @@ mathematics was ready to give almost anything a go.
 The school-yard understanding of "infinity" is that once you reach it, that's
 all there is. If a grade-schooler says to her best friend, "I love you," the
 friend may reply, "I love you more!" The natural response is, "I love you twice
-as much!" Which elicits, "I love you times 10!" Then "...times 100!" Eventually,
-one of the amicable combatants will end the game with, "...times infinity," to
-which, on the school yard at least, there is no retort since (as every child
-understands) once you reach "infinity" you cannot count any higher. Cantor
-understood this school-yard intuition as meaning that what most people think of
-as \\(\infty\\) corresponds to the cardinality of the set of natural numbers. As
-a Set Theoretician would say, when you count up indefinitely from 1 (or 0,
-depending on your tastes and the context of any given discussion), you are
-defining the set of natural numbers by _intention_ and the _cardinality_ of that
-set is \\(\infty\\).
+as much!" Which elicits, "I love you times 10!" Then "...times 100!"
+Eventually, one of the amicable combatants will end the game with, "...times
+infinity," to which, on the school yard at least, there is no retort since (as
+every child understands) once you reach "infinity" you cannot count any higher.
+Cantor understood this school-yard intuition as meaning that what most people
+think of as \\(\infty\\) corresponds to the cardinality of the set of natural
+numbers. As a Set Theoretician would say, when you count up indefinitely from 1
+(or 0, depending on your tastes and the context of any given discussion), you
+are defining the set of natural numbers by _intention_ and the _cardinality_ of
+that set is \\(\infty\\).
 
 To understand Set Theory's terminology like "cardinality," "intension vs.
 extension" and so on, consider the letters of the Latin alphabet as a set of
 symbols. There are twenty-six of them as used in English, so the _cardinality_
 of this set is 26. "Cardinality" can be loosely understood as "the number of
-members of a given set." However, "cardinality" is used to allow the notion to
-be extended to sets with infinitely many members. Historically, people were
-hesitant to refer to infinite quantities as "numbers," so a different term was
-invented for "number of members" when that number's magnitude was potentially
-infinite.
+members of a given set." However, "cardinality" is used so as to allow the
+notion to be extended to sets with infinitely many members. Historically,
+people were hesitant to refer to infinite quantities as "numbers," so a
+different term was invented for "number of members" when that number's
+magnitude was potentially infinite.
 
 > There is a lot more underlying these distinctions of terminology related to
-> the original motivation for creating Set Theory in relation to ideas regarding
-> the nature of numbers and of mathematics, itself. Mathemeticians use terms
-> like "cardinal numbers," "cardinality" when talking about magnitudes, i.e.
-> quantities. They use terms like "ordinal numbers," "ordinality" when talking
-> about the relationships (ordering) among such magnitudes. Sets composed of
-> ordered magnitudes can be shown to have specific properties of great use in
-> Set Theory. At a deeper level, separating the concept of "cardinality" from
-> the concept of "number" allowed early Set Theoreticians to use the concept of
-> "cardinality of a set" to _define_ the concept of "number" in purely Set
-> Theoretical terms. But I digress....
+> the original motivation for creating Set Theory in relation to ideas
+> regarding the nature of numbers and of mathematics, itself. Mathemeticians
+> use terms like "cardinal numbers," "cardinality" when talking about
+> magnitudes, i.e. quantities. They use terms like "ordinal numbers,"
+> "ordinality" when talking about the relationships (ordering) among such
+> magnitudes. Sets composed of ordered magnitudes can be shown to have specific
+> properties of great use in Set Theory. At a deeper level, separating the
+> concept of "cardinality" from the concept of "number" allowed early Set
+> Theoreticians to use the concept of "cardinality of a set" to _define_ the
+> concept of "number" in purely Set Theoretical terms. But I digress....
 
-Sets are defined by enclosing their contents in curly braces \\(\left(\\{ \dots
-\\}\right)\\) in Set Theory. For a set defined by _extension_, what is inside the
-curly braces is an explicit list. For example the set of "letters of the
-alphabet" as used in English is
+Sets are represented by enclosing their contents in curly braces \\(\left(\\{
+\dots \\}\right)\\) in Set Theory. For a set defined by _extension_, what is
+inside the curly braces is an explicit list. For example the set of "letters of
+the alphabet" as used in English is
 
 \\[
 \\{A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z\\}
@@ -316,24 +317,25 @@ because the arithmetic addition operation does not even apply to it. And so on
 for everything in the universe, including abstractions like numbers.
 
 > Note that the preceding rule is self-referential in that it refers to the set
-> \\(\mathbb{N}\\) when defining \\(\mathbb{N}\\) by intension. Such self-reference
-> is characteristic of the definitions of infinite sets, but must be used with
-> care. Self-referential definitions can easily slip into circular arguments
-> when abused. They can also lead to problems like the "liar paradox." The
-> sentence, "I am lying," is a well-formed utterance in English. It consists of
-> meaningful English words, correctly arranged according the rules of English
-> syntax and grammar. But it cannot be said to be either true or false. If it
-> were true, then I would be lying. But since what I am saying is that I am
-> lying, to be true it must be false and vice versa. It cannot be both true and
-> false, so it must be neither. Later, we will see how such paradoxical
-> self-reference came to be used to prove important things about the nature of
-> sets of numbers and, by [G&ouml;del](https://en.wikipedia.org/wiki/Kurt_G%C3%B6del),
-> the nature of formal languages by treating them as sets of numbers.
+> \\(\mathbb{N}\\) when defining \\(\mathbb{N}\\) by intension. Such
+> self-reference is characteristic of the definitions of infinite sets, but
+> must be used with care. Self-referential definitions can easily slip into
+> circular arguments when abused. They can also lead to problems like the "liar
+> paradox." The sentence, "I am lying," is a well-formed utterance in English.
+> It consists of meaningful English words, correctly arranged according to the
+> rules of English syntax and grammar. But it cannot be said to be either true
+> or false. If it were true, then I would be lying. But since what I am saying
+> is that I am lying, to be true it must be false and vice versa. It cannot be
+> both true and false, so it must be neither. Later, we will see how such
+> paradoxical self-reference came to be used to prove important things about
+> the nature of sets of numbers and, by
+> [G&ouml;del](https://en.wikipedia.org/wiki/Kurt_G%C3%B6del), the nature of
+> formal languages by treating them as sets of numbers.
 
 This allows "the set of natural numbers" to be well defined, but what about its
 cardinality? Cantor begins his exploration of infinite quantity simply by
 stipulating that the set of natural numbers when defined by intention has a
-cardinality, which he called (\\(\aleph_{0}\\)) (pronounced "aleph null"):
+cardinality, which he called \\(\aleph_{0}\\) (pronounced "aleph null"):
 
 \\[
 \aleph_{0} = |\mathbb{N}|
@@ -344,24 +346,25 @@ cardinality, i.e. \\(|\mathbb{N}|\\) simply means the "the cardinality of the
 set \\(\mathbb{N}\\)."
 
 > It is not a coincidence that Set Theory uses the same notation for
-> "cardinality" as that used for "magnitude" in Number Theory. One of
-> the original motivations for defining Set Theory in the first place
-> was as part of an attempt to "derive" Arithmetic, in some sense,
-> from pure Logic. Sets with their cardinalities became the "proxies"
-> for numbers with their magnitudes in that context. (And that is why
-> a different term, "cardinality," for "number of members" was introduced
-> in the first place, as well; i.e. to avoid circularity when using the concept
-> of cardinality when providing a definition of the concept of number.) That
-> whole enterprise failed, but in a far more interesting way than if it had
-> succeeded. What was actually shown was not that Logic, Arithmetic, Algebra,
-> Geometry, Calculus etc. existed in a hierarchy where each level in
-> the hierarchy was somehow derivable from the next level down. (But that
-> is where the term "higher math" comes from, which you will still hear
+> "cardinality" as that used for "magnitude" in Number Theory. One of the
+> original motivations for defining Set Theory in the first place was as part
+> of an attempt to "derive" Arithmetic, in some sense, from pure Logic. Sets
+> with their cardinalities became the "proxies" for numbers with their
+> magnitudes in that context. (And that is why a different term, "cardinality,"
+> for "number of members" was introduced in the first place, as well; i.e. to
+> avoid circularity when using the concept of cardinality when providing a
+> definition of the concept of number.)
+>
+> That whole enterprise failed, but in a far more interesting way than if it
+> had succeeded. What was actually shown was not that Logic, Arithmetic,
+> Algebra, Geometry, Calculus etc. existed in a hierarchy where each level in
+> the hierarchy was somehow derivable from the next level down. (But that is
+> where the term "higher math" comes from, which you will still hear
 > non-mathematicians use to this day.) What was shown is that any formal
-> language with certain properties can be used to "model" the axioms of
-> any other such language. I.e. Set Theory is just as "derivable" from
-> Arithmetic as Arithmetic is from Set Theory &mdash; but it is not really
-> "derivation" at all but, rather, "representation."
+> language with certain properties can be used to "model" the axioms of any
+> other such language. I.e. Set Theory is just as "derivable" from Arithmetic
+> as Arithmetic is from Set Theory &mdash; but it is not really "derivation" at
+> all but, rather, "representation."
 
 Since there is no limit to the number of times you can add 1 to a natural
 number, \\(|\mathbb{N}|\\) represents an infinite quantity. But is
@@ -374,8 +377,8 @@ finite numbers differ." To prove this, we need to intoduce some additional
 jargon: _mapping_ and _countability_. A mapping is a rule by which elements in
 one set are associated with elements in another set. For finite sets defined by
 extension, such mappings can be defined by extension as well. A finite mapping
-can be represented as a set of ordered pairs where the first member of a pair is
-from one set and the second member of a pair is from the other set.
+can be represented as a set of ordered pairs where the first member of a pair
+is from one set and the second member of a pair is from the other set.
 
 As an example, consider two sets, \\(n\\) and \\(l\\) where
 
@@ -487,7 +490,7 @@ or, "for every \\(s\\), if \\(s\\) is countably infinite then the cardinality of
 \\(s\\) is the same as the cardinality of \\(\mathbb{N}\\)."
 
 Countability, infinite or otherwise, has other interesting implications. For
-example, any set whose cardinality is less than or equal to \\(|\mathbb{N}\\|)
+example, any set whose cardinality is less than or equal to \\(|\mathbb{N}|\\)
 and for which there is a "natural ordering" among its members is countable since
 you can arrange the members of that set in their natural order and then map the
 first element to 0, the second element to 1 and so on.
@@ -622,12 +625,13 @@ attempts to answer the question, "what makes a real number computable?"
 ## Computability Theory to the Rescue?
 
 But how does one go about characterizing what makes a number computable?
-(Leaving aside, for now, the question of how "real" a number can be if it cannot
-be computed, i.e. identified or characterized in any way.) Starting in the late
-19th Century, various philosophers of mathematics and philosophically-inclined
-mathematicians worked on this question. The question was considered settled when
-the work of two such people,
-[Church](https://en.wikipedia.org/wiki/Alonzo_Church) and
+(Leaving aside, for now, the question of how "real" a number can be if it
+cannot be computed, i.e. identified or characterized in any way other than it
+lies at some indefinable distance on the number line between two points for
+which there are formulas.) Starting in the late 19th Century, various
+philosophers of mathematics and philosophically-inclined mathematicians worked
+on this question. The question was considered settled when the work of two such
+people, [Church](https://en.wikipedia.org/wiki/Alonzo_Church) and
 [Turing](https://en.wikipedia.org/wiki/Alan_Turing), converged during the first
 half of the 20th Century (Church was Turing's Doctoral advisor).
 
@@ -649,20 +653,21 @@ conceptually. A Turing Machine is a theoretical mechanical device built
 according to certain rules and which produces a particular sequence of symbols
 (e.g. digits in the representation of a real number) as the result of its
 operation. If Turing Machines could be constructed (which they could not be in
-reality because each would require an infinitely long paper tape on which to
-print its output), Turing's thesis is that the outputs of all possible such
-machines would be the set of computable numbers.
+reality, but only because each would require an infinitely long paper tape on
+which to print its output), Turing's thesis is that the outputs of all possible
+such machines would be the set of computable numbers.
 
-Computability Theory was considered settled and the world moved on to other
-interests when it was shown that Church's and Turing's theses are mathematically
-equivalent: given the rules governing the behavior of any possible Turing
-Machine, one can define a formula of the Lambda Calculus that will carry out the
-equivalent calculation and produce the same result. Any formula of the Lambda
-Calculus can be used as the "blueprint" for "building" a Turing Machine. Since
-two intuitively compelling definitions of "computability" were shown to produce
-the same results (by way of the now-familiar reasoning based bijective mappings
-between infinite sets), the consensus among those interested in this question
-was that the "problem" was solved, and there was, once again, much rejoicing.
+Computability Theory was considered settled and mathematicians moved on to
+other interests when it was shown that Church's and Turing's theses are
+mathematically equivalent. Given the rules governing the behavior of any
+possible Turing Machine, one can define a formula of the Lambda Calculus that
+will carry out the equivalent calculation and produce the same result.
+Conversely, any formula of the Lambda Calculus can be used as the "blueprint"
+for "building" a Turing Machine. Since two intuitively compelling definitions
+of "computability" were shown to produce the same results (by way of the
+now-familiar reasoning based on bijective mappings between infinite sets), the
+consensus among those interested in this question was that the "problem" was
+solved, and there was, once again, much rejoicing.
 
 As an unintended side-effect, Turing and Church had between them provided the
 mathematical model and mental framework for programmable digital computers and
@@ -687,15 +692,15 @@ historically more traditional, empiricist view of mathematics it is deeply
 circular. Cantor begins by stipulating that concepts like the "set of natural
 numbers" and "set of real numbers" make sense and that such sets have
 cardinalities. Only on that basis can you even pose the question as to whether
-and how their cardinalities differ. Even accepting those premises, you can never
-literally carry out his procedure for showing that \\(|\mathbb{R}| >
+and how their cardinalities compare. Even accepting those premises, you can
+never literally carry out his procedure for showing that \\(|\mathbb{R}| >
 |\mathbb{N}|\\) since you would first have to produce a "completed infinity" of
 representations of real numbers, each of which was a "completed infinity" of
 digits and finally produce yet another "completed infinity" of digits using the
 "slash" procedure. So, while Cantor's results and all the results that followed
 from it are logically valid, the only meta-mathematical realities to which they
 lead are represented by the countably many real numbers described by
-Computability Theory. Consider the opposite interpretation, for a moment.
+Church-Turing Hypothesis. Consider the opposite interpretation, for a moment.
 Viewing Cantor's argument as showing not that the cardinality of the continuum
 is greater than that of the set of natural numbers but, rather, that the
 continuum does not have a cardinality in any meaningful sense helps address
@@ -713,41 +718,42 @@ understood to be smaller segments of a formerly single object made of a single
 substance. E.g. cut an actual macroscopic string in half, then each of the
 halves in half and so on. Long before you reach the level of molecules the
 fibers out of which the string was made would stop being at all string-like and
-so you would no longer be cutting strings in half as you continued to "subdivide
-a piece of string". At the sub-microscopic scale, the whole point of Quantum
-Physics is that physical matter is an agglomeration of discrete constituents,
-each of which can be observed to be in a specific, computable state when
-observed under the correct conditions. The "real number line" with its
-infinitely large number of points between any two points can only be understood
-as a mathematical object with no direct meta-mathematical correspondence to
-anything in the real world. Unless almost everything contemporary Physicists
-believe is wrong, the number of possible states of all the subatomic particles
-in the real world is not even infinite, much less uncountably so even as they
-use mathematics involving the continuum to reason about it. As already pointed
-out, the risk is in mistaking features of a mathematical model for features of
-the thing being modeled by some meta-mathematical theory. That there are these
-sorts of tensions between "pure" and "applied" mathematics became inevitable
-once mathematicians embraced validity over truth. What is remarkable, despite
-that tension, is how often what begins as an exploration of a pure mathematical
-abstraction, e.g. Computability Theory, yields results with powerful and even
-world-changing applications, e.g. Computer Science. Similar examples can be
-found in other scientific domains. Non-Euclidean Geometries have found practical
-(for some definition of "practical") use in various branches of Physics rather
-than remaining solely the province of abstract considerations of Euclid's
-axioms.
+so you would no longer be cutting strings in half as you continued to
+"subdivide a piece of string". At the sub-microscopic scale, the whole point of
+Quantum Physics is that physical matter is an agglomeration of discrete
+constituents, each of which can be observed to be in a specific, computable
+state when observed under the correct conditions. The "real number line" with
+its infinitely large number of points between any two points can only be
+understood as a mathematical object with no direct meta-mathematical
+correspondence to anything in the real world. Unless almost everything
+contemporary Physicists believe is wrong, the number of possible states of all
+the subatomic particles in the real world is not even infinite, much less
+uncountably so even as they use mathematics involving the continuum to reason
+about it. As already pointed out, the risk is in mistaking features of a
+mathematical model for features of the thing being modeled by some
+meta-mathematical theory. That there are these sorts of tensions between "pure"
+and "applied" mathematics became inevitable once mathematicians embraced
+validity over truth. What is remarkable, despite that tension, is how often
+what begins as an exploration of a pure mathematical abstraction, e.g.
+Computability Theory, yields results with powerful and even world-changing
+applications, e.g. Computer Science. Similar examples can be found in other
+scientific domains. Non-Euclidean Geometries have found practical (for some
+definition of "practical") use in various branches of Physics rather than
+remaining solely the province of abstract considerations of Euclid's axioms.
 
 Programmers use the term "lambda" to refer to an anonymous function because of
 Church's Lambda Calculus and, more importantly, the Lambda Calculus is the
-original model for all so-called "Turing complete" programming languages. Turing
-Machines were the original model for the [Von Neumann
+original model for all so-called "Turing complete" programming languages.
+Turing Machines were the original model for the [Von Neumann
 Architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture) on which
 all current electronic programmable computing devices are based. Conversely,
 Cantor's non-computable real numbers can only ever remain the stuff of abstract
 considerations of the theoretical properties of an infinitely subdivisable
-number line. But the same embrace of infinite quantities Cantor pioneered has
+number line. But the same embrace of infinite quantities Cantor championed has
 been useful in both abstract and applied math in quite concrete ways. Division
 by zero, which once was regarded as an anomalous discontinuity, now is
-understood to have a definite result: \\(\pm\infty\\):
+understood to have a definite result: \\(\pm\infty\\). This is because the two
+sides of the following equivalence are mathematical inverses of one another:
 
 \\[
 \lim_{x \to \infty}{1 \over x} = 0 \iff \lim_{x \to 0}{1 \over x} = \infty
@@ -768,6 +774,9 @@ a negative number.
 \\]
 
 where `NaN` is the IEEE 754 constant meaning "Not a Number" and `INFINITY` is
-the IEEE 754 constant meaning \\(\infty\\). Also, 0 and `INFINITY` are signed in
-the IEEE 754 specification and follow the usual rules for sign agreement in
-division.
+the IEEE 754 constant meaning \\(\infty\\). Also, 0 and `INFINITY` are signed
+in the IEEE 754 specification and follow the usual rules for sign agreement in
+division. What is _not_ explicitly called out by the authors of the IEEE 754
+specifiction is that their definition of `INFINITY` is mathematically equal to
+\\(\aleph_0\\) and no such specification could, in principle, have anything
+meaningful to say about any other infinite quantity.
