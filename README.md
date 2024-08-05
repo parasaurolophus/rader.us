@@ -32,6 +32,9 @@ npm add -D markdown-it-mathjax3
 # for instructions on modifying .vitepress/config.mjs
 npm i vitepress-plugin-mermaid mermaid -D
 
+# add dependency on CSV parser used by music.data.js
+npm i csv-parse
+
 # run dev server
 npm run docs:dev
 ```

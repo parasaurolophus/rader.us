@@ -15,7 +15,7 @@ themeConfig: {
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Test Plugins', link: '/test-plugins' },
+      { text: 'Music', link: '/music' },
       { text: 'README', link: '/README' },
     ],
 
@@ -23,7 +23,7 @@ themeConfig: {
       {
         text: 'Examples',
         items: [
-          { text: 'Test Plugins', link: '/test-plugins' },
+          { text: 'Music', link: '/music' },
           { text: 'README', link: '/README' },
         ]
       },

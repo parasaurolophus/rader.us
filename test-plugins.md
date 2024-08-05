@@ -26,6 +26,7 @@ $$
     & \text{Let } \aleph_0 = \omega \ \omega \\
     & \text{where } \omega = \lambda x . x \ x
 \end{align}
+$$
 ```
 
 ```markdown
