@@ -32,13 +32,13 @@ export default withMermaid({
             ],
           },
           {
-            text: "Setup",
+            text: "Setups",
             items: [
               { text: 'Yesterday', link: '/music/yesterday' },
               { text: 'Today', link: '/music/today' },
             ],
           },
-          { text: 'MP3', link: '/music/hits' },
+          { text: 'MP3', link: '/music/mp3' },
         ]
       },
       {

@@ -12,10 +12,7 @@ hero:
       link: /music/musicography
     - theme: brand
       text: MP3
-      link: /music/hits
-    - theme: brand
-      text: Test Plugins
-      link: /test-plugins
+      link: /music/mp3
 
 # features:
 #   - title: Feature A
