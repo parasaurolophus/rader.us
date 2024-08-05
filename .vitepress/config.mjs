@@ -8,26 +8,46 @@ export default withMermaid({
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
   ],
 
-themeConfig: {
+  themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/kirk.png',
     appearance: 'dark',
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Music', link: '/music' },
-      { text: 'README', link: '/README' },
+      { text: 'Music', link: '/music/' },
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Music',
+        link: '/music/',
         items: [
-          { text: 'Music', link: '/music' },
-          { text: 'README', link: '/README' },
+          { text: 'Musicography', link: '/music/musicography' },
+          {
+            text: "Approaches",
+            items: [
+              { text: 'Analog', link: '/music/analog' },
+              { text: 'Digital', link: '/music/digital' },
+            ],
+          },
+          {
+            text: "Setup",
+            items: [
+              { text: 'Yesterday', link: '/music/yesterday' },
+              { text: 'Today', link: '/music/today' },
+            ],
+          },
+          { text: 'MP3', link: '/music/hits' },
         ]
       },
-    ],
+      {
+        text: 'Examples',
+        items: [
+          { text: 'Test Plugins', link: '/test-plugins' },
+        ]
+      },
+    ]
 
     // socialLinks: [
     //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
