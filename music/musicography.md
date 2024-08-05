@@ -8,7 +8,7 @@
 >
 > _Or search for "Kirk Rader" on the music service you prefer_
 
-[I started creating electronic music](../yesterday.md) on the West Coast of the
+[I started creating electronic music](./yesterday.md) on the West Coast of the
 US, in the "West Coast Style," long before I knew that there was such a thing.
 My musical tastes have always been outside the mainstream. The first album I
 purchased with my "own" money was a vinyl recording (there were no other
