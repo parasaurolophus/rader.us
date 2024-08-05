@@ -1,3 +1,7 @@
+<script setup>
+import { data } from '/music.data.js'
+</script>
+
 # Musicography
 
 > - [Amazon Music](amazon.md)
@@ -29,6 +33,25 @@ experimentalists like Stockhausen and Subotnick. If you have never
 heard any of my own stuff, consider the combination of those
 influences as fair warning.
 
+## List of Published Works
+
+<template v-for="(album) in data">
+    <h3>{{ album[0].album }}</h3>
+    <p>UPC {{ album[0].upc }}</p>
+    <table>
+        <tr>
+            <th>Track</th>
+            <th>Title</th>
+            <th>ISRC</th>
+        </tr>
+        <tr v-for="(item) in album">
+            <td>{{ item.track }}</td>
+            <td>{{ item.title }}</td>
+            <td>{{ item.isrc }}</td>
+        </tr>
+    </table>
+</template>
+
 ## What Does the Title of My First Album, _Undecidable_, mean?
 
 Even though you didn't ask and probably weren't wondering, the title
@@ -41,15 +64,15 @@ the period when many of those tracks were recorded.
 
 Given:
 
-\\[
+$$
 \begin{align*}
-    \text{Let } \Omega & = \omega \hskip0.25em \omega \\\\
-    \text{where } \omega & = \lambda x.x \hskip0.25em x
+    \text{Let } \Omega & = \omega \ \omega \\
+    \text{where } \omega & = \lambda x.x \ x
 \end{align*}
-\\]
+$$
 
-The value of \\(\Omega\\) is "undecidable" according to the rules of the lambda
-calculus because the calculation of \\(\lambda x.x \hskip0.25em x\\) never
+The value of $\Omega$ is "undecidable" according to the rules of the lambda
+calculus because the calculation of $\lambda x.x \hskip0.25em x$ never
 terminates when applied to itself. I experimented a lot with feedback from the
 signal path back into the control path (the sort of thing you can really only
 do with modular analog synthesizers) so I adopted this self-referential
@@ -65,9 +88,9 @@ science, while feedback (a physical manifestation of "self reference") is a way
 to produce highly complex (and often catastrophic) results from simple
 mechanical or electronic systems.
 
-As an even less relevant aside, I chose \\(\Omega\\) (the last letter of the
+As an even less relevant aside, I chose $\Omega$ (the last letter of the
 Greek alphabet) as the name of the undecidable result because it is easier to
-render using computer keyboards than \\(\aleph_{0}\\) that is the name
+render using computer keyboards than $\aleph_{0}$ that is the name
 traditionally used when referring to the cardinality of the set of natural
 numbers and that, according to accepted wisdom, is the smallest infinite
 magnitude. It also happens to be the "stack depth" of an infinitely recursive
@@ -77,19 +100,19 @@ maybe it isn't all that amusing. But it makes me smile to think that the most
 abstruse branches of "pure" mathematics like [computability
 theory](https://en.wikipedia.org/wiki/Computability_theory) can inadvertently
 produce literally world-changing effects such as the post-industrial
-"Information Age." According to common terminology, \\(\Omega\\) more properly
-should refer to \\(\aleph_{1}\\) rather than \\(\aleph_{0}\\), the former being
+"Information Age." According to common terminology, $\Omega$ more properly
+should refer to $\aleph_{1}$ rather than $\aleph_{0}$, the former being
 the cardinality of the set of all countable numbers. Since the cardinality of a
-set's power set must be larger than that set's own cardinality, \\(\aleph_{0} <
-\aleph_{1}\\) so \\(\aleph_{0} \neq \Omega\\). So if I'd had access to better
+set's power set must be larger than that set's own cardinality, $\aleph_{0} <
+\aleph_{1}$ so $\aleph_{0} \neq \Omega$. So if I'd had access to better
 graphical tools at the time I would have used this as the logo:
 
-\\[
+$$
 \begin{align*}
-    \text{Let } \aleph_{0} & = \omega_{0} \hskip0.25em \omega_{0} \\\\
-    \text{where } \omega_{0} & = \lambda x.x \hskip0.25em x
+    \text{Let } \aleph_{0} & = \omega_{0} \ \omega_{0} \\
+    \text{where } \omega_{0} & = \lambda x.x \ x
 \end{align*}
-\\]
+$$
 
 If I ever publish a re-issue or remixes of any of the tracks on _Undecidable_,
 you will already be in on the joke of the logo I plan to use.
