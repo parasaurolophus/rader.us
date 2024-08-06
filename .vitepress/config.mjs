@@ -28,6 +28,7 @@ export default withMermaid({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Music', link: '/music/music' },
+      { text: 'About', link: '/about' },
     ],
 
     sidebar: [
@@ -59,6 +60,7 @@ export default withMermaid({
           { text: 'Test Plugins', link: '/test-plugins' },
         ]
       },
+      { text: 'About', link: '/about' },
     ],
   },
 

@@ -1,5 +1,5 @@
 <script setup>
-import { data } from '/music.data.js'
+import { data } from '/musicography.data.js'
 </script>
 
 # Musicography
