@@ -1,4 +1,3 @@
-```ruby
 # Copyright Kirk Rader 2023. All rights reserved.
 
 # Farandole in Tempore Belli
@@ -195,4 +194,3 @@ with_fx :reverb, room: 0.75 do
     
   end
 end
-```

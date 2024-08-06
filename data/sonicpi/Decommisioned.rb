@@ -1,4 +1,3 @@
-```ruby
 # Copyright 2023 Kirk Rader. All rights reserved.
 
 # Decomissioned
@@ -64,4 +63,3 @@ melody :dark_ambience
 
 sleep 100
 terminate = true
-```

@@ -8,11 +8,11 @@ hero:
   tagline: My music, code examples, essays
   actions:
     - theme: brand
-      text: Musicography
-      link: /music/musicography
-    - theme: brand
-      text: MP3
-      link: /music/mp3
+      text: Music
+      link: /music/music
+    - theme: alt
+      text: About
+      link: /about
 
 # features:
 #   - title: Feature A

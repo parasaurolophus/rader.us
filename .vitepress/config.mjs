@@ -10,19 +10,31 @@ export default withMermaid({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/kirk.png',
     appearance: 'dark',
+
+    footer: {
+      message: '',
+      copyright: 'Copyright 2024 <a href="https://github.com/parasaurolophus">Kirk Rader</a>'
+    },
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/parasaurolophus' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/kirkrader/' },
+    ],
+
+
+    logo: '/kirk.png',
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Music', link: '/music/' },
+      { text: 'Music', link: '/music/music' },
     ],
 
     sidebar: [
       {
         text: 'Music',
-        link: '/music/',
         items: [
+          { text: 'Music', link: '/music/music' },
           { text: 'Musicography', link: '/music/musicography' },
           {
             text: "Approaches",
@@ -47,22 +59,8 @@ export default withMermaid({
           { text: 'Test Plugins', link: '/test-plugins' },
         ]
       },
-    ]
-
-    // socialLinks: [
-    //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
-    // ],
+    ],
   },
-
-  // optionally, you can pass MermaidConfig
-  // mermaid: {
-  //    refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
-  // },
-
-  // optionally set additional config for plugin itself with MermaidPluginConfig
-  // mermaidPlugin: {
-  //   class: "mermaid my-class", // set additional css classes for parent container 
-  // },
 
   markdown: {
     math: true,

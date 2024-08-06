@@ -1,4 +1,3 @@
-```ruby
 # Copyright 2023 Kirk Rader. All rights reserved.
 
 # Farandole Lamentoso
@@ -122,4 +121,3 @@ if play_notes
 end
 
 play_bass :A2, (arps * a_min_inv.length * arp_tempo)
-```
