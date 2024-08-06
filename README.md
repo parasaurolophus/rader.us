@@ -2,8 +2,8 @@
 
 ```bash
 # create the project directory
-mkdir vitepress-test
-cd vitepress-test
+mkdir rader.us
+cd rader.us
 
 # initialize a node project
 npm init
@@ -19,6 +19,9 @@ cat << EOF > .gitignore
 node_modules
 .vitepress/cache
 .vitepress/dist
+.~*
+*~
+dist.zip
 EOF
 
 # add mathjax support
