@@ -1,4 +1,5 @@
 import { withMermaid } from "vitepress-plugin-mermaid";
+import MarkdownItCollapsible from "markdown-it-collapsible"
 
 export default withMermaid({
   title: "Kirk Rader",
@@ -45,5 +46,8 @@ export default withMermaid({
 
   markdown: {
     math: true,
+    config: (md) => {
+      md.use(MarkdownItCollapsible)
+    }
   },
 })

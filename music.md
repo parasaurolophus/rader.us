@@ -6,16 +6,39 @@ import { data } from '/musicography.data.js'
 
 ## Streaming
 
-- <https://music.amazon.com/artists/B004L4HW52/kirk-rader>
-  ![Amazon Music](/qrcodes/amazon_kirk_rader_qrcode.png)
-- <https://music.apple.com/us/artist/kirk-rader/417090159>
-  ![Apple](/qrcodes/apple_kirk_rader_qrcode.png)
-- <https://open.spotify.com/artist/06lMz4EjJn3pYej2kGIL5t>
-  ![Spotify](/qrcodes/spotify_kirk_rader_qrcode.png)
-- <https://music.youtube.com/channel/UCp__q4DYBXYhq9uiD2Y8vUg>
-  ![Youtube Music](/qrcodes/youtube_kirk_rader_qrcode.png)
+_Or search for "Kirk Rader" on the music service you prefer..._
 
-> _Or search for "Kirk Rader" on the music service you prefer_
+### Amazon Music
+
+<https://music.amazon.com/artists/B004L4HW52/kirk-rader>
+
++++ Amazon Music QR
+![Amazon Music](/qrcodes/amazon_kirk_rader_qrcode.png)
++++
+
+### Apple Music
+
+<https://music.apple.com/us/artist/kirk-rader/417090159>
+
++++ Apple Music QR
+![Apple](/qrcodes/apple_kirk_rader_qrcode.png)
++++
+
+### Spotify
+
+<https://open.spotify.com/artist/06lMz4EjJn3pYej2kGIL5t>
+
++++ Spotify QR
+![Spotify](/qrcodes/spotify_kirk_rader_qrcode.png)
++++
+
+### YouTube Music
+
+<https://music.youtube.com/channel/UCp__q4DYBXYhq9uiD2Y8vUg>
+
++++ YouTube Music QR
+![Youtube Music](/qrcodes/youtube_kirk_rader_qrcode.png)
++++
 
 ## Musicography
 
