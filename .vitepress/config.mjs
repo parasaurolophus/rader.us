@@ -27,24 +27,12 @@ export default withMermaid({
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Music', link: '/music/musicography' },
+      { text: 'Music', link: '/music' },
       { text: 'About', link: '/about' },
     ],
 
     sidebar: [
-      {
-        text: 'Music',
-        items: [
-          { text: 'Musicography', link: '/music/musicography' },
-          {
-            text: 'Studio Setups',
-            items: [
-              { text: 'Today', link: '/music/setups/today' },
-            ],
-          },
-          { text: 'MP3', link: '/music/mp3' },
-        ],
-      },
+      { text: 'Music', link: '/music' },
       { text: 'Test Plugins', link: '/test-plugins' },
       { text: 'About', link: '/about' },
     ],

@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Music
-      link: /music/musicography
+      link: /music
     - theme: alt
       text: About
       link: /about
