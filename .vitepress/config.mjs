@@ -27,7 +27,7 @@ export default withMermaid({
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Music', link: '/music/music' },
+      { text: 'Music', link: '/music/musicography' },
       { text: 'About', link: '/about' },
     ],
 
@@ -35,33 +35,24 @@ export default withMermaid({
       {
         text: 'Music',
         items: [
-          { text: 'Music', link: '/music/music' },
           { text: 'Musicography', link: '/music/musicography' },
           {
-            text: "Approaches",
+            text: 'Studio Setups',
             items: [
-              { text: 'Analog', link: '/music/analog' },
-              { text: 'Digital', link: '/music/digital' },
-            ],
-          },
-          {
-            text: "Setups",
-            items: [
-              { text: 'Yesterday', link: '/music/yesterday' },
-              { text: 'Today', link: '/music/today' },
+              { text: 'Today', link: '/music/setups/today' },
             ],
           },
           { text: 'MP3', link: '/music/mp3' },
-        ]
+        ],
       },
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Test Plugins', link: '/test-plugins' },
-        ]
-      },
+      { text: 'Test Plugins', link: '/test-plugins' },
       { text: 'About', link: '/about' },
     ],
+
+    outline: {
+      level: 'deep',
+      label: 'On this page',
+    }
   },
 
   markdown: {

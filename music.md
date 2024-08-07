@@ -2,7 +2,9 @@
 import { data } from '/musicography.data.js'
 </script>
 
-# Musicography
+# Music
+
+## Streaming
 
 - <https://music.amazon.com/artists/B004L4HW52/kirk-rader>
   ![Amazon Music](/qrcodes/amazon_kirk_rader_qrcode.png)
@@ -15,7 +17,7 @@ import { data } from '/musicography.data.js'
 
 > _Or search for "Kirk Rader" on the music service you prefer_
 
-## List of Published Works
+## Musicography
 
 <template v-for="(album) in data">
     <h3>{{ album[0].album }}</h3>
@@ -131,39 +133,33 @@ keyboard (to within the very narrow limis of my skill) to produce more
 conventionally tonal music. Some pieces consist only of tracks recorded in this
 way, while others combine analog and digital sound sources in various ways.
 
-For example, the two versions of _Farandole Lamentoso_ on my recent album _The
-Modern Temple of Amusement_ were created using a single
-[_Sonic Pi_ program](#farandole) generating output in two ways: the "8-bit mix"
-consists of a digital audio file generated directly by _Sonic Pi_ using some of
-its built-in digital synthesizers. The "2600 remix" uses the _Behringer 2600_
-as the sound source, driven by the same _Sonic Pi_ program, but by sending a
-sequence of MIDI commands rather than generating digital audio directly. Because
-the _2600_ is monophonic, the latter version required running the program
-multiple times with slight modifications each time to produce the MIDI sequence
-for each voice separately.
+For example, the two versions of _Farandole Lamentoso_ on my album _The Modern
+Temple of Amusement_ were created using a single _Sonic Pi_ program generating
+output in two ways: the "8-bit mix" consists of a digital audio file generated
+directly by _Sonic Pi_ using some of its built-in digital synthesizers. The
+"2600 remix" uses the _Behringer 2600_ as the sound source, driven by the same
+_Sonic Pi_ program, but by sending a sequence of MIDI commands rather than
+generating digital audio directly. Because the _2600_ is monophonic, the latter
+version required running the program multiple times with slight modifications
+each time to produce the MIDI sequence for each voice separately.
 
 Another piece, _Ghostly Reminiscences_, on the same album as the _Farandole_,
 was produced entirely as the output of another _Sonic Pi_ program. Even when
 using digital tools like _Sonic Pi_, I tend to use randomization and sonic
-layering to produce unconventional timbres, rhythms and harmonies that will vary
-endlessly no matter how long they are looped. These Ruby source code files are
-the closest I am likely to come to writing "scores" for any of my music. This is
-my "West Coast" approach applied to using "East Coast" inspired gear and software.
-
-- [Au_Quai.rb](sonicpi/Au_Quai.md)
-- [Decommisioned.rb](sonicpi/Decommisioned.md)
-- <a id="farandole"></a>[Farandole_Lamentoso.rb](sonicpi/Farandole_Lamentoso.md)
-- [Farandole_in_Tempore_Belli.rb](sonicpi/Farandole_in_Tempore_Belli.md)
-- [Ghostly_Reminiscences.rb](sonicpi/Ghostly_Reminiscences.md)
+layering to produce unconventional timbres, rhythms and harmonies that will
+vary endlessly no matter how long they are looped. These Ruby source code files
+are the closest I am likely to come to writing "scores" for any of my music.
+This is my "West Coast" approach applied to using "East Coast" inspired gear
+and software.
 
 ## Studio Setups
 
 ### Yesterday
 
-Here is the setup I used when creating tracks in the 70's and 80's, a
-few of which eventually were published as the album
-[_Undecidable_](./musicography.md#undecidable) in 2011,
-once self-publishing music started to become a thing:
+Here is the setup I used when creating tracks in the 70's and 80's, a few of
+which eventually were published as the album
+[_Undecidable_](./musicography.md#undecidable) in 2011, once self-publishing
+music started to become a thing:
 
 ```mermaid
 graph LR
@@ -203,12 +199,12 @@ graph LR
 - [TASCAM PortaStudio 244](https://en.wikipedia.org/wiki/Portastudio)
 
 The _Knabe_ piano I had as a kid was built in the 1930's and sounded far better
-in real life than on the surviving cassette recordings. Most of these recordings
-were made in my childhood bedroom or various apartments I had as a college
-student and young adult using decidedly consumer-level microphones and recording
-technologies of the era. The jankiness of the audio quality appeals to me as an
-artifact of the period of my life and the circumstances in which they were
-created, but I cannot argue with anyone who finds it less charming than I.
+recordings were made in my childhood bedroom or various apartments I had as a
+college student and young adult using decidedly consumer-level microphones and
+recording technologies of the era. The jankiness of the audio quality appeals
+to me as an artifact of the period of my life and the circumstances in which
+they were created, but I cannot argue with anyone who finds it less charming
+than I.
 
 ### Today
 
@@ -273,7 +269,7 @@ graph BT
         cdbaby -- "register" --> soundexchange
 ```
 
-## Hardware
+#### Hardware
 
 - [Akai Pro MPK261](https://www.akaipro.com/mpk261) keyboard
 - [Behringer 2600](https://www.behringer.com/product.html?modelCode=P0DNJ)
@@ -283,7 +279,7 @@ graph BT
 
 ...plus various Eurorack modules that change embarassingly frequently
 
-## Software
+#### Software
 
 - [Audacity](https://www.audacityteam.org/) Digital Audio Workstation (DAW)
 - [Ableton Live](https://www.ableton.com/) real-time digital synthesis and effects

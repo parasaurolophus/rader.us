@@ -6,10 +6,11 @@ hero:
   name: Kirk Rader
   text: A repository of random stuff
   tagline: My music, code examples, essays
+  image: /kirk.png
   actions:
     - theme: brand
       text: Music
-      link: /music/music
+      link: /music/musicography
     - theme: alt
       text: About
       link: /about
