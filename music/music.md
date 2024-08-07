@@ -63,9 +63,9 @@ _Or search for "Kirk Rader" on the music service you prefer..._
 
 ## Background
 
-[I started creating electronic music](./yesterday.md) on the West Coast of the
-US, in the "West Coast Style," long before I knew that there was such a thing.
-My musical tastes have always been outside the mainstream. The first album I
+[I started creating electronic music](#yesterday) on the West Coast of the US,
+in the "West Coast Style," long before I knew that there was such a thing. My
+musical tastes have always been outside the mainstream. The first album I
 purchased with my "own" money was a vinyl recording (there were no other
 commercially significant recording media for sale in the mid 1960's) of
 Schubert's _Unfinished Symphony_ which I had worn the grooves out of by the
@@ -92,21 +92,21 @@ Yes, let's call it "music."
 
 My process for creating music has evolved as new technologies have become
 available, but conceptually is not all that different from how I [started
-out](./yesterday.md) as a composer. I have loved listening to many types of
-music all my life. The first album that I bought with my "own" money was a
-recording of Schubert's _Unfinished Symphony_. I had worn the grooves out of it
-by the time I turned seven years old. By the time I was in my late teens, I was
-writing papers for my degree in Formal Linguistics and, a couple of years later,
-teaching myself to program computers while listening to a personal soundtrack
-that featured Lou Reed's _Metal Machine Music_ -- yes, the 4-LP sides' worth of
-guitar feedback and effects noise that ended his career just as it was starting
-to take off in the late 1970's. You will find strong hints of all those
-influences - classical and experimental music together with mathematics and a
-love of algorithms - throughout my musical _oeuvre_. To me, an analog
-synthesizer is a device for translating what are essentially mathematical
-formulas into acoustic impulses, which are occasionally and serendipitously
-esthetically pleasing (at least to someone with my extremely idiosyncratic
-tastes). Computer software makes that even more literally true.
+out](#yesterday) as a composer. I have loved listening to many types of music
+all my life. The first album that I bought with my "own" money was a recording
+of Schubert's _Unfinished Symphony_. I had worn the grooves out of it by the
+time I turned seven years old. By the time I was in my late teens, I was
+writing papers for my degree in Formal Linguistics and, a couple of years
+later, teaching myself to program computers while listening to a personal
+soundtrack that featured Lou Reed's _Metal Machine Music_ -- yes, the 4-LP
+sides' worth of guitar feedback and effects noise that ended his career just as
+it was starting to take off in the late 1970's. You will find strong hints of
+all those influences - classical and experimental music together with
+mathematics and a love of algorithms - throughout my musical _oeuvre_. To me,
+an analog synthesizer is a device for translating what are essentially
+mathematical formulas into acoustic impulses, which are occasionally and
+serendipitously esthetically pleasing (at least to someone with my extremely
+idiosyncratic tastes). Computer software makes that even more literally true.
 
 ### Mostly Analog
 
@@ -185,9 +185,8 @@ examples as musical scores.
 ### Yesterday
 
 Here is the setup I used when creating tracks in the 70's and 80's, a few of
-which eventually were published as the album
-[_Undecidable_](./musicography.md#undecidable) in 2011, once self-publishing
-music started to become a thing:
+which eventually were published as the album _Undecidable_ in 2011, once
+self-publishing music started to become a thing:
 
 ```mermaid
 graph LR
