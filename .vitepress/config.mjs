@@ -28,15 +28,17 @@ export default withMermaid({
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Music', link: '/music' },
+      { text: 'Music', link: '/music/music' },
+      { text: 'MP3', link: '/music/mp3' },
       { text: 'About', link: '/about' },
     ],
 
     sidebar: [
       {
-        text: 'Music', link: '/music',
+        text: 'Music', link: '/music/music',
         items: [
-          { text: 'SonicPi "Scores"', link: '/sonicpi' }
+          { text: 'SonicPi "Scores"', link: '/music/sonicpi' },
+          { text: 'MP3', link: '/music/mp3' },
         ]
       },
       { text: 'Test Plugins', link: '/test-plugins' },

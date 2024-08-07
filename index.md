@@ -10,7 +10,10 @@ hero:
   actions:
     - theme: brand
       text: Music
-      link: /music
+      link: /music/music
+    - theme: brand
+      text: MP3
+      link: /music/mp3
     - theme: alt
       text: About
       link: /about
