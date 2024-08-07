@@ -33,7 +33,12 @@ export default withMermaid({
     ],
 
     sidebar: [
-      { text: 'Music', link: '/music' },
+      {
+        text: 'Music', link: '/music',
+        items: [
+          { text: 'SonicPi "Scores"', link: '/sonicpi' }
+        ]
+      },
       { text: 'Test Plugins', link: '/test-plugins' },
       { text: 'About', link: '/about' },
     ],

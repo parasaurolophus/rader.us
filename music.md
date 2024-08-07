@@ -1,5 +1,5 @@
 <script setup>
-import { data } from '/musicography.data.js'
+import { data } from '/all.data.js'
 </script>
 
 # Music
@@ -43,20 +43,22 @@ _Or search for "Kirk Rader" on the music service you prefer..._
 ## Musicography
 
 <template v-for="(album) in data">
-    <h3>{{ album[0].album }}</h3>
-    <p>UPC {{ album[0].upc }}</p>
-    <table>
-        <tr>
-            <th>Track</th>
-            <th>Title</th>
-            <th>ISRC</th>
-        </tr>
-        <tr v-for="(item) in album">
-            <td>{{ item.track }}</td>
-            <td>{{ item.title }}</td>
-            <td>{{ item.isrc }}</td>
-        </tr>
-    </table>
+  <template v-if="album.file.endsWith('.csv')">
+      <h3>{{ album.contents[0].album }}</h3>
+      <p>UPC {{ album.contents[0].upc }}</p>
+      <table>
+          <tr>
+              <th>Track</th>
+              <th>Title</th>
+              <th>ISRC</th>
+          </tr>
+          <tr v-for="(item) in album.contents">
+              <td>{{ item.track }}</td>
+              <td>{{ item.title }}</td>
+              <td>{{ item.isrc }}</td>
+          </tr>
+      </table>
+  </template>
 </template>
 
 ## Background
@@ -174,6 +176,9 @@ vary endlessly no matter how long they are looped. These Ruby source code files
 are the closest I am likely to come to writing "scores" for any of my music.
 This is my "West Coast" approach applied to using "East Coast" inspired gear
 and software.
+
+See [SonicPi "Scores"](sonicpi) for [Ruby](https://www.ruby-lang.org) code
+examples as musical scores.
 
 ## Studio Setups
 
