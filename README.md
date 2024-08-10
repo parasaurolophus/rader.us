@@ -47,3 +47,98 @@ npm run docs:dev
 * See <https://vitepress.dev/guide/markdown> for the list of vitepress markdown
   extensions
 * See <https://vitepress.dev/reference/runtime-api> for the vitepress API
+
+## bobsvg sources
+
+### Euclid's Fifth Axiom (Parallel Postulate)
+
+```bobsvg
+
+ A *                    * B
+    \                  /
+     \                /
+ -----\--------------/--
+       \ a )    ( b /
+        \<'      `>/ +------------------------+ 
+         \        /  | Parallel Postulate:    |
+          \      /   |                        |
+           \    /    | Lines AC and BD always | 
+            \  /     | intersect when angles  | 
+             \/      | a and b are both less  | 
+             /\      | than 90°        {note} | 
+            /  \     +------------------------+ 
+         D *    * C
+
+# Legend:
+note = {
+  fill: silver;
+  stroke: silver;
+}
+```
+
+### Playfair's Theorem
+
+```bobsvg
+
+         * A   / +--------------------------+ 
+        /     /  | Playfair's Theorem:      | 
+       /     /   | {playfair}               | 
+      /     /    | For any P not on AB,     | 
+     /   P *     | exactly one line can     | 
+    /     /      | be drawn through P which | 
+   /     /       | does not intersect AB    | 
+  * B   /        +--------------------------+ 
+
+# Legend:
+playfair = {
+  stroke: silver;
+  fill: silver;
+}
+```
+
+```bobsvg
+
+ +---------------------------------+ 
+ |       Injective Mapping         | 
+ |                                 | 
+ |     ______           ______     | 
+ |   ,'      `.       ,'      `.   | 
+ |  /  a ----- \  -  / --> e    \  | 
+ | |     b ---- | - | --> f      | | 
+ | |            |   |      g     | | 
+ |  \          /     \          /  | 
+ |   `.______.'       `.______.'   | 
+ |                                 | 
+ |    Domain             Range     | 
+ +---------------------------------+ 
+
+ +---------------------------------+ 
+ |      Surjective Mapping         | 
+ |                                 | 
+ |     ______           ______     | 
+ |   ,'      `.       ,'      `.   | 
+ |  /  a ----- \  -  / --> e    \  | 
+ | |     b ---- | - | --> f      | | 
+ | |   c        |   |            | | 
+ |  \          /     \          /  | 
+ |   `.______.'       `.______.'   | 
+ |                                 | 
+ |    Domain             Range     | 
+ +---------------------------------+ 
+
+ +---------------------------------+ 
+ |       Bijective Mapping         | 
+ |                                 | 
+ |     ______           ______     | 
+ |   ,'      `.       ,'      `.   | 
+ |  /  a <---- \  -  / --> e    \  | 
+ | |     b <--- | - | --> f      | | 
+ | |   c <----- | - | ---> g     | | 
+ |  \          /     \          /  | 
+ |   `.______.'       `.______.'   | 
+ |                                 | 
+ |    Domain             Range     | 
+ +---------------------------------+ 
+
+
+```

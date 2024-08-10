@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="368" height="160" class="svgbob"><style>.svgbob line, .svgbob path, .svgbob circle, .svgbob rect, .svgbob polygon {
+    stroke: black;
+    stroke-width: 2;
+    stroke-opacity: 1;
+    fill-opacity: 1;
+    stroke-linecap: round;
+    stroke-linejoin: miter;
+}
+.svgbob text {
+    white-space: pre;
+    fill: black;
+    font-family: Iosevka Fixed, monospace;
+    font-size: 14px;
+}
+.svgbob rect.backdrop {
+    stroke: none;
+    fill: white;
+}
+.svgbob .broken {
+    stroke-dasharray: 8;
+}
+.svgbob .filled {
+    fill: black;
+}
+.svgbob .bg_filled {
+    fill: white;
+    stroke-width: 1;
+}
+.svgbob .nofill {
+    fill: white;
+}
+.svgbob .end_marked_arrow {
+    marker-end: url(#arrow);
+}
+.svgbob .start_marked_arrow {
+    marker-start: url(#arrow);
+}
+.svgbob .end_marked_diamond {
+    marker-end: url(#diamond);
+}
+.svgbob .start_marked_diamond {
+    marker-start: url(#diamond);
+}
+.svgbob .end_marked_circle {
+    marker-end: url(#circle);
+}
+.svgbob .start_marked_circle {
+    marker-start: url(#circle);
+}
+.svgbob .end_marked_open_circle {
+    marker-end: url(#open_circle);
+}
+.svgbob .start_marked_open_circle {
+    marker-start: url(#open_circle);
+}
+.svgbob .end_marked_big_open_circle {
+    marker-end: url(#big_open_circle);
+}
+.svgbob .start_marked_big_open_circle {
+    marker-start: url(#big_open_circle);
+}<!--separator-->.svgbob .playfair{ 
+  stroke: silver;
+  fill: silver;
+ }</style><defs><marker id="arrow" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><polygon points="0,0 0,4 4,2 0,0"></polygon></marker><marker id="diamond" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><polygon points="0,2 2,0 4,2 2,4 0,2"></polygon></marker><marker id="circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><circle cx="4" cy="4" r="2" class="filled"></circle></marker><marker id="open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><circle cx="4" cy="4" r="2" class="bg_filled"></circle></marker><marker id="big_open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><circle cx="4" cy="4" r="3" class="bg_filled"></circle></marker></defs><rect class="backdrop" x="0" y="0" width="368" height="160"></rect><rect x="140" y="24" width="216" height="112" class="solid nofill playfair" rx="0"></rect><text x="154" y="44" >Playfair's</text><text x="154" y="76" >For</text><text x="186" y="76" >any</text><text x="218" y="76" >P</text><text x="234" y="76" >not</text><text x="266" y="76" >on</text><text x="290" y="76" >AB,</text><text x="154" y="92" >exactly</text><text x="218" y="92" >one</text><text x="250" y="92" >line</text><text x="290" y="92" >can</text><text x="154" y="108" >be</text><text x="178" y="108" >drawn</text><text x="226" y="108" >through</text><text x="290" y="108" >P</text><text x="306" y="108" >which</text><text x="154" y="124" >does</text><text x="194" y="124" >not</text><text x="226" y="124" >intersect</text><text x="306" y="124" >AB</text><text x="242" y="44" >Theorem:</text><line x1="74" y1="28" x2="76" y2="24" class="solid end_marked_circle"></line><line x1="72" y1="32" x2="20" y2="136" class="solid end_marked_circle"></line><text x="34" y="140" >B</text><text x="90" y="28" >A</text><line x1="128" y1="16" x2="92" y2="88" class="solid end_marked_circle"></line><text x="74" y="92" >P</text><line x1="90" y1="92" x2="64" y2="144" class="solid"></line></svg>

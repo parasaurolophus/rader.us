@@ -1,4 +1,4 @@
-import { withMermaid } from "vitepress-plugin-mermaid";
+import { withMermaid } from "vitepress-plugin-mermaid"
 import MarkdownItCollapsible from "markdown-it-collapsible"
 
 export default withMermaid({
@@ -40,6 +40,9 @@ export default withMermaid({
           { text: 'SonicPi "Scores"', link: '/music/sonicpi' },
           { text: 'MP3', link: '/music/mp3' },
         ]
+      },
+      {
+        text: 'Philosopy', link: '/philosophy/computability'
       },
       { text: 'Test Plugins', link: '/test-plugins' },
       { text: 'About', link: '/about' },

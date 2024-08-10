@@ -9,21 +9,18 @@ hero:
   image: /kirk.png
   actions:
     - theme: brand
-      text: Music
-      link: /music/music
-    - theme: brand
       text: MP3
       link: /music/mp3
     - theme: alt
       text: About
       link: /about
 
-# features:
-#   - title: Feature A
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   - title: Feature B
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   - title: Feature C
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+features:
+  - title: Music
+    details: Old-school, west coast style electronic... er, um, music?
+    link: /music/music
+  - title: Philosophy of Mathematics
+    details: Under construction
+    link: /philosophy/computability
 ---
 
