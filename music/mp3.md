@@ -7,7 +7,7 @@ albums that are available on most music streaming services.)
 
 ## Aural Palette Cleansers
 
-The first eight are among my more accessible compositions. They are mostly
+The first group are among my more accessible compositions. They are mostly
 rather silly. They generally began life as ways of experimenting with
 particular features of some new piece of music gear or audio software. I think
 of them as aural palette cleansers.
@@ -39,5 +39,5 @@ definitely an acquired taste.
 | 14 | [Ready, Steady](/mp3/14_Ready_Steady.mp3)                                                    |                                 |
 | 15 | [Triad](/mp3/15_Triad.mp3)                                                                   |                                 |
 | 16 | [Arise, Fair Sun](/mp3/16_Arise_Fair_Sun.mp3)                                                |                                 |
-| 17 | [Air Fairy](/mp3/17_Airy_Fairy.mp3)                                                          |                                 |
+| 17 | [Airy Fairy](/mp3/17_Airy_Fairy.mp3)                                                          |                                 |
 | 18 | [March of the Airy Fairies](/mp3/18_March_of_the_Airy_Fairies.mp3)                           |                                 |
