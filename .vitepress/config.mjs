@@ -43,7 +43,12 @@ export default withMermaid({
         ]
       },
       {
-        text: 'Computability', link: '/philosophy/computability'
+        text: 'Philosophy',
+        items: [
+          {
+            text: 'Computability', link: '/philosophy/computability'
+          }
+        ],
       },
       { text: 'Test Plugins', link: '/test-plugins' },
       { text: 'About', link: '/about' },

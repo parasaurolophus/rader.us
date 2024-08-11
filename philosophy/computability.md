@@ -28,8 +28,8 @@ are:
 
 1. A point can be extended indefinitely to form a line.
 2. A line can be extended indefinitely to form a plane.
-3. A circle can be formed by rotating a point around another point at a
-   constant distance (i.e. the radius).
+3. A point can be rotated at a constant distance around another point to form a
+   circle.
 4. All right angles are equal to each other.
 5. If two lines intersect a third line such that the interior angles on the
    same side are each less than a right angle, the first two lines will
