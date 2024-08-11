@@ -20,7 +20,6 @@ features:
     details: Old-school, west coast style electronic... er, um, music?
     link: /music/music
   - title: Philosophy of Mathematics
-    details: Under construction
+    details: Stuff that interests me
     link: /philosophy/computability
 ---
-

@@ -218,7 +218,113 @@ every element of both the domain and range with exactly one element of the
 other, there must be exactly the same number of elements in both or else some
 elements would have either been duplicated or left out of the mapping.
 
-![](/mappings.svg)
+@graphviz_open
+digraph G {
+
+    node[shape=circle]
+
+    subgraph injective {
+
+        cluster=true;
+        label="injective (into)";
+        color=white;
+
+        subgraph injective_domain {
+            cluster=true;
+            color=black;
+            label="domain";
+
+            ia[label="a"];
+            ib[label="b"];
+
+            ia -> ib[style=invis];
+        }
+
+        subgraph injective_range {
+            cluster=true;
+            label = "range";
+            color=black;
+
+            id[label="d"];
+            ie[label="e"];
+            if[label="f"];
+            id -> ie[style=invis];
+            ie -> if[style=invis];
+        }
+
+        ia -> id;
+        ib -> ie;
+    }
+
+    subgraph surjective {
+
+        cluster=true;
+        label="surjective (onto)";
+        color=white;
+
+        subgraph surjective_domain {
+            cluster=true;
+            color=black;
+            label="domain";
+            sa[label="a"];
+            sb[label="b"];
+            sc[label="c"];
+
+            sa -> sb[style=invis];
+            sb -> sc[style=invis];
+        }
+
+        subgraph surjective_range {
+            cluster=true;
+            label = "range";
+            color=black;
+
+            sd[label="d"];
+            se[label="e"];
+            sd -> se[style=invis];
+        }
+
+        sa -> sd;
+        sb -> se;
+    }
+
+    subgraph bijective {
+
+        cluster=true;
+        label="bijective (1:1)";
+        color=white;
+
+        subgraph bijective_domain {
+            cluster=true;
+            label="domain";
+            color=black;
+
+            ba[label="a"];
+            bb[label="b"];
+            bc[label="c"];
+
+            ba -> bb[style=invis];
+            bb -> bc[style=invis];
+        }
+
+        subgraph bijective_range {
+            cluster=true;
+            label = "co-domain";
+            color=black;
+
+            bd[label="d"];
+            be[label="e"];
+            bf[label="f"];
+            bd -> be[style=invis];
+            be -> bf[style=invis];
+        }
+
+        ba -> bd[dir=both];
+        bb -> be[dir=both];
+        bc -> bf[dir=both];
+    }
+}
+@graphviz_close
 
 Cantor's approach was to show that you can devise procedures for selecting
 exactly one integer given any natural number, exactly one natural number given

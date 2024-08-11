@@ -1,5 +1,6 @@
 import { withMermaid } from "vitepress-plugin-mermaid"
 import MarkdownItCollapsible from "markdown-it-collapsible"
+import MarkdownItGraphvizExec from "markdown-it-graphviz-exec"
 
 export default withMermaid({
   title: "Kirk Rader",
@@ -29,7 +30,7 @@ export default withMermaid({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Music', link: '/music/music' },
-      { text: 'MP3', link: '/music/mp3' },
+      { text: 'Philosopy', link: '/philosophy/computability' },
       { text: 'About', link: '/about' },
     ],
 
@@ -42,7 +43,7 @@ export default withMermaid({
         ]
       },
       {
-        text: 'Philosopy', link: '/philosophy/computability'
+        text: 'Computability', link: '/philosophy/computability'
       },
       { text: 'Test Plugins', link: '/test-plugins' },
       { text: 'About', link: '/about' },
@@ -58,6 +59,7 @@ export default withMermaid({
     math: true,
     config: (md) => {
       md.use(MarkdownItCollapsible)
+      md.use(MarkdownItGraphvizExec)
     }
   },
 })
