@@ -14,7 +14,7 @@ npm add -D vitepress
 # initialize vitepress
 npx vitepress init
 
-# add create .gitignore
+# add to .gitignore
 cat << EOF > .gitignore
 node_modules
 .vitepress/cache
@@ -38,6 +38,10 @@ npm i vitepress-plugin-mermaid mermaid -D
 # add dependency on CSV parser used by music.data.js
 npm i csv-parse
 
+# additionl markdown-it plugins
+npm i markdown-it-collapsible
+npm i markdown-it-graphviz-exec
+
 # run dev server
 npm run docs:dev
 ```
@@ -50,9 +54,11 @@ npm run docs:dev
 
 ## bobsvg sources
 
+See <https://ivanceras.github.io/svgbob-editor/> for what these are.
+
 ### Euclid's Fifth Axiom (Parallel Postulate)
 
-```bobsvg
+```
 
  A *                    * B
     \                  /
@@ -78,11 +84,11 @@ note = {
 
 ### Playfair's Theorem
 
-```bobsvg
+```
 
          * A   / +--------------------------+ 
         /     /  | Playfair's Theorem:      | 
-       /     /   | {playfair}               | 
+       /     /   | {note}                   | 
       /     /    | For any P not on AB,     | 
      /   P *     | exactly one line can     | 
     /     /      | be drawn through P which | 
@@ -90,16 +96,16 @@ note = {
   * B   /        +--------------------------+ 
 
 # Legend:
-playfair = {
+note = {
   stroke: silver;
   fill: silver;
 }
 ```
 
-```bobsvg
+```
 
  +---------------------------------+ 
- |       Injective Mapping         | 
+ |       "Injective Mapping"       | 
  |                                 | 
  |     ______           ______     | 
  |   ,'      `.       ,'      `.   | 
@@ -109,11 +115,11 @@ playfair = {
  |  \          /     \          /  | 
  |   `.______.'       `.______.'   | 
  |                                 | 
- |    Domain             Range     | 
+ |    "Domain"          "Range"    | 
  +---------------------------------+ 
 
  +---------------------------------+ 
- |      Surjective Mapping         | 
+ |       "Surjective Mapping"      | 
  |                                 | 
  |     ______           ______     | 
  |   ,'      `.       ,'      `.   | 
@@ -123,21 +129,21 @@ playfair = {
  |  \          /     \          /  | 
  |   `.______.'       `.______.'   | 
  |                                 | 
- |    Domain             Range     | 
+ |     "Domain"         "Range"    | 
  +---------------------------------+ 
 
  +---------------------------------+ 
- |       Bijective Mapping         | 
+ |        "Bijective Mapping"      | 
  |                                 | 
  |     ______           ______     | 
  |   ,'      `.       ,'      `.   | 
- |  /  a <---- \  -  / --> e    \  | 
- | |     b <--- | - | --> f      | | 
- | |   c <----- | - | ---> g     | | 
+ |  /  a ----- \  -  / --> e    \  | 
+ | |     b ---- | - | --> f      | | 
+ | |   c ------ | - | ---> g     | | 
  |  \          /     \          /  | 
  |   `.______.'       `.______.'   | 
  |                                 | 
- |    Domain             Range     | 
+ |     "Domain"       "Co-domain"  | 
  +---------------------------------+ 
 
 
