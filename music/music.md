@@ -40,27 +40,6 @@ _Or search for "Kirk Rader" on the music service you prefer..._
 ![Youtube Music](/qrcodes/youtube_kirk_rader_qrcode.png)
 +++
 
-## Musicography
-
-<template v-for="(album) in data">
-  <template v-if="album.file.endsWith('.csv')">
-      <h3>{{ album.contents[0].album }}</h3>
-      <p>UPC {{ album.contents[0].upc }}</p>
-      <table>
-          <tr>
-              <th>Track</th>
-              <th>Title</th>
-              <th>ISRC</th>
-          </tr>
-          <tr v-for="(item) in album.contents">
-              <td>{{ item.track }}</td>
-              <td>{{ item.title }}</td>
-              <td>{{ item.isrc }}</td>
-          </tr>
-      </table>
-  </template>
-</template>
-
 ## Background
 
 [I started creating electronic music](#yesterday) on the West Coast of the US,
@@ -177,7 +156,7 @@ are the closest I am likely to come to writing "scores" for any of my music.
 This is my "West Coast" approach applied to using "East Coast" inspired gear
 and software.
 
-See [SonicPi "Scores"](sonicpi) for [Ruby](https://www.ruby-lang.org) code
+See [SonicPi "Scores"](#sonicpi-scores) for [Ruby](https://www.ruby-lang.org) code
 examples as musical scores.
 
 ## Studio Setups
@@ -314,3 +293,35 @@ graph BT
   creating digital music and controlling MIDI instruments
 
 ...running on a creaky old MacBook Pro laptop
+
+## Musicography
+
+<template v-for="(album) in data">
+  <template v-if="album.file.endsWith('.csv')">
+      <h3>{{ album.contents[0].album }}</h3>
+      <p>UPC {{ album.contents[0].upc }}</p>
+      <table>
+          <tr>
+              <th>Track</th>
+              <th>Title</th>
+              <th>ISRC</th>
+          </tr>
+          <tr v-for="(item) in album.contents">
+              <td>{{ item.track }}</td>
+              <td>{{ item.title }}</td>
+              <td>{{ item.isrc }}</td>
+          </tr>
+      </table>
+  </template>
+</template>
+
+## SonicPi "Scores"
+
+[Ruby](https://www.ruby-lang.org) code examples as musical scores.
+
+<template v-for="(score) in data">
+  <template v-if="score.file.endsWith('.rb')">
+    <h4>{{ /[^/]*$/.exec(score.file)[0] }}</h4>
+    <pre>{{ score.contents }}</pre>
+  </template>
+</template>
