@@ -132,7 +132,8 @@ from the 16th through the 19th centuries was that calculus was simply too
 useful to ignore simply because it flirted with the idea that infinite
 quantities must be legitimate mathematical objects.
 
-::: info
+::: info Note
+
 Mathematicians had long before become accustomed to rationalizing abstract
 mathematical entities in empirical terms. For example, negative numbers were
 initially justified using reasoning based on what modern bookkeepers would
@@ -141,6 +142,7 @@ dollars, I will still owe you 1 dollar after giving you all I have. I.e. my net
 holdings will be -1 dollars because as soon as I find another dollar I will be
 obligated to hand it over to you. That sort of reasoning underlay how Western
 mathematicians first embraced the concept of negative numbers.
+
 :::
 
 But starting in the late 19th century, enabled by the new focus on validity
@@ -218,155 +220,100 @@ every element of both the domain and range with exactly one element of the
 other, there must be exactly the same number of elements in both or else some
 elements would have either been duplicated or left out of the mapping.
 
-@graphviz_open
-digraph G {
-
-    node[shape=circle]
-
-    subgraph injective {
-
-        cluster=true;
-        label="injective (into)";
-        color=white;
-
-        subgraph injective_domain {
-            cluster=true;
-            color=black;
-            label="domain";
-
-            ia[label="a"];
-            ib[label="b"];
-
-            ia -> ib[style=invis];
-        }
-
-        subgraph injective_range {
-            cluster=true;
-            label = "range";
-            color=black;
-
-            id[label="d"];
-            ie[label="e"];
-            if[label="f"];
-            id -> ie[style=invis];
-            ie -> if[style=invis];
-        }
-
-        ia -> id;
-        ib -> ie;
-    }
-
-    subgraph surjective {
-
-        cluster=true;
-        label="surjective (onto)";
-        color=white;
-
-        subgraph surjective_domain {
-            cluster=true;
-            color=black;
-            label="domain";
-            sa[label="a"];
-            sb[label="b"];
-            sc[label="c"];
-
-            sa -> sb[style=invis];
-            sb -> sc[style=invis];
-        }
-
-        subgraph surjective_range {
-            cluster=true;
-            label = "range";
-            color=black;
-
-            sd[label="d"];
-            se[label="e"];
-            sd -> se[style=invis];
-        }
-
-        sa -> sd;
-        sb -> se;
-    }
-
-    subgraph bijective {
-
-        cluster=true;
-        label="bijective (1:1)";
-        color=white;
-
-        subgraph bijective_domain {
-            cluster=true;
-            label="domain";
-            color=black;
-
-            ba[label="a"];
-            bb[label="b"];
-            bc[label="c"];
-
-            ba -> bb[style=invis];
-            bb -> bc[style=invis];
-        }
-
-        subgraph bijective_range {
-            cluster=true;
-            label = "co-domain";
-            color=black;
-
-            bd[label="d"];
-            be[label="e"];
-            bf[label="f"];
-            bd -> be[style=invis];
-            be -> bf[style=invis];
-        }
-
-        ba -> bd[dir=both];
-        bb -> be[dir=both];
-        bc -> bf[dir=both];
-    }
-}
-@graphviz_close
+![](/mappings.svg)
 
 Cantor's approach was to show that you can devise procedures for selecting
-exactly one integer given any natural number, exactly one natural number given
-any integer and that those procedures associate the same integer and natural
-number which ever direction of the bijection you consider. Same for the natural
-and rational numbers. So far, so good.
+exactly one integer given any natural number. Same for the natural and rational
+numbers. So far, so good.
 
-::: info
-Any set for which there is an injective mapping from $\mathbb{N}$ is said to be
+::: info Note
+
+Any set for which there is a surjective mapping from $\mathbb{N}$ is said to be
 _countable_. If that set, itself, has an infinite cardinality then it is said
 to be _countably infinite_. All countably infinite sets have the same
 cardinality as $\mathbb{N}$.
+
 :::
 
 But what about the set of real numbers, $|\mathbb{R}|$? The first clue to there
 being something different about $|\mathbb{R}|$ is that it isn't possible to
-come up with a succinct definition of it similar to the definitions given above
-for $|\mathbb{N}|$, $|\mathbb{I}|$ and $|\mathbb{F}|$.
+come up with a succinct definition of it using the formalisms of Set Theory
+similar to the definitions given above for $|\mathbb{N}|$, $|\mathbb{I}|$ and
+$|\mathbb{F}|$.
 
 Conventionally, the set of real numbers is defined loosely as "all the points
 on the number line," also known as the _continuum_. Every point in the
-continuum corresponds to a particular real a number, whose value is distinct
-from the real number whose value is at some other point. The essential nature
-of the continuum is that it is, well, _continuous_. Given any two points on the
+continuum corresponds to a particular real number, whose value is distinct from
+the real number whose value is at every other point. The essential nature of
+the continuum is that it is, well, _continuous_. Given any two points on the
 number line, there are an infinite number of points between them. Take any two
-of those "inner" points and there is, again, an infinite number of points
-between those, as well.
+of those "inner" points and there is an infinite number of points between
+those, as well.
 
 Cantor showed that you cannot create a bijective mapping between $\mathbb{N}$
-and $\mathbb{R}$. Even if you assume such a 1:1 mapping is possible between
-$\mathbb{N}$ and just the points on the continuum between any two real numbers
-(e.g. 0.0 to 1.0), there is a procedure by which you can always produce an
-infinite number of real numbers that could not have been in the original
-mapping. This means that all mapping between $\mathbb{N}$ and $\mathbb{R}$ are,
-at best, injective and can never by surjective. Thus
-$|\mathbb{N}|<|\mathbb{R}|$. Since both cardinalities are infinite, there are
-at least to distinct infinite quantities which are orderable in the same way
-that finite quantities are ordered. In fact, Cantor's arguments together with
-subsequent work by Hilbert and others demonstrate that there are an infinite
-number of such ordered infinite quantities, with $\mathbb{N}$ and $\mathbb{R}$
-being the first two and (if assuming the axiom of choice) nothing in between
-them. That latter assumption is known as the _continuum hypothesis_.
+and $\mathbb{R}$ when the latter is defined as all the points on the continuum.
+
+::: info Note
+
+More precisely, Cantor assumed that every point on the continuum can be
+represented as a unique sequence of decimal digits such that if two sequences
+of digits differ in even one decimal place, they denote different real numbers.
+Some such sequences must be infinitely long in order to denote a fully exact
+real number distinct from all others, such as the values of $\frac 1 3$ or
+$\pi$ when represented as decimal digits.
+
+:::
+
+
+Even if you begin by assuming a 1:1 mapping is possible between $\mathbb{N}$
+and just the points on the continuum between any two real numbers (e.g. 0.0 to
+1.0), Cantor defined a procedure by which you can always produce an infinite
+number of real numbers that could not have been in the original mapping.
+
+::: info Note
+
+See <https://en.wikipedia.org/wiki/Cantor's_diagonal_argument> for a
+description of Cantor's procedure.
+
+:::
+
+This means that all mappings between $\mathbb{N}$ and $\mathbb{R}$ are, at
+best, injective and can never by surjective. Thus $|\mathbb{N}|<|\mathbb{R}|$.
+Since both cardinalities are infinite, there are at least two distinct infinite
+quantities which are orderable in the same way that finite quantities are
+ordered. Cantor named the cardinality the set of natural numbers $\aleph_0$.
+
+In fact, Cantor's arguments together with subsequent work by Hilbert and others
+demonstrate that according to Set Theory there are an infinite number of such
+ordered infinite quantities, with $\aleph_0$ being the smallest infinite
+cardinality, $\aleph_1$ being the next and so on.
+
+To return to the preceding discussion of naive intuitions about infinite
+quantities, Cantor showed that, while:
+
+$$
+\aleph_0 = |\mathbb{N}|
+$$
+
+it is also true that:
+
+$$
+\aleph_0 < |\mathbb{R}|
+$$
+
+::: info Note
+
+The cardinality of $\mathbb{R}$ turns out to be that of the power set of
+$\mathbb{N}$, i.e. $2^{\aleph_0}$. Set Theory cannot show the exact ordering of
+the numbers in the $\aleph$ sequence, but the _continummum hypothesis_ (CH) is
+that there are no infinite quantities between $\aleph_0$ and $|\mathbb{R}|$,
+meaning that if you assume CH:
+
+$$
+\aleph_1 = |\mathbb{R}| = 2^{\aleph_0}
+$$
+
+:::
 
 ## Computability
 
@@ -413,9 +360,11 @@ approaches yield the same set of numbers. I.e. the behavior of any possible
 Turing machine can be represented as a formula of the Lambda Calculus and any
 such formula can be used as the "blueprint" for such a machine.
 
-::: info
+::: info Note
+
 This is what programming language theorists mean when they say a given language
 is "Turing complete" -- but that is getting ahead in the story.
+
 :::
 
 ### Computability Theory Begat Computer Science
@@ -445,10 +394,12 @@ $$
 Both represent the application of a function that adds 1 to its argument,
 producing the value 3.[<sup>**</sup>](#lambda)
 
-::: info
+::: info Note
+
 Yes, the term _lambda_ to mean an anonymous function as well as Amazon's choice
 of _Lambda_ as the brand name of its "serverless" computing platform derives
 from Church's Lambda Calculus and Lisp.
+
 :::
 
 ## But Wait, There's More!
@@ -463,16 +414,16 @@ empiricist mathematics when regarded as a science). Among those new areas of
 interest were set theory, formal linguistics and computability theory. The
 results from such metamathematical research immediately gave rise to Computer
 Science. They also provided tools that helped physicists develop General
-Relativity and Quantum Mechanics among other revolutionary discoveries of the
+Relativity and Quantum Mechanics among other revolutionary advancements of the
 20th century.
 
 Returning to the fundamental questions underlying Computability Theory, the
-Church - Turing Hypothesis answers the question of how to characterize
-computable real numbers, at least from a purely formal perspective. It says
-absolutely nothing about all those vastly more points  on the number line
-representing numbers that are not computable. I.e. it says nothing qaulitative
-about numbers, computable or otherwise. This still leaves us with the question
-of what can we say about non-computable numbers?
+Church-Turing Hypothesis answers the question of how to characterize computable
+real numbers, at least from a purely formal perspective. It says absolutely
+nothing about all those vastly more points  on the number line representing
+numbers that are not computable. I.e. it says nothing qualitative about
+numbers, computable or otherwise. This still leaves us with the question of
+what can we say about non-computable numbers?
 
 The answer is, of course, that there is nothing we can say about non-computable
 real numbers because they only exist as a side-effect of an intuitively
@@ -493,9 +444,9 @@ of rope" simply because of the physical materials out of which the rope was
 made and how those materials are combined to form a "length of rope". Laying
 such concerns aside, if you choose to continue the subdividing process on the
 bits of fiber that are the tiny remnants of what is no longer a rope, you will
-reach a point where you are pulling apart microscopic bits of composite
-materials into mono-molecular chunks. Keep going and you will eventually reach
-a point where you are separating molecules into the their constituent elemental
+reach a point where you are pulling apart microscopic chunks of composite
+materials into mono-molecular bits. Keep going and you will eventually reach a
+point where you are separating molecules into the their constituent elemental
 atoms. Continue, and you will start pulling atoms apart into clouds of
 electrons, protons and neutrons. Keep at it, and you will see vast numbers of
 every species in the "particle zoo" until you arrive at some final level
@@ -509,11 +460,13 @@ artifacts of a purely formal mathematical theory, like the "completed
 infinities" that were once anathema and now seem commonplace among mathematical
 theories. But from that point of view, Cantor's proof that
 $|\mathbb{N}|<|\mathbb{R}|$ can just as easily be understood to be a _reductio
-ad absurdum_ argument that the continuum cannot exist even as a theoretical
-artifact of pure number theory. From that point of view, the set of computable
-numbers represents the exhaustive list of all possible numbers and is countably
-infinite. For this reason, mathematical texts should just stop talking about
-"real numbers" as a set distinct from the computable ones.
+ad absurdum_ argument that the continuum is fairly useless even as a
+theoretical artifact of pure number theory. From that point of view, the set of
+computable numbers represents the exhaustive list of all possible numbers and
+is countably infinite. For this reason, mathematical texts should just stop
+talking about "real numbers" as a set distinct from the computable ones, other
+than as a quaint remnant of pre-modern theories. I.e. the continuum is to
+mathematics what _phlogison_ is to chemistry or the _ether_ is to physics.
 
 ---
 
