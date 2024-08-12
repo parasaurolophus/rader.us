@@ -131,7 +131,7 @@ Download [Rainy Day Fanfare](/mp3/09_Rainy_Day_Fanfare.mp3)
 
 ### Analogy in C Major
 
-Major mode variation on track [Analogy in C Minor](#analogy-in-c-minor).
+Major mode variation on [Analogy in C Minor](#analogy-in-c-minor).
 
 <audio controls>
     <source src="/mp3/10_Analogy_in_C_Major.mp3" type="audio/mpeg"/>

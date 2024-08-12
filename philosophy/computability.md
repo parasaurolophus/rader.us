@@ -438,6 +438,9 @@ For example, the following Scheme expression:
 
 means exactly the same as the following expression of the lambda calculus:
 
+$$
+\lambda x . + \ x \ 1 \ ( 2
+$$
 
 Both represent the application of a function that adds 1 to its argument,
 producing the value 3.[<sup>**</sup>](#lambda)

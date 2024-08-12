@@ -29,7 +29,7 @@ export default withMermaid({
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Music', link: '/music/music' },
+      { text: 'Music', link: '/music/musicography' },
       { text: 'Philosopy', link: '/philosophy/computability' },
       { text: 'About', link: '/about' },
     ],
@@ -38,7 +38,7 @@ export default withMermaid({
       {
         text: 'Music',
         items: [
-          { text: 'Musicography', link: '/music/music' },
+          { text: 'Musicography', link: '/music/musicography' },
           { text: 'MP3', link: '/music/mp3' },
         ]
       },
