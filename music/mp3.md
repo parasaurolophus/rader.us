@@ -4,7 +4,7 @@ At the request of some friends and family who have, rather incautiously,
 requested access to some of my music without recourse to streaming services, I
 have put together the following links. (These are all tracks from various
 albums that are available on most [music streaming
-services](./music.md#streaming).)
+services](./musicography.md#streaming).)
 
 ## Aural Palette Cleansers
 
