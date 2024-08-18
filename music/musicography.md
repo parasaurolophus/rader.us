@@ -296,22 +296,24 @@ graph BT
 
 ## Musicography
 
-<template v-for="(album) in data">
-  <template v-if="album.file.endsWith('.csv')">
-      <h3>{{ album.contents[0].album }}</h3>
-      <p>UPC {{ album.contents[0].upc }}</p>
-      <table>
-          <tr>
-              <th>Track</th>
-              <th>Title</th>
-              <th>ISRC</th>
-          </tr>
-          <tr v-for="(item) in album.contents">
-              <td>{{ item.track }}</td>
-              <td>{{ item.title }}</td>
-              <td>{{ item.isrc }}</td>
-          </tr>
-      </table>
+<template v-for="(file) in data">
+  <template v-if="file.file.endsWith('/musicography.csv')">
+    <template v-for="(album) in file.contents">
+        <h3>{{ album[0].album }}</h3>
+        <p>UPC {{ album[0].upc }}</p>
+        <table>
+            <tr>
+                <th>Track</th>
+                <th>Title</th>
+                <th>ISRC</th>
+            </tr>
+            <tr v-for="(item) in album">
+                <td>{{ item.track }}</td>
+                <td>{{ item.title }}</td>
+                <td>{{ item.isrc }}</td>
+            </tr>
+        </table>
+    </template>
   </template>
 </template>
 
