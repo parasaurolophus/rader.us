@@ -257,3 +257,15 @@ A wonderful visit.
 </audio>
 
 Download [Westlake Souvenir (for Michael and Julie)](/mp3/19_Westlake_Souvenir_-_for_Michael_and_Julie.mp3)
+
+---
+
+### For Dennis
+
+Inspired by, but rather different from...
+
+<audio controls>
+    <source src="/mp3/20_For_Dennis.mp3" type="audio/mpeg"/>
+</audio>
+
+Download [For Dennis](/mp3/20_For_Dennis.mp3)
