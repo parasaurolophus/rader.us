@@ -22,10 +22,10 @@ graph LR
 
 ```latex
 $$
-\begin{align}
-    & \text{Let } \aleph_0 = \omega \ \omega \\
-    & \text{where } \omega = \lambda x . x \ x
-\end{align}
+\begin{split}
+    \text{Let } \aleph_0 & = \omega \ \omega \\
+    \text{where } \omega & = \lambda x . x \ x
+\end{split}
 $$
 ```
 
@@ -37,10 +37,10 @@ $$
 ### Rendered
 
 $$
-\begin{align}
-    & \text{Let } \aleph_0 = \omega \ \omega \\
-    & \text{where } \omega = \lambda x . x \ x
-\end{align}
+\begin{split}
+    \text{Let } \aleph_0 & = \omega \ \omega \\
+    \text{where } \omega & = \lambda x . x \ x
+\end{split}
 $$
 
 > I.e. $\aleph_0$ is the result returned by a function which calls itself an
