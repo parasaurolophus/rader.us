@@ -12,33 +12,37 @@ _Or search for "Kirk Rader" on the music service you prefer..._
 
 <https://music.amazon.com/artists/B004L4HW52/kirk-rader>
 
-+++ Amazon Music QR
-![Amazon Music](/qrcodes/amazon_kirk_rader_qrcode.png)
-+++
+<details>
+    <summary>Amazon Music QR</summary>
+    ![Amazon Music](/qrcodes/amazon_kirk_rader_qrcode.png)
+</details>
 
 ### Apple Music
 
 <https://music.apple.com/us/artist/kirk-rader/417090159>
 
-+++ Apple Music QR
-![Apple](/qrcodes/apple_kirk_rader_qrcode.png)
-+++
+<details>
+    <summary>Apple Music QR</summary>
+    ![Apple](/qrcodes/apple_kirk_rader_qrcode.png)
+</details>
 
 ### Spotify
 
 <https://open.spotify.com/artist/06lMz4EjJn3pYej2kGIL5t>
 
-+++ Spotify QR
-![Spotify](/qrcodes/spotify_kirk_rader_qrcode.png)
-+++
+<details>
+    <details>Spotify QR</details>
+    ![Spotify](/qrcodes/spotify_kirk_rader_qrcode.png)
+</details>
 
 ### YouTube Music
 
 <https://music.youtube.com/channel/UCp__q4DYBXYhq9uiD2Y8vUg>
 
-+++ YouTube Music QR
-![Youtube Music](/qrcodes/youtube_kirk_rader_qrcode.png)
-+++
+<details>
+    <summary>YouTube Music QR</summary>
+    ![Youtube Music](/qrcodes/youtube_kirk_rader_qrcode.png)
+</details>
 
 ## Background
 
@@ -227,7 +231,7 @@ graph BT
 
             eurorack["Various\nEurorack\nModules"]
 
-            adc["PreSonus AudioBox iTwo"]
+            adc["PreSonus Studio 26c"]
 
             subgraph computer["Computer"]
                 audacity["Audacity"]

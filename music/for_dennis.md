@@ -1,16 +1,15 @@
 _Copyright &copy; 2024 Kirk Rader_
 
-# Anatomy of a Musical Composition
+# Anatomy of a Digital Musical Composition
 
-<audio controls>
+[For Dennis](/mp3/20_For_Dennis.mp3">20_For_Dennis.mp3) <audio controls>
     <source src="/mp3/20_For_Dennis.mp3" type="audio/mpeg"/>
 </audio>
 
-[For Dennis](/mp3/20_For_Dennis.mp3) is the result of a recent conversation
-with a friend. He described an idea he had for a musical composition
-memorializing the thousands of victims of the terrorist attacks on September
-11, 2001. His description of the piece he had in mind was the inspiration for
-the following bit of Ruby code:
+_For Dennis_ is the result of a recent conversation with a friend. He described
+an idea he had for a musical composition memorializing the thousands of victims
+of the terrorist attacks on September 11, 2001. His description of the piece he
+had in mind was the inspiration for the following bit of Ruby code:
 
 ```ruby
 # Copyright 2024 Kirk Rader
