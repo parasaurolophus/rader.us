@@ -18,7 +18,7 @@ hero:
 features:
   - title: Music
     details: Old-school, west coast style electronic... er, um, music?
-    link: /music/music
+    link: /music/musicography
   - title: Philosophy of Mathematics
     details: Stuff that interests me
     link: /philosophy/computability

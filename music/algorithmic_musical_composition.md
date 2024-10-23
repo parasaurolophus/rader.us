@@ -11,42 +11,78 @@ Go ahead. Press <span style="font-size: xx-large; vertical-align: middle;">&#x23
 
 After all, what's the worst that could happen?
 
-## Old-School Modular Analog Synthesis
-
 What humans perceive as sound is the result of rapid changes in air pressure
 causing our ear drums to vibrate. So long as these vibrations occur within
 certain ranges of _frequency_ and _amplitude_, the arrangement of tiny bones and
 sensory nerves within our inner ears transduce them into bioelectric signals
-sent to our brains, which process them as recognizable sounds.
+sent to our brains, which process and interpret them as recognizable sounds.
 
-A recording of a sound stores a representation of those vibrations in a way such
+Such changes in air pressure are conventionally visualized and described
+mathematically by analogy to ripples on a still body of water when something
+disturbs its surface. In this analogy, striking a drum's head is like tossing a
+pebble into a pond on a windless day. The mass of the stone displaces some
+amount of fluid as it passes through the water, causing a characteristic pattern
+of changes to the water's pressure. When those pressure changes reach the pond's
+surface, they appear as ripples emanating from the point at which the pebble
+entered the water. The ripples have a distinctive shape that is caused by the
+interplay of the size, shape and mass of the pebble, the density and viscosity
+of the water, the size and shape of the pond, and so on. The ripples are tallest
+when the pebble first enters the water, then become lower over time as the
+energy from the impact dissipates. Eventually the system returns to equilibrium.
+The water again has a smooth, motionless surface until the next pebble is
+thrown. If multiple pebbles are thrown when the ripples from previous pebbles
+have not yet died out, the pond's is covered by complex patterns of ripples,
+where the motion of one ripple might either reinforce or cancel out the motion
+of some other ripple.
+
+In the case of sound waves caused by striking a drum, the drumstick or mallet is
+like the pebble, the drumhead is like the pond's surface. Striking the drum
+causes ripples on the surface of the drum. The size and shape of the ripples are
+determined by factors such as the elasticity of the drumhead and its taughtness.
+Other factors include the size and shape of the body of the drum, the physical
+characteristics of the object used to strike it, and so on. The height and shape
+of the ripples in the drumhead cause a corresponding pattern of changes to
+pressure in the surrounding air. The eardrums of anyone in hearing range then
+are induced to ripple in sympathy to the ripples in the drumhead due to those
+changes in air pressure. (Hence the antique term _sympathetic vibrations_ as a
+way of describing how _resonance_ works.) This is why sounds are described by
+acousticians and recording engineers using the terminology of _sound waves_ and
+_wave forms_. Since any wave form can be depicted by graphing some mathematical
+function, it is common to visualize sound waves using such graphs and to
+describe them using mathematical terms like _sine wave_.
+
+A recording of a sound stores a representation of the sound waves in a way such
 that they can be transduced into changes in air pressure via a speaker, which
-then enter your ears in the same fashion as the original sound. An _analog_
+then enter our ears in the same fashion as the original sound. An _analog_
 recording represents a stored sound using a continuously varying physical
 property where each point in the "analog" of the sound directly matches the
-corresponding point in the actual sound. For example, a vinyl disk stores
-acoustical vibrations as physical textures on the sides of grooves cut into its
-surface. A turntable's playback needle vibrates as a result of brushing against
-that texture as the disk spins. The needle's vibrations are converted
-electromechanically into a continuously varying voltage. That voltage is passed
-through an amplifier and ultimately to the electroacoustic transducer in a
-speaker. The speaker's membrane vibrates according to the changes in voltage,
-which resonates through the air to listners' ears as a reproduction of the
-original sound.
+corresponding point in the original sound's wave form.
 
-An analog tape stores acoustic vibrations as patterns of intensity of a magnetic
-field imparted along its length. Rather than a physically vibrating needle, a
-tape machine's playback heads transduce these variations in the magnetic field
-to a continuously varying voltage. From that point on, the process is the same
-as that described for a turntable. That is why you can connect a turntable and
-tape player to a single amplifier, feeding a single set of speakers. Internally,
-the "sound" is really just an electrical current whose voltage varies over time
-right up until it reaches the speakers.
+For example, a vinyl disk stores acoustical vibrations as physical textures on
+the sides of grooves cut into its surface. A turntable's playback needle
+vibrates as a result of brushing against that texture as the disk spins. The
+needle's vibrations are converted electromechanically into a continuously
+varying voltage. That voltage is passed through an amplifier and ultimately to
+the electroacoustic transducer in a speaker. The speaker's membrane vibrates
+according to the changes in voltage, which resonates through the air to
+listners' ears as a reproduction of the original sound.
+
+In the same way, an analog tape stores acoustic vibrations as patterns of
+intensity of a magnetic field imparted along its length. Rather than a
+physically vibrating needle, a tape machine's playback heads transduce these
+variations in the magnetic field to a continuously varying voltage. From that
+point on, the process is the same as that described for a turntable. That is why
+you can connect a turntable and tape player to a single amplifier, feeding a
+single set of speakers. Internally, the "sound" is really just an electrical
+current whose voltage varies over time in "sympathy" to the recorded sound
+waves, right up until it reaches the speakers, where they are converted back
+into actual sound waves.
 
 _[For completeness, a digital recording stores the record of the vibrations as a
-series of binary numbers which then undergoes digital to analog conversion
-(DAC)... but let's leave that aside for now since we are concentrating here on
-analog synthesis and playback.]_
+series of binary numbers which then undergoes digital to analog conversion (DAC)
+to become an audio signal conveyed as a varying voltage... but let's leave that
+aside for now since we are concentrating here on analog synthesis and
+playback.]_
 
 The point to understand for our present purposes is that whatever medium was
 used to store a sound, the playback device must be able to transduce the
@@ -58,20 +94,22 @@ reproduction of the original sound in the same manner as if they had been
 present when it was being recorded, though with a cumulative loss of fidelity
 resulting from the physical characteristics of the intermediate transducers and
 storage media, governed by basic laws of nature involving constraints like
-inertia and entropy.
+friction, inertia, and entropy.
 
 The process by which such recordings are created is the same, but operating in
 reverse. A microphone consists of a membrane which vibrates in resonance to
-changes in air pressure. It transduces those vibrations into -- you guessed it!
+changes in air pressure, just like a person's eardrums vibrate in resonance to
+sound waves. The microphone transduces those vibrations into -- you guessed it!
 -- a continuously varying electric voltage. That electric signal is fed into a
 device which stores the changes in voltage as changes to whatever recording
-medium is in use: vibrations in the cutting needle or. these days, changes to
-the position of a cutting laser for a vinyl disk template, changes in intensity
-of electromagnets in the recording head of a tape machine, etc.
+medium is in use: vibrations in the cutting needle for a vinyl disk template,
+changes in intensity of electromagnets in the recording head of a tape machine,
+etc.
 
 I.e. to create a recording, a sound is first transformed into a continuously
-varying voltage. To play the recording back, the stored analog of the original
-sound is again transformed into a voltage:
+varying voltage which is then used to create some physical analog of the
+original sound waves. To play the recording back, the stored analog of the
+original sound is again transformed into a voltage:
 
 ```mermaid
 ---
@@ -110,12 +148,11 @@ graph LR
 ```
 
 Any time a term like _signal_. _signal path_, _audio_ or _audio path_ are used
-in the context of a discussion music synthesis, it refers to the continuously
-varying voltage representing the analog of an acoustical vibration. (This is to
-be distinguished from _control voltage_ (_CV_) or _control path_, discussed
-later.)
+in the context of music synthesis, it refers to the continuously varying voltage
+representing the analog of an acoustical vibration. This is to be distinguished
+from _control voltage_ (_CV_) or _control path_, discussed later.
 
-### Elementary Psychoacoustics
+## Elementary Psychoacoustics
 
 A number of characteristics of sound vibrations combine to form a given sound's
 _timbre_: the subjective experience of the sound that allows us, for example, to
@@ -127,28 +164,38 @@ include:
 
 - The _frequency_ (or "pitch") of the vibrations.
 
-- The _envelope_ (how the _amplitude_ and wave form change over time).
+- A vibration's _envelope_ (how the _amplitude_ and wave form change over time).
 
 The terminology of "frequency" and "amplitude" are best explained by reference
 to extremely simple wave forms, like sine, rectangle, sawtooth etc. Such wave
-are easy to visualize and describe mathematically but rarely occur naturally in
-anything close to their pure forms.
+forms are easy to visualize and describe mathematically but rarely occur
+naturally in anything close to their pure forms.
 
 Consider the following three tracks displayed in an audio editing program:
 
 ![](/sines.png)
 
-The top track contains a 440 Hz sine wave at a particular amplitude. (440 Hz
+The top track contains a 440 Hz sine wave at a particular amplitude (440 Hz
 corresponds to "concert A," the pitch used by players in an orchestra so that
-their instruments will all be "in tune" when played together.) Here is what that
+their instruments will all be "in tune" when played together). Here is what that
 track sounds like when played on its own:
 
 **440 Hz Sine Wave** <audio controls><source src="/sine-01.mp3"/></audio>
 
 This is called a "sine wave" because the wave's shape can be exactly represented
-by graphing the mathematical _sine_ function. The term "440 Hz" refers to the
-fact that this particular sine wave repeats at 440 Hertz, i.e. it traverses one
-cycle (from zero to peak to valley and back to zero) 440 times each second.
+by graphing the mathematical _sine_ function:
+
+$$
+v = a \sin(pt)
+$$
+
+where $t$ is a point in time, $p$ and $a$ are scaling factors representing the
+tone's pitch and amplitude, respectively, and $v$ the audio signal's voltage at
+that time.
+
+The term "440 Hz" refers to the fact that this particular sine wave repeats at
+440 Hertz, i.e. it traverses one cycle (from zero volts, to peak, to valley and
+back to zero) 440 times each second.
 
 The second track is the same 440 Hz sine wave, but at half the amplitude. I.e.
 it is again a 440 Hz sine wave, but the distance, top to bottom, between the
@@ -158,7 +205,7 @@ first one, but at a noticeably lower volume:
 
 **Softer 440 Hz Sine Wave** <audio controls><source src="/sine-02.mp3"/></audio>
 
-The third track is a 880 Hz sine wave, at the same aplitude as the first. The
+The third track is a 880 Hz sine wave, at the same amplitude as the first. The
 result is a tone that is the same volume as the first one, but an octave higher
 in pitch:
 
@@ -180,17 +227,21 @@ as the first sine wave, above. It sounds like this:
 
 **440 Hz Sawtooth Wave** <audio controls><source src="/sawtooth.mp3"/></audio>
 
-It is perceived as the same "note" as the 440 Hz sine wave, at the same volume
-as the first and third of the preceding examples. It has a noticeably different
-quality to its sound, however, as if it were being played by a different musical
-instrument. Human hearing is such that differently shaped waves are perceived as
-sounding distinctively different from one another, even at the same pitch and
-amplitude.
+It is perceived as being the same pitch as the 440 Hz sine wave. It has a
+noticeably different quality to its sound, however, as if it were being played
+by a different musical instrument. Human hearing is such that differently shaped
+waves are perceived as sounding distinctively different from one another, even
+at the same pitch and amplitude. Note also that even though the sawtooth wave
+has the same overall amplitude when graphed as the first sine wave, above, it
+actually sounds a bit louder when played back. This due to the presence of
+_overtones_, discussed later.
 
 The essence of electronic musical composition is finding creative ways to put
 all of the preceding principles together.
 
-### Wave Forms As Musical Notes
+## Wave Forms As Musical Notes
+
+### Composite Wave Forms (Fundamentals vs Overtones)
 
 Any naturally occuring sound will have a fairly complex wave form that can be
 understood using the [mathematics of signal
@@ -199,7 +250,32 @@ of a given set of sine waves, each at a specific frequency and amplitude. A
 sufficiently chaotic jumble of sine waves at different frequencies and
 amplitudes sounds like noise, e.g. the hiss of stean escaping a radiator or the
 sound coming from the speakers of an old analog TV that is not tuned to any
-station,
+station. A truly random distribution of frequencies across the full range of
+audible frequenices is referred to as "white" noise, by analogy to the colors in
+the visible light spectrum:
+
+**White Noise** <audio controls><source src="/white_noise.mp3"/></audio>
+
+Noise that contains a preponderance of frequencies lower in the audible
+"spectrum" is referred to as "pink" or "red," again by analogy to light colors.
+Depending on the highest frequency that is included, the lower the cut-off
+frequency, the "redder" the noise:
+
+**Red Noise** <audio controls><source src="/red_noise.mp3"/></audio>
+
+Here is what the preceding two wave forms look like an audio editing program:
+
+![](/noise.png)
+
+Note that the preceding sound wave graphs both consist of a randomly varying
+signal voltage with the same overall amplitude. The white noise graph varies
+faster over time than the graph of red noise, because it contains more
+frequencies in any given span of time. Because the white noise contains more
+frequencies per unit of time, it sounds louder than the red noise for the same
+reason that the sawtooth wave, above, sounds louder than the corresponding sine
+wave. Even though noise is not particuarly "musical" on its own (it is, after
+all, called "noise" for a reason) it does find its way into many analog
+synthesizer setups for a variety of purposes, as will be seen later.
 
 In order to sound "musical," the sine waves comprising a given "note" must
 conform to certain rules. The loudest (highest amplitude) sine wave should be
@@ -210,7 +286,14 @@ specific mathematical relationships to the fundamental frequency. Such
 additional frequencies are called _overtones_. One of the things that makes a
 violin sound different from a flute and a flute, in turn, different from a
 trumpet is the distinctive patterns of overtones at specific amplitudes present
-in the sounds they emit.
+in the sounds they emit. A sine wave consists of nothing but its fundamental,
+while any other wave form consists a fundamental plus some number of overtones.
+White noise sounds louder than red noise, and a sawtooth wave sounds louder than
+a sine wave because, in each case, the former represents a higher transfer of
+energy compared to the latter in the form of changes in air pressure due to the
+inclusion of more frequencies per unit of time.
+
+### Dynamic Properties of Music Notes
 
 As a consequence of the physical properties of whatever is producing the sound
 -- vocal chords buzzing, sticks or mallets striking drum heads, bows scraping
@@ -226,16 +309,19 @@ below audible amplitude nearly as fast as they begin when struck, while a
 piano's strings can "ring on" for quite some time if allowed to do so by use of
 the sustain pedal. By comparison, human voices as well as wind and string
 instruments can have much longer "sustain" levels, determined by the breath
-control of the performers or the lengths of their bows. Compared to percussion
-instruments, many string and wind instruments have a noticeable "ramp up" in
-aoplitude during their attack phase because it takes a little bit of time for
-the vibrations to expand to the full length of a given instrument's strings or
-air column.
+control of the performers or the lengths of their bows.
+
+Conversely, bowed and wind instruments can have a noticeable "ramp up" in
+amplitude during their attack phase compared to plucked or percussion
+instruments, because it takes a little bit of time for sufficient energy to be
+transferred to the full length of a given instrument's strings or air column,
+depending on the mechanical properties of the means by which that energy is
+imparted to begin with.
 
 This pattern of _attack - decay - sustain - release_ (_ADSR_) forming a sound's
 "envelope" applies to a sound's wave form as well as its amplitude. The
-perciptible difference between the timbres of a woodwind and brass instrument,
-for example, has mostly to do with differences in their wave forms' envelopes.
+perceptible difference between the timbres of a woodwind and brass instrument,
+for example, has a lot to do with differences in their wave forms' envelopes.
 This is due to the difference between how their sounds are initially produced. A
 woodwind's wave form is relatively constant, even as its amplitude varies, while
 a brass instrument's wave form varies considerably from the attack / decay
@@ -243,25 +329,28 @@ phases through the sustain / release phases due to the physical characteristics
 of human lips compared to the far less elastic media of reeds and wooden or
 metallic edges.
 
-In order to produce wave forms with similar complexities to those produced by
-"acoustic" instruments, the _modules_ comprising a _modular analog synthesizer_
-are individual electronic components that generate or modify an _audio signal_
-represented as a continuously varying voltage. By chaining together a number of
-such modules in a single audio path, a huge variety of sounds can be produced
-using from a few basic building blocks. Since modular synthesizers have
-traditionally used patch cords to implement such chains, a given configuration
-of modules to produce a particular audio output is referred to as a _patch_.
+## Old-School Modular Analog Synthesis
+
+In order to produce wave forms with similar musical characteristics and
+complexities to those produced by "acoustic" instruments, the _modules_
+comprising a _modular analog synthesizer_ are individual electronic components
+that generate or modify an _audio signal_ represented as a continuously varying
+voltage. By chaining together a number of such modules in a single audio path, a
+huge variety of wave forms can be produced from a few basic building blocks.
+Since modular synthesizers have traditionally used patch cords to implement such
+chains of modules, a given configuration of modules to produce a particular
+audio output is referred to as a _patch_.
 
 A typical patch might consist of:
 
 - An _oscillator_, which generates an audio signal in the form of some periodic
   wave form, e.g. sine, triangle, sawtooth or rectangular waves.
 
-- An _amplifier_, which modifies the signal's _gain_, i.e. the audio wave form's
-  overall amplitude.
-
 - A _filter_, which allows some audio frequencies to pass through unchanged,
   while attenuating (reducing the amplitude) of other frequencies.
+
+- An _amplifier_, which modifies the signal's _gain_, i.e. the audio wave form's
+  overall amplitude.
 
 - ...and so on for more exotic types of modules such as _envelope generators_,
   _ring modulators_, _sample and hold units_ etc.
@@ -288,12 +377,13 @@ waves:
   amplitude of certain frequencies).
 
 - _Frequency modulation (FM) synthesis_ feeds one or more audio-frequency
-  signals into another as control voltages,
+  signals into another as control voltages.
 
 FM synthesis is particularly useful with traditional analog synthesizers that
 have a relatively small number of oscilattors, each producing relatively simple
-wave forms. Such wave forms combine chaotically to produce a lot of acoustically
-interesting complexity.
+wave forms. Such wave forms combine through FM synthesis chaotically, which
+produces a lot of acoustically interesting complexity from relatively few
+individual oscillators.
 
 Some producers and performers are primarily interested in electronic instruments
 as a means of simulating traditional instrumentation at lower cost than hiring
@@ -305,29 +395,28 @@ _Electronic Music_, as a meta-genre, is focused on musical techniques, sounds,
 and forms that simply are not possible using conventional instruments. Modular
 analog synthesizers are ideal for such pursuits.
 
-## Using Control Voltages
+### Using Control Voltages
 
-### Traditional Musical Techniques
+#### Traditional Musical Techniques
 
 A _low frequency oscillator (LFO)_ is simply a VCO (voltage controlled
 oscillator) which is configured to emit a frequency well below that which is
 perceptible to human hearing. Such a LFO is often used for traditional musical
-techniques involving changes to tempo, like _rubato_ or pitch, like _vibrato_.
-
+techniques involving changes to pitch, like _vibrato_, or tempo, like _rubato_.
 
 For example, here is the audio output of a VCO emitting a sine wave at a given
 base pitch, with another sine wave emitted by a LFO patched into the VCO's CV
-controlling the latter's frequency:
+controlling the former's frequency:
 
 **Vibrato** <audio controls><source src="/vibrato.mp3" /></audio>
 
 The result is that the VCO's output continously increases and decreases in
 pitch, producing vibrato.
 
-### Uniquely Electronic Techniques
+#### Uniquely Electronic Techniques
 
 As with other aspects of electronic musical composition, analog modular
-syntheisizers allows far greater scope for defining musical techniques than is
+synthesizers allows far greater scope for defining musical techniques than is
 possible with traditional instruments. For example, here is a similar example to
 the preceding one, but with the range of frequencies in the "vibrator" far
 beyond what a human could achieve with a traditional instrument:
@@ -362,6 +451,13 @@ graph TB
 
 **Sine vs Sine vs Sine**<audio controls><source src="/fm.mp3" /></audio>
 
+On the one hand, the preceding sounds likes a continuously sustained note whose
+pitch is that of the constant fundamental frequency to which VCO 1 is tuned.
+Over time, however, the timbre changes periodically due to the overtones
+introduced by modulating VCO 1 using VCO 2 and varying VCO 2's frequency by wave
+of the LFO. The speed of the sweep of changing overtones is determined by the
+frequency of the LFO.
+
 ## Example 01
 
 It is obviously a matter of taste as to how "musical" any of the preceding
@@ -392,6 +488,10 @@ middle and extreme left, respectively.
 **Meloday Patch** ![Example 03 Melody Patch](/23_Example_03_Melody_Patch.png)
 
 **Toms Patch** ![Example 03 Toms Patch](/23_Example_03_Toms_Patch.png)
+
+Unlike the preceding examples, the notes values and timings are controlled by
+MIDI events sent by the following [Ruby](https://www.ruby-lang.org/) code,
+executed by [Sonic Pi](https://sonic-pi.net/):
 
 ```ruby
 # Copyright 2024 Kirk Rader
@@ -530,47 +630,53 @@ are all the algorithms?"
 The answer, of course, is "the patches _are_ the algorithms."
 
 It is worth noting that not one of the examples on this page involved the use of
-a keyboard nor any other direct input medium. None of them were "played" in the
-conventional sense. The _Sonic Pi_ program sent commands to the synthesizer as
-MIDI events, but the timing and note values of those MIDI events were entirely
-determined by the execution of the Ruby program shown above. For the other
-examples, any rhythms, dynamics or other time-based aspects were the result of
-the "logic" of how various wave forms combined along both the audio and control
-paths of a given patch. (Most of these examples, as well as my published works,
-are composites of multiple tracks arranged manually using _digital audio
-workstation_ (DAW) software, but most such tracks in my body of work were
-created in this entirely algorithmic fashion.)
+a keyboard nor any other manual input device. I.e. none of them were "played" in
+the conventional sense. The _Sonic Pi_ program sent commands to the synthesizer
+as MIDI events, in the same that a MIDI keyboard would send them, but the timing
+and note values of those MIDI events were entirely determined by the execution
+of the Ruby program shown above. For the other examples, any rhythms, dynamics
+or other time-based aspects were the result of the "logic" of how various wave
+forms combined along both the audio and control paths of a given patch. (Most of
+these examples, as well as my published works, are composites of multiple tracks
+arranged manually using _digital audio workstation_ (DAW) software.
+Individually, however, most such tracks in my body of work were created in this
+entirely algorithmic fashion.)
 
-A traditional musical score is an algorithm, expressed in the language of
-traditional muscial notation. Such algorithms are intended to be executed by the
-human performers who play the music encoded by the given score. Such algorithms
-are, however, more like recipes in a cookbook than like mathematical formulas.
-I.e. the choice of each and every "ingredient" and how they are combined in a
-conventional musical score is the result of a conscious decision by its
-composer, resulting from that particular person's whims and tastes at the time
-of composition.
+But that is neither particularly radical nor "inartistic." A traditional musical
+score is an algorithm, expressed in the language of traditional muscial
+notation. Such algorithms are intended to be executed by the human performers
+who play the music encoded by the given score. Such algorithms are, however,
+more like recipes in a cookbook than like mathematical formulas. I.e. the choice
+of each and every "ingredient" and how they are combined in a conventional
+musical score is the result of a conscious decision by its composer, resulting
+from that particular person's whims and tastes at the time of composition.
 
 Similarly, the source code that was used to drive [Example 03](#example-03) is
 an algorithm expressed in the Ruby programming language, executed by a computer
 running _Sonic Pi_. I.e. the Ruby code is the musical score for _Example 03_
-every bit as much, and exactly the same way as a score written in musical
+every bit as much, and in exactly the same way as a score written in musical
 notation. Though it looks nothing like music notation, each line was consciously
 and deliberately written by a person (your humble author) according to a
 particular set of transitory "artistic" impulses with the aim of achieving some
 particular esthetic result.
 
-For the other examples on this page (and many of my published musical
+For the other examples on this page (and most of my published musical
 compositions), the algorithm is embodied directly in how the modules of various
-analog synthesizers are configured and patched together. They are, in effect,
-algorithms that execute themselves. This is the key concept which, in the late
-1970's, simultaneously drew me toward this style of electronic music composition
-and toward computer programming as a career.
+analog synthesizers are configured and patched together. They are algorithms
+that execute themselves. They represent music whose scores do not exist, even
+theoretically, independent of the physcial patches that produce their audible
+output. This is different from improvisation on conventional instruments, where
+the performer / composer could, themselves or else by way of an amanuensis,
+write down a score in conventional musical notation from memory or based on a
+recording.
 
-I had already fallen in love with the sound of electronic music when I began
-studying symbolic logic and formal linguistics at UCLA in 1978 (including
+That is the key concept which, in the late 1970's, simultaneously drew me toward
+this style of electronic music composition and toward computer programming as a
+career. I had already fallen in love with the sound of electronic music when I
+began studying symbolic logic and formal linguistics at UCLA in 1978 (including
 seminars on various topics in metamathematics conducted by [Alonzo
 Church](https://plato.stanford.edu/ENTRIES/church/), himself.) At the same time,
-I started dabbling in the creation of my own electronic musical compositions, I
+I started dabbling in the creation of my own electronic musical compositions. I
 was immediately struck by how the third of the following bullet points is a
 direct consequence (actually, a restatement in applied terms) of the first two
 foundational principles of computational logic:
@@ -588,14 +694,15 @@ foundational principles of computational logic:
 That said, I never felt any great need to reproduce traditional musical sounds
 or forms by electronic means. (I occasionally do so, but usually only as
 experiments with particular tools or techniques, i.e. as "studies" for more
-purely electronic compositions.) Specifically, I consider traditional music
-notation and instrumentation entirely sufficent for expressing traditional
-musical ideas. My passion as a composer is in exploring musical ideas which
-cannot be expressed or performed by traditional means. This is no less an
-"artistic" undertaking than composing and arranging more conventional music. It
-is just that the artistry occurs by way of experimenting with patches, reording
-the results, and layering the individual tracks in a final mix for any given
-piece.
+purely electronic compositions.)
+
+Specifically, I consider traditional music notation and instrumentation more
+than sufficent for expressing traditional musical ideas. My passion as a
+composer is in exploring musical ideas which cannot be expressed or performed by
+traditional means. This is no less an "artistic" undertaking than composing and
+arranging more conventional music. It is just that the artistry occurs by way of
+experimenting with patches, recording the results, and layering the individual
+tracks in a final mix for any given piece.
 
 ---
 
@@ -617,5 +724,5 @@ $$
 never receive any definite value within a finite amount of time. Such
 self-recursion resulting in an infinitely evolving outcome is analogous to using
 techniques like FM synthesis, which mix together elements between the audio and
-control paths of a patch to achieve complex sonic outputs from mutually
+control paths of a patch to achieve complex sonic outputs from simple, mutually
 referential inputs.
