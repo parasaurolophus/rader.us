@@ -31,9 +31,9 @@ when the pebble first enters the water, then become lower over time as the
 energy from the impact dissipates. Eventually the system returns to equilibrium.
 The water again has a smooth, motionless surface until the next pebble is
 thrown. If multiple pebbles are thrown when the ripples from previous pebbles
-have not yet died out, the pond's is covered by complex patterns of ripples,
-where the motion of one ripple might either reinforce or cancel out the motion
-of some other ripple.
+have not yet died out, the pond's surface is covered by complex patterns of
+ripples, where the motion of one ripple might either reinforce or cancel out the
+motion of some other ripple.
 
 In the case of sound waves caused by striking a drum, the drumstick or mallet is
 like the pebble, the drumhead is like the pond's surface. Striking the drum
@@ -418,23 +418,23 @@ pitch, producing vibrato.
 As with other aspects of electronic musical composition, analog modular
 synthesizers allows far greater scope for defining musical techniques than is
 possible with traditional instruments. For example, here is a similar example to
-the preceding one, but with the range of frequencies in the "vibrator" far
-beyond what a human could achieve with a traditional instrument:
+the preceding one, but with the range of frequencies in the "vibrato" far beyond
+what a human could achieve with a traditional instrument:
 
 **Way Beyond "Vibrato"** <audio controls><source src="/extreme_vibrato.mp3" /></audio>
 
-Taking it one step further, here is an extremely simple example of what is
-npossible using FM synthsis. Like the preceding example, it is the output of a
-VCO emitting a sine wave. In this case, however, the first VCO's frequency is
-being modulated by feeding the output of a second sine wave, whose base
-frequency is tuned to the same frequency as the source of the audio signal, into
-the first VCO's CV input controlling its frequency. I.e. the audio signal is the
-result of modulating a sine wave's frequency by another sine wave. If that were
-the end of it, there would be relatively little change to the output signal
-because the two sines waves were tuned to the same initial frequency. However,
-for this patch, the second sine wave's frequency is itself being modulated by a
-third, low frequency sine wave, creating a continuously varying interference
-pattern between the first two VCO's frequencies:
+And here is an extremely simple example of what is npossible using FM synthsis.
+Like the preceding example, it is the output of a VCO emitting a sine wave. In
+this case, however, the first VCO's frequency is being modulated by feeding the
+output of a second sine wave, whose base frequency is tuned to the same
+frequency as the source of the audio signal, into the first VCO's CV input
+controlling its frequency. I.e. the audio signal is the result of modulating a
+sine wave's frequency by another sine wave. If that were the end of it, there
+would be relatively little change to the output signal because the two sines
+waves were tuned to the same initial frequency. However, for this patch, the
+second sine wave's frequency is itself being modulated by a third, low frequency
+sine wave, creating a continuously varying interference pattern between the
+first two VCO's frequencies:
 
 ```mermaid
 graph TB
@@ -457,6 +457,96 @@ Over time, however, the timbre changes periodically due to the overtones
 introduced by modulating VCO 1 using VCO 2 and varying VCO 2's frequency by wave
 of the LFO. The speed of the sweep of changing overtones is determined by the
 frequency of the LFO.
+
+As already discussed, a sound's "envelope" is an essential aspect of its timbre.
+An _ADSR envelope generator_ is a type of module that emits a pattern of changes
+to a control voltage each time it is triggered. "ADSR" is an acronym for
+_Attack_, _Decary_, _Sustain_, _Release_:
+
+| Envelope Phase | Description                                                                                           |
+|----------------|-------------------------------------------------------------------------------------------------------|
+| **Attack**     | Time it takes for CV to go from minimum to its maximum value when the gate "open" signal is received  |
+| **Decay**      | Time it takes for CV to go from its maximum value to the sustain level                                |
+| **Sustain**    | Level at which CV remains after attack and decay phases, for as long as the gate remains "open"       |
+| **Release**    | Time it takes for CV to go from its current level to 0 when the gate is "closed"                      |
+
+The "gate" signals are often provided by keyboard events: the gate "opens" when
+a key is pressed and "closes" when the key is released. However, other triggers
+can be used as the gate signals for ADSR. Many of the my compositions "play
+themselves" by using a single "clock" signal to drive both envelope generator
+and _sample and hold_ units simultaneously.
+
+A _sample and hold_ unit emits a control voltage based on periodically
+"sampling" an input voltage and "holding" its output at that level until it is
+time for the next "sample." To illustrate, consider a patch like:
+
+```mermaid
+graph LR
+
+    LFO -.->|"CV<br>(sawtooth)"| VCO
+    VCO -->|audio| out
+```
+
+The preceding will produce a sound like:
+
+**Smoothly ramping pitch** <audio controls><source src="/smooth.mp3"/></audio>
+
+because the low-frequency sawtooth wave causes the frequency of the tone emitted
+by the VCO to continuously increase from its minimum value to its maximum value
+for each cycle of the control signal.
+
+Adding a sample and hold (S&H) unit to the patch:
+
+```mermaid
+graph LR
+
+    sh["S&H"]
+
+    LFO -.->|"CV<br>(sawtooth)"| sh
+    clock -.-> sh
+    sh -.->|"CV"| VCO
+    VCO -->|audio| out
+```
+
+might cause the output to sound something like:
+
+**Stair stepping pitch** <audio controls><source src="/s_h_1.mp3"/></audio>
+
+The output jumps directly from pitch to pitch directly instead of continuously
+sliding higher because the S&H unit sets its output voltage to whatever is
+present on its input each time the clock "ticks." The S&H unit holds its output
+at that level until the next "tick," when it again sets its output voltage to
+match its input at that instant in time. The smoothly ramping sawtooth wave is
+turned into a stair case. The width and height of the steps are determined by
+the relationship between the frequencies of the input voltage, the low-frequency
+sawtooth in this case, and the speed of the clock. For example, here is what the
+same patch sounds like sampling the same sawtooth but with the clock frequency
+sped up a bit:
+
+**Faster clock** <audio controls><source src="/s_h_2.mp3"/></audio>
+
+Note that output traverses the same range of pitches from lowest to highest in
+the same amount of time, as determined by the amplitude and frequency of the
+sawtooth wave emitted by the LFO in both of the two preceding examples. However,
+there are fewer, more widely spaced pitches in the first compared to the second
+because the faster clock results in a higher number of samples, each being held
+for a shorter amount, in each cycle of the sawtooth wave. If one were to
+increase the clock to a sufficiently high frequency, the output of the second of
+the preceding patches would eventually sound indistinguishable from the first
+due to the same phenomenon of "anti-aliasing" that results from increasing the
+number of pixels used to capture a digital image.
+
+But the same phenomenon works in reverse. Depending on the phase relationship
+between the frequency of the clock relative to that of the source being sampled,
+interesting patterns can emerge. Here is another recording of the same patch,
+but with the clock substantially slower than in the preceding two examples:
+
+**Phasing clock** <audio controls><source src="/s_h_3.mp3"/></audio>
+
+The "ramping" pitches can still be discerned, but they start and end at
+noticeably different points in the "scale" for different iterations through the
+LFO sawtooth. Layering multiple tracks created in this way can create
+interestingly complex rhythmic and harmonic patterns.
 
 ## Example 01
 
@@ -489,9 +579,10 @@ middle and extreme left, respectively.
 
 **Toms Patch** ![Example 03 Toms Patch](/23_Example_03_Toms_Patch.png)
 
-Unlike the preceding examples, the notes values and timings are controlled by
-MIDI events sent by the following [Ruby](https://www.ruby-lang.org/) code,
-executed by [Sonic Pi](https://sonic-pi.net/):
+Unlike the preceding examples, the notes' values and timings are controlled by
+[MIDI](https://en.wikipedia.org/wiki/MIDI) events sent by the following
+[Ruby](https://www.ruby-lang.org/) code, executed by [Sonic
+Pi](https://sonic-pi.net/):
 
 ```ruby
 # Copyright 2024 Kirk Rader
