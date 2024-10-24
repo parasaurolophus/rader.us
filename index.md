@@ -8,17 +8,17 @@ hero:
   tagline: My music, code examples, essays
   image: /kirk.png
   actions:
-    - theme: brand
-      text: MP3
-      link: /music/mp3
     - theme: alt
       text: About
       link: /about
 
 features:
-  - title: Music
+  - title: Musicography
     details: Old-school, west coast style electronic... er, um, music?
     link: /music/musicography
+  - title: MP3
+    details: Less outré compositions
+    link: /music/mp3
   - title: Philosophy of Mathematics
     details: Stuff that interests me
     link: /philosophy/computability

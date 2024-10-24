@@ -190,11 +190,11 @@ graph LR
 
         cassette(["Cassette Tape"])
 
-        piano --> mic -- "analog\naudio" ---> portastudio
-        arp2600 -- "analog\naudio" --> portastudio
-        ob8 -- "analog\naudio" -----> portastudio
-        dx7 -- "analog\naudio" -----> portastudio
-        portastudio -- "analog\naudio" --> cassette
+        piano --> mic -- "analog<br>audio" ---> portastudio
+        arp2600 -- "analog<br>audio" --> portastudio
+        ob8 -- "analog<br>audio" -----> portastudio
+        dx7 -- "analog<br>audio" -----> portastudio
+        portastudio -- "analog<br>audio" --> cassette
 
         classDef group stroke-dasharray: 5 5
         class early,later group
@@ -222,15 +222,13 @@ The albums I have been publishing more recently have been created using
 variations of this setup:
 
 ```mermaid
-graph BT
+graph TB
 
         subgraph "My Basement"
 
             keyboard(["Akai Pro MPK261"])
             b2600["Behringer 2600"]
-
-            eurorack["Various\nEurorack\nModules"]
-
+            eurorack["Various<br>Eurorack<br>Modules"]
             adc["PreSonus Studio 26c"]
 
             subgraph computer["Computer"]
@@ -238,7 +236,7 @@ graph BT
                 ableton["Ableton Live"]
                 sonicpi["Sonic Pi"]
                 plugins["VST"]
-                flac[("FLAC,\nWAV,\nMP3")]
+                flac[("FLAC,<br>WAV,<br>MP3")]
                 plugins <--> audacity --> flac
                 plugins <--> ableton --> flac
                 sonicpi --> flac
@@ -249,7 +247,7 @@ graph BT
         end
 
         subgraph cloud["Online Publishers"]
-            cdbaby["cdbaby.com\ndistrokid.com\netc."]
+            cdbaby["cdbaby.com<br>distrokid.com<br>etc."]
             bandcamp["bandcamp.com"]
         end
 
@@ -264,14 +262,14 @@ graph BT
             soundexchange["SoundExchange"]
         end
 
-        keyboard -- "MIDI\n(DIN)" --> b2600
-        b2600 <-- "trigger,\ngate,\ncontrol voltage,\nanalog audio" --> eurorack
-        b2600 -- "analog\naudio" --> adc
-        adc <-- "digital audio,\nMIDI\n(USB)" --> computer
+        keyboard -- "MIDI<br>(USB)" --> adc
+        b2600 <-- "trigger,<br>gate,<br>control voltage,<br>analog audio" --> eurorack
+        b2600 -- "analog<br>audio" --> adc
+        adc -- "MIDI<br>(DIN)" --> b2600
+        adc <-- "digital audio,<br>MIDI<br>(USB)" --> computer
         adc -- "monitor" --> monitor
-        computer <-- "MIDI\n(USB)" --> keyboard
-        computer -- "publish" --> cdbaby
-        computer -- "publish" --> bandcamp
+        computer -- "publish" ---> cdbaby
+        computer -- "publish" ---> bandcamp
         cdbaby -- "distribute" --> itunes
         cdbaby -- "distribute" --> youtube
         cdbaby -- "distribute" --> spotify
@@ -284,7 +282,7 @@ graph BT
 - [Akai Pro MPK261](https://www.akaipro.com/mpk261) keyboard
 - [Behringer 2600](https://www.behringer.com/product.html?modelCode=P0DNJ)
   modern clone of the _ARP 2600_ I used as a kid
-- [PreSonus AudioBox iTwo](https://www.presonus.com/en-US/interfaces/usb-audio-interfaces/audiobox-series/2777700108.html)
+- [PreSonus Studio 26c](https://www.presonus.com/products/studio-26c)
   ADC
 
 ...plus various Eurorack modules that change embarassingly frequently
@@ -296,7 +294,9 @@ graph BT
 - [Sonic Pi](https://sonic-pi.net/) Ruby dialect and runtime platform for
   creating digital music and controlling MIDI instruments
 
-...running on a creaky old MacBook Pro laptop
+...running on an infuratingly overpriced, poorly designed and implemented iMac
+due to lack of support for anything else by the manufacturers of audio related
+hardware and software
 
 ## Musicography
 
@@ -323,7 +323,8 @@ graph BT
 
 ## SonicPi "Scores"
 
-[Ruby](https://www.ruby-lang.org) code examples as musical scores.
+[Ruby](https://www.ruby-lang.org) code examples as musical scores for use with
+[Sonic Pi](https://sonic-pi.net/).
 
 <template v-for="(score) in data">
   <template v-if="score.file.endsWith('.rb')">
