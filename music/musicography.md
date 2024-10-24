@@ -14,7 +14,7 @@ _Or search for "Kirk Rader" on the music service you prefer..._
 
 <details>
     <summary>Amazon Music QR</summary>
-    ![Amazon Music](/qrcodes/amazon_kirk_rader_qrcode.png)
+    <img src="/qrcodes/amazon_kirk_rader_qrcode.png">
 </details>
 
 ### Apple Music
@@ -23,7 +23,7 @@ _Or search for "Kirk Rader" on the music service you prefer..._
 
 <details>
     <summary>Apple Music QR</summary>
-    ![Apple](/qrcodes/apple_kirk_rader_qrcode.png)
+    <img src="/qrcodes/apple_kirk_rader_qrcode.png">
 </details>
 
 ### Spotify
@@ -31,8 +31,8 @@ _Or search for "Kirk Rader" on the music service you prefer..._
 <https://open.spotify.com/artist/06lMz4EjJn3pYej2kGIL5t>
 
 <details>
-    <details>Spotify QR</details>
-    ![Spotify](/qrcodes/spotify_kirk_rader_qrcode.png)
+    <summary>Spotify QR</summary>
+    <img src="/qrcodes/spotify_kirk_rader_qrcode.png">
 </details>
 
 ### YouTube Music
@@ -41,7 +41,7 @@ _Or search for "Kirk Rader" on the music service you prefer..._
 
 <details>
     <summary>YouTube Music QR</summary>
-    ![Youtube Music](/qrcodes/youtube_kirk_rader_qrcode.png)
+    <img src="/qrcodes/youtube_kirk_rader_qrcode.png">
 </details>
 
 ## Background
