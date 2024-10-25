@@ -3,11 +3,12 @@ _Copyright &copy; 2024 Kirk Rader_
 # Algorithmic Musical Composition
 
 _[This page concentrates primarily on analog synthesizer techniques. See [For
-Dennis](./for_dennis.md) for a purely digital example.]_
+Dennis](../for_dennis.md) for a purely digital example.]_
 
 Go ahead. Press <span style="font-size: xx-large; vertical-align: middle;">&#x23F5;</span>
 
-[Example 04](/mp3/24_Example_04.mp3) <video controls><source src="/24_Example_04.mp4"/></video>
+[Example 04](/mp3/Example_04.mp3) <video controls><source
+src="./mp4/Example_04.mp4"/></video>
 
 After all, what's the worst that could happen?
 
@@ -173,14 +174,14 @@ naturally in anything close to their pure forms.
 
 Consider the following three tracks displayed in an audio editing program:
 
-![](/sines.png)
+![](./images/sines.png)
 
 The top track contains a 440 Hz sine wave at a particular amplitude (440 Hz
 corresponds to "concert A," the pitch used by players in an orchestra so that
 their instruments will all be "in tune" when played together). Here is what that
 track sounds like when played on its own:
 
-**440 Hz Sine Wave** <audio controls><source src="/sine-01.mp3"/></audio>
+**440 Hz Sine Wave** <audio controls><source src="./mp3/sine-01.mp3"/></audio>
 
 This is called a "sine wave" because the wave's shape can be exactly represented
 by graphing the mathematical _sine_ function:
@@ -203,13 +204,13 @@ higest and lowest points in each cycle is half of the corresponding distance in
 the preceding track. This results in a tone that sounds exactly the same as the
 first one, but at a noticeably lower volume:
 
-**Softer 440 Hz Sine Wave** <audio controls><source src="/sine-02.mp3"/></audio>
+**Softer 440 Hz Sine Wave** <audio controls><source src="./mp3/sine-02.mp3"/></audio>
 
 The third track is a 880 Hz sine wave, at the same amplitude as the first. The
 result is a tone that is the same volume as the first one, but an octave higher
 in pitch:
 
-**880 Hz Sine Wave** <audio controls><source src="/sine-03.mp3"/></audio>
+**880 Hz Sine Wave** <audio controls><source src="./mp3/sine-03.mp3"/></audio>
 
 Visually, note that the peaks and valleys line up from left to right in the
 first two tracks, while the peaks and valleys in the third track are closer
@@ -220,12 +221,12 @@ pitches and larger amplitudes as being louder.
 
 Now consider this screen shot from the same audio editing software:
 
-![](/sawtooth.png)
+![](./images/sawtooth.png)
 
 The track depicted contains a sawtooth wave at the same frequency and amplitude
 as the first sine wave, above. It sounds like this:
 
-**440 Hz Sawtooth Wave** <audio controls><source src="/sawtooth.mp3"/></audio>
+**440 Hz Sawtooth Wave** <audio controls><source src="./mp3/sawtooth.mp3"/></audio>
 
 It is perceived as being the same pitch as the 440 Hz sine wave. It has a
 noticeably different quality to its sound, however, as if it were being played
@@ -233,7 +234,7 @@ by a different musical instrument. Human hearing is such that differently shaped
 waves are perceived as sounding distinctively different from one another, even
 at the same pitch and amplitude. Note also that even though the sawtooth wave
 has the same overall amplitude when graphed as the first sine wave, above, it
-actually sounds a bit louder when played back. This due to the presence of
+actually sounds a bit louder when played back. This is due to the presence of
 _overtones_, discussed later.
 
 The essence of electronic musical composition is finding creative ways to put
@@ -254,18 +255,18 @@ station. A truly random distribution of frequencies across the full range of
 audible frequenices is referred to as "white" noise, by analogy to the colors in
 the visible light spectrum:
 
-**White Noise** <audio controls><source src="/white_noise.mp3"/></audio>
+**White Noise** <audio controls><source src="./mp3/white_noise.mp3"/></audio>
 
 Noise that contains a preponderance of frequencies lower in the audible
 "spectrum" is referred to as "pink" or "red," again by analogy to light colors.
 Depending on the highest frequency that is included, the lower the cut-off
 frequency, the "redder" the noise:
 
-**Red Noise** <audio controls><source src="/red_noise.mp3"/></audio>
+**Red Noise** <audio controls><source src="./mp3/red_noise.mp3"/></audio>
 
 Here is what the preceding two wave forms look like an audio editing program:
 
-![](/noise.png)
+![](./images/noise.png)
 
 Note that the preceding sound wave graphs both consist of a randomly varying
 signal voltage with the same overall amplitude. The white noise graph varies
@@ -355,7 +356,7 @@ A typical patch might consist of:
 - ...and so on for more exotic types of modules such as _envelope generators_,
   _ring modulators_, _sample and hold units_ etc.
 
-![basic patch](/basic-patch.png)
+![](./images/basic-patch.png)
 
 Each type of module accepts input and / or produces output audio signals. It
 must also provide controls to set parameters for its operation. For example, an
@@ -408,7 +409,7 @@ For example, here is the audio output of a VCO emitting a sine wave at a given
 base pitch, with another sine wave emitted by a LFO patched into the VCO's CV
 controlling the former's frequency:
 
-**Vibrato** <audio controls><source src="/vibrato.mp3" /></audio>
+**Vibrato** <audio controls><source src="./mp3/vibrato.mp3" /></audio>
 
 The result is that the VCO's output continously increases and decreases in
 pitch, producing vibrato.
@@ -421,7 +422,7 @@ possible with traditional instruments. For example, here is a similar example to
 the preceding one, but with the range of frequencies in the "vibrato" far beyond
 what a human could achieve with a traditional instrument:
 
-**Way Beyond "Vibrato"** <audio controls><source src="/extreme_vibrato.mp3" /></audio>
+**Way Beyond "Vibrato"** <audio controls><source src="./mp3/extreme_vibrato.mp3" /></audio>
 
 And here is an extremely simple example of what is npossible using FM synthsis.
 Like the preceding example, it is the output of a VCO emitting a sine wave. In
@@ -437,7 +438,7 @@ sine wave, creating a continuously varying interference pattern between the
 first two VCO's frequencies:
 
 ```mermaid
-graph TB
+graph LR
 
     lfo[LFO]
     vco1[VCO 1]
@@ -449,12 +450,12 @@ graph TB
     vco1 -->|audio| vca
 ```
 
-**Sine vs Sine vs Sine**<audio controls><source src="/fm.mp3" /></audio>
+**Sine vs Sine vs Sine**<audio controls><source src="./mp3/fm.mp3" /></audio>
 
 On the one hand, the preceding sounds likes a continuously sustained note whose
 pitch is that of the constant fundamental frequency to which VCO 1 is tuned.
 Over time, however, the timbre changes periodically due to the overtones
-introduced by modulating VCO 1 using VCO 2 and varying VCO 2's frequency by wave
+introduced by modulating VCO 1 using VCO 2 and varying VCO 2's frequency by way
 of the LFO. The speed of the sweep of changing overtones is determined by the
 frequency of the LFO.
 
@@ -473,7 +474,7 @@ _Attack_, _Decary_, _Sustain_, _Release_:
 The "gate" signals are often provided by keyboard events: the gate "opens" when
 a key is pressed and "closes" when the key is released. However, other triggers
 can be used as the gate signals for ADSR. Many of the my compositions "play
-themselves" by using a single "clock" signal to drive both envelope generator
+themselves" by using a single "clock" signal to drive both _envelope generator_
 and _sample and hold_ units simultaneously.
 
 A _sample and hold_ unit emits a control voltage based on periodically
@@ -489,7 +490,7 @@ graph LR
 
 The preceding will produce a sound like:
 
-**Smoothly ramping pitch** <audio controls><source src="/smooth.mp3"/></audio>
+**Smoothly ramping pitch** <audio controls><source src="./mp3/smooth.mp3"/></audio>
 
 because the low-frequency sawtooth wave causes the frequency of the tone emitted
 by the VCO to continuously increase from its minimum value to its maximum value
@@ -510,7 +511,7 @@ graph LR
 
 might cause the output to sound something like:
 
-**Stair stepping pitch** <audio controls><source src="/s_h_1.mp3"/></audio>
+**Stair stepping pitch** <audio controls><source src="./mp3/s_h_1.mp3"/></audio>
 
 The output jumps directly from pitch to pitch directly instead of continuously
 sliding higher because the S&H unit sets its output voltage to whatever is
@@ -523,10 +524,10 @@ sawtooth in this case, and the speed of the clock. For example, here is what the
 same patch sounds like sampling the same sawtooth but with the clock frequency
 sped up a bit:
 
-**Faster clock** <audio controls><source src="/s_h_2.mp3"/></audio>
+**Faster clock** <audio controls><source src="./mp3/s_h_2.mp3"/></audio>
 
-Note that output traverses the same range of pitches from lowest to highest in
-the same amount of time, as determined by the amplitude and frequency of the
+Note that the output traverses the same range of pitches from lowest to highest
+in the same amount of time, as determined by the amplitude and frequency of the
 sawtooth wave emitted by the LFO in both of the two preceding examples. However,
 there are fewer, more widely spaced pitches in the first compared to the second
 because the faster clock results in a higher number of samples, each being held
@@ -541,12 +542,19 @@ between the frequency of the clock relative to that of the source being sampled,
 interesting patterns can emerge. Here is another recording of the same patch,
 but with the clock substantially slower than in the preceding two examples:
 
-**Phasing clock** <audio controls><source src="/s_h_3.mp3"/></audio>
+**Phasing clock** <audio controls><source src="./mp3/s_h_3.mp3"/></audio>
 
 The "ramping" pitches can still be discerned, but they start and end at
-noticeably different points in the "scale" for different iterations through the
-LFO sawtooth. Layering multiple tracks created in this way can create
-interestingly complex rhythmic and harmonic patterns.
+different points in the "scale" for each cycle of the LFO sawtooth when the LFO
+and clock frequencies are not even multiples of one another. Layering multiple
+tracks created in this way can create interestingly complex rhythmic and
+harmonic patterns that vary continuously over time in manner that is neither
+simply repetitive nor random.
+
+To achieve a truly random "melody" is easy. Simply use a _noise generator_
+module as the CV input to a S&H unit:
+
+**Noisy melody** <audio controls><source src="./mp3/random.mp3"/></audio>
 
 ## Example 01
 
@@ -557,27 +565,27 @@ Here is a composition that combines all of the preceding principles, using a
 Behringer 2600 semi-modular synthesizer, to produce polyrhytmuc music with
 harmonic and timbral structures not achievable using conventional instruments:
 
-[Example 01](/mp3/21_Example_01.mp3) <audio controls><source src="/mp3/21_Example_01.mp3" /></audio>
+[Example 01](./mp3/Example_01.mp3) <audio controls><source src="./mp3/Example_01.mp3" /></audio>
 
-![Example 01](/21_Example_01_Patch.png)
+![](./images/Example_01_Patch.png)
 
-[Example 01](/mp3/21_Example_01.mp3) consists of three tracks of a couple of
+[Example 01](./mp3/Example_01.mp3) consists of three tracks of a couple of
 minutes each, recorded with VCO 1's _Fine Tune_ slider set to the extreme right,
 middle and extreme left, respectively.
 
-![](/21_Example_01_DAW.png)
+![](./images/Example_01_DAW.png)
 
 ## Example 02
 
-[Example 02](/mp3/22_Example_02.mp3) <audio controls><source src="/mp3/22_Example_02.mp3" /></audio>
+[Example 02](./mp3/Example_02.mp3) <audio controls><source src="./mp3/Example_02.mp3" /></audio>
 
 ## Example 03
 
-[Example 03](/mp3/23_Example_03.mp3) <audio controls><source src="/mp3/23_Example_03.mp3" /></audio>
+[Example 03](./mp3/Example_03.mp3) <audio controls><source src="./mp3/Example_03.mp3" /></audio>
 
-**Meloday Patch** ![Example 03 Melody Patch](/23_Example_03_Melody_Patch.png)
+**Meloday Patch** ![](./images/Example_03_Melody_Patch.png)
 
-**Toms Patch** ![Example 03 Toms Patch](/23_Example_03_Toms_Patch.png)
+**Toms Patch** ![](./images/Example_03_Toms_Patch.png)
 
 Unlike the preceding examples, the notes' values and timings are controlled by
 [MIDI](https://en.wikipedia.org/wiki/MIDI) events sent by the following
@@ -723,15 +731,15 @@ The answer, of course, is "the patches _are_ the algorithms."
 It is worth noting that not one of the examples on this page involved the use of
 a keyboard nor any other manual input device. I.e. none of them were "played" in
 the conventional sense. The _Sonic Pi_ program sent commands to the synthesizer
-as MIDI events, in the same that a MIDI keyboard would send them, but the timing
-and note values of those MIDI events were entirely determined by the execution
-of the Ruby program shown above. For the other examples, any rhythms, dynamics
-or other time-based aspects were the result of the "logic" of how various wave
-forms combined along both the audio and control paths of a given patch. (Most of
-these examples, as well as my published works, are composites of multiple tracks
-arranged manually using _digital audio workstation_ (DAW) software.
-Individually, however, most such tracks in my body of work were created in this
-entirely algorithmic fashion.)
+as MIDI events, in the same way that a MIDI keyboard or sequencer would send
+them, but the timing and note values of those MIDI events were entirely
+determined by the execution of the Ruby program shown above. For the other
+examples, any rhythms, dynamics or other time-based aspects were the result of
+the "logic" of how various wave forms combined along both the audio and control
+paths of a given patch. (Most of these examples, as well as my published works,
+are composites of multiple tracks arranged manually using _digital audio
+workstation_ (DAW) software. Individually, however, most such tracks in my body
+of work were created in this entirely algorithmic fashion.)
 
 But that is neither particularly radical nor "inartistic." A traditional musical
 score is an algorithm, expressed in the language of traditional muscial

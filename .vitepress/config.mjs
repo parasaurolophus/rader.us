@@ -29,7 +29,7 @@ export default withMermaid({
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Music', link: '/music/musicography' },
+      { text: 'Music', link: '/music/musicography/musicography' },
       { text: 'Philosopy', link: '/philosophy/computability' },
       { text: 'About', link: '/about' },
     ],
@@ -40,8 +40,8 @@ export default withMermaid({
         items: [
           { text: 'Musicography', link: '/music/musicography' },
           { text: 'MP3', link: '/music/mp3' },
-          { text: 'Algorithmic Musical Composition', link: '/music/algorithmic_musical_composition.md'},
-          { text: 'For Dennis', link: '/music/for_dennis.md' },
+          { text: 'Algorithmic Musical Composition', link: '/music/algorithmic_musical_composition/algorithmic_musical_composition'},
+          { text: 'For Dennis', link: '/music/for_dennis' },
         ]
       },
       {

@@ -15,7 +15,7 @@ hero:
 features:
   - title: Musicography
     details: Old-school, west coast style electronic... er, um, music?
-    link: /music/musicography
+    link: /music/musicography/musicography
   - title: MP3
     details: Less outré compositions
     link: /music/mp3
