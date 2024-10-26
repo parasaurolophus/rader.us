@@ -66,7 +66,7 @@ needle's vibrations are converted electromechanically into a continuously
 varying voltage. That voltage is passed through an amplifier and ultimately to
 the electroacoustic transducer in a speaker. The speaker's membrane vibrates
 according to the changes in voltage, which resonates through the air to
-listners' ears as a reproduction of the original sound.
+listeners' ears as a reproduction of the original sound.
 
 In the same way, an analog tape stores acoustic vibrations as patterns of
 intensity of a magnetic field imparted along its length. Rather than a
@@ -217,7 +217,11 @@ first two tracks, while the peaks and valleys in the third track are closer
 together, i.e. the peaks and valleys occur more frequently as one progresses
 through time in the third track compared to the first two. Thus, the third track
 represents a higher-frequency wave. Humans perceive higher frequencies as higher
-pitches and larger amplitudes as being louder.
+pitches and larger amplitudes as being louder. The keys on a "tempered"
+instrument like a piano or organ each correspond to a particular pitch in
+conventional musical notation. For example, striking the A key immediately above
+middle C causes a properly tuned piano's corresponding string to vibrate at 440
+Hz, the frequency of the first two of the preceding sine waves.
 
 Now consider this screen shot from the same audio editing software:
 
@@ -230,12 +234,13 @@ as the first sine wave, above. It sounds like this:
 
 It is perceived as being the same pitch as the 440 Hz sine wave. It has a
 noticeably different quality to its sound, however, as if it were being played
-by a different musical instrument. Human hearing is such that differently shaped
-waves are perceived as sounding distinctively different from one another, even
-at the same pitch and amplitude. Note also that even though the sawtooth wave
-has the same overall amplitude when graphed as the first sine wave, above, it
-actually sounds a bit louder when played back. This is due to the presence of
-_overtones_, discussed later.
+by a different musical instrument -- e.g. like the difference between a flute
+and oboe. Human hearing is such that differently shaped waves are perceived as
+sounding distinctively different from one another, even at the same pitch and
+amplitude. Note also that even though the sawtooth wave has the same overall
+amplitude when graphed as the first sine wave, above, it actually sounds a bit
+louder when played back. This is due to the presence of _overtones_, discussed
+later.
 
 The essence of electronic musical composition is finding creative ways to put
 all of the preceding principles together.
@@ -247,7 +252,7 @@ all of the preceding principles together.
 Any naturally occuring sound will have a fairly complex wave form that can be
 understood using the [mathematics of signal
 processing](https://en.wikipedia.org/wiki/Fast_Fourier_transform) to be the sum
-of a given set of sine waves, each at a specific frequency and amplitude. A
+of a particular set of sine waves, each at a specific frequency and amplitude. A
 sufficiently chaotic jumble of sine waves at different frequencies and
 amplitudes sounds like noise, e.g. the hiss of stean escaping a radiator or the
 sound coming from the speakers of an old analog TV that is not tuned to any
@@ -259,12 +264,14 @@ the visible light spectrum:
 
 Noise that contains a preponderance of frequencies lower in the audible
 "spectrum" is referred to as "pink" or "red," again by analogy to light colors.
-Depending on the highest frequency that is included, the lower the cut-off
-frequency, the "redder" the noise:
+White light that is passed through a filter than only allows lower frequencies
+to pass through becomes pink or red depending on the filter's cut-off frequency.
+By analogy, "white" noise that is passed through a low-pass filter will sound
+"redder":
 
 **Red Noise** <audio controls><source src="./mp3/red_noise.mp3"/></audio>
 
-Here is what the preceding two wave forms look like an audio editing program:
+Here is what the preceding two wave forms look like in an audio editing program:
 
 ![](./images/noise.png)
 
@@ -288,31 +295,83 @@ additional frequencies are called _overtones_. One of the things that makes a
 violin sound different from a flute and a flute, in turn, different from a
 trumpet is the distinctive patterns of overtones at specific amplitudes present
 in the sounds they emit. A sine wave consists of nothing but its fundamental,
-while any other wave form consists a fundamental plus some number of overtones.
-White noise sounds louder than red noise, and a sawtooth wave sounds louder than
-a sine wave because, in each case, the former represents a higher transfer of
-energy compared to the latter in the form of changes in air pressure due to the
-inclusion of more frequencies per unit of time.
+while any other wave form consists of a fundamental plus some number of
+overtones. White noise sounds louder than red noise, and a sawtooth wave sounds
+louder than a sine wave because, in each case, the former represents a greater
+transfer of energy from sound waves to ear drums compared to the latter in the
+form of changes in air pressure due to the inclusion of more frequencies per
+unit of time.
 
-### Dynamic Properties of Music Notes
+### Dynamic Properties of Musical Notes
 
-As a consequence of the physical properties of whatever is producing the sound
--- vocal chords buzzing, sticks or mallets striking drum heads, bows scraping
+As a consequence of the physical properties of whatever is producing a sound --
+vocal chords buzzing, sticks or mallets striking drum heads, bows scraping
 across strings, etc. -- a sound's wave form and overall amplitude will change
-over time in various ways. Percussion instruments, for example, have nearly
-instantaneous "attack" and very short "decay." I.e. they are at their loudest
-almost from the moment at which their sounds first start, and their loudness
-tapers off very quickly. Depending on other physcal characteristcs, such as the
-difference between a snare drum and a piano, a percussion instrument might or
-might not have any appreciable "release" -- the time it takes for the sound to
+over time in various ways. Consider what happens when a stick strikes a drum.
+
+First, the stick imparts energy to the drumhead at the point at which it lands.
+How much energy is determined by the stick's mass and velocity as determined by
+Newton's laws of motion. The energy absorbed by the drumhead causes wave to run
+through it similarly to the ripples on the surface of a pond caused by a stone.
+Those ripples are tallest when the stick first strikes, but quickly die out as
+they travel throughout the material of which the drumhead is made. We hear a
+short burst of sound, as these very short-lived waves resonant to our eardrums
+through the ear.
+
+A bowed string instrument works very differently, even though it is subject to
+the same laws of physics as a drum. The friction between the bow and the string
+causes the string to vibrate at a frequency that is determined by a combination
+of factors including the string's elasticity, length and taughtness. The
+strength of the vibrations -- i.e. the amplitude of the wave form it produces --
+are determined by the amount of energy imparted by the bow, which is affected by
+the speed at which it is moving and the amount of pressure applied. Again thanks
+to classical physics, the string's own inertia means that it takes a bit of time
+for the vibrations to emanate from the point at which the bow makes contact and
+reach maximum amplitude along its entire length. This causes a small but
+noticeable "ramping up" of the volume of the note when the bow is first applied.
+But as long as the bow keeps moving against it, the string keeps receiving
+energy and so keeps vibrating. Because of the lower mass and air resistance at
+each point on a string compared to a extended surface like a drumhead, a
+string's vibrations take longer to die out after the bow is removed, unless they
+are mechanically surpressed. (The latter is how string players achieve staccato:
+they keep the bow pressed against the string to damp its vibrations more quickly
+than when they end a note by removing the bow from the string entirely.)
+
+And so on for plucked string instruments, brass and woodwinds. The materials of
+which they are constructed and the manner in which they generate sound are, on
+the one hand, all governed by the same simple laws of physics but with results
+that sound different due to each instrument's particular mechanical properties.
+Among the factors that give each instrument its own unique timbre is the rate at
+which their amplitude ramps up and dies out and the way their sound waves shape
+changes over time as a note is played. These changes of a note's sound over time
+is called _envelope_.
+
+For the purposes of understanding how musical sounds are perceived, it turns out
+that envelope can be broken down into four distinct phases:
+
+| Phase     | Description                                                                                              |
+|-----------|----------------------------------------------------------------------------------------------------------|
+| _Attack_  | The time from which energy is first applied to when it reaches its maximum                               |
+| _Decay_   | The time from when energy has reeached its maximum to when it reaches the level at which it is sustained |
+| _Sustain_ | The amount of energy continously applied while a note is being played                                    |
+| _Release_ | The time it takes for the energy to die out after it is no longer being sustained                        |
+
+Drums, for example, have nearly instantaneous attack and very short decay. I.e.
+they are at their loudest almost from the instant at which their sounds first
+start, and their loudness tapers off just as quickly. Depending on various
+physcal characteristcs, such as the differences between the construction and
+operation of a snare drum and a cymbal or piano, a percussion instrument might
+or might not have any appreciable release -- the time it takes for the sound to
 die out completely after its initial decay. Drum heads' vibrations damp out to
 below audible amplitude nearly as fast as they begin when struck, while a
 piano's strings can "ring on" for quite some time if allowed to do so by use of
-the sustain pedal. By comparison, human voices as well as wind and string
-instruments can have much longer "sustain" levels, determined by the breath
-control of the performers or the lengths of their bows.
+the sustain pedal. Either way, the defining characteristic of a percussion
+instrument is that it has no true sustain (despite the name of piano's pedal).
+By comparison, human voices as well as wind and bowed instruments can have
+appreciable sustain levels, determined by the breath control of the performers
+or the lengths of their bows.
 
-Conversely, bowed and wind instruments can have a noticeable "ramp up" in
+That said, bowed and wind instruments can have a noticeable "ramp up" in
 amplitude during their attack phase compared to plucked or percussion
 instruments, because it takes a little bit of time for sufficient energy to be
 transferred to the full length of a given instrument's strings or air column,
@@ -320,15 +379,17 @@ depending on the mechanical properties of the means by which that energy is
 imparted to begin with.
 
 This pattern of _attack - decay - sustain - release_ (_ADSR_) forming a sound's
-"envelope" applies to a sound's wave form as well as its amplitude. The
+envelope applies to a sound's wave form as well as its amplitude. The
 perceptible difference between the timbres of a woodwind and brass instrument,
-for example, has a lot to do with differences in their wave forms' envelopes.
-This is due to the difference between how their sounds are initially produced. A
-woodwind's wave form is relatively constant, even as its amplitude varies, while
-a brass instrument's wave form varies considerably from the attack / decay
-phases through the sustain / release phases due to the physical characteristics
-of human lips compared to the far less elastic media of reeds and wooden or
-metallic edges.
+for example, has a lot to do with differences in their wave forms' envelopes
+even though their amplitude envelopes are quite similar. This is due to the
+difference between how their sounds are initially produced. A woodwind's wave
+form is relatively constant, even as its amplitude varies, while a brass
+instrument's wave form varies considerably from the attack / decay phases
+through the sustain / release phases due to the physical characteristics of
+human lips vibrating against each other while pressed to a mouthpiece compared
+to the far less elastic media of reeds and wooden or metallic edges while air is
+blown against them.
 
 ## Old-School Modular Analog Synthesis
 
@@ -344,11 +405,11 @@ audio output is referred to as a _patch_.
 
 A typical patch might consist of:
 
-- An _oscillator_, which generates an audio signal in the form of some periodic
-  wave form, e.g. sine, triangle, sawtooth or rectangular waves.
+- One or more _oscillators_, which generate audio signals in the form of some
+  periodic wave form, e.g. sine, triangle, sawtooth or rectangular waves.
 
-- A _filter_, which allows some audio frequencies to pass through unchanged,
-  while attenuating (reducing the amplitude) of other frequencies.
+- One or more _filters_, which allow some audio frequencies to pass through
+  unchanged, while attenuating (reducing the amplitude) of other frequencies.
 
 - An _amplifier_, which modifies the signal's _gain_, i.e. the audio wave form's
   overall amplitude.
@@ -373,7 +434,7 @@ waves:
   together with a series of overtones directly.
 
 - _Subtractive synthesis_ passes an already complex wave form through one or
-  more _filters_ set to attenuate particular ranges of frequencies while passing
+  more filters set to attenuate particular ranges of frequencies while passing
   other frequencies through without attenuation (or, optionally, boosting the
   amplitude of certain frequencies).
 
@@ -392,7 +453,7 @@ an orchestra's worth of musicians. Non-modular, typically digital, instruments
 are a better choice when all you want are buttons clearly labeled "piano,"
 "strings," "horns" etc.
 
-_Electronic Music_, as a meta-genre, is focused on musical techniques, sounds,
+_Electronic Music_, as a meta-genre, is focused on musical techniques, timbers,
 and forms that simply are not possible using conventional instruments. Modular
 analog synthesizers are ideal for such pursuits.
 
@@ -412,14 +473,22 @@ controlling the former's frequency:
 **Vibrato** <audio controls><source src="./mp3/vibrato.mp3" /></audio>
 
 The result is that the VCO's output continously increases and decreases in
-pitch, producing vibrato.
+pitch, producing vibrato from a patch like:
+
+```mermaid
+graph LR
+
+    LFO -.->|"CV<br>(frequency)"| VCO
+    VCO -->|audio| VCA
+```
 
 #### Uniquely Electronic Techniques
 
 As with other aspects of electronic musical composition, analog modular
-synthesizers allows far greater scope for defining musical techniques than is
-possible with traditional instruments. For example, here is a similar example to
-the preceding one, but with the range of frequencies in the "vibrato" far beyond
+synthesizers allow far greater scope for defining musical techniques than is
+possible with traditional instruments. For a very basic example, here is the
+output of the same patch as the preceding one, but with a far larger CV
+amplitude. The range of frequencies in the resulting "vibrato" is far beyond
 what a human could achieve with a traditional instrument:
 
 **Way Beyond "Vibrato"** <audio controls><source src="./mp3/extreme_vibrato.mp3" /></audio>
@@ -431,7 +500,7 @@ output of a second sine wave, whose base frequency is tuned to the same
 frequency as the source of the audio signal, into the first VCO's CV input
 controlling its frequency. I.e. the audio signal is the result of modulating a
 sine wave's frequency by another sine wave. If that were the end of it, there
-would be relatively little change to the output signal because the two sines
+would be relatively little change to the output timbre because the two sines
 waves were tuned to the same initial frequency. However, for this patch, the
 second sine wave's frequency is itself being modulated by a third, low frequency
 sine wave, creating a continuously varying interference pattern between the
@@ -454,38 +523,43 @@ graph LR
 
 On the one hand, the preceding sounds likes a continuously sustained note whose
 pitch is that of the constant fundamental frequency to which VCO 1 is tuned.
-Over time, however, the timbre changes periodically due to the overtones
-introduced by modulating VCO 1 using VCO 2 and varying VCO 2's frequency by way
-of the LFO. The speed of the sweep of changing overtones is determined by the
-frequency of the LFO.
+Over time, however, the timbre changes continuously in a repeating pattern due
+to the overtones introduced by modulating VCO 1 using VCO 2 and varying VCO 2's
+frequency by way of the LFO. The speed of the sweep of changing overtones is
+determined by the frequency of the LFO.
 
-As already discussed, a sound's "envelope" is an essential aspect of its timbre.
+As already discussed, a sound's envelope is an essential aspect of its timbre.
 An _ADSR envelope generator_ is a type of module that emits a pattern of changes
-to a control voltage each time it is triggered. "ADSR" is an acronym for
-_Attack_, _Decary_, _Sustain_, _Release_:
+to a control voltage each time it is triggered by receipt of _gate singals_.
+"ADSR" is an acronym for _Attack_, _Decary_, _Sustain_, _Release_. An ADSR unit
+provides controls (e.g. knobs or sliders) to set values for each phase. In
+analog synthesizers, "acoustical energy" is represented in a patch as the value
+of a control voltage. Here is the same table as shown
+[above](#dynamic-properties-of-musical-notes), as it applies to the modules
+comprising a patch:
 
-| Envelope Phase | Description                                                                                           |
-|----------------|-------------------------------------------------------------------------------------------------------|
-| **Attack**     | Time it takes for CV to go from minimum to its maximum value when the gate "open" signal is received  |
-| **Decay**      | Time it takes for CV to go from its maximum value to the sustain level                                |
-| **Sustain**    | Level at which CV remains after attack and decay phases, for as long as the gate remains "open"       |
-| **Release**    | Time it takes for CV to go from its current level to 0 when the gate is "closed"                      |
+| Envelope Phase | Description                                                                                     |
+|----------------|-------------------------------------------------------------------------------------------------|
+| _Attack_       | Time it takes for CV to go from 0 to its maximum value when the gate "open" signal is received  |
+| _Decay_        | Time it takes for CV to go from its maximum value to the sustain level                          |
+| _Sustain_      | Level at which CV remains after attack and decay phases, for as long as the gate remains "open" |
+| _Release_      | Time it takes for CV to go from its current level to 0 when the gate "close" signal is received |
 
-The "gate" signals are often provided by keyboard events: the gate "opens" when
-a key is pressed and "closes" when the key is released. However, other triggers
+The gate signals are often provided by keyboard events: the gate "opens" when a
+key is pressed and "closes" when the key is released. However, other triggers
 can be used as the gate signals for ADSR. Many of the my compositions "play
 themselves" by using a single "clock" signal to drive both _envelope generator_
-and _sample and hold_ units simultaneously.
+and _sample and hold_ units simultaneously, where a _sample and hold_ unit emits
+a control voltage based on periodically "sampling" an input voltage and
+"holding" its output at that level until it is time for the next "sample."
 
-A _sample and hold_ unit emits a control voltage based on periodically
-"sampling" an input voltage and "holding" its output at that level until it is
-time for the next "sample." To illustrate, consider a patch like:
+To illustrate, consider a patch like:
 
 ```mermaid
 graph LR
 
     LFO -.->|"CV<br>(sawtooth)"| VCO
-    VCO -->|audio| out
+    VCO -->|audio| VCA
 ```
 
 The preceding will produce a sound like:
@@ -506,36 +580,37 @@ graph LR
     LFO -.->|"CV<br>(sawtooth)"| sh
     clock -.-> sh
     sh -.->|"CV"| VCO
-    VCO -->|audio| out
+    VCO -->|audio| VCA
 ```
 
-might cause the output to sound something like:
+will cause the output to sound something like:
 
 **Stair stepping pitch** <audio controls><source src="./mp3/s_h_1.mp3"/></audio>
 
-The output jumps directly from pitch to pitch directly instead of continuously
-sliding higher because the S&H unit sets its output voltage to whatever is
-present on its input each time the clock "ticks." The S&H unit holds its output
-at that level until the next "tick," when it again sets its output voltage to
-match its input at that instant in time. The smoothly ramping sawtooth wave is
-turned into a stair case. The width and height of the steps are determined by
-the relationship between the frequencies of the input voltage, the low-frequency
-sawtooth in this case, and the speed of the clock. For example, here is what the
-same patch sounds like sampling the same sawtooth but with the clock frequency
-sped up a bit:
+The output jumps directly from pitch to pitch instead of sliding continuously
+higher because the S&H unit sets its output voltage to whatever is present on
+its input each time the clock "ticks." The S&H unit holds its output at that
+level until the next "tick," when it again sets its output voltage to match its
+input at that instant in time. The smoothly ramping sawtooth wave is turned into
+a stair case. The width and height of the steps are determined by the
+relationship between the frequency and amplitude of the sampled voltage, the
+low-frequency sawtooth in this case, and the speed of the clock. For example,
+here is what the same patch sounds like sampling the same sawtooth but with the
+clock frequency sped up a bit:
 
 **Faster clock** <audio controls><source src="./mp3/s_h_2.mp3"/></audio>
 
 Note that the output traverses the same range of pitches from lowest to highest
 in the same amount of time, as determined by the amplitude and frequency of the
 sawtooth wave emitted by the LFO in both of the two preceding examples. However,
-there are fewer, more widely spaced pitches in the first compared to the second
-because the faster clock results in a higher number of samples, each being held
-for a shorter amount, in each cycle of the sawtooth wave. If one were to
-increase the clock to a sufficiently high frequency, the output of the second of
-the preceding patches would eventually sound indistinguishable from the first
-due to the same phenomenon of "anti-aliasing" that results from increasing the
-number of pixels used to capture a digital image.
+there are fewer, more widely spaced but larger jumps pitches in the first
+compared to the second because the faster clock results in a higher number of
+samples, each being held for a shorter amount, in each cycle of the sawtooth
+wave. If one were to increase the clock to a sufficiently high frequency, the
+output of the second of the preceding patches would eventually sound
+indistinguishable by human hearing from the first due to the same phenomenon of
+"anti-aliasing" that results from increasing the number of pixels used to
+capture a digital image.
 
 But the same phenomenon works in reverse. Depending on the phase relationship
 between the frequency of the clock relative to that of the source being sampled,
@@ -548,13 +623,25 @@ The "ramping" pitches can still be discerned, but they start and end at
 different points in the "scale" for each cycle of the LFO sawtooth when the LFO
 and clock frequencies are not even multiples of one another. Layering multiple
 tracks created in this way can create interestingly complex rhythmic and
-harmonic patterns that vary continuously over time in manner that is neither
+harmonic patterns that vary continuously over time in a manner that is neither
 simply repetitive nor random.
 
 To achieve a truly random "melody" is easy. Simply use a _noise generator_
 module as the CV input to a S&H unit:
 
 **Noisy melody** <audio controls><source src="./mp3/random.mp3"/></audio>
+
+```mermaid
+graph LR
+
+    sh["S&H"]
+    ng[Noise Generator]
+
+    ng -.->|CV| sh
+    clock -.-> sh
+    sh -.->|"CV"| VCO
+    VCO -->|audio| VCA
+```
 
 ## Example 01
 
@@ -790,18 +877,37 @@ foundational principles of computational logic:
   analog synthesizer patch given a sufficient number of the correct kinds of
   modules.<a href="#undecidable"><sup>*</sup></a>_
 
-That said, I never felt any great need to reproduce traditional musical sounds
-or forms by electronic means. (I occasionally do so, but usually only as
-experiments with particular tools or techniques, i.e. as "studies" for more
-purely electronic compositions.)
+Another way of saying this is that just as the wave forms emitted by musical
+instruments can be described mathematically, so can all of the rhythmic and
+harmonic relationships that result from playing sequences of particular notes,
+for particular durations, at particular volumes. This is why there has always
+been such an affinity between mathematics and music. From this point of view,
+the modules comprising a patch can be understood as being mathematical functions
+which together form an arbitrarily complex recursive equation.
 
-Specifically, I consider traditional music notation and instrumentation more
-than sufficent for expressing traditional musical ideas. My passion as a
-composer is in exploring musical ideas which cannot be expressed or performed by
-traditional means. This is no less an "artistic" undertaking than composing and
-arranging more conventional music. It is just that the artistry occurs by way of
-experimenting with patches, recording the results, and layering the individual
-tracks in a final mix for any given piece.
+I never felt any great need to reproduce traditional musical sounds or forms by
+electronic means. (I occasionally do so, but usually only as experiments with
+particular tools or techniques, i.e. as "studies" for more purely electronic
+compositions.) Specifically, I consider traditional music notation and
+instrumentation more than sufficent for expressing traditional musical ideas. My
+passion as a composer is in exploring musical ideas which cannot be expressed or
+performed by traditional means. This is no less an "artistic" undertaking than
+composing and arranging more conventional music. It is just that the artistry
+occurs by way of experimenting with patches, recording the results, and layering
+the individual tracks in a final mix for any given piece.
+
+Of course, I am far from the first to experiment in this way. Schoenberg
+famously experimented with randomness in his approach to "twelve tone"
+composition. Cage experimented with timbre in his compositions for "prepared"
+pianos. Modular synthsizers and similar tools allow this kind of experimentation
+to extend further and in directions not possible when restricted by the physical
+characteristics of traditional instruments and human players. The essential
+difference between the "West Coast" and "East Coast" movements in the
+development of electronic music is that the latter focused on integrating
+electronic music into ensembles which also included traditional instruments
+being played according to the rules of conventional musical forms while the
+former focused on the capabilities of electronic instruments to extend the range
+of musical possibilities.
 
 ---
 
