@@ -2,8 +2,8 @@ _Copyright &copy; 2024 Kirk Rader_
 
 # Anatomy of a Digital Musical Composition
 
-[For Dennis](/mp3/20_For_Dennis.mp3">20_For_Dennis.mp3) <audio controls>
-    <source src="/mp3/20_For_Dennis.mp3" type="audio/mpeg"/>
+[For Dennis](./For_Dennis.mp3">20_For_Dennis.mp3) <audio controls>
+    <source src="./For_Dennis.mp3" type="audio/mpeg"/>
 </audio>
 
 _For Dennis_ is the result of a recent conversation with a friend. He described

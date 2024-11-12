@@ -297,38 +297,3 @@ graph TB
 ...running on an infuratingly overpriced, poorly designed and implemented iMac
 due to lack of support for anything else by the manufacturers of audio related
 hardware and software
-
-## Musicography
-
-<template v-for="(file) in data">
-  <template v-if="file.file.endsWith('/musicography.csv')">
-    <template v-for="(album) in file.contents">
-        <h3>{{ album[0].album }}</h3>
-        <p>UPC {{ album[0].upc }}</p>
-        <table>
-            <tr>
-                <th>Track</th>
-                <th>Title</th>
-                <th>ISRC</th>
-            </tr>
-            <tr v-for="(item) in album">
-                <td>{{ item.track }}</td>
-                <td>{{ item.title }}</td>
-                <td>{{ item.isrc }}</td>
-            </tr>
-        </table>
-    </template>
-  </template>
-</template>
-
-## SonicPi "Scores"
-
-[Ruby](https://www.ruby-lang.org) code examples as musical scores for use with
-[Sonic Pi](https://sonic-pi.net/).
-
-<template v-for="(score) in data">
-  <template v-if="score.file.endsWith('.rb')">
-    <h4>{{ /[^/]*$/.exec(score.file)[0] }}</h4>
-    <pre>{{ score.contents }}</pre>
-  </template>
-</template>

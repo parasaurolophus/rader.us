@@ -3,11 +3,11 @@ _Copyright &copy; 2024 Kirk Rader_
 # Algorithmic Musical Composition
 
 _[This page concentrates primarily on analog synthesizer techniques. See [For
-Dennis](../for_dennis.md) for a purely digital example.]_
+Dennis](../for_dennis/) for a purely digital example.]_
 
 Go ahead. Press <span style="font-size: xx-large; vertical-align: middle;">&#x23F5;</span>
 
-[Example 04](/mp3/Example_04.mp3) <video controls><source
+[Example 04](./mp3/Example_04.mp3) <video controls><source
 src="./mp4/Example_04.mp4"/></video>
 
 After all, what's the worst that could happen?
@@ -254,7 +254,7 @@ understood using the [mathematics of signal
 processing](https://en.wikipedia.org/wiki/Fast_Fourier_transform) to be the sum
 of a particular set of sine waves, each at a specific frequency and amplitude. A
 sufficiently chaotic jumble of sine waves at different frequencies and
-amplitudes sounds like noise, e.g. the hiss of stean escaping a radiator or the
+amplitudes sounds like noise, e.g. the hiss of steam escaping a radiator or the
 sound coming from the speakers of an old analog TV that is not tuned to any
 station. A truly random distribution of frequencies across the full range of
 audible frequenices is referred to as "white" noise, by analogy to the colors in
@@ -311,12 +311,12 @@ over time in various ways. Consider what happens when a stick strikes a drum.
 
 First, the stick imparts energy to the drumhead at the point at which it lands.
 How much energy is determined by the stick's mass and velocity as determined by
-Newton's laws of motion. The energy absorbed by the drumhead causes wave to run
-through it similarly to the ripples on the surface of a pond caused by a stone.
-Those ripples are tallest when the stick first strikes, but quickly die out as
-they travel throughout the material of which the drumhead is made. We hear a
-short burst of sound, as these very short-lived waves resonant to our eardrums
-through the ear.
+Newton's laws of motion. The energy absorbed by the drumhead causes waves to run
+through it similar to the ripples on the surface of a pond caused by tossing a
+stone. Those ripples are tallest when the stick first strikes, but quickly die
+out as their energy dissipates throughout the material of which the drumhead is
+made. We hear a short burst of sound, as these very short-lived waves resonant
+to our eardrums through the air.
 
 A bowed string instrument works very differently, even though it is subject to
 the same laws of physics as a drum. The friction between the bow and the string
@@ -331,7 +331,7 @@ reach maximum amplitude along its entire length. This causes a small but
 noticeable "ramping up" of the volume of the note when the bow is first applied.
 But as long as the bow keeps moving against it, the string keeps receiving
 energy and so keeps vibrating. Because of the lower mass and air resistance at
-each point on a string compared to a extended surface like a drumhead, a
+each point on a string compared to an extended surface like a drumhead, a
 string's vibrations take longer to die out after the bow is removed, unless they
 are mechanically surpressed. (The latter is how string players achieve staccato:
 they keep the bow pressed against the string to damp its vibrations more quickly
@@ -342,9 +342,9 @@ which they are constructed and the manner in which they generate sound are, on
 the one hand, all governed by the same simple laws of physics but with results
 that sound different due to each instrument's particular mechanical properties.
 Among the factors that give each instrument its own unique timbre is the rate at
-which their amplitude ramps up and dies out and the way their sound waves shape
-changes over time as a note is played. These changes of a note's sound over time
-is called _envelope_.
+which their amplitude ramps up and dies out and the way their sound waves'
+shapes changes over time as a note is played. These changes of a note's sound
+over time is called _envelope_.
 
 For the purposes of understanding how musical sounds are perceived, it turns out
 that envelope can be broken down into four distinct phases:
@@ -366,7 +366,7 @@ die out completely after its initial decay. Drum heads' vibrations damp out to
 below audible amplitude nearly as fast as they begin when struck, while a
 piano's strings can "ring on" for quite some time if allowed to do so by use of
 the sustain pedal. Either way, the defining characteristic of a percussion
-instrument is that it has no true sustain (despite the name of piano's pedal).
+instrument is that it has no true sustain (despite the name of a piano's pedal).
 By comparison, human voices as well as wind and bowed instruments can have
 appreciable sustain levels, determined by the breath control of the performers
 or the lengths of their bows.
@@ -453,7 +453,7 @@ an orchestra's worth of musicians. Non-modular, typically digital, instruments
 are a better choice when all you want are buttons clearly labeled "piano,"
 "strings," "horns" etc.
 
-_Electronic Music_, as a meta-genre, is focused on musical techniques, timbers,
+_Electronic Music_, as a meta-genre, is focused on musical techniques, timbres,
 and forms that simply are not possible using conventional instruments. Modular
 analog synthesizers are ideal for such pursuits.
 
@@ -605,12 +605,12 @@ in the same amount of time, as determined by the amplitude and frequency of the
 sawtooth wave emitted by the LFO in both of the two preceding examples. However,
 there are fewer, more widely spaced but larger jumps pitches in the first
 compared to the second because the faster clock results in a higher number of
-samples, each being held for a shorter amount, in each cycle of the sawtooth
-wave. If one were to increase the clock to a sufficiently high frequency, the
-output of the second of the preceding patches would eventually sound
-indistinguishable by human hearing from the first due to the same phenomenon of
-"anti-aliasing" that results from increasing the number of pixels used to
-capture a digital image.
+samples, each being held for a shorter amount of time, in each cycle of the
+sawtooth wave. If one were to increase the clock to a sufficiently high
+frequency, the output of the second of the preceding patches would eventually
+sound indistinguishable by human hearing from the first due to the same
+phenomenon of "anti-aliasing" that results from increasing the number of pixels
+used to capture a digital image.
 
 But the same phenomenon works in reverse. Depending on the phase relationship
 between the frequency of the clock relative to that of the source being sampled,
@@ -835,7 +835,10 @@ who play the music encoded by the given score. Such algorithms are, however,
 more like recipes in a cookbook than like mathematical formulas. I.e. the choice
 of each and every "ingredient" and how they are combined in a conventional
 musical score is the result of a conscious decision by its composer, resulting
-from that particular person's whims and tastes at the time of composition.
+from that particular person's whims and tastes at the time of composition,
+limited by the physical characteristics of the particular instruments listed in
+the arrangement and reasonable expectations of the performance capabilities of
+human musicians.
 
 Similarly, the source code that was used to drive [Example 03](#example-03) is
 an algorithm expressed in the Ruby programming language, executed by a computer
@@ -914,7 +917,7 @@ of musical possibilities.
 <a id="undecidable"><sup>*</sup></a><i>Undecidable</i>
 
 The title and cover art of my first album, _Undecidable_ (consisting of tracks I
-recorded in the late 1970's through the early 1980's) are testaments to the
+recorded in the late 1970's through the mid 1980's) are testaments to the
 conceptual origin of my musical style. Its "logo" is the following expression of
 the &lambda;-calculus:
 

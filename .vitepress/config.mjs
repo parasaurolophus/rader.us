@@ -39,10 +39,9 @@ export default withMermaid({
         text: 'Music',
         items: [
           { text: 'Musicography', link: '/music/musicography/' },
-          { text: 'MP3', link: '/music/mp3' },
           { text: 'Algorithmic Musical Composition', link: '/music/algorithmic_musical_composition/'},
           { text: 'Ratcheting', link: '/music/ratcheting/' },
-          { text: 'For Dennis', link: '/music/for_dennis' },
+          { text: 'For Dennis', link: '/music/for_dennis/' },
         ]
       },
       {

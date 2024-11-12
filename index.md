@@ -16,9 +16,6 @@ features:
   - title: Musicography
     details: Old-school, west coast style electronic... er, um, music?
     link: /music/musicography/
-  - title: MP3
-    details: Less outré compositions
-    link: /music/mp3
   - title: Philosophy of Mathematics
     details: Stuff that interests me
     link: /philosophy/computability
