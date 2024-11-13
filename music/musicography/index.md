@@ -2,6 +2,18 @@
 import { data } from '/all.data.js'
 </script>
 
+<style scoped>
+    .release {
+        font-weight: bold;
+        font-size: large;
+    }
+
+    .upc {
+        font-style: italic;
+        font-size: small;
+    }
+</style>
+
 # Music
 
 ## Streaming
@@ -283,7 +295,7 @@ graph TB
 - [Behringer 2600](https://www.behringer.com/product.html?modelCode=P0DNJ)
   modern clone of the _ARP 2600_ I used as a kid
 - [PreSonus Studio 26c](https://www.presonus.com/products/studio-26c)
-  ADC
+  Analog-to-Digital Converter (ADC)
 
 ...plus various Eurorack modules that change embarassingly frequently
 
@@ -297,3 +309,27 @@ graph TB
 ...running on an infuratingly overpriced, poorly designed and implemented iMac
 due to lack of support for anything else by the manufacturers of audio related
 hardware and software
+
+## Musicography
+
+<template v-for="datum in data">
+    <template v-for="album in datum">
+        <div class="release">{{ album[0].album}}</div>
+        <div class="upc">{{ album[0].upc }}</div>
+        <div>{{ album[0].year }}</div>
+        <table>
+            <tr>
+                <th>Track</th>
+                <th>Title</th>
+                <th>ISRC</th>
+            </tr>
+            <template v-for="track in album">
+                <tr>
+                    <td>{{ track.track }}</td>
+                    <td>{{ track.title }}</td>
+                    <td>{{ track.isrc }}</td>
+                </tr>
+            </template>
+        </table>
+    </template>
+</template>
