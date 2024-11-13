@@ -44,7 +44,7 @@ other hand, is quite verbose by comparison and takes a few readings to fully
 grasp the construction... at which point it becomes as obviously true as the
 others when one is drawing figures on a flat surface:
 
-![](/parallel_postulate.svg)
+![](./parallel_postulate.svg)
 
 It seems so complex by comparison to the others and has an air of somehow
 depending on them (by reference to extending lines and comparing right angles)
@@ -56,7 +56,7 @@ Along the way, various alternative axioms were identified as being equivalent
 to Euclid's. Playfair's Theorem is the most famous one, and is presented in
 many modern texts on geometry as the preferred "fifth axiom":
 
-![](/playfair_theorem.svg)
+![](./playfair_theorem.svg)
 
 All such attempts failed to produce truly simpler axioms because, as it turns
 out, the parallel postulate really is an axiom and not a theorem hiding some
@@ -220,7 +220,7 @@ every element of both the domain and range with exactly one element of the
 other, there must be exactly the same number of elements in both or else some
 elements would have either been duplicated or left out of the mapping.
 
-![](/mappings.svg)
+![](./mappings.svg)
 
 Cantor's approach was to show that you can devise procedures for selecting
 exactly one integer given any natural number. Same for the natural and rational

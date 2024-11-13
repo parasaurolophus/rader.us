@@ -7,8 +7,9 @@ Dennis](../for_dennis/) for a purely digital example.]_
 
 Go ahead. Press <span style="font-size: xx-large; vertical-align: middle;">&#x23F5;</span>
 
-[Example 04](./mp3/Example_04.mp3) <video controls><source
-src="./mp4/Example_04.mp4"/></video>
+<video controls>
+    <source src="./mp4/Example_04.mp4"/>
+</video>
 
 After all, what's the worst that could happen?
 

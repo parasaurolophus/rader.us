@@ -18,5 +18,5 @@ features:
     link: /music/musicography/
   - title: Philosophy of Mathematics
     details: Stuff that interests me
-    link: /philosophy/computability
+    link: /philosophy/computability/
 ---

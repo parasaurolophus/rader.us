@@ -48,7 +48,7 @@ export default withMermaid({
         text: 'Philosophy',
         items: [
           {
-            text: 'Computability', link: '/philosophy/computability'
+            text: 'Computability', link: '/philosophy/computability/'
           }
         ],
       },
