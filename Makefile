@@ -22,4 +22,4 @@ preview:
 	npm run docs:preview
 
 zip: cleanzip
-	cd ./.vitepress/dist ;	find . -name \* | zip ../../dist.zip -@
+	pushd .vitepress/dist && find . -name \* | zip ../../dist.zip -x .DS_Store -@ && popd
