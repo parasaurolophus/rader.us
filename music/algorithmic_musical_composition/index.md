@@ -121,13 +121,13 @@ graph LR
 
     recorder[recording /<br>playback<br>device]
 
-    soundwaves --> ears
-    instrument --> soundwaves
-    soundwaves --> microphone
-    microphone --> voltage
-    voltage <--> recorder
-    voltage --> speaker
-    speaker --> soundwaves
+    instrument -->|soundwaves| ears
+    instrument -->|soundwaves| microphone
+    microphone -->|voltage| amplifier
+    amplifier -->|voltage| recorder
+    recorder -->|voltage| amplifier
+    amplifier -->|voltage| speaker
+    speaker -->|soundwaves| ears
 ```
 
 Analog synthesizers are electronic devices for directly creating audio signals
@@ -142,11 +142,11 @@ graph LR
 
     recorder[recording /<br>playback<br>device]
 
-    synthesizer --> voltage
-    voltage <--> recorder
-    voltage --> speaker
-    speaker --> soundwaves
-    soundwaves --> ears
+    synthesizer -->|voltage| amplifier
+    amplifier -->|voltage| recorder
+    recorder -->|voltage| amplifier
+    amplifier -->|voltage| speaker
+    speaker -->|soundwaves| ears
 ```
 
 Any time a term like _signal_. _signal path_, _audio_ or _audio path_ are used
@@ -182,7 +182,9 @@ corresponds to "concert A," the pitch used by players in an orchestra so that
 their instruments will all be "in tune" when played together). Here is what that
 track sounds like when played on its own:
 
-**440 Hz Sine Wave** <audio controls><source src="./mp3/sine-01.mp3"/></audio>
+> **440 Hz Sine Wave**
+>
+> <audio controls><source src="./mp3/sine-01.mp3"/></audio>
 
 This is called a "sine wave" because the wave's shape can be exactly represented
 by graphing the mathematical _sine_ function:
@@ -205,13 +207,17 @@ higest and lowest points in each cycle is half of the corresponding distance in
 the preceding track. This results in a tone that sounds exactly the same as the
 first one, but at a noticeably lower volume:
 
-**Softer 440 Hz Sine Wave** <audio controls><source src="./mp3/sine-02.mp3"/></audio>
+> **Softer 440 Hz Sine Wave**
+>
+> <audio controls><source src="./mp3/sine-02.mp3"/></audio>
 
 The third track is a 880 Hz sine wave, at the same amplitude as the first. The
 result is a tone that is the same volume as the first one, but an octave higher
 in pitch:
 
-**880 Hz Sine Wave** <audio controls><source src="./mp3/sine-03.mp3"/></audio>
+> **880 Hz Sine Wave**
+>
+> <audio controls><source src="./mp3/sine-03.mp3"/></audio>
 
 Visually, note that the peaks and valleys line up from left to right in the
 first two tracks, while the peaks and valleys in the third track are closer
@@ -231,7 +237,9 @@ Now consider this screen shot from the same audio editing software:
 The track depicted contains a sawtooth wave at the same frequency and amplitude
 as the first sine wave, above. It sounds like this:
 
-**440 Hz Sawtooth Wave** <audio controls><source src="./mp3/sawtooth.mp3"/></audio>
+> **440 Hz Sawtooth Wave**
+>
+> <audio controls><source src="./mp3/sawtooth.mp3"/></audio>
 
 It is perceived as being the same pitch as the 440 Hz sine wave. It has a
 noticeably different quality to its sound, however, as if it were being played
@@ -261,7 +269,9 @@ station. A truly random distribution of frequencies across the full range of
 audible frequenices is referred to as "white" noise, by analogy to the colors in
 the visible light spectrum:
 
-**White Noise** <audio controls><source src="./mp3/white_noise.mp3"/></audio>
+> **White Noise**
+>
+> <audio controls><source src="./mp3/white_noise.mp3"/></audio>
 
 Noise that contains a preponderance of frequencies lower in the audible
 "spectrum" is referred to as "pink" or "red," again by analogy to light colors.
@@ -270,7 +280,9 @@ to pass through becomes pink or red depending on the filter's cut-off frequency.
 By analogy, "white" noise that is passed through a low-pass filter will sound
 "redder":
 
-**Red Noise** <audio controls><source src="./mp3/red_noise.mp3"/></audio>
+> **Red Noise**
+>
+> <audio controls><source src="./mp3/red_noise.mp3"/></audio>
 
 Here is what the preceding two wave forms look like in an audio editing program:
 
@@ -471,7 +483,9 @@ For example, here is the audio output of a VCO emitting a sine wave at a given
 base pitch, with another sine wave emitted by a LFO patched into the VCO's CV
 controlling the former's frequency:
 
-**Vibrato** <audio controls><source src="./mp3/vibrato.mp3" /></audio>
+> **Vibrato**
+>
+> <audio controls><source src="./mp3/vibrato.mp3" /></audio>
 
 The result is that the VCO's output continously increases and decreases in
 pitch, producing vibrato from a patch like:
@@ -492,7 +506,9 @@ output of the same patch as the preceding one, but with a far larger CV
 amplitude. The range of frequencies in the resulting "vibrato" is far beyond
 what a human could achieve with a traditional instrument:
 
-**Way Beyond "Vibrato"** <audio controls><source src="./mp3/extreme_vibrato.mp3" /></audio>
+> **Way Beyond "Vibrato"**
+>
+> <audio controls><source src="./mp3/extreme_vibrato.mp3" /></audio>
 
 And here is an extremely simple example of what is npossible using FM synthsis.
 Like the preceding example, it is the output of a VCO emitting a sine wave. In
@@ -513,14 +529,16 @@ graph LR
     lfo[LFO]
     vco1[VCO 1]
     vco2[VCO 2]
-    vca["VCA<br>(to output)"]
+    vca[VCA]
 
     lfo .->|"CV<br>(frequency)"| vco2
     vco2 .->|"CV<br>(frequency)"| vco1
     vco1 -->|audio| vca
 ```
 
-**Sine vs Sine vs Sine**<audio controls><source src="./mp3/fm.mp3" /></audio>
+> **Sine vs Sine vs Sine**
+>
+> <audio controls><source src="./mp3/fm.mp3" /></audio>
 
 On the one hand, the preceding sounds likes a continuously sustained note whose
 pitch is that of the constant fundamental frequency to which VCO 1 is tuned.
@@ -565,7 +583,9 @@ graph LR
 
 The preceding will produce a sound like:
 
-**Smoothly ramping pitch** <audio controls><source src="./mp3/smooth.mp3"/></audio>
+> **Smoothly ramping pitch**
+>
+> <audio controls><source src="./mp3/smooth.mp3"/></audio>
 
 because the low-frequency sawtooth wave causes the frequency of the tone emitted
 by the VCO to continuously increase from its minimum value to its maximum value
@@ -586,7 +606,9 @@ graph LR
 
 will cause the output to sound something like:
 
-**Stair stepping pitch** <audio controls><source src="./mp3/s_h_1.mp3"/></audio>
+> **Stair stepping pitch**
+>
+> <audio controls><source src="./mp3/s_h_1.mp3"/></audio>
 
 The output jumps directly from pitch to pitch instead of sliding continuously
 higher because the S&H unit sets its output voltage to whatever is present on
@@ -599,7 +621,9 @@ low-frequency sawtooth in this case, and the speed of the clock. For example,
 here is what the same patch sounds like sampling the same sawtooth but with the
 clock frequency sped up a bit:
 
-**Faster clock** <audio controls><source src="./mp3/s_h_2.mp3"/></audio>
+> **Faster clock**
+>
+> <audio controls><source src="./mp3/s_h_2.mp3"/></audio>
 
 Note that the output traverses the same range of pitches from lowest to highest
 in the same amount of time, as determined by the amplitude and frequency of the
@@ -618,7 +642,9 @@ between the frequency of the clock relative to that of the source being sampled,
 interesting patterns can emerge. Here is another recording of the same patch,
 but with the clock substantially slower than in the preceding two examples:
 
-**Phasing clock** <audio controls><source src="./mp3/s_h_3.mp3"/></audio>
+> **Phasing clock**
+>
+> <audio controls><source src="./mp3/s_h_3.mp3"/></audio>
 
 The "ramping" pitches can still be discerned, but they start and end at
 different points in the "scale" for each cycle of the LFO sawtooth when the LFO
@@ -630,7 +656,9 @@ simply repetitive nor random.
 To achieve a truly random "melody" is easy. Simply use a _noise generator_
 module as the CV input to a S&H unit:
 
-**Noisy melody** <audio controls><source src="./mp3/random.mp3"/></audio>
+> **Noisy melody**
+>
+> <audio controls><source src="./mp3/random.mp3"/></audio>
 
 ```mermaid
 graph LR
@@ -653,7 +681,9 @@ Here is a composition that combines all of the preceding principles, using a
 Behringer 2600 semi-modular synthesizer, to produce polyrhytmuc music with
 harmonic and timbral structures not achievable using conventional instruments:
 
-[Example 01](./mp3/Example_01.mp3) <audio controls><source src="./mp3/Example_01.mp3" /></audio>
+> [Example 01](./mp3/Example_01.mp3)
+>
+> <audio controls><source src="./mp3/Example_01.mp3" /></audio>
 
 ![](./images/Example_01_Patch.png)
 
@@ -665,11 +695,15 @@ middle and extreme left, respectively.
 
 ## Example 02
 
-[Example 02](./mp3/Example_02.mp3) <audio controls><source src="./mp3/Example_02.mp3" /></audio>
+> [Example 02](./mp3/Example_02.mp3)>
+>
+> <audio controls><source src="./mp3/Example_02.mp3" /></audio>
 
 ## Example 03
 
-[Example 03](./mp3/Example_03.mp3) <audio controls><source src="./mp3/Example_03.mp3" /></audio>
+> [Example 03](./mp3/Example_03.mp3)
+>
+> <audio controls><source src="./mp3/Example_03.mp3" /></audio>
 
 **Meloday Patch** ![](./images/Example_03_Melody_Patch.png)
 
