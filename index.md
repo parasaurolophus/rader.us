@@ -5,7 +5,7 @@ layout: home
 hero:
   name: Kirk Rader
   text: A repository of random stuff
-  tagline: My music, code examples, essays
+  tagline: Music, code examples, essays
   image: /kirk.png
   actions:
     - theme: alt
@@ -13,9 +13,9 @@ hero:
       link: /about
 
 features:
-  - title: Musicography
-    details: Old-school, west coast style electronic... er, um, music?
-    link: /music/musicography/
+  - title: Music
+    details: Old-school, West Coast style electronic... er, um, music?
+    link: /music/
   - title: Philosophy of Mathematics
     details: Stuff that interests me
     link: /philosophy/computability/
