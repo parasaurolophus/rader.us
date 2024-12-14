@@ -2,20 +2,17 @@
 import { data } from '/all.data.js'
 </script>
 
-<style scoped>
-    .upc {
-        font-style: italic;
-        font-size: small;
-    }
-</style>
-
 # Musicography
 
 <template v-for="datum in data">
     <template v-for="album in datum">
-        <h2>{{ album[0].album}}</h2>
-        <div class="upc">{{ album[0].upc }}</div>
-        <div>{{ album[0].year }}</div>
+        <h2 :id="album[0].upc">
+            <a :href="'#' + album[0].upc">
+                {{ album[0].album}}
+            </a>
+        </h2>
+        <div>UPC: <i>{{ album[0].upc }}</i></div>
+        <div>Year: <i>{{ album[0].year }}</i></div>
         <table>
             <tr>
                 <th>Track</th>

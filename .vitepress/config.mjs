@@ -30,7 +30,7 @@ export default withMermaid({
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Music', link: '/music/' },
-            { text: 'Philosopy', link: '/philosophy/computability' },
+            { text: 'Philosopy', link: '/philosophy/' },
             { text: 'About', link: '/about' },
         ],
 
@@ -51,6 +51,7 @@ export default withMermaid({
             },
             {
                 text: 'Philosophy',
+                link: '/philosophy/',
                 items: [
                     {
                         items: [

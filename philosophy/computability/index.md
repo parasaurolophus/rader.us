@@ -2,21 +2,14 @@
 
 > _Or, How Euclid's Parallel Postulate Gave Rise to the Information Age_
 
-$$
-\begin{align}
-\text{Let } \aleph_0 & = \omega \ \omega \\
-\text{where } \omega &= \lambda x . x \ x
-\end{align}
-$$
-
 Once upon a time, mathematicians in the Western tradition regarded their
-profession as being a science, no different from chemistry or physics. That
-view was based on an empirical understanding of mathematical truths. In this
-model, _2 + 2 = 4_ is true because if I am holding two pebbles and pick up two
-more, then I can confirm by counting the pebbles in my hand that I end up
-holding four.
+profession as being a science, no differen in kind from chemistry or physics.
+That view was based on an empirical understanding of mathematical truths. This
+point of view, _2 + 2 = 4_ is true simply and entirely because if I am holding
+two pebbles and pick up two more then I can confirm by counting the pebbles in
+my hand that I end up holding four.
 
-Euclid's _Elements_ was firmly based in this empirical tradition. While he
+Euclid's _Elements_ was firmly rooted in this empirical tradition. While he
 provided arguments which, in modern terms, were based on a formal approach to
 proving theorems based on a set of axioms, his proofs relied on "constructions"
 using experimentally verifiable procedures involving straight-edge and compass
@@ -28,11 +21,10 @@ are:
 
 1. A point can be extended indefinitely to form a line.
 2. A line can be extended indefinitely to form a plane.
-3. A point can be rotated at a constant distance around another point to form a
-   circle.
+3. A point can be rotated around another point to form a circle.
 4. All right angles are equal to each other.
-5. If two lines intersect a third line such that the interior angles on the
-   same side are each less than a right angle, the first two lines will
+5. If two lines intersect a third line such that the interior angles on the same
+   side are each less than a right angle then the first two lines will
    eventually intersect when they are both extended indefinitely.
 
 The fifth axiom has historically been referred to as the "parallel postulate,"
@@ -103,8 +95,8 @@ techniques that began in the late 19th century and which, ultimately, provided
 the theoretical basis for scientific and technological advances like General
 Relativity, Quantum Physics and Computer Science. Paradoxically, the focus on
 _metamathematics_ (the study of mathematics as purely formal systems divorced
-from empirical reality) is what made possible the very palpable advancements we
-now take for granted.
+from empirical reality) is what made possible the very palpable advancements in
+science and engineering we now take for granted.
 
 ## Infinite Quantities and the Continuum Hypothesis
 
@@ -128,9 +120,9 @@ final result of applying a given mathematical formula an infinite number of
 times, or comparing values that differ only to an infinitessimal degree. But if
 infinitessimal differences are real, and an infinitessimal is simply the
 mathematical inverse of an infinite quantity... well, never mind. The consensus
-from the 16th through the 19th centuries was that calculus was simply too
-useful to ignore simply because it flirted with the idea that infinite
-quantities must be legitimate mathematical objects.
+from the 17th through the 19th centuries was that calculus was simply too useful
+to ignore simply because it flirted with the idea that infinite quantities must
+be legitimate mathematical objects.
 
 ::: info Note
 

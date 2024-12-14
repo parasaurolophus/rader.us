@@ -16,7 +16,19 @@ features:
   - title: Music
     details: Old-school, West Coast style electronic... er, um, music?
     link: /music/
-  - title: Philosophy of Mathematics
+  - title: Philosophy
     details: Stuff that interests me
-    link: /philosophy/computability/
+    link: /philosophy/
 ---
+
+---
+
+<style scoped>
+    th, td {
+        border: none;
+    }
+</style>
+
+## More
+
+- <https://hyperfollow.com/kirkrader>
