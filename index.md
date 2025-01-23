@@ -8,6 +8,14 @@ hero:
   tagline: Music, code examples, essays
   image: /kirk.png
   actions:
+    - theme: brand
+      text: https://hyperfollow.com/kirkrader
+      link: https://hyperfollow.com/kirkrader
+      target: _blank
+    - theme: brand
+      text: https://github.com/parasaurolophus
+      link: https://github.com/parasaurolophus
+      target: _blank
     - theme: alt
       text: About
       link: /about
@@ -23,12 +31,6 @@ features:
 
 ---
 
-<style scoped>
-    th, td {
-        border: none;
-    }
-</style>
-
-## More
-
-- <https://hyperfollow.com/kirkrader>
+<a href="https://hyperfollow.com/kirkrader" target="_blank">
+  <img src="/hyperfollowqr.png" alt="my music on hyperfollow dot com" width="100px" height="100px">
+</a>

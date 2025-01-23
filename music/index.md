@@ -8,6 +8,10 @@
 
 Recent releases: <https://hyperfollow.com/kirkrader>
 
+<a href="https://hyperfollow.com/kirkrader" target="_blank">
+  <img src="/hyperfollowqr.png" alt="my music on hyperfollow dot com" width="100px" height="100px">
+</a>
+
 ## Streaming
 
 <table>
@@ -113,7 +117,13 @@ My favorite composers include Tallis, Monteverdi, Vivaldi, Bach,
 Handel, Beethoven, Glass and Byrne as well as hard-core mid-century
 experimentalists like Stockhausen and Subotnick. If you have never
 heard any of my own stuff, consider the combination of those
-influences as fair warning.
+influences as fair warning. You will find strong hints of
+all those influences - classical and experimental music together with
+mathematics and a love of algorithms - throughout my musical _oeuvre_. To me,
+an analog synthesizer is a device for translating what are essentially
+mathematical formulas into acoustic impulses, which are occasionally and
+serendipitously esthetically pleasing (at least to someone with my extremely
+idiosyncratic tastes). Computer software makes that even more literally true.
 
 Over the years I have used a variety of traditional
 instruments and electronic gear to make, er, um, "music?"
@@ -123,21 +133,7 @@ Yes, let's call it "music."
 
 My process for creating music has evolved as new technologies have become
 available, but conceptually is not all that different from how I [started
-out](#yesterday) as a composer. I have loved listening to many types of music
-all my life. The first album that I bought with my "own" money was a recording
-of Schubert's _Unfinished Symphony_. I had worn the grooves out of it by the
-time I turned seven years old. By the time I was in my late teens, I was
-writing papers for my degree in Formal Linguistics and, a couple of years
-later, teaching myself to program computers while listening to a personal
-soundtrack that featured Lou Reed's _Metal Machine Music_ -- yes, the 4-LP
-sides' worth of guitar feedback and effects noise that ended his career just as
-it was starting to take off in the late 1970's. You will find strong hints of
-all those influences - classical and experimental music together with
-mathematics and a love of algorithms - throughout my musical _oeuvre_. To me,
-an analog synthesizer is a device for translating what are essentially
-mathematical formulas into acoustic impulses, which are occasionally and
-serendipitously esthetically pleasing (at least to someone with my extremely
-idiosyncratic tastes). Computer software makes that even more literally true.
+out](#yesterday) as a composer.
 
 ### Mostly Analog
 
@@ -208,9 +204,6 @@ are the closest I am likely to come to writing "scores" for any of my music.
 This is my "West Coast" approach applied to using "East Coast" inspired gear
 and software.
 
-See [SonicPi "Scores"](#sonicpi-scores) for [Ruby](https://www.ruby-lang.org) code
-examples as musical scores.
-
 ## Studio Setups
 
 ### Yesterday
@@ -257,12 +250,12 @@ graph LR
 - [TASCAM PortaStudio 244](https://en.wikipedia.org/wiki/Portastudio)
 
 The _Knabe_ piano I had as a kid was built in the 1930's and sounded far better
-recordings were made in my childhood bedroom or various apartments I had as a
-college student and young adult using decidedly consumer-level microphones and
-recording technologies of the era. The jankiness of the audio quality appeals
-to me as an artifact of the period of my life and the circumstances in which
-they were created, but I cannot argue with anyone who finds it less charming
-than I.
+in real life than it sounds in the recordings made in my childhood bedroom or
+various apartments I had as a college student and young adult using decidedly
+consumer-level microphones and recording technologies of the era. The jankiness
+of the audio quality appeals to me as an artifact of the period of my life and
+the circumstances in which they were created, but I cannot argue with anyone
+who finds it less charming than I.
 
 ### Today
 
