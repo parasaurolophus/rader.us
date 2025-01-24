@@ -17,3 +17,11 @@ const members = [
 # About
 
 <VPTeamMembers size="small" :members="members" />
+
+---
+
+<audio controls loop autoplay muted>
+    <source src="/BrokenOaths.ogg" controlsList="nodownload noremoteplayback">
+</audio>
+
+![](/lava.webp)

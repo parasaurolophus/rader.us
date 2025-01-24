@@ -3,7 +3,8 @@ import MarkdownItCollapsible from "markdown-it-collapsible"
 import MarkdownItGraphvizExec from "markdown-it-graphviz-exec"
 
 export default withMermaid({
-    title: "Kirk Rader",
+    title: "Home",
+    titleTemplate: "Kirk Rader",
     description: "Repository of random stuff",
 
     head: [
@@ -16,7 +17,7 @@ export default withMermaid({
 
         footer: {
             message: '',
-            copyright: 'Copyright 2024 <a href="https://github.com/parasaurolophus">Kirk Rader</a>'
+            copyright: 'Copyright 2024-2025 <a href="https://github.com/parasaurolophus">Kirk Rader</a>'
         },
 
         socialLinks: [
@@ -62,7 +63,6 @@ export default withMermaid({
                     }
                 ]
             },
-            { text: 'Test Plugins', link: '/test-plugins' },
             { text: 'About', link: '/about' },
         ],
 
