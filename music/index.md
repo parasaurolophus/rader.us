@@ -14,102 +14,92 @@ Recent releases: <https://hyperfollow.com/kirkrader>
 
 ## Streaming
 
-<table>
-    <tr>
-        <td>
-            <details>
-                <summary>Amazon Music</summary>
-                <iframe id='AmazonMusicEmbedB004L4HW52'
-                        src='https://music.amazon.com/embed/B004L4HW52/?id=q7SieUCVuT&marketplaceId=ATVPDKIKX0DER&musicTerritory=US'
-                        width='100%'
-                        height='352px'
-                        frameBorder='0'
-                        style='border-radius:20px;max-width:'>
-                </iframe>
-                <p>
-                    <img src="./musicography/qrcodes/amazon_kirk_rader_qrcode.png">
-                </p>
-                <p>
-                    <a ref="https://music.amazon.com/artists/B004L4HW52/kirk-rader">
-                        https://music.amazon.com/artists/B004L4HW52/kirk-rader
-                    </a>
-                </p>
-            </details>
-        </td>
-        <td>
-            <details>
-                <summary>Apple Music</summary>
-                <iframe allow="autoplay *; encrypted-media *;"
-                        frameborder="0"
-                        height="450"
-                        style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
-                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                        src="https://embed.music.apple.com/us/artist/kirk-rader/417090159">
-                </iframe>
-                <p>
-                    <img src="./musicography/qrcodes/apple_kirk_rader_qrcode.png">
-                </p>
-                <p>
-                    <a href="https://music.apple.com/us/artist/kirk-rader/417090159">
-                        https://music.apple.com/us/artist/kirk-rader/417090159
-                    </a>
-                </p>
-            </details>
-        </td>
-        <td>
-            <details>
-                <summary>Spotify</summary>
-                <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/artist/06lMz4EjJn3pYej2kGIL5t?utm_source=generator"
-                        width="100%"
-                        height="352"
-                        frameBorder="0"
-                        allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy" >
-                </iframe>
-                <p>
-                    <img src="./musicography/qrcodes/spotify_kirk_rader_qrcode.png">
-                </p>
-                <p>
-                    <a href="https://open.spotify.com/artist/06lMz4EjJn3pYej2kGIL5t">
-                        https://open.spotify.com/artist/06lMz4EjJn3pYej2kGIL5t
-                    </a>
-                </p>
-            </details>
-        </td>
-        <td>
-            <details>
-                <summary>YouTube Music</summary>
-                <p>
-                    <img src="./musicography/qrcodes/youtube_kirk_rader_qrcode.png">
-                </p>
-                <p>
-                    <a href="https://music.youtube.com/channel/UCp__q4DYBXYhq9uiD2Y8vUg">
-                        https://music.youtube.com/channel/UCp__q4DYBXYhq9uiD2Y8vUg
-                    </a>
-                </p>
-            </details>
-        </td>
-    </tr>
-</table>
+<div class="rader-container">
+    <details>
+        <summary>Amazon Music</summary>
+        <iframe id='AmazonMusicEmbedB004L4HW52'
+                src='https://music.amazon.com/embed/B004L4HW52/?id=q7SieUCVuT&marketplaceId=ATVPDKIKX0DER&musicTerritory=US'
+                width='100%'
+                height='352px'
+                frameBorder='0'
+                style='border-radius:20px;max-width:'>
+        </iframe>
+        <p>
+            <img src="./musicography/qrcodes/amazon_kirk_rader_qrcode.png">
+        </p>
+        <p>
+            <a ref="https://music.amazon.com/artists/B004L4HW52/kirk-rader">
+                https://music.amazon.com/artists/B004L4HW52/kirk-rader
+            </a>
+        </p>
+    </details>
+    <details>
+        <summary>Apple Music</summary>
+        <iframe allow="autoplay *; encrypted-media *;"
+                frameborder="0"
+                height="450"
+                style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                src="https://embed.music.apple.com/us/artist/kirk-rader/417090159">
+        </iframe>
+        <p>
+            <img src="./musicography/qrcodes/apple_kirk_rader_qrcode.png">
+        </p>
+        <p>
+            <a href="https://music.apple.com/us/artist/kirk-rader/417090159">
+                https://music.apple.com/us/artist/kirk-rader/417090159
+            </a>
+        </p>
+    </details>
+    <details>
+        <summary>Spotify</summary>
+        <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/artist/06lMz4EjJn3pYej2kGIL5t?utm_source=generator"
+                width="100%"
+                height="352"
+                frameBorder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" >
+        </iframe>
+        <p>
+            <img src="./musicography/qrcodes/spotify_kirk_rader_qrcode.png">
+        </p>
+        <p>
+            <a href="https://open.spotify.com/artist/06lMz4EjJn3pYej2kGIL5t">
+                https://open.spotify.com/artist/06lMz4EjJn3pYej2kGIL5t
+            </a>
+        </p>
+    </details>
+    <details>
+        <summary>YouTube Music</summary>
+        <p>
+            <img src="./musicography/qrcodes/youtube_kirk_rader_qrcode.png">
+        </p>
+        <p>
+            <a href="https://music.youtube.com/channel/UCp__q4DYBXYhq9uiD2Y8vUg">
+                https://music.youtube.com/channel/UCp__q4DYBXYhq9uiD2Y8vUg
+            </a>
+        </p>
+    </details>
+</div>
 
 _...or search for "Kirk Rader" on the music service you prefer_
 
 ## Background
 
 [I started creating electronic music](#yesterday) on the West Coast of the US,
-in the "West Coast Style," long before I knew that there was such a thing. My
-musical tastes have always been outside the mainstream. The first album I
-purchased with my "own" money was a vinyl recording (there were no other
-commercially significant recording media for sale in the mid 1960's) of
-Schubert's _Unfinished Symphony_ which I had worn the grooves out of by the
-time I turned 7 years old. When I was studying formal linguistics and teaching
-myself to program computers in my late teens and early twenties, I did so to a
-personal soundtrack that featured Lou Reed's _Metal Machine Music_ (yes, the
-album consisting of 4 LP sides of electric guitar feedback and effects pedal
-noise that literally ended his career just as it was beginning to take off in
-the mid 70's and then went on to become the [stuff of
+in the [West Coast Style](https://electronicmusic.fandom.com/wiki/West_Coast),
+long before I knew that there was such a thing. My musical tastes have always
+been outside the mainstream. The first album I purchased with my "own" money was
+a vinyl recording (there were no other commercially significant recording media
+for sale in the mid 1960's) of Schubert's _Unfinished Symphony_ which I had worn
+the grooves out of by the time I turned 7 years old. When I was studying formal
+linguistics and teaching myself to program computers in my late teens and early
+twenties, I did so to a personal soundtrack that featured Lou Reed's _Metal
+Machine Music_ (yes, the album consisting of 4 LP sides of electric guitar
+feedback and effects pedal noise that literally ended his career just as it was
+beginning to take off in the mid 70's and then went on to become the [stuff of
 legends](https://www.zeitkratzer.de/metal-metal-machine-music-zeitkratzer-performing-lou-reeds-milestone-)
 decades later).
 

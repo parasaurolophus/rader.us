@@ -2,50 +2,11 @@ _Copyright &copy; 2024 Kirk Rader_
 
 # Anatomy of a Digital Musical Composition
 
-_For Dennis_ is the result of a recent conversation with a friend:
-
-<table>
-    <tr>
-        <td>
-            <details>
-                <summary>Amazon Music</summary>
-                <iframe id='AmazonMusicEmbedB0DLPC4WG7'
-                        src='https://music.amazon.com/embed/B0DLPC4WG7/?id=ptXCUnaHiY&marketplaceId=ATVPDKIKX0DER&musicTerritory=US'
-                        width='100%'
-                        height='352px'
-                        frameBorder='0'
-                        style='border-radius:20px;max-width:500px'></iframe>
-            </details>
-        </td>
-        <td>
-            <details>
-                <summary>Apple Music</summary>
-                <iframe allow="autoplay *; encrypted-media *;"
-                frameborder="0"
-                height="150"
-                style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
-                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                src="https://embed.music.apple.com/us/album/for-dennis/1777575627?i=1777575628"></iframe>
-            </details>
-        </td>
-        <td>
-            <details>
-                <summary>Spotify</summary>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5sycXFtDAJVDKSERPuPprF?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </details>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="3">
-            ...or search for a track titled <i>For Dennis</i>, by <i>Kirk Rader</i> on the streaming service you prefer
-        </td>
-    </tr>
-</table>
-
-He described an idea he had for a musical composition memorializing the
-thousands of victims of the terrorist attacks on September 11, 2001. His
-description of the piece he had in mind was the inspiration for the following
-bit of Ruby code:
+[For Dennis](https://distrokid.com/hyperfollow/kirkrader/for-dennis) is the
+result of a recent conversation with a friend He described an idea he had for a
+musical composition memorializing the thousands of victims of the terrorist
+attacks on September 11, 2001. His description of the piece he had in mind was
+the inspiration for the following bit of Ruby code:
 
 ```ruby
 # Copyright 2024 Kirk Rader

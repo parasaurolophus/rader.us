@@ -275,7 +275,7 @@ the visible light spectrum:
 
 Noise that contains a preponderance of frequencies lower in the audible
 "spectrum" is referred to as "pink" or "red," again by analogy to light colors.
-White light that is passed through a filter than only allows lower frequencies
+White light that is passed through a filter that only allows lower frequencies
 to pass through becomes pink or red depending on the filter's cut-off frequency.
 By analogy, "white" noise that is passed through a low-pass filter will sound
 "redder":
@@ -628,7 +628,7 @@ clock frequency sped up a bit:
 Note that the output traverses the same range of pitches from lowest to highest
 in the same amount of time, as determined by the amplitude and frequency of the
 sawtooth wave emitted by the LFO in both of the two preceding examples. However,
-there are fewer, more widely spaced but larger jumps pitches in the first
+there are fewer, more widely spaced pitches with larger jumps in the first
 compared to the second because the faster clock results in a higher number of
 samples, each being held for a shorter amount of time, in each cycle of the
 sawtooth wave. If one were to increase the clock to a sufficiently high
@@ -705,7 +705,7 @@ middle and extreme left, respectively.
 >
 > <audio controls><source src="./mp3/Example_03.mp3" /></audio>
 
-**Meloday Patch** ![](./images/Example_03_Melody_Patch.png)
+**Melody Patch** ![](./images/Example_03_Melody_Patch.png)
 
 **Toms Patch** ![](./images/Example_03_Toms_Patch.png)
 

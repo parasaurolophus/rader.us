@@ -1,5 +1,6 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
+import CopyrightComponent from './CopyrightComponent.vue'
 
 const { Layout } = DefaultTheme
 </script>
@@ -7,19 +8,13 @@ const { Layout } = DefaultTheme
 <template>
   <Layout>
     <template #doc-top>
-        <div class="copyright">
-            Copyright © 2024-2025 <a href="https://github.com/parasaurolophus">Kirk Rader</a>
-        </div>
+        <CopyrightComponent />
     </template>
     <template #page-top>
-        <div class="copyright">
-            Copyright © 2024-2025 <a href="https://github.com/parasaurolophus">Kirk Rader</a>
-        </div>
+        <CopyrightComponent />
     </template>
-    <template #home-hero-before>
-        <div class="copyright">
-            Copyright © 2024-2025 <a href="https://github.com/parasaurolophus">Kirk Rader</a>
-        </div>
+    <template #layout-bottom>
+        <CopyrightComponent />
     </template>
   </Layout>
 </template>
