@@ -15,11 +15,6 @@ export default withMermaid({
         // https://vitepress.dev/reference/default-theme-config
         appearance: 'dark',
 
-        footer: {
-            message: '',
-            copyright: 'Copyright 2024-2025 <a href="https://github.com/parasaurolophus">Kirk Rader</a>'
-        },
-
         socialLinks: [
             { icon: 'github', link: 'https://github.com/parasaurolophus' },
             { icon: 'linkedin', link: 'https://www.linkedin.com/in/kirkrader/' },
@@ -31,7 +26,7 @@ export default withMermaid({
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Music', link: '/music/' },
-            { text: 'Philosopy', link: '/philosophy/' },
+            { text: 'Gallery', link: '/gallery/' },
             { text: 'About', link: '/about' },
         ],
 
@@ -51,14 +46,15 @@ export default withMermaid({
                 ]
             },
             {
-                text: 'Philosophy',
-                link: '/philosophy/',
+                text: 'Gallery',
+                link: '/gallery/',
                 items: [
                     {
                         items: [
-                            {
-                                text: 'Computability', link: '/philosophy/computability/'
-                            }
+                            { text: 'Project 2025', link: '/gallery/Project2025.md', },
+                            { text: 'Blank Verse', link: '/gallery/BlankVerse.md', },
+                            { text: 'Tympanic Nerve', link: '/gallery/TympanicNerve.md', },
+                            { text: 'The Auction', link: '/gallery/Auction.md', },
                         ],
                     }
                 ]

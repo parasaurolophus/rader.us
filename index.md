@@ -24,9 +24,9 @@ features:
   - title: Music
     details: Old-school, West Coast style electronic... er, um, music?
     link: /music/
-  - title: Philosophy
-    details: Stuff that interests me
-    link: /philosophy/
+  - title: Gallery
+    details: Image Gallery
+    link: /gallery/
 ---
 
 ---

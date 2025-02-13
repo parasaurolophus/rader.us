@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.copyright {
+    margin: 1em;
+    font-style: italic;
+    font-size: small;
+}
