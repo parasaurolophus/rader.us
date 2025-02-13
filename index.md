@@ -24,9 +24,6 @@ features:
   - title: Music
     details: Old-school, West Coast style electronic... er, um, music?
     link: /music/
-  - title: Gallery
-    details: Image Gallery
-    link: /gallery/
 ---
 
 ---

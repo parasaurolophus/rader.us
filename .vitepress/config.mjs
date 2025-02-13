@@ -26,7 +26,6 @@ export default withMermaid({
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Music', link: '/music/' },
-            { text: 'Gallery', link: '/gallery/' },
             { text: 'About', link: '/about' },
         ],
 
@@ -42,20 +41,6 @@ export default withMermaid({
                             { text: 'Ratcheting', link: '/music/ratcheting/' },
                             { text: 'For Dennis', link: '/music/for_dennis/' },
                         ]
-                    }
-                ]
-            },
-            {
-                text: 'Gallery',
-                link: '/gallery/',
-                items: [
-                    {
-                        items: [
-                            { text: 'Project 2025', link: '/gallery/Project2025.md', },
-                            { text: 'Blank Verse', link: '/gallery/BlankVerse.md', },
-                            { text: 'Tympanic Nerve', link: '/gallery/TympanicNerve.md', },
-                            { text: 'The Auction', link: '/gallery/Auction.md', },
-                        ],
                     }
                 ]
             },
