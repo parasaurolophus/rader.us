@@ -25,9 +25,3 @@ features:
     details: Old-school, West Coast style electronic... er, um, music?
     link: /music/
 ---
-
----
-
-<a href="https://hyperfollow.com/kirkrader" target="_blank">
-  <img src="/hyperfollowqr.png" alt="my music on hyperfollow dot com" width="100px" height="100px">
-</a>

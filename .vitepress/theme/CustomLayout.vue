@@ -7,14 +7,16 @@ const { Layout } = DefaultTheme
 
 <template>
   <Layout>
-    <template #doc-top>
+    <template #doc-bottom>
         <CopyrightComponent />
     </template>
-    <template #page-top>
+    <template #page-bottom>
         <CopyrightComponent />
     </template>
-    <template #layout-bottom>
-        <CopyrightComponent />
+    <template #home-features-after>
+        <div style="margin-top: 1rem;">
+            <CopyrightComponent />
+        </div>
     </template>
   </Layout>
 </template>
