@@ -3,6 +3,11 @@ import MarkdownItCollapsible from "markdown-it-collapsible"
 import MarkdownItGraphvizExec from "markdown-it-graphviz-exec"
 
 export default withMermaid({
+
+    srcExclude: [
+        '**/README.md',
+     ],
+
     title: "Home",
     titleTemplate: "Kirk Rader",
     description: "Repository of random stuff",
