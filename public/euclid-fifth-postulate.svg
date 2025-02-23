@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="568" height="304" class="svgbob"><style>.svgbob line, .svgbob path, .svgbob circle, .svgbob rect, .svgbob polygon {
+    stroke: black;
+    stroke-width: 2;
+    stroke-opacity: 1;
+    fill-opacity: 1;
+    stroke-linecap: round;
+    stroke-linejoin: miter;
+}
+.svgbob text {
+    white-space: pre;
+    fill: black;
+    font-family: Iosevka Fixed, monospace;
+    font-size: 14px;
+}
+.svgbob rect.backdrop {
+    stroke: none;
+    fill: white;
+}
+.svgbob .broken {
+    stroke-dasharray: 8;
+}
+.svgbob .filled {
+    fill: black;
+}
+.svgbob .bg_filled {
+    fill: white;
+    stroke-width: 1;
+}
+.svgbob .nofill {
+    fill: white;
+}
+.svgbob .end_marked_arrow {
+    marker-end: url(#arrow);
+}
+.svgbob .start_marked_arrow {
+    marker-start: url(#arrow);
+}
+.svgbob .end_marked_diamond {
+    marker-end: url(#diamond);
+}
+.svgbob .start_marked_diamond {
+    marker-start: url(#diamond);
+}
+.svgbob .end_marked_circle {
+    marker-end: url(#circle);
+}
+.svgbob .start_marked_circle {
+    marker-start: url(#circle);
+}
+.svgbob .end_marked_open_circle {
+    marker-end: url(#open_circle);
+}
+.svgbob .start_marked_open_circle {
+    marker-start: url(#open_circle);
+}
+.svgbob .end_marked_big_open_circle {
+    marker-end: url(#big_open_circle);
+}
+.svgbob .start_marked_big_open_circle {
+    marker-start: url(#big_open_circle);
+}<!--separator-->.svgbob .note{ 
+  fill: silver;
+  stroke: silver;
+ }</style><defs><marker id="arrow" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><polygon points="0,0 0,4 4,2 0,0"></polygon></marker><marker id="diamond" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><polygon points="0,2 2,0 4,2 2,4 0,2"></polygon></marker><marker id="circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><circle cx="4" cy="4" r="2" class="filled"></circle></marker><marker id="open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><circle cx="4" cy="4" r="2" class="bg_filled"></circle></marker><marker id="big_open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><circle cx="4" cy="4" r="3" class="bg_filled"></circle></marker></defs><rect class="backdrop" x="0" y="0" width="568" height="304"></rect><rect x="172" y="120" width="384" height="112" class="solid nofill note" rx="0"></rect><text x="186" y="140" >Parallel Postulate:</text><text x="186" y="172" >Lines AC and BD must eventually intersect,</text><text x="186" y="188" >when extended indefinitely, on the side</text><text x="186" y="204" >where angles a and b are both less than 90°</text><polygon points="17,12 10,4 10,15" class="filled"></polygon><line x1="14" y1="12" x2="28" y2="40" class="solid end_marked_circle"></line><polygon points="207,12 214,4 214,15" class="filled"></polygon><line x1="210" y1="12" x2="196" y2="40" class="solid end_marked_circle"></line><text x="10" y="44" >A</text><line x1="30" y1="44" x2="92" y2="168" class="solid end_marked_circle"></line><text x="74" y="108" >a</text><polygon points="80,116 72,120 80,124" class="filled"></polygon><line x1="194" y1="44" x2="132" y2="168" class="solid end_marked_circle"></line><text x="146" y="108" >b</text><polygon points="144,116 152,120 144,124" class="filled"></polygon><text x="210" y="44" >B</text><polygon points="8,84 0,88 8,92" class="filled"></polygon><line x1="8" y1="88" x2="224" y2="88" class="solid"></line><polygon points="224,84 232,88 224,92" class="filled"></polygon><text x="74" y="172" >D</text><line x1="94" y1="172" x2="146" y2="276" class="solid"></line><line x1="130" y1="172" x2="78" y2="276" class="solid"></line><text x="146" y="172" >C</text><polygon points="81,276 74,284 74,273" class="filled"></polygon><polygon points="143,276 150,284 150,273" class="filled"></polygon><g><path d="M 88,96 A 16,16 0,0,1 88,112" class="nofill"></path><line x1="88" y1="112" x2="86" y2="116" class="solid"></line><path d="M 86,116 A 8,8 0,0,1 80,120" class="nofill"></path></g><g><path d="M 136,96 A 16,16 0,0,0 136,112" class="nofill"></path><line x1="136" y1="112" x2="138" y2="116" class="solid"></line><path d="M 138,116 A 8,8 0,0,0 144,120" class="nofill"></path></g></svg>

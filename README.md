@@ -56,24 +56,27 @@ npm run docs:dev
 
 See <https://ivanceras.github.io/svgbob-editor/> for what these are.
 
-### Euclid's Fifth Axiom (Parallel Postulate)
+### Euclid's Fifth ('Parallel') Postulate
 
 ```
-
+ ^                        ^
+  \                      /
  A *                    * B
     \                  /
      \                /
- -----\--------------/--
+<-----\--------------/------>
        \ a )    ( b /
-        \<'      `>/ +------------------------+ 
-         \        /  | Parallel Postulate:    |
-          \      /   |                        |
-           \    /    | Lines AC and BD always | 
-            \  /     | intersect when angles  | 
-             \/      | a and b are both less  | 
-             /\      | than 90°        {note} | 
-            /  \     +------------------------+ 
-         D *    * C
+        \<'      `>/ +-----------------------------------------------+
+         \        /  | "Parallel Postulate:"                         |
+          \      /   |                                               |
+         D *    * C  | "Lines AC and BD must eventually intersect,"  |
+            \  /     | "when extended indefinitely, on the side"     |
+             \/      | "where angles a and b are both less than 90°" |
+             /\      | {note}                                        |
+            /  \     +-----------------------------------------------+
+           /    \
+          /      \
+         v        v
 
 # Legend:
 note = {
@@ -81,19 +84,24 @@ note = {
   stroke: silver;
 }
 ```
+
+![Euclid's Fifth Postulate](./public/euclid-fifth-postulate.svg)
 
 ### Playfair's Theorem
 
 ```
-
-         * A   / +--------------------------+ 
-        /     /  | Playfair's Theorem:      | 
-       /     /   | {note}                   | 
-      /     /    | For any P not on AB,     | 
-     /   P *     | exactly one line can     | 
-    /     /      | be drawn through P which | 
-   /     /       | does not intersect AB    | 
-  * B   /        +--------------------------+ 
+           ^     ^
+          /     /
+         * A   / +---------------------------------+
+        /     /  | "Playfair's Theorem:"           |
+       /     /   |                                 |
+      /     /    | "For any P not on AB, exactly"  |
+     /   P *     | "one line can be drawn through" |
+    /     /      | "P which does not intersect AB" |
+   /     /       | {note}                          |
+  * B   /        +---------------------------------+
+ /     /
+V     v
 
 # Legend:
 note = {
@@ -102,49 +110,63 @@ note = {
 }
 ```
 
-```
+![Playfair's Theorem](./public/playfair-theorem.svg)
 
- +---------------------------------+ 
- |       "Injective Mapping"       | 
- |                                 | 
- |     ______           ______     | 
- |   ,'      `.       ,'      `.   | 
- |  /  a ----- \  -  / --> e    \  | 
- | |     b ---- | - | --> f      | | 
- | |            |   |      g     | | 
- |  \          /     \          /  | 
- |   `.______.'       `.______.'   | 
- |                                 | 
- |    "Domain"          "Range"    | 
- +---------------------------------+ 
+### Mappings
 
- +---------------------------------+ 
- |       "Surjective Mapping"      | 
- |                                 | 
- |     ______           ______     | 
- |   ,'      `.       ,'      `.   | 
- |  /  a ----- \  -  / --> e    \  | 
- | |     b ---- | - | --> f      | | 
- | |   c        |   |            | | 
- |  \          /     \          /  | 
- |   `.______.'       `.______.'   | 
- |                                 | 
- |     "Domain"         "Range"    | 
- +---------------------------------+ 
-
- +---------------------------------+ 
- |        "Bijective Mapping"      | 
- |                                 | 
- |     ______           ______     | 
- |   ,'      `.       ,'      `.   | 
- |  /  a ----- \  -  / --> e    \  | 
- | |     b ---- | - | --> f      | | 
- | |   c ------ | - | ---> g     | | 
- |  \          /     \          /  | 
- |   `.______.'       `.______.'   | 
- |                                 | 
- |     "Domain"       "Co-domain"  | 
- +---------------------------------+ 
-
+#### Injection
 
 ```
+     "Injective Mapping"
++---------------------------------+
+|     ______           ______     |
+|   ,'      `.       ,'      `.   |
+|  /  a ------\---  /---> d    \  |
+| |     b -----|-- |---> e      | |
+| |            |   |      f     | |
+|  \          /     \          /  |
+|   `.______.'       `.______.'   |
+|                                 |
+|    "Domain"          "Range"    |
++---------------------------------+
+```
+
+![Injective Mapping](./public/injective-mapping.svg)
+
+#### Surjection
+
+```
+       "Surjective Mapping"
++---------------------------------+
+|     ______           ______     |
+|   ,'      `.       ,'      `.   |
+|  /  a ------\---  /---> d    \  |
+| |     b -----|-- |---> e      | |
+| |   c        |   |            | |
+|  \          /     \          /  |
+|   `.______.'       `.______.'   |
+|                                 |
+|     "Domain"         "Range"    |
++---------------------------------+
+```
+
+![Surjective Mapping](./public/surjective-mapping.svg)
+
+#### Bijection
+
+```
+         "Bijective Mapping"
++---------------------------------+
+|     ______           ______     |
+|   ,'      `.       ,'      `.   |
+|  /  a <-----\---  /---> d    \  |
+| |     b <----|-- |---> e      | |
+| |   c <------|-- |----> f     | |
+|  \          /     \          /  |
+|   `.______.'       `.______.'   |
+|                                 |
+|    "Domain"        "Co-domain"  |
++---------------------------------+
+```
+
+![Bijective Mapping](./public/bijective-mapping.svg)

@@ -49,109 +49,116 @@ $$
 ## Graphviz
 
 @graphviz_open
-digraph G {
+digraph {
 
+    label="Injective ('Into') Mapping";
     node[shape=circle]
 
-    subgraph injective {
+    subgraph {
 
         cluster=true;
-        label="injective";
-        color=white;
+        label="domain"
 
-        subgraph injective_domain {
-            cluster=true;
-            color=black;
-            label="domain";
+        a;
+        b;
 
-            ia[label="a"];
-            ib[label="b"];
-
-            ia -> ib[style=invis];
-        }
-
-        subgraph injective_range {
-            cluster=true;
-            label = "range";
-            color=black;
-
-            id[label="d"];
-            ie[label="e"];
-            if[label="f"];
-            id -> ie[style=invis];
-            ie -> if[style=invis];
-        }
-
-        ia -> id;
-        ib -> ie;
+        a -> b [style=invis];
     }
 
-    subgraph surjective {
+    subgraph {
 
         cluster=true;
-        label="surjective";
-        color=white;
+        label = "range";
 
-        subgraph surjective_domain {
-            cluster=true;
-            color=black;
-            label="domain";
-            sa[label="a"];
-            sb[label="b"];
-            sc[label="c"];
+        d;
+        e;
+        f;
 
-            sa -> sb[style=invis];
-            sb -> sc[style=invis];
-        }
-
-        subgraph surjective_range {
-            cluster=true;
-            label = "range";
-            color=black;
-
-            sd[label="d"];
-            se[label="e"];
-            sd -> se[style=invis];
-        }
-
-        sa -> sd;
-        sb -> se;
+        d -> e [style=invis];
+        e -> f [style=invis];
     }
 
-    subgraph bijective {
+
+    a -> d;
+    b -> e;
+}
+@graphviz_close
+
+---
+
+@graphviz_open
+digraph {
+
+    label="Surjective ('Onto') Mapping";
+    node[shape=circle]
+
+    subgraph {
 
         cluster=true;
-        label="bijective";
-        color=white;
+        label="domain"
 
-        subgraph bijective_domain {
-            cluster=true;
-            label="domain";
-            color=black;
+        a;
+        b;
+        c;
 
-            ba[label="a"];
-            bb[label="b"];
-            bc[label="c"];
-
-            ba -> bb[style=invis];
-            bb -> bc[style=invis];
-        }
-
-        subgraph bijective_range {
-            cluster=true;
-            label = "co-domain";
-            color=black;
-
-            bd[label="d"];
-            be[label="e"];
-            bf[label="f"];
-            bd -> be[style=invis];
-            be -> bf[style=invis];
-        }
-
-        ba -> bd[dir=both];
-        bb -> be[dir=both];
-        bc -> bf[dir=both];
+        a -> b [style=invis];
+        b -> c [style=invis];
     }
+
+    subgraph {
+
+        cluster=true;
+        label = "range";
+
+        d;
+        e;
+
+        d -> e [style=invis];
+    }
+
+
+    a -> d;
+    b -> e;
+}
+@graphviz_close
+
+---
+
+@graphviz_open
+digraph {
+
+    label="Bijective ('1:1') Mapping"
+    node[shape=circle]
+
+    subgraph {
+
+        cluster=true;
+        label="domain"
+
+        a;
+        b;
+        c;
+
+        a -> b [style=invis];
+        b -> c [style=invis];
+    }
+
+    subgraph {
+
+        cluster=true;
+        label = "co-domain";
+
+        d;
+        e;
+        f;
+
+        d -> e [style=invis];
+        e -> f [style=invis];
+    }
+
+
+    a -> d [dir=both];
+    b -> e [dir=both];
+    c -> f [dir=both];
 }
 @graphviz_close

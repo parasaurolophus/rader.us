@@ -56,6 +56,11 @@ export default withMermaid({
                 ]
             },
             { text: 'About', link: '/about' },
+            {
+                items: [
+                    { text: 'Test Plugins', link: '/test-plugins.md'},
+                ]
+            },
         ],
 
         outline: {
