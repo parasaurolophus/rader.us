@@ -9,16 +9,19 @@ hero:
   image: /kirk.png
   actions:
     - theme: brand
-      text: https://hyperfollow.com/kirkrader
-      link: https://hyperfollow.com/kirkrader
-      target: _blank
+      text: Music
+      link: /music
     - theme: brand
-      text: https://github.com/parasaurolophus
+      text: About
+      link: /about
+    - theme: alt
+      text: GitHub
       link: https://github.com/parasaurolophus
       target: _blank
     - theme: alt
-      text: About
-      link: /about
+      text: HyperFollow
+      link: https://hyperfollow.com/kirkrader
+      target: _blank
 
 features:
   - title: Music

@@ -1,10 +1,17 @@
 <template>
     <div class="rader-container rader-copyright">
         <div>
-            Copyright © 2024-2025 <a href="https://github.com/parasaurolophus">Kirk Rader</a>
+            © 2024-2025 Kirk Rader
         </div>
         <div>
-            <a href="https://hyperfollow.com/kirkrader" target="_blank">HyperFollow</a>
+            <a href="https://github.com/parasaurolophus" target="_blank">
+                <img src="/github.svg" alt="GitHub" width="24" height="24">
+            </a>
+        </div>
+        <div>
+            <a href="https://hyperfollow.com/kirkrader" target="_blank">
+                <img src="/icon-hyperfollow.svg" alt="HyperFollow" width="24" height="24">
+            </a>
         </div>
     </div>
 </template>
