@@ -2,6 +2,9 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+title: Kirk Rader
+titleTemplate: :title
+
 hero:
   name: Kirk Rader
   text: A repository of random stuff

@@ -10,8 +10,8 @@ export default withMermaid({
         '**/README.md',
      ],
 
-    title: "Home",
-    titleTemplate: "Kirk Rader",
+    title: "Kirk Rader",
+    titleTemplate: ":title | Kirk Rader",
     description: "Repository of random stuff",
 
     head: [
