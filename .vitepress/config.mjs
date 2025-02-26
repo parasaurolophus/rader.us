@@ -21,6 +21,7 @@ export default withMermaid({
     themeConfig: {
 
         // https://vitepress.dev/reference/default-theme-config
+
         appearance: 'dark',
 
         socialLinks: [
@@ -35,6 +36,11 @@ export default withMermaid({
 
 
         logo: '/kirk.png',
+
+        docFooter: {
+            prev: false,
+            next: false,
+        },
 
         nav: [
             { text: 'Home', link: '/' },
