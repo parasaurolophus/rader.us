@@ -17,17 +17,18 @@ hero:
     - theme: brand
       text: About
       link: /about
-    - theme: alt
-      text: GitHub
-      link: https://github.com/parasaurolophus
-      target: _blank
-    - theme: alt
-      text: HyperFollow
-      link: https://hyperfollow.com/kirkrader
-      target: _blank
 
 features:
-  - title: Music
-    details: Old-school, West Coast style electronic... er, um, music?
-    link: /music/
+  - title: https://github.com/parasaurolophus
+    link: https://github.com/parasaurolophus
+    details: Software I have written or to which I have contributed
+  - title: https://hyperfollow.com/kirkrader
+    link: https://hyperfollow.com/kirkrader
+    details: Links to my music on various streaming services
 ---
+
+<div class="rader-container" style="margin-top:1rem;">
+    <a href="https://hyperfollow.com/kirkrader" target="_blank">
+        <img src="/hyperfollowqr.png" width="64" height="64">
+    </a>
+</div>

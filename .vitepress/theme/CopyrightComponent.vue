@@ -1,7 +1,8 @@
 <template>
+    <hr>
     <div class="rader-container rader-copyright">
         <div>
-            © 2024-2025 Kirk Rader
+            © 2023-2025 Kirk Rader
         </div>
         <div>
             <a href="https://github.com/parasaurolophus" target="_blank">
@@ -14,4 +15,5 @@
             </a>
         </div>
     </div>
+    <hr>
 </template>

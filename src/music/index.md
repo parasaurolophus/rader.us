@@ -6,13 +6,9 @@
 
 # Music
 
-Recent releases: <https://hyperfollow.com/kirkrader>
+<https://hyperfollow.com/kirkrader>
 
-<a href="https://hyperfollow.com/kirkrader" target="_blank">
-  <img src="/hyperfollowqr.png" alt="my music on hyperfollow dot com" width="100px" height="100px">
-</a>
-
-## Streaming
+_or_
 
 :::: details Amazon Music
 

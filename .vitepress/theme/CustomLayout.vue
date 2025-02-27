@@ -18,5 +18,12 @@ const { Layout } = DefaultTheme
             <CopyrightComponent />
         </div>
     </template>
+    <template #sidebar-nav-after>
+        <div class="rader-container">
+            <a href="https://hyperfollow.com/kirkrader" target="_blank">
+                <img src="/hyperfollowqr.png" width="64" height="64">
+            </a>
+        </div>
+    </template>
   </Layout>
 </template>

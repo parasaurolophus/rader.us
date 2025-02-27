@@ -51,9 +51,11 @@ export default withMermaid({
         sidebar: [
             {
                 text: 'Here',
+                collapsed: false,
                 items: [
                     {
                         text: 'Music',
+                        collapsed: false,
                         link: '/music/',
                         items: [
                             { text: 'Musicography', link: '/music/musicography/' },
@@ -68,11 +70,13 @@ export default withMermaid({
             },
             {
                 text: 'Elsewhere',
+                collapsed: false,
                 items: [
                     { text: 'GitHub', link: 'https://github.com/parasaurolophus' },
                     { text: 'HyperFollow', link: 'https://www.linkedin.com/in/kirkrader/' },
                 ],
             },
+            {},
         ],
 
         outline: {
