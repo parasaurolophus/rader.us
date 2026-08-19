@@ -189,12 +189,23 @@ track sounds like when played on its own:
 This is called a "sine wave" because the wave's shape can be exactly represented
 by graphing the mathematical _sine_ function:
 
-$$
-v = a \sin(pt)
-$$
+<math display="block">
+    <mi>v</mi>
+    <mo>=</mo>
+    <mrow>
+        <mi>a</mi>
+        <mrow>
+            <mo>sin</mo>
+            <mo>(</mo>
+                <mi>p</mi>
+                <mi>t</mi>
+            <mo>)</mo>
+        </mrow>
+    </mrow>
+</math>
 
-where $t$ is a point in time, $p$ and $a$ are scaling factors representing the
-tone's pitch and amplitude, respectively, and $v$ the audio signal's voltage at
+where `t` is a point in time, `p` and `a` are scaling factors representing the
+tone's pitch and amplitude, respectively, and `v` the audio signal's voltage at
 that time.
 
 The term "440 Hz" refers to the fact that this particular sine wave repeats at
@@ -956,12 +967,36 @@ recorded in the late 1970's through the mid 1980's) are testaments to the
 conceptual origin of my musical style. Its "logo" is the following expression of
 the &lambda;-calculus:
 
-$$
-\begin{align*}
-    \text{Let } \Omega &= \omega \ \omega \\
-  \text{where } \omega &= \lambda x.x \ x
-\end{align*}
-$$
+<math display="block">
+    <mtable>
+        <mrow>
+            <mtext>Let</mtext>
+            <mspace width="0.5em"/>
+            <mi>&Omega;</mi>
+            <mo>=</mo>
+            <mi>&omega;</mi>
+            <mspace width="0.5em"/>
+            <mi>&omega;</mi>
+        </mrow>
+        <mrow>
+            <mspace height="1ex"/>
+        </mrow>
+        <mrow>
+            <mtext>where</mtext>
+            <mspace width="0.5em"/>
+            <mi>&omega;</mi>
+            <mo>=</mo>
+            <mrow>
+                <mo>&lambda;</mo>
+                <mi>x</mi>
+                <mo>.</mo>
+                <mi>x</mi>
+                <mspace width="0.5em"/>
+                <mi>x</mi>
+            </mrow>
+        </mrow>
+    </mtable>
+</math>
 
 &omega; is a function which calls itself indefinitely, meaning that &Omega; will
 never receive any definite value within a finite amount of time. Such

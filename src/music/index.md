@@ -10,7 +10,7 @@
 
 _or_
 
-:::: details Amazon Music
+::: details Amazon Music
 
 <iframe id='AmazonMusicEmbedB004L4HW52'
         src='https://music.amazon.com/embed/B004L4HW52/?id=q7SieUCVuT&marketplaceId=ATVPDKIKX0DER&musicTerritory=US'
@@ -21,9 +21,9 @@ _or_
 </iframe>
 
 <https://music.amazon.com/artists/B004L4HW52/kirk-rader>
-::::
+:::
 
-:::: details Apple Music
+::: details Apple Music
 
 <iframe allow="autoplay *; encrypted-media *;"
         frameborder="0"
@@ -34,9 +34,9 @@ _or_
 </iframe>
 
 <https://music.apple.com/us/artist/kirk-rader/417090159>
-::::
+:::
 
-:::: details Spotify
+::: details Spotify
 
 <iframe style="border-radius:12px"
         src="https://open.spotify.com/embed/artist/06lMz4EjJn3pYej2kGIL5t?utm_source=generator"
@@ -49,14 +49,14 @@ _or_
 </iframe>
 
 <https://open.spotify.com/artist/06lMz4EjJn3pYej2kGIL5t>
-::::
+:::
 
-:::: details YouTube Music
+::: details YouTube Music
 
 ![](./musicography/qrcodes/youtube_kirk_rader_qrcode.png)
 
 <https://music.youtube.com/channel/UCp__q4DYBXYhq9uiD2Y8vUg>
-::::
+:::
 
 _...or search for "Kirk Rader" on the music service you prefer_
 

@@ -1,6 +1,4 @@
 import { withMermaid } from "vitepress-plugin-mermaid"
-import MarkdownItCollapsible from "markdown-it-collapsible"
-import MarkdownItGraphvizExec from "markdown-it-graphviz-exec"
 
 export default withMermaid({
 
@@ -8,7 +6,7 @@ export default withMermaid({
 
     srcExclude: [
         '**/README.md',
-     ],
+    ],
 
     title: "Kirk Rader",
     titleTemplate: ":title | Kirk Rader",
@@ -65,7 +63,6 @@ export default withMermaid({
                         ]
                     },
                     { text: 'About', link: '/about' },
-                    { text: 'Test Plugins', link: '/test-plugins.md'},
                 ],
             },
             {
@@ -82,14 +79,6 @@ export default withMermaid({
         outline: {
             level: 'deep',
             label: 'On this page',
-        }
-    },
-
-    markdown: {
-        math: true,
-        config: (md) => {
-            md.use(MarkdownItCollapsible)
-            md.use(MarkdownItGraphvizExec)
         }
     },
 })
