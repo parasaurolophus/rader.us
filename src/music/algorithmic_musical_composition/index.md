@@ -186,8 +186,8 @@ track sounds like when played on its own:
 >
 > <audio controls><source src="./mp3/sine-01.mp3"/></audio>
 
-This is called a "sine wave" because the wave's shape can be exactly represented
-by graphing the mathematical _sine_ function:
+This is called a "sine wave" because the wave's shape can be represented by
+graphing the mathematical _sine_ function:
 
 <math display="block">
     <mi>v</mi>
@@ -206,7 +206,7 @@ by graphing the mathematical _sine_ function:
 
 where `t` is a point in time, `p` and `a` are scaling factors representing the
 tone's pitch and amplitude, respectively, and `v` the audio signal's voltage at
-that time.
+time `t`.
 
 The term "440 Hz" refers to the fact that this particular sine wave repeats at
 440 Hertz, i.e. it traverses one cycle (from zero volts, to peak, to valley and
