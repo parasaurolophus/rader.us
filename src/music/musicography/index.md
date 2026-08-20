@@ -1,3 +1,5 @@
+<!-- Copyright &copy; Kirk Rader  2023-2026 -->
+
 <script setup>
 import { data } from '/all.data.js'
 </script>
@@ -14,18 +16,22 @@ import { data } from '/all.data.js'
         <div>UPC: <i>{{ album[0].upc }}</i></div>
         <div>Year: <i>{{ album[0].year }}</i></div>
         <table>
-            <tr>
-                <th>Track</th>
-                <th>Title</th>
-                <th>ISRC</th>
-            </tr>
-            <template v-for="track in album">
+            <thead>
                 <tr>
-                    <td>{{ track.track }}</td>
-                    <td>{{ track.title }}</td>
-                    <td>{{ track.isrc }}</td>
+                    <th>Track</th>
+                    <th>Title</th>
+                    <th>ISRC</th>
                 </tr>
-            </template>
+            </thead>
+            <tbody>
+                <template v-for="track in album">
+                    <tr>
+                        <td>{{ track.track }}</td>
+                        <td>{{ track.title }}</td>
+                        <td>{{ track.isrc }}</td>
+                    </tr>
+                </template>
+            </tbody>
         </table>
     </template>
 </template>

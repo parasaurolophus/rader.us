@@ -1,40 +1,32 @@
 {
-  "name": "rader.us",
-  "version": "1.0.0",
-  "description": "A vanity site",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/parasaurolophus/rader.us.git"
-  },
-  "keywords": [
-    "vitepress",
-    "vue",
-    "vue3"
-  ],
-  "author": "parasurolophus <apps@rader.us>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/parasaurolophus/rader.us/issues"
-  },
-  "homepage": "https://github.com/parasaurolophus/rader.us#readme",
-  "devDependencies": {
-    "add": "^2.0.6",
-    "markdown-it-mathjax3": "^4.3.2",
-    "mermaid": "^10.9.1",
-    "npm": "^10.8.2",
-    "vitepress": "^1.3.1",
-    "vitepress-plugin-mermaid": "^2.0.16"
-  },
-  "dependencies": {
-    "csv-parse": "^5.5.6",
-    "markdown-it-collapsible": "^2.0.2",
-    "markdown-it-graphviz-exec": "^1.1.3"
-  }
+    "name": "rader.us",
+    "version": "1.0.0",
+    "description": "A vanity site",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "docs:dev": "vitepress dev",
+        "docs:build": "vitepress build",
+        "docs:preview": "vitepress preview"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/parasaurolophus/rader.us.git"
+    },
+    "keywords": [
+        "vitepress",
+        "vue"
+    ],
+    "author": "parasurolophus <apps@rader.us>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/parasaurolophus/rader.us/issues"
+    },
+    "homepage": "https://github.com/parasaurolophus/rader.us#readme",
+    "devDependencies": {
+        "csv-parse": "^7.0.2",
+        "mermaid": "^10.9.8",
+        "vitepress": "^1.6.4",
+        "vitepress-plugin-mermaid": "^2.0.17"
+    }
 }

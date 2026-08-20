@@ -1,3 +1,5 @@
+<!-- Copyright &copy; Kirk Rader  2023-2026 -->
+
 <script setup>
 import DefaultTheme from 'vitepress/theme'
 import CopyrightComponent from './CopyrightComponent.vue'
