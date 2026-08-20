@@ -1,3 +1,5 @@
+<!-- Copyright &copy; Kirk Rader  2023-2026 -->
+
 # About
 
 <VPTeamMembers size="small" :members="members" />

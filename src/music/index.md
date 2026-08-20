@@ -1,3 +1,5 @@
+<!-- Copyright &copy; Kirk Rader  2023-2026 -->
+
 <style scoped>
     th, td {
         border: none;
@@ -111,11 +113,11 @@ to create dynamic timbre" and the like. I then simply play around with such
 patches -- changing the underlying wave forms, inverting the phase of some of
 the low-frequency oscillator signals, changing the base frequency relationships
 when using FM, and so on -- until I find something that appeals to my very
-idiosyncratic tastes sufficiently to be worth recording. I then repeat the same
-process to create multiple layers of sound for a given composition. Where I
-used a multitrack analog recorder back in the day, I now use _Audacity_ to
-record each sonic layer. Finally, I align and trim the tracks, add fades and
-similar basic editing in the DAW to produce a final mix as a FLAC file.
+peculiar tastes sufficiently to be worth recording. I then repeat the same
+process to create multiple layers of sound for a given composition. Where I used
+a multitrack analog recorder back in the day, I now use _Audacity_ to record
+each sonic layer. Finally, I align and trim the tracks, add fades and similar
+basic editing in the DAW to produce a final mix as a FLAC file.
 
 Most of the time, when I "play" a piece during the recording process it is by
 adjusting potentiometers to alter the patch in real time. Often I don't do even
@@ -145,7 +147,7 @@ tools and techniques that simply did not exist when I was young. Some of the
 sounds on my albums were produced using completely digital synthesis. These are
 often in the form of digital audio samples or the output of VST plugins using
 software like _Ableton Live_ and _Sonic Pi_. Using _Ableton Live_, I can play a
-keyboard (to within the very narrow limis of my skill) to produce more
+keyboard (to within the very narrow limits of my skill) to produce more
 conventionally tonal music. Some pieces consist only of tracks recorded in this
 way, while others combine analog and digital sound sources in various ways.
 

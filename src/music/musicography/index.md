@@ -1,3 +1,5 @@
+<!-- Copyright &copy; Kirk Rader  2023-2026 -->
+
 <script setup>
 import { data } from '/all.data.js'
 </script>

@@ -2,7 +2,7 @@
     <hr>
     <div class="rader-container rader-copyright">
         <div>
-            © 2023-2025 Kirk Rader
+            © Kirk Rader 2023-2026
         </div>
         <div>
             <a href="https://github.com/parasaurolophus" target="_blank">

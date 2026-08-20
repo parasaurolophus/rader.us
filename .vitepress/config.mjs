@@ -62,6 +62,13 @@ export default withMermaid({
                             { text: 'For Dennis', link: '/music/for_dennis/' },
                         ]
                     },
+                    {
+                        text: 'Other',
+                        link: '/other/',
+                        items: [
+                            { text: 'MathML Experiments', link: '/other/mathml.md' },
+                        ],
+                    },
                     { text: 'About', link: '/about' },
                 ],
             },
@@ -81,4 +88,5 @@ export default withMermaid({
             label: 'On this page',
         }
     },
+    lastUpdated: true,
 })
