@@ -43,6 +43,7 @@ export default withMermaid({
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Music', link: '/music/' },
+            { text: 'Other', link: '/other/' },
             { text: 'About', link: '/about' },
         ],
 
@@ -66,7 +67,7 @@ export default withMermaid({
                         text: 'Other',
                         link: '/other/',
                         items: [
-                            { text: 'MathML Experiments', link: '/other/mathml.md' },
+                            { text: 'MathML Experiments', link: '/other/mathml/' },
                         ],
                     },
                     { text: 'About', link: '/about' },

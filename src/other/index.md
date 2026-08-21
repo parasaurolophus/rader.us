@@ -2,4 +2,4 @@
 
 # Other
 
-- [MathML Experiments](./mathml.md)
+- [MathML Experiments](./mathml/index.md)
