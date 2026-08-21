@@ -5,6 +5,7 @@ node_modules
 .~*
 *~
 dist.zip
+dist.tgz
 *.hide
 *.bak
 *.old
