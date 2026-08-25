@@ -7,7 +7,7 @@
 
     <p>
         A number of seemingly unrelated results in formal linguistics,
-        combinatory logic and computer science can be uderstood as all being
+        combinatory logic and computer science can be understood as all being
         variants of the <i>liar paradox</i>. As has been discussed in first-year
         Philosphy classes from at least the time of the ancient Greeks, certain
         simple, declarative sentences cannot be said to be either true or false.
