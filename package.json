@@ -8,7 +8,8 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "clean": "del /s /q dist"
+        "clean": "clean.bat",
+        "zip": "tar -cavf dist.zip -C dist *"
     },
     "dependencies": {
         "@mdi/js": "^7.4.47",
