@@ -8,8 +8,8 @@
             </div>
             <BreadCrumbs />
         </div>
-        <a id="hyperfollowqr" href="https://hyperfollow.com/kirkrader" target="_blank">
-            <img src="/qr-hyperfollow.png" alt="https://hyperfollow.com/kirkrader">
+        <a id="hyperfollowqr" :href="externalLinks.hyperFollow" target="_blank">
+            <QrComponent v-model="externalLinks.hyperFollow" />
         </a>
     </div>
 </template>
@@ -28,14 +28,12 @@
 #hyperfollowqr {
     margin-left: auto;
 }
-
-#hyperfollowqr>img {
-    width: calc(0.75 * var(--headerheight));
-    height: calc(0.75 * var(--headerheight));
-    border-radius: initial;
-}
 </style>
 
 <script setup>
 import BreadCrumbs from '@/components/BreadCrumbs.vue'
+import QrComponent from '@/components/QrComponent.vue'
+import { inject } from 'vue'
+
+const externalLinks = inject('externalLinks')
 </script>

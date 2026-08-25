@@ -3,12 +3,13 @@
 <template>
     <div>
         <h1>Logic</h1>
-        <ul>
-            <MatchingRoutes wrapper="li" pattern="^/logic/" />
-        </ul>
+        <RouteTree :root="route" />
     </div>
 </template>
 
 <script setup>
-import MatchingRoutes from '@/components/MatchingRoutes.vue'
+import RouteTree from '@/components/RouteTree'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 </script>

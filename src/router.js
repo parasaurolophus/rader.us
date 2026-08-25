@@ -14,6 +14,33 @@ const routes = [
     },
 
     {
+        path: '/logic',
+        name: 'logic',
+        component: () => import('./pages/logic/LogicPage.vue'),
+        meta: {
+            title: 'Logic',
+        },
+    },
+
+    {
+        path: '/logic/ieee',
+        name: 'ieee',
+        component: () => import('./pages/logic/Ieee754.vue'),
+        meta: {
+            title: 'IEEE 754',
+        },
+    },
+
+    {
+        path: '/logic/liar',
+        name: 'liar',
+        component: () => import('./pages/logic/LiarParadoxPage.vue'),
+        meta: {
+            title: 'Liar Paradox',
+        },
+    },
+
+    {
         path: '/music',
         name: 'music',
         component: () => import('./pages/music/MusicPage.vue'),
@@ -37,24 +64,6 @@ const routes = [
         component: () => import('./pages/music/ForDennisPage.vue'),
         meta: {
             title: 'For Dennis',
-        },
-    },
-
-    {
-        path: '/logic',
-        name: 'logic',
-        component: () => import('./pages/logic/LogicPage.vue'),
-        meta: {
-            title: 'Logic',
-        },
-    },
-
-    {
-        path: '/logic/liar',
-        name: 'liar',
-        component: () => import('./pages/logic/LiarParadoxPage.vue'),
-        meta: {
-            title: 'Liar Paradox',
         },
     },
 ]

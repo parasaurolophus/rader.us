@@ -42,14 +42,26 @@
 <script setup>
 import mermaid from 'mermaid'
 import { RouterView } from 'vue-router'
+import { provide, ref } from 'vue'
 import OmegaFormula from '@/components/OmegaFormula.vue'
 import SideBar from '@/components/SideBar.vue'
 import TitleBar from '@/components/TitleBar.vue'
+
+const externalLinks = ref({
+    amazonMusic: 'https://music.amazon.com/artists/B004L4HW52/kirk-rader',
+    appleMusic: 'https://music.apple.com/us/artist/kirk-rader/417090159',
+    github: 'https://hyperfollow.com/kirkrader',
+    hyperFollow: 'https://hyperfollow.com/kirkrader',
+    spotify: 'https://open.spotify.com/artist/06lMz4EjJn3pYej2kGIL5t',
+    youtubeMusic: 'https://music.youtube.com/channel/UCp__q4DYBXYhq9uiD2Y8vUg',
+})
 
 function mermaidClick(arg) {
 
     console.log(`mermaid click ${arg}`)
 }
+
+provide('externalLinks', externalLinks)
 
 mermaidHandler = mermaidClick
 

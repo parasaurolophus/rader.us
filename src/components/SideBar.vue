@@ -3,15 +3,7 @@
 <template>
     <div class="container">
         <img id="portrait" src="/kirk.png">
-        <fieldset>
-            <legend>here</legend>
-            <AllLinks />
-        </fieldset>
-        <fieldset>
-            <legend>elsewhere</legend>
-            <a href="https://hyperfollow.com/kirkrader" target="_blank">HyperFollow</a>
-            <a href="https://github.com/parasaurolophus" target="_blank">GitHub</a>
-        </fieldset>
+        <RouteTree />
     </div>
 </template>
 
@@ -42,5 +34,5 @@ fieldset>* {
 </style>
 
 <script setup>
-import AllLinks from '@/components/AllLinks.vue'
+import RouteTree from '@/components/RouteTree'
 </script>
