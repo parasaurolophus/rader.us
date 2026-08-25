@@ -1,174 +1,38 @@
-<!-- Copyright &copy; Kirk Rader  2023-2026 -->
-
 # rader.us
 
-```bash
-# create the project directory
-mkdir rader.us
-cd rader.us
+This template should help get you started developing with Vue 3 in Vite.
 
-# initialize a node project
-npm init
+## Recommended IDE Setup
 
-# add vitepress as a dev dependency
-npm add -D vitepress
+[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-# initialize vitepress
-npx vitepress init
+## Recommended Browser Setup
 
-# add to .gitignore
-cat << EOF > .gitignore
-node_modules
-.vitepress/cache
-.vitepress/dist
-.~*
-*~
-dist.zip
-EOF
+- Chromium-based browsers (Chrome, Edge, Brave, etc.):
+  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
+- Firefox:
+  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
+  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
 
-# add mathjax support
-# see
-# https://vitepress.dev/guide/markdown#math-equations
-# for instructions on modifying .vitepress/config.mjs
-npm add -D markdown-it-mathjax3
+## Customize configuration
 
-# add mermaid extension, see
-# https://emersonbottero.github.io/vitepress-plugin-mermaid/guide/getting-started.html
-# for instructions on modifying .vitepress/config.mjs
-npm i vitepress-plugin-mermaid mermaid -D
+See [Vite Configuration Reference](https://vite.dev/config/).
 
-# add dependency on CSV parser used by music.data.js
-npm i csv-parse
+## Project Setup
 
-# additionl markdown-it plugins
-npm i markdown-it-collapsible
-npm i markdown-it-graphviz-exec
-
-# run dev server
-npm run docs:dev
+```sh
+npm install
 ```
 
-* See <https://vitepress.dev/reference/default-theme-config> for the default
-  theme documentation
-* See <https://vitepress.dev/guide/markdown> for the list of vitepress markdown
-  extensions
-* See <https://vitepress.dev/reference/runtime-api> for the vitepress API
+### Compile and Hot-Reload for Development
 
-## bobsvg sources
-
-See <https://ivanceras.github.io/svgbob-editor/> for what these are.
-
-### Euclid's Fifth ('Parallel') Postulate
-
-```
- ^                        ^
-  \                      /
- A *                    * B
-    \                  /
-     \                /
-<-----\--------------/------>
-       \ a )    ( b /
-        \<'      `>/ +-----------------------------------------------+
-         \        /  | "Parallel Postulate:"                         |
-          \      /   |                                               |
-         D *    * C  | "Lines AC and BD must eventually intersect,"  |
-            \  /     | "when extended indefinitely, on the side"     |
-             \/      | "where angles a and b are both less than 90°" |
-             /\      | {note}                                        |
-            /  \     +-----------------------------------------------+
-           /    \
-          /      \
-         v        v
-
-# Legend:
-note = {
-  fill: silver;
-  stroke: silver;
-}
+```sh
+npm run dev
 ```
 
-![Euclid's Fifth Postulate](./public/euclid-fifth-postulate.svg)
+### Compile and Minify for Production
 
-### Playfair's Theorem
-
+```sh
+npm run build
 ```
-           ^     ^
-          /     /
-         * A   / +---------------------------------+
-        /     /  | "Playfair's Theorem:"           |
-       /     /   |                                 |
-      /     /    | "For any P not on AB, exactly"  |
-     /   P *     | "one line can be drawn through" |
-    /     /      | "P which does not intersect AB" |
-   /     /       | {note}                          |
-  * B   /        +---------------------------------+
- /     /
-V     v
-
-# Legend:
-note = {
-  stroke: silver;
-  fill: silver;
-}
-```
-
-![Playfair's Theorem](./public/playfair-theorem.svg)
-
-### Mappings
-
-#### Injection
-
-```
-     "Injective Mapping"
-+---------------------------------+
-|     ______           ______     |
-|   ,'      `.       ,'      `.   |
-|  /  a ------\---  /---> d    \  |
-| |     b -----|-- |---> e      | |
-| |            |   |      f     | |
-|  \          /     \          /  |
-|   `.______.'       `.______.'   |
-|                                 |
-|    "Domain"          "Range"    |
-+---------------------------------+
-```
-
-![Injective Mapping](./public/injective-mapping.svg)
-
-#### Surjection
-
-```
-       "Surjective Mapping"
-+---------------------------------+
-|     ______           ______     |
-|   ,'      `.       ,'      `.   |
-|  /  a ------\---  /---> d    \  |
-| |     b -----|-- |---> e      | |
-| |   c        |   |            | |
-|  \          /     \          /  |
-|   `.______.'       `.______.'   |
-|                                 |
-|     "Domain"         "Range"    |
-+---------------------------------+
-```
-
-![Surjective Mapping](./public/surjective-mapping.svg)
-
-#### Bijection
-
-```
-         "Bijective Mapping"
-+---------------------------------+
-|     ______           ______     |
-|   ,'      `.       ,'      `.   |
-|  /  a <-----\---  /---> d    \  |
-| |     b <----|-- |---> e      | |
-| |   c <------|-- |----> f     | |
-|  \          /     \          /  |
-|   `.______.'       `.______.'   |
-|                                 |
-|    "Domain"        "Co-domain"  |
-+---------------------------------+
-```
-
-![Bijective Mapping](./public/bijective-mapping.svg)
