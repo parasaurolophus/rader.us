@@ -5,12 +5,7 @@ import { RouterLink, useRouter } from 'vue-router'
 
 export default {
 
-    props: {
-
-        root: {
-            required: false,
-        },
-    },
+    props: ['root', 'externalLinks'],
 
     setup(props) {
 
@@ -57,8 +52,8 @@ export default {
                 'ul',
                 {},
                 () => [
-                    h('li', {}, () => [buildAnchor(externalLinks.value.hyperFollow, 'HyperFollow')]),
-                    h('li', {}, () => [buildAnchor(externalLinks.value.github, 'GitHub')]),
+                    h('li', {}, () => [buildAnchor(externalLinks.value.hyperFollow.url, externalLinks.value.hyperFollow.title)]),
+                    h('li', {}, () => [buildAnchor(externalLinks.value.github.url, externalLinks.value.github.title)]),
                     h('li', {}, () => [
                         buildRouterLink(root),
                         buildRouteTree(root),

@@ -13,7 +13,7 @@
         After all, what's the worst that can happen?
     </p>
 
-    <video ref="exampleVideo" controls @playing="paused = false" @pause="paused = true">
+    <video ref="exampleVideo" width="97%" controls @playing="paused = false" @pause="paused = true">
         <source src="/music/example04.mp4">
     </video>
 
@@ -232,7 +232,7 @@ graph LR
     </p>
 
     <p>
-        <img src="/music/sines.png" width="90%">
+        <img src="/music/sines.png" width="97%">
     </p>
 
     <p>
@@ -330,7 +330,7 @@ graph LR
     </p>
 
     <p>
-        <img src="/music/sawtooth.png" width="90%">
+        <img src="/music/sawtooth.png" width="97%">
     </p>
 
     <p>
@@ -415,7 +415,7 @@ graph LR
     </p>
 
     <p>
-        <img src="/music/noise.png" width="90%">
+        <img src="/music/noise.png" width="97%">
     </p>
 
     <p>
@@ -643,7 +643,7 @@ graph LR
 
     </ul>
 
-    <img src="/music/basic-patch.png" width="90%">
+    <img src="/music/basic-patch.png" width="97%">
 
     <p>
         Each type of module accepts input and / or produces output audio
@@ -892,7 +892,9 @@ graph LR
 
     <p>
         The preceding will produce a sound like:
+    </p>
 
+    <p>
         Smoothly ramping pitch
         <br>
         <audio controls>
@@ -1046,7 +1048,7 @@ graph LR
         </audio>
     </p>
 
-    <img src="/music/Example_01_Patch.png" width="90%">
+    <img src="/music/Example_01_Patch.png" width="97%">
 
     <p>
         <i>Example 01</i>> consists of three tracks of a couple of minutes each,
@@ -1054,7 +1056,7 @@ graph LR
         middle and extreme left, respectively.
     </p>
 
-    <img src="/music/Example_01_DAW.png" width="90%">
+    <img src="/music/Example_01_DAW.png" width="97%">
 
     <h3>Example 02</h3>
 
@@ -1079,13 +1081,13 @@ graph LR
     <p>
         Melody Patch
         <br>
-        <img src="/music/Example_03_Melody_Patch.png" width="90%">
+        <img src="/music/Example_03_Melody_Patch.png" width="97%">
     </p>
 
     <p>
         Toms Patch
         <br>
-        <img src="/music/Example_03_Toms_Patch.png" width="90%">
+        <img src="/music/Example_03_Toms_Patch.png" width="97%">
     </p>
 
     <p>
@@ -1277,7 +1279,12 @@ end
         "artistic" impulses with the aim of achieving some particular esthetic
         result. More importantly, the Ruby program is used by <i>Sonic PI</i> to
         direct the musical output just as a musician is directed to produce a
-        particular musical output by reading a traditional score.
+        particular musical output by reading a traditional score. To stretch
+        this analogy even further, a computer running a program like
+        <i>Sonic PI</i> to send a sequence of MIDI commands to external
+        synthesizers can be thought of like a conductor coordinating the actions
+        of an ensemble of musicians, each reading their own copy of a musical
+        score.
     </p>
 
     <p>
@@ -1320,9 +1327,7 @@ end
             <i>
                 Thus, any possible musical composition could, in principle, be
                 embodied in an analog synthesizer patch given a sufficient
-                number of the correct kinds of modules.<a href="#undecidable">
-                    <sup>*</sup>
-                </a>
+                number of the correct kinds of modules.<sup>*</sup>
             </i>
         </li>
     </ul>
@@ -1371,10 +1376,17 @@ end
 
     <hr>
 
-    <a id="undecidable"><sup>*</sup></a><i>Undecidable</i>
+    <sup>*</sup><i>Undecidable</i>
 
     <p>
-        The title and cover art of my first album, <i>Undecidable</i>
+        The title and cover art of my first album,
+    </p>
+
+    <p>
+        <img src="/music/undecidable.webp" alt="Undecidable" class="cover">
+    </p>
+
+    <p>
         (consisting of tracks I recorded in the late 1970's through the mid
         1980's) are testaments to the conceptual origin of my musical style. Its
         "logo" is the following expression of the &lambda;-calculus:
@@ -1446,6 +1458,11 @@ tbody tr:nth-child(even) {
 .centerAligned {
     display: flex;
     align-items: center;
+}
+
+.cover {
+    width: 97%;
+    max-width: 240px;
 }
 </style>
 

@@ -8,8 +8,8 @@
             </div>
             <BreadCrumbs />
         </div>
-        <a id="hyperfollowqr" :href="externalLinks.hyperFollow" target="_blank">
-            <QrComponent v-model="externalLinks.hyperFollow" />
+        <a id="hyperfollowqr" :href="externalLinks.hyperFollow.url" target="_blank">
+            <QrComponent v-model="externalLinks.hyperFollow.url" />
         </a>
     </div>
 </template>

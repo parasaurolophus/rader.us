@@ -180,6 +180,10 @@ math {
     cursor: pointer;
 }
 
+.copyable {
+    cursor: copy;
+}
+
 /*
  * styles for "cards"
  */

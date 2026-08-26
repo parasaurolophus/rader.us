@@ -66,6 +66,15 @@ const routes = [
             title: 'For Dennis',
         },
     },
+
+    {
+        path: '/music/musicography',
+        name: 'musicography',
+        component: () => import('./pages/music/MusicographyPage.vue'),
+        meta: {
+            title: 'Musicography',
+        },
+    },
 ]
 
 export const router = createRouter({
