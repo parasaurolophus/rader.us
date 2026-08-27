@@ -66,7 +66,11 @@
     </math>
 
     <p>
-        since the latter is the algebraic inverse of the former. However:
+        since the latter is the algebraic inverse of the former.
+    </p>
+
+    <p>
+        However:
     </p>
 
     <math display="block">
