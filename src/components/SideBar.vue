@@ -3,7 +3,7 @@
 <template>
     <div class="sidebar">
         <img id="portrait" src="/kirk.png">
-        <RouteTree :root="root" />
+        <RouteTree :root="root" :links="links" />
     </div>
 </template>
 
@@ -36,8 +36,10 @@ fieldset>* {
 <script setup>
 import RouteTree from '@/components/RouteTree'
 import { useRouter } from 'vue-router'
-import { computed } from 'vue'
+import { computed, inject } from 'vue'
 
+const externalLinks = inject('externalLinks')
 const router = useRouter()
 const root = computed(() => router.resolve({ name: 'home' }))
+const links = computed(() => [externalLinks.value.hyperFollow, externalLinks.value.github])
 </script>

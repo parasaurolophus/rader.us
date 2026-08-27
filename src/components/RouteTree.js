@@ -45,30 +45,20 @@ export default {
 
         function buildRouteTree(route, ...links) {
 
-            const body = buildRouteItems(route)
+            let routeItems = buildRouteItems(route)
+            const additionalItems = links.map(link => h('li', {}, buildAnchor(link.url, link.title)))
 
-            for (let link of links) {
+            if (route.name === 'home') {
 
-                body.unshift(h('li', {}, buildAnchor(link.url, link.title)))
+                const routeLink = buildRouterLink(route)
+
+                routeItems = [h('li', {}, () => [
+                    routeLink,
+                    h('ul', {}, routeItems),
+                ])]
             }
 
-            return h('ul', {}, () => body)
-        }
-
-        if (root.name === 'home') {
-
-            return () => h(
-                'ul',
-                {},
-                () => [
-                    h('li', {}, () => [buildAnchor(externalLinks.value.hyperFollow.url, externalLinks.value.hyperFollow.title)]),
-                    h('li', {}, () => [buildAnchor(externalLinks.value.github.url, externalLinks.value.github.title)]),
-                    h('li', {}, () => [
-                        buildRouterLink(root),
-                        buildRouteTree(root),
-                    ]),
-                ],
-            )
+            return h('ul', {}, () => additionalItems.concat(routeItems))
         }
 
         return () => buildRouteTree(root, ...links)
