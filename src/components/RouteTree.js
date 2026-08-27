@@ -1,7 +1,7 @@
 // Copyright(c) Kirk Rader 2026
 
 import { h, inject } from 'vue'
-import { RouterLink, useRouter } from 'vue-router'
+import { RouterLink, useRoute, useRouter } from 'vue-router'
 
 export default {
 
@@ -10,8 +10,9 @@ export default {
     setup(props) {
 
         const externalLinks = inject('externalLinks')
+        const route = useRoute()
         const router = useRouter()
-        const root = props.root ?? router.getRoutes().filter(route => route.path === '/' || route.name === 'home')[0]
+        const root = props.root ?? route
         const links = props.links ?? []
 
         function buildAnchor(url, title) {

@@ -3,13 +3,10 @@
 <template>
     <div>
         <h1>Logic</h1>
-        <RouteTree :root="route" />
+        <RouteTree />
     </div>
 </template>
 
 <script setup>
 import RouteTree from '@/components/RouteTree'
-import { useRoute } from 'vue-router'
-
-const route = useRoute()
 </script>

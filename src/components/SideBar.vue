@@ -1,14 +1,14 @@
 <!-- Copyright (c) Kirk Rader -->
 
 <template>
-    <div class="container">
+    <div class="sidebar">
         <img id="portrait" src="/kirk.png">
-        <RouteTree />
+        <RouteTree :root="root" />
     </div>
 </template>
 
 <style scoped>
-.container {
+.sidebar {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -35,4 +35,9 @@ fieldset>* {
 
 <script setup>
 import RouteTree from '@/components/RouteTree'
+import { useRouter } from 'vue-router'
+import { computed } from 'vue'
+
+const router = useRouter()
+const root = computed(() => router.resolve({ name: 'home' }))
 </script>

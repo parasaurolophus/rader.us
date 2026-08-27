@@ -10,9 +10,59 @@
     </p>
 
     <math display="block">
-        <LimitZero />
+
+        <mrow>
+            <munder>
+                <mo>lim</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&rarr;</mo>
+                    <mrow>
+                        <mo>&pm;</mo>
+                        <mn>&infin;</mn>
+                    </mrow>
+                </mrow>
+            </munder>
+            <mo>(</mo>
+            <mfrac>
+                <mn>1</mn>
+                <mi>x</mi>
+            </mfrac>
+            <mo>)</mo>
+            <mo>=</mo>
+            <mrow>
+                <mo>&pm;</mo>
+                <mn>0</mn>
+            </mrow>
+        </mrow>
+
         <mo>&equiv;</mo>
-        <LimitInfinity />
+
+        <mrow>
+            <munder>
+                <mo>lim</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&rarr;</mo>
+                    <mrow>
+                        <mo>&pm;</mo>
+                        <mn>0</mn>
+                    </mrow>
+                </mrow>
+            </munder>
+            <mo>(</mo>
+            <mfrac>
+                <mn>1</mn>
+                <mi>x</mi>
+            </mfrac>
+            <mo>)</mo>
+            <mo>=</mo>
+            <mrow>
+                <mo>&pm;</mo>
+                <mn>&infin;</mn>
+            </mrow>
+        </mrow>
+
     </math>
 
     <p>
@@ -67,8 +117,3 @@
     </p>
 
 </template>
-
-<script setup>
-import LimitInfinity from '@/components/LimitInfinity.vue';
-import LimitZero from '@/components/LimitZero.vue'
-</script>

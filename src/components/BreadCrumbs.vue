@@ -1,13 +1,15 @@
 <!-- Copyright (c) Kirk Rader 2026 -->
 
 <template>
-    <template v-for="(destination, index) of path">
-        <span v-if="index > 0" class="separator">
-            &gt;
-        </span>
-        <span v-if="destination.to === null" class="label">{{ destination.title }}</span>
-        <RouterLink v-else :to="destination.to">{{ destination.title }}</RouterLink>
-    </template>
+    <div>
+        <template v-for="(destination, index) of path">
+            <span v-if="index > 0" class="separator">
+                &gt;
+            </span>
+            <span v-if="destination.to === null" class="label">{{ destination.title }}</span>
+            <RouterLink v-else :to="destination.to">{{ destination.title }}</RouterLink>
+        </template>
+    </div>
 </template>
 
 <style scoped>

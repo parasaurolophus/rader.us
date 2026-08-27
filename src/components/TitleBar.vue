@@ -1,7 +1,7 @@
 <!-- Copyright (c) Kirk Rader 2026 -->
 
 <template>
-    <div class="container">
+    <div class="titlebar">
         <div>
             <div class="title">
                 Kirk Rader
@@ -15,14 +15,14 @@
 </template>
 
 <style scoped>
-.container {
+.titlebar {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
 .title {
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 #hyperfollowqr {

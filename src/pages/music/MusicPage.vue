@@ -8,7 +8,7 @@
 
         <fieldset>
             <legend>here</legend>
-            <RouteTree :root="route" :links="links" />
+            <RouteTree :links="links" />
         </fieldset>
 
         <fieldset>
@@ -40,10 +40,8 @@
 import CopyableSpan from '@/components/CopyableSpan.vue'
 import MusicStreamer from '@/components/music/MusicStreamer.vue'
 import RouteTree from '@/components/RouteTree'
-import { useRoute } from 'vue-router'
 import { inject } from 'vue'
 
 const externalLinks = inject('externalLinks')
-const route = useRoute()
 const links = [externalLinks.value.hyperFollow]
 </script>
