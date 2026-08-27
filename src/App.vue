@@ -41,6 +41,10 @@ const externalLinks = ref({
         title: 'Apple Music',
         url: 'https://music.apple.com/us/artist/kirk-rader/417090159',
     },
+    deezer: {
+        title: 'Deezer',
+        url: 'https://www.deezer.com/us/artist/5223459',
+    },
     github: {
         title: 'GitHub',
         url: 'https://github.com/parasaurolophus',
@@ -49,9 +53,21 @@ const externalLinks = ref({
         title: 'HyperFollow',
         url: 'https://hyperfollow.com/kirkrader',
     },
+    iheartradio: {
+        title: 'iHeartRadio',
+        url: 'https://www.iheart.com/artist/kirk-rader-539364',
+    },
+    pandora: {
+        title: 'Pandora',
+        url: 'https://www.pandora.com/artist/kirk-rader/ARd5ht9vgv6kzzc',
+    },
     spotify: {
         title: 'Spotify',
         url: 'https://open.spotify.com/artist/06lMz4EjJn3pYej2kGIL5t',
+    },
+    tidal: {
+        title: 'Tidal',
+        url: 'https://tidal.com/artist/37978550',
     },
     undecidable: {
         title: 'Undecidable',

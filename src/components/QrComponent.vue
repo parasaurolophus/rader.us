@@ -1,14 +1,14 @@
 <!-- Copyright (c) Kirk Rader 2026 -->
 
 <template>
-    <div ref="svg" :class="`svg ${size}`"></div>
+    <div ref="svg" :class="`container ${size}`">
+    </div>
 </template>
 
 <style scoped>
-.svg {
+.container {
     display: inline-block;
     color: black;
-    width: 64px;
     background-color: white;
     border-radius: 0;
 }
@@ -23,6 +23,10 @@
 
 .large {
     width: 128px;
+}
+
+.x-large {
+    width: 256px;
 }
 </style>
 

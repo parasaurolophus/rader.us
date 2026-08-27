@@ -176,6 +176,12 @@ math {
     font-family: 'Latin Modern Math';
 }
 
+.clickable,
+.copyable {
+
+    color: var(--secondary)
+}
+
 .clickable {
     cursor: pointer;
 }

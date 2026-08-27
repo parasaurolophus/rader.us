@@ -27,6 +27,7 @@
 
 #hyperfollowqr {
     margin-left: auto;
+    margin-right: 1em;
 }
 </style>
 

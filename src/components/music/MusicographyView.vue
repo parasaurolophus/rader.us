@@ -9,19 +9,22 @@
             <template #summary>
                 {{ album[0][2] }}
             </template>
+            <template #subtitle>
+                UPC {{ album[0][3] }}
+            </template>
             <table>
                 <thead>
                     <tr>
-                        <th v-for="header of headers">
-                            {{ header }}
-                        </th>
+                        <th>{{ headers[5] }}</th>
+                        <th>{{ headers[4] }}</th>
+                        <th>{{ headers[6] }}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="track of album">
-                        <td v-for="column of track">
-                            {{ column }}
-                        </td>
+                        <td>{{ track[5] }}</td>
+                        <td>{{ track[4] }}</td>
+                        <td>{{ track[6] }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -32,7 +35,7 @@
 <style scoped>
 th,
 td {
-    padding: 0.25em;
+    padding: 0.25em 0.5em;
 }
 
 tr,
