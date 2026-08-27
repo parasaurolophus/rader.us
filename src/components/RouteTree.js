@@ -5,13 +5,14 @@ import { RouterLink, useRouter } from 'vue-router'
 
 export default {
 
-    props: ['root', 'externalLinks'],
+    props: ['root', 'links'],
 
     setup(props) {
 
         const externalLinks = inject('externalLinks')
         const router = useRouter()
         const root = props.root ?? router.getRoutes().filter(route => route.path === '/' || route.name === 'home')[0]
+        const links = props.links ?? []
 
         function buildAnchor(url, title) {
 
@@ -41,9 +42,16 @@ export default {
             return h(RouterLink, { to: route.path }, () => [route.meta?.title ?? route.name ?? route.path])
         }
 
-        function buildRouteTree(route) {
+        function buildRouteTree(route, ...links) {
 
-            return h('ul', {}, () => buildRouteItems(route))
+            const body = buildRouteItems(route)
+
+            for (let link of links) {
+
+                body.unshift(h('li', {}, buildAnchor(link.url, link.title)))
+            }
+
+            return h('ul', {}, () => body)
         }
 
         if (root.name === 'home') {
@@ -62,6 +70,6 @@ export default {
             )
         }
 
-        return () => buildRouteTree(root)
+        return () => buildRouteTree(root, ...links)
     }
 }

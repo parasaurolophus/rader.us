@@ -3,12 +3,14 @@
 <template>
     <fieldset class="music-links">
         <legend>{{ externalLink.title }}</legend>
-        <div>
-            <QrComponent v-model="externalLink.url" size="large" />
-            <a :href="externalLink.url" target="_blank">
+        <a :href="externalLink.url" target="_blank">
+            <div>
+                <QrComponent v-model="externalLink.url" size="large" />
+            </div>
+            <div>
                 profile
-            </a>
-        </div>
+            </div>
+        </a>
     </fieldset>
 </template>
 
@@ -20,7 +22,7 @@
     width: max-content;
 }
 
-.music-links>div {
+.music-links>a>div {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;

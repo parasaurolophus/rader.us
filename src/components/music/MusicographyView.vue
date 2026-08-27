@@ -49,7 +49,7 @@ tr:nth-child(even) {
 
 <script setup>
 import { onMounted, ref } from 'vue'
-import data from '/musicography.tsv?raw'
+import data from '/assets/musicography.tsv?raw'
 import DetailsComponent from '@/components/DetailsComponent.vue'
 
 const headers = ref([])

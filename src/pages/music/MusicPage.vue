@@ -8,7 +8,7 @@
 
         <fieldset>
             <legend>here</legend>
-            <RouteTree :root="route" />
+            <RouteTree :root="route" :links="links" />
         </fieldset>
 
         <fieldset>
@@ -32,24 +32,18 @@
 
         </fieldset>
 
-        <AmazonMusic />
-        <AppleMusic />
-        <SpotifyMusic />
-
     </div>
 
 </template>
 
 <script setup>
-import AmazonMusic from '@/components/music/AmazonMusic.vue'
-import AppleMusic from '@/components/music/AppleMusic.vue'
 import CopyableSpan from '@/components/CopyableSpan.vue'
 import MusicStreamer from '@/components/music/MusicStreamer.vue'
 import RouteTree from '@/components/RouteTree'
-import SpotifyMusic from '@/components/music/SpotifyMusic.vue'
 import { useRoute } from 'vue-router'
 import { inject } from 'vue'
 
 const externalLinks = inject('externalLinks')
 const route = useRoute()
+const links = [externalLinks.value.hyperFollow]
 </script>
