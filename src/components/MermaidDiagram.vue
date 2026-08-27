@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, useTemplateRef, watch } from 'vue'
+import { computed, onMounted, useTemplateRef } from 'vue'
 import mermaid from 'mermaid'
 
 const diagramElement = useTemplateRef('diagramElement')

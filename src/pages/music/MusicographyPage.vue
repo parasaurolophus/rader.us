@@ -2,9 +2,7 @@
 
 <template>
 
-    <h1>Music</h1>
-
-    <h2>Musicography</h2>
+    <h1>Musicography</h1>
 
     <MusicographyView />
 

@@ -1,9 +1,8 @@
 <!-- Copyright (c) Kirk Rader 2026 -->
 
 <template>
-    <h1>Logic</h1>
 
-    <h2>Liar Paradox</h2>
+    <h1>Liar Paradox</h1>
 
     <p>
         A number of seemingly unrelated results in formal linguistics,
@@ -155,21 +154,18 @@
         there is no conceptual difference between looping constructs and
         tail-recursion, so even the most basic structured programming languages
         rely instrinsically on self reference in order to be Turing complete.
-        The functional programming paradigm and <abbr>CPS</abbr> (<dfn
-        title="CPS">Continuation Passing Style</dfn>) place recursion at the
+        The functional programming paradigm and <abbr>CPS</abbr> (<dfn title="CPS">Continuation Passing Style</dfn>)
+        place
+        recursion at the
         center of good programming style. Here is a simple example of
         implementing <i>5!</i> in <i>Scheme</i> using recursion:
     </p>
 
-    <pre>
-        (let factorial ((a 1)
-                        (n 5))
-            (if (< n 2)
-                a
-                (factorial (* a n) (- n 1))
-            )
-        ) ; => 120
-    </pre>
+<pre>
+(let factorial ((a 1)
+    (n 5))
+    (if (< n 2) a (factorial (* a n) (- n 1)) ) ) ;=> 120
+</pre>
 
     <p>
         Since <code>let</code> is syntactic sugar for <code>lambda</code>, the
@@ -179,4 +175,5 @@
         understand, and substantially less efficient at run time. But both
         versions would return the number 120 as their result when executed.
     </p>
+
 </template>

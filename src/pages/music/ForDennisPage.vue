@@ -2,9 +2,7 @@
 
 <template>
 
-    <h1>Music</h1>
-
-    <h2>For Dennis</h2>
+    <h1>For Dennis</h1>
 
     <h3>Anatomy of a Digital Musical Composition</h3>
 

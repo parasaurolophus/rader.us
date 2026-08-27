@@ -2,20 +2,22 @@
 
 <template>
 
-    <h1>Music</h1>
-
-    <h2>Algorithmic Musical Composition</h2>
+    <h1>Algorithmic Musical Composition</h1>
 
     <p v-if="exampleVideo" class="centerAligned">
         Go ahead. Press
         <MdiIcon v-if="paused" :path="mdiPlay" @click="toggleExampleVideo()" />
-        <MdiIcon v-else :path="mdiPause" @click="toggleExampleVideo()" />.
-        After all, what's the worst that can happen?
+        <MdiIcon v-else :path="mdiPause" @click="toggleExampleVideo()" />
     </p>
 
-    <video ref="exampleVideo" width="97%" controls @playing="paused = false" @pause="paused = true">
+    <video ref="exampleVideo" controls @playing="paused = false" @pause="paused = true">
         <source src="/music/example04.mp4">
     </video>
+
+    <p>
+        After all, what's the worst that can happen?
+
+    </p>
 
     <p>
         What humans perceive as sound is the result of rapid changes in air
@@ -198,7 +200,7 @@ graph LR
             voltage</i> (<i>CV</i>) or <i>control path</i>, discussed later.
     </p>
 
-    <h3>Elementary Psychoacoustics</h3>
+    <h2>Elementary Psychoacoustics</h2>
 
     <p>
         A number of characteristics of sound vibrations combine to form a given sound's
@@ -232,7 +234,7 @@ graph LR
     </p>
 
     <p>
-        <img src="/music/sines.png" width="97%">
+        <img src="/music/sines.png">
     </p>
 
     <p>
@@ -330,7 +332,7 @@ graph LR
     </p>
 
     <p>
-        <img src="/music/sawtooth.png" width="97%">
+        <img src="/music/sawtooth.png">
     </p>
 
     <p>
@@ -364,9 +366,9 @@ graph LR
         to put all of the preceding principles together.
     </p>
 
-    <h3>Wave Forms As Musical Notes</h3>
+    <h2>Wave Forms As Musical Notes</h2>
 
-    <h4>Composite Wave Forms (Fundamentals vs Overtones)</h4>
+    <h3>Composite Wave Forms (Fundamentals vs Overtones)</h3>
 
     <p>
         Any naturally occuring sound will have a fairly complex wave form that
@@ -415,7 +417,7 @@ graph LR
     </p>
 
     <p>
-        <img src="/music/noise.png" width="97%">
+        <img src="/music/noise.png">
     </p>
 
     <p>
@@ -451,7 +453,7 @@ graph LR
         due to the inclusion of more frequencies per unit of time.
     </p>
 
-    <h4>Dynamic Properties of Musical Notes</h4>
+    <h3>Dynamic Properties of Musical Notes</h3>
 
     <p>
         As a consequence of the physical properties of whatever is producing a
@@ -597,7 +599,7 @@ graph LR
         wooden or metallic edges while air is blown against them.
     </p>
 
-    <h3>Old-School Modular Analog Synthesis</h3>
+    <h2>Old-School Modular Analog Synthesis</h2>
 
     <p>
         In order to produce wave forms with similar musical characteristics and
@@ -643,7 +645,7 @@ graph LR
 
     </ul>
 
-    <img src="/music/basic-patch.png" width="97%">
+    <img src="/music/basic-patch.png">
 
     <p>
         Each type of module accepts input and / or produces output audio
@@ -706,9 +708,9 @@ graph LR
         pursuits.
     </p>
 
-    <h4>Using Control Voltages</h4>
+    <h3>Using Control Voltages</h3>
 
-    <h5>Traditional Musical Techniques</h5>
+    <h4>Traditional Musical Techniques</h4>
 
     <p>
         A <i>low frequency oscillator (<abbr>LFO</abbr>)</i> is simply a VCO
@@ -746,7 +748,7 @@ graph LR
     </pre>
     </MermaidDiagram>
 
-    <h5>Uniquely Electronic Techniques</h5>
+    <h4>Uniquely Electronic Techniques</h4>
 
     <p>
         As with other aspects of electronic musical composition, analog modular
@@ -1026,7 +1028,7 @@ graph LR
         </pre>
     </MermaidDiagram>
 
-    <h3>Example 01</h3>
+    <h2>Example 01</h2>
 
     <p>
         It is obviously a matter of taste as to how "musical" any of the
@@ -1048,7 +1050,7 @@ graph LR
         </audio>
     </p>
 
-    <img src="/music/Example_01_Patch.png" width="97%">
+    <img src="/music/Example_01_Patch.png">
 
     <p>
         <i>Example 01</i>> consists of three tracks of a couple of minutes each,
@@ -1056,9 +1058,9 @@ graph LR
         middle and extreme left, respectively.
     </p>
 
-    <img src="/music/Example_01_DAW.png" width="97%">
+    <img src="/music/Example_01_DAW.png">
 
-    <h3>Example 02</h3>
+    <h2>Example 02</h2>
 
     <p>
         <a href="/music/example02.mp3">Example 02</a>
@@ -1068,7 +1070,7 @@ graph LR
         </audio>
     </p>
 
-    <h3>Example 03</h3>
+    <h2>Example 03</h2>
 
     <p>
         <a href="/music/example03.mp3">Example 03</a>
@@ -1081,13 +1083,13 @@ graph LR
     <p>
         Melody Patch
         <br>
-        <img src="/music/Example_03_Melody_Patch.png" width="97%">
+        <img src="/music/Example_03_Melody_Patch.png">
     </p>
 
     <p>
         Toms Patch
         <br>
-        <img src="/music/Example_03_Toms_Patch.png" width="97%">
+        <img src="/music/Example_03_Toms_Patch.png">
     </p>
 
     <p>
@@ -1223,7 +1225,7 @@ uncomment do
 end
     </pre>
 
-    <h3>Summary</h3>
+    <h2>Summary</h2>
 
     <p>
         Other than <i>Example 03</i>, which was created using a Ruby program
@@ -1394,32 +1396,33 @@ end
 
     <math display="block">
         <mtable>
-            <mrow>
-                <mtext>Let</mtext>
-                <mspace width="0.5em" />
-                <mi>&Omega;</mi>
-                <mo>=</mo>
-                <mi>&omega;</mi>
-                <mspace width="0.5em" />
-                <mi>&omega;</mi>
-            </mrow>
-            <mrow>
-                <mspace height="1ex" />
-            </mrow>
-            <mrow>
-                <mtext>where</mtext>
-                <mspace width="0.5em" />
-                <mi>&omega;</mi>
-                <mo>=</mo>
-                <mrow>
-                    <mo>&lambda;</mo>
-                    <mi>x</mi>
-                    <mo>.</mo>
-                    <mi>x</mi>
+            <mtr>
+                <mtd>
+                    <mtext>Let</mtext>
                     <mspace width="0.5em" />
-                    <mi>x</mi>
-                </mrow>
-            </mrow>
+                    <mi>&Omega;</mi>
+                    <mo>=</mo>
+                    <mi>&omega;</mi>
+                    <mspace width="0.5em" />
+                    <mi>&omega;</mi>
+                </mtd>
+            </mtr>
+            <mtr>
+                <mtd>
+                    <mtext>where</mtext>
+                    <mspace width="0.5em" />
+                    <mi>&omega;</mi>
+                    <mo>=</mo>
+                    <mrow>
+                        <mo>&lambda;</mo>
+                        <mi>x</mi>
+                        <mo>.</mo>
+                        <mi>x</mi>
+                        <mspace width="0.5em" />
+                        <mi>x</mi>
+                    </mrow>
+                </mtd>
+            </mtr>
         </mtable>
     </math>
 
@@ -1435,6 +1438,11 @@ end
 </template>
 
 <style scoped>
+img {
+    width: 97%;
+    max-width: 1000px;
+}
+
 th {
     border-color: var(--foreground);
     border-bottom-style: solid;
@@ -1455,6 +1463,11 @@ tbody tr:nth-child(even) {
     background-color: var(--highlight);
 }
 
+video {
+    width: 97%;
+    max-width: 640px;
+}
+
 .centerAligned {
     display: flex;
     align-items: center;
@@ -1462,7 +1475,7 @@ tbody tr:nth-child(even) {
 
 .cover {
     width: 97%;
-    max-width: 240px;
+    max-width: 480px;
 }
 </style>
 

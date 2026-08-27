@@ -2,9 +2,7 @@
 
 <template>
 
-    <h1>Logic</h1>
-
-    <h2>IEEE 754 Division by Zero</h2>
+    <h1>IEEE 754 Division by Zero</h1>
 
     <p>
         Division by zero of most numbers is well defined, and produces a result
