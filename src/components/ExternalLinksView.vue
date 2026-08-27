@@ -1,13 +1,13 @@
 <!-- Copyright (c) Kirk Rader 2026 -->
 
 <template>
-    <fieldset class="wrapper">
+    <fieldset v-if="selectedLink" class="wrapper">
         <legend>{{ selectedLink.title }}</legend>
         <a :href="selectedLink.url" target="_blank">
             <QrComponent v-model="selectedLink.url" :size="size" />
         </a>
         <select v-model="selectedLink">
-            <template v-for="link in externalLinks">
+            <template v-for="link of links ?? []">
                 <option :value="link">{{ link.title }}</option>
             </template>
         </select>
@@ -31,7 +31,7 @@
 
 <script setup>
 import QrComponent from '@/components/QrComponent.vue'
-import { inject, ref } from 'vue'
+import { onMounted, ref, toRaw, watch } from 'vue'
 
 const { size } = defineProps({
 
@@ -41,6 +41,17 @@ const { size } = defineProps({
     },
 })
 
-const externalLinks = inject('externalLinks')
-const selectedLink = ref(externalLinks.value.appleMusic)
+const links = defineModel()
+const selectedLink = ref(links.value[0])
+
+function update() {
+
+    if (links.value && links.value.length > 0) {
+
+        selectedLink.value = links.value[0]
+    }
+}
+
+onMounted(update)
+watch(links, update)
 </script>

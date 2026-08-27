@@ -7,7 +7,7 @@
         <h1>Music</h1>
 
         <p>
-            <MusicStreamer size="x-large" />
+            <ExternalLinksView v-model="links" size="x-large" />
         </p>
 
         <p>
@@ -24,5 +24,17 @@
 
 <script setup>
 import CopyableSpan from '@/components/CopyableSpan.vue'
-import MusicStreamer from '@/components/music/MusicStreamer.vue'
+import ExternalLinksView from '@/components/ExternalLinksView.vue'
+import { inject, onMounted, ref, watch } from 'vue'
+
+const externalLinks = inject('externalLinks')
+const links = ref([])
+
+function update() {
+
+    links.value = Object.values(externalLinks.value)
+}
+
+onMounted(update)
+watch(externalLinks, update)
 </script>
