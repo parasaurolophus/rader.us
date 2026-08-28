@@ -36,7 +36,9 @@
             </mrow>
         </mrow>
 
+        <mspace width="1em" />
         <mo>&equiv;</mo>
+        <mspace width="1em" />
 
         <mrow>
             <munder>
@@ -84,7 +86,7 @@
                 <mn>0</mn>
             </mrow>
         </mfrac>
-        <mo>=</mo>
+        <mo>&equiv;</mo>
         <mn>NaN</mn>
     </math>
 
@@ -93,17 +95,14 @@
     </p>
 
     <ul>
-
         <li>
-            On the one hand, any number divided by itself ought to produce a
-            quotient of 1.
-        </li>
-
-        <li>
-            On the other hand, dividing any number by 0 ought to produce an
+            On the one hand, dividing any number by 0 ought to produce an
             infinite quotient, as shown above.
         </li>
-
+        <li>
+            On the other hand, any number divided by itself ought to produce a
+            quotient of 1 according to the axioms of arithmetic.
+        </li>
     </ul>
 
     <p>
@@ -112,12 +111,41 @@
                 <mn>0</mn>
                 <mn>0</mn>
             </mfrac>
-        </math> cannot be
-        both 1 and &infin;, it must be neither. Since there are no other
-        possibilities, the actual result is <math>
-            <mn>NaN</mn>
-        </math> ("not
+        </math> cannot be both 1 and &infin;, it must be neither. Since there
+        are no other possibilities, the actual result is <code>NaN</code> ("not
         a number").
     </p>
+
+    <p>
+        The IEEE specification allows implementations to generate an OS trap or
+        throw an excaption instead of returning <code>NaN</code>. The same
+        applies in other cases where <code>NaN</code> would be returned, such as:
+    </p>
+
+    <math display="block">
+        <mtable>
+            <mtr>
+                <mtd>
+                    <msqrt>
+                        <mo>&minus;</mo>
+                        <mi>x</mi>
+                    </msqrt>
+                    <mo>&equiv;</mo>
+                    <mn>NaN</mn>
+                </mtd>
+            </mtr>
+            <mtr>
+                <mtd>
+                    <mtext>where</mtext>
+                    <mspace width="1em"/>
+                    <mrow>
+                        <mi>x</mi>
+                        <mo>&gt;</mo>
+                        <mn>0</mn>
+                    </mrow>
+                </mtd>
+            </mtr>
+        </mtable>
+    </math>
 
 </template>
