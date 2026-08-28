@@ -34,14 +34,16 @@
 <style scoped>
 .columns {
     display: grid;
-    grid-template-columns: max-content max-content;
+    grid-template-columns: 49% 49%;
 }
 
 .column {
     display: flex;
     flex-flow: column wrap;
+}
+
+.column:not(:first-child) {
     align-items: center;
-    margin: 0 1em;
 }
 </style>
 

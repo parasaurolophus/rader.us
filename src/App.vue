@@ -20,7 +20,7 @@ header>*,
 main>*,
 #sidebar>*,
 footer>* {
-    padding: 0.5em;
+    padding: 1em;
 }
 </style>
 
