@@ -128,6 +128,13 @@ a:hover {
     text-decoration: underline;
 }
 
+code,
+.code {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: white;
+}
+
 details {
     border: 1px solid var(--background);
 }
@@ -143,6 +150,14 @@ details:not(:open) {
 details>*:not(summary) {
     margin: 0.25em;
     padding: 0.25em;
+}
+
+input {
+    accent-color: var(--primary);
+}
+
+math {
+    font-family: 'Latin Modern Math';
 }
 
 summary {
@@ -161,19 +176,19 @@ summary>* {
     display: inline-block;
 }
 
-input {
-    accent-color: var(--primary);
+td,
+th {
+    border-radius: 0;
+    padding: 0.25em;
 }
 
-code,
-.code {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    color: white;
+thead tr,
+tbody tr:nth-child(even) {
+    background-color: var(--highlight);
 }
 
-math {
-    font-family: 'Latin Modern Math';
+tr {
+    border-radius: 0;
 }
 
 .clickable,
@@ -196,9 +211,11 @@ math {
 
 .title {
     font-weight: bolder;
+    font-size: 110%;
 }
 
 .subtitle {
     font-style: italic;
     font-weight: bold;
+    font-size: 90%;
 }

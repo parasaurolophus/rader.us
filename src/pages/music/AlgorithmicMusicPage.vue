@@ -1443,26 +1443,6 @@ img {
     max-width: 1000px;
 }
 
-th {
-    border-color: var(--foreground);
-    border-bottom-style: solid;
-    border-radius: 0;
-    padding: 0.25em;
-}
-
-td {
-    border-radius: 0;
-    padding: 0.25em;
-}
-
-tr {
-    border-radius: 0;
-}
-
-tbody tr:nth-child(even) {
-    background-color: var(--highlight);
-}
-
 video {
     width: 97%;
     max-width: 640px;

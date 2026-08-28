@@ -32,24 +32,6 @@
     </DetailsComponent>
 </template>
 
-<style scoped>
-th,
-td {
-    padding: 0.25em 0.5em;
-}
-
-tr,
-th,
-td {
-    border-radius: 0;
-}
-
-thead>tr,
-tr:nth-child(even) {
-    background-color: var(--highlight);
-}
-</style>
-
 <script setup>
 import { onMounted, ref } from 'vue'
 import data from '/assets/musicography.tsv?raw'
