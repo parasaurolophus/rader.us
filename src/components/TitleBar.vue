@@ -8,8 +8,8 @@
             </div>
             <BreadCrumbs />
         </div>
-        <a id="hyperfollowqr" :href="externalLinks.hyperFollow.url" target="_blank">
-            <QrComponent v-model="externalLinks.hyperFollow.url" />
+        <a id="hyperfollowqr" :href="otherLinks.hyperFollow.url" target="_blank">
+            <QrComponent v-model="otherLinks.hyperFollow.url" />
         </a>
     </div>
 </template>
@@ -36,5 +36,5 @@ import BreadCrumbs from '@/components/BreadCrumbs.vue'
 import QrComponent from '@/components/QrComponent.vue'
 import { inject } from 'vue'
 
-const externalLinks = inject('externalLinks')
+const otherLinks = inject('otherLinks')
 </script>

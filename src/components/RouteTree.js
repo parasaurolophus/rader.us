@@ -1,6 +1,6 @@
 // Copyright(c) Kirk Rader 2026
 
-import { h, inject } from 'vue'
+import { h } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
 
 export default {
@@ -9,7 +9,6 @@ export default {
 
     setup(props) {
 
-        const externalLinks = inject('externalLinks')
         const route = useRoute()
         const router = useRouter()
         const root = props.root ?? route
