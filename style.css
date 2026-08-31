@@ -65,7 +65,8 @@ aside {
     border-left-style: solid;
 }
 
-aside dfn {
+aside dfn,
+aside i {
     font-style: normal;
 }
 
@@ -126,6 +127,14 @@ a:visited {
 a:active,
 a:hover {
     text-decoration: underline;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+blockquote i {
+    font-style: normal;
 }
 
 code,

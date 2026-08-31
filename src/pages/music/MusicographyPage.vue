@@ -2,9 +2,13 @@
 
 <template>
 
-    <h1>Musicography</h1>
+    <div>
 
-    <MusicographyView />
+        <h1>Musicography</h1>
+
+        <MusicographyView />
+
+    </div>
 
 </template>
 

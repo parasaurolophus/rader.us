@@ -1,7 +1,13 @@
 <!-- Copyright (c) Kirk Rader 2026 -->
 
 <template>
-    <EnterpriseSoftwareDevelopment />
+
+    <div>
+
+        <EnterpriseSoftwareDevelopment />
+
+    </div>
+
 </template>
 
 <script setup>

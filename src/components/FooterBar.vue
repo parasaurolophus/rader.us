@@ -18,9 +18,9 @@
                 </mrow>
             </mrow>
             <mrow>
-                <mspace width="1em" />
+                <mspace width="0.5em" />
                 <mtext>where</mtext>
-                <mspace width="1em" />
+                <mspace width="0.5em" />
             </mrow>
             <mrow>
                 <mi>&omega;</mi>

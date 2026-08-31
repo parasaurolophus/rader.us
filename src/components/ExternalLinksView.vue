@@ -1,6 +1,11 @@
 <!-- Copyright (c) Kirk Rader 2026 -->
 
 <template>
+
+    <p>
+        Choose a streaming service on which to hear my stuff:
+    </p>
+
     <fieldset v-if="selectedLink" class="wrapper">
         <legend>{{ selectedLink.title }}</legend>
         <a :href="selectedLink.url" target="_blank">
@@ -12,6 +17,13 @@
             </template>
         </select>
     </fieldset>
+
+    <p v-if="selectedLink">
+        <a :href="selectedLink.url" target="_blank">
+            {{ selectedLink.url }}
+        </a>
+    </p>
+
 </template>
 
 <style scoped>
@@ -21,6 +33,7 @@
     align-items: center;
     justify-content: center;
     width: max-content;
+    max-width: 20em;
 }
 
 .wrapper>* {
