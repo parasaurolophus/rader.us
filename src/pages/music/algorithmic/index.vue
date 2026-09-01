@@ -13,7 +13,7 @@
         </p>
 
         <video ref="exampleVideo" controls @playing="paused = false" @pause="paused = true">
-            <source src="/music/example04.mp4">
+            <source src="./example04.mp4">
         </video>
 
         <p>
@@ -246,7 +246,7 @@ graph LR
         </p>
 
         <p>
-            <img src="/music/sines.png">
+            <img src="./sines.png">
         </p>
 
         <p>
@@ -261,7 +261,7 @@ graph LR
             440 Hz Sine Wave
             <br>
             <audio controls>
-                <source src="/music/sine01.mp3">
+                <source src="./sine01.mp3">
             </audio>
         </p>
 
@@ -311,7 +311,7 @@ graph LR
             Softer 440 Hz Sine Wave
             <br>
             <audio controls>
-                <source src="/music/sine02.mp3">
+                <source src="./sine02.mp3">
             </audio>
         </p>
 
@@ -325,7 +325,7 @@ graph LR
             880 Hz Sine Wave
             <br>
             <audio controls>
-                <source src="/music/sine03.mp3">
+                <source src="./sine03.mp3">
             </audio>
         </p>
 
@@ -349,7 +349,7 @@ graph LR
         </p>
 
         <p>
-            <img src="/music/sawtooth.png">
+            <img src="./sawtooth.png">
         </p>
 
         <p>
@@ -361,7 +361,7 @@ graph LR
             440 Hz Sawtooth Wave
             <br>
             <audio controls>
-                <source src="/music/sawtooth.mp3">
+                <source src="./sawtooth.mp3">
             </audio>
         </p>
 
@@ -407,7 +407,7 @@ graph LR
             White Noise
             <br>
             <audio controls>
-                <source src="/music/white_noise.mp3" />
+                <source src="./white_noise.mp3" />
             </audio>
         </p>
 
@@ -424,7 +424,7 @@ graph LR
             Red Noise
             <br>
             <audio controls>
-                <source src="/music/red_noise.mp3" />
+                <source src="./red_noise.mp3" />
             </audio>
         </p>
 
@@ -434,7 +434,7 @@ graph LR
         </p>
 
         <p>
-            <img src="/music/noise.png">
+            <img src="./noise.png">
         </p>
 
         <p>
@@ -670,7 +670,7 @@ graph LR
 
         </ul>
 
-        <img src="/music/basic-patch.png">
+        <img src="./basic-patch.png">
 
         <p>
             Each type of module accepts input and / or produces output audio
@@ -758,7 +758,7 @@ graph LR
             Vibrato
             <br>
             <audio controls>
-                <source src="/music/vibrato.mp3" />
+                <source src="./vibrato.mp3" />
             </audio>
         </p>
 
@@ -792,7 +792,7 @@ graph LR
             Way Beyond "Vibrato"
             <br>
             <audio controls>
-                <source src="/music/extreme_vibrato.mp3" />
+                <source src="./extreme_vibrato.mp3" />
             </audio>
         </p>
 
@@ -832,7 +832,7 @@ graph LR
             Sine vs Sine vs Sine
             <br>
             <audio controls>
-                <source src="/music/fm.mp3" />
+                <source src="./fm.mp3" />
             </audio>
         </p>
 
@@ -930,7 +930,7 @@ graph LR
             Smoothly ramping pitch
             <br>
             <audio controls>
-                <source src="/music/smooth.mp3" />
+                <source src="./smooth.mp3" />
             </audio>
         </p>
 
@@ -965,7 +965,7 @@ graph LR
             Stair stepping pitch
             <br>
             <audio controls>
-                <source src="/music/s_h_1.mp3" />
+                <source src="./s_h_1.mp3" />
             </audio>
         </p>
 
@@ -988,7 +988,7 @@ graph LR
             Faster clock
             <br>
             <audio controls>
-                <source src="/music/s_h_2.mp3" />
+                <source src="./s_h_2.mp3" />
             </audio>
         </p>
 
@@ -1020,7 +1020,7 @@ graph LR
             Phasing clock
             <br>
             <audio controls>
-                <source src="/music/s_h_3.mp3" />
+                <source src="./s_h_3.mp3" />
             </audio>
         </p>
 
@@ -1043,7 +1043,7 @@ graph LR
             Noisy melody
             <br>
             <audio controls>
-                <source src="/music/random.mp3" />
+                <source src="./random.mp3" />
             </audio>
         </p>
 
@@ -1076,14 +1076,12 @@ graph LR
         </p>
 
         <p>
-            <a href="/music/example01.mp3">Example 01</a>
-            <br>
             <audio controls>
-                <source src="/music/example01.mp3" />
+                <source src="./example01.mp3" />
             </audio>
         </p>
 
-        <img src="/music/Example_01_Patch.png">
+        <img src="./Example_01_Patch.png">
 
         <p>
             <i>Example 01</i>> consists of three tracks of a couple of minutes
@@ -1091,38 +1089,34 @@ graph LR
             extreme right, middle and extreme left, respectively.
         </p>
 
-        <img src="/music/Example_01_DAW.png">
+        <img src="./Example_01_DAW.png">
 
         <h2>Example 02</h2>
 
         <p>
-            <a href="/music/example02.mp3">Example 02</a>
-            <br>
             <audio controls>
-                <source src="/music/example02.mp3">
+                <source src="./example02.mp3">
             </audio>
         </p>
 
         <h2>Example 03</h2>
 
         <p>
-            <a href="/music/example03.mp3">Example 03</a>
-            <br>
             <audio controls>
-                <source src="/music/example03.mp3" />
+                <source src="./example03.mp3" />
             </audio>
         </p>
 
         <p>
             Melody Patch
             <br>
-            <img src="/music/Example_03_Melody_Patch.png">
+            <img src="./Example_03_Melody_Patch.png">
         </p>
 
         <p>
             Toms Patch
             <br>
-            <img src="/music/Example_03_Toms_Patch.png">
+            <img src="./Example_03_Toms_Patch.png">
         </p>
 
         <p>
@@ -1421,7 +1415,7 @@ end
         </p>
 
         <p>
-            <img src="/music/undecidable.webp" alt="Undecidable" class="cover">
+            <img src="./undecidable.webp" alt="Undecidable" class="cover">
         </p>
 
         <p>

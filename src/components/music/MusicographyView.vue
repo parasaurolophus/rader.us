@@ -3,28 +3,28 @@
 <template>
     <DetailsComponent v-for="year of years">
         <template #summary>
-            {{ year[0][0][1] }}
+            {{ year[0][0][YEAR] }}
         </template>
         <DetailsComponent v-for="album of year">
             <template #summary>
-                {{ album[0][2] }}
+                {{ album[0][ALBUM] }}
             </template>
             <template #subtitle>
-                UPC {{ album[0][3] }}
+                UPC {{ album[0][UPC] }}
             </template>
             <table>
                 <thead>
                     <tr>
-                        <th>{{ headers[5] }}</th>
-                        <th>{{ headers[4] }}</th>
-                        <th>{{ headers[6] }}</th>
+                        <th>{{ headers[TRACK] }}</th>
+                        <th>{{ headers[TITLE] }}</th>
+                        <th>{{ headers[ISRC] }}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="track of album">
-                        <td>{{ track[5] }}</td>
-                        <td>{{ track[4] }}</td>
-                        <td>{{ track[6] }}</td>
+                        <td>{{ track[TRACK] }}</td>
+                        <td>{{ track[TITLE] }}</td>
+                        <td>{{ track[ISRC] }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -37,6 +37,14 @@ import { onMounted, ref } from 'vue'
 import data from '/assets/musicography.tsv?raw'
 import DetailsComponent from '@/components/DetailsComponent.vue'
 
+const RELEASE = 0
+const YEAR = 1
+const ALBUM = 2
+const UPC = 3
+const TITLE = 4
+const TRACK = 5
+const ISRC = 6
+
 const headers = ref([])
 const years = ref([])
 
@@ -46,7 +54,7 @@ function ensureAlbum(year, trackUpc) {
 
         const track = album[0]
 
-        if (track[3] === trackUpc) {
+        if (track[UPC] === trackUpc) {
 
             return album
         }
@@ -64,7 +72,7 @@ function ensureYear(trackYear) {
         const album = year[0]
         const track = album[0]
 
-        if (track[1] === trackYear) {
+        if (track[YEAR] === trackYear) {
 
             return year
         }
@@ -85,13 +93,13 @@ onMounted(() => {
 
             const track = line.split('\t')
 
-            if (track[0] === 'release') {
+            if (track[RELEASE] === 'release') {
 
                 headers.value = track
                 return
             }
 
-            if (!(track[0] && track[3])) {
+            if (!(track[RELEASE] && track[UPC])) {
 
                 return
             }
@@ -106,12 +114,12 @@ onMounted(() => {
                 throw `expected length of ${track} to be 7, got ${track.length}`
             }
 
-            track[0] = Number.parseInt(track[0])
-            track[1] = Number.parseInt(track[1])
-            track[5] = Number.parseInt(track[5])
+            track[RELEASE] = Number.parseInt(track[RELEASE])
+            track[YEAR] = Number.parseInt(track[YEAR])
+            track[TRACK] = Number.parseInt(track[TRACK])
 
-            const year = ensureYear(track[1])
-            const album = ensureAlbum(year, track[3])
+            const year = ensureYear(track[YEAR])
+            const album = ensureAlbum(year, track[UPC])
 
             album.push(track)
 

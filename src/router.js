@@ -7,7 +7,7 @@ const routes = [
     {
         path: '/',
         name: 'home',
-        component: () => import('./pages/HomePage.vue'),
+        component: () => import('./pages/index.vue'),
         meta: {
             title: 'Home',
         },
@@ -16,25 +16,16 @@ const routes = [
     {
         path: '/logic',
         name: 'logic',
-        component: () => import('./pages/logic/LogicPage.vue'),
+        component: () => import('./pages/logic/index.vue'),
         meta: {
             title: 'Logic',
         },
     },
 
     {
-        path: '/logic/computability',
-        name: 'computability',
-        component: () => import('./pages/logic/ComputabilityPage.vue'),
-        meta: {
-            title: 'Computability',
-        },
-    },
-
-    {
         path: '/logic/ieee',
         name: 'ieee',
-        component: () => import('./pages/logic/Ieee754.vue'),
+        component: () => import('./pages/logic/ieee754/index.vue'),
         meta: {
             title: 'IEEE 754',
         },
@@ -43,7 +34,7 @@ const routes = [
     {
         path: '/logic/liar',
         name: 'liar',
-        component: () => import('./pages/logic/LiarParadoxPage.vue'),
+        component: () => import('./pages/logic/liar/index.vue'),
         meta: {
             title: 'Liar Paradox',
         },
@@ -52,7 +43,7 @@ const routes = [
     {
         path: '/music',
         name: 'music',
-        component: () => import('./pages/music/MusicPage.vue'),
+        component: () => import('./pages/music/index.vue'),
         meta: {
             title: 'Music',
         },
@@ -61,7 +52,7 @@ const routes = [
     {
         path: '/music/algorithmic',
         name: 'algorithmic',
-        component: () => import('./pages/music/AlgorithmicMusicPage.vue'),
+        component: () => import('./pages/music/algorithmic/index.vue'),
         meta: {
             title: 'Algorithmic Music',
         },
@@ -70,7 +61,7 @@ const routes = [
     {
         path: '/music/dennis',
         name: 'dennis',
-        component: () => import('./pages/music/ForDennisPage.vue'),
+        component: () => import('./pages/music/dennis/index.vue'),
         meta: {
             title: 'For Dennis',
         },
@@ -79,9 +70,18 @@ const routes = [
     {
         path: '/music/musicography',
         name: 'musicography',
-        component: () => import('./pages/music/MusicographyPage.vue'),
+        component: () => import('./pages/music/musicography/index.vue'),
         meta: {
             title: 'Musicography',
+        },
+    },
+
+    {
+        path: '/music/ratcheting',
+        name: 'Ratcheting',
+        component: () => import('./pages/music/ratcheting/index.vue'),
+        meta: {
+            title: 'Ratcheting',
         },
     },
 ]

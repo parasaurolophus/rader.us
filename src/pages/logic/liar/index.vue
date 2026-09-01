@@ -4,7 +4,7 @@
 
     <div>
 
-        <h1>Liar Paradox</h1>
+        <h1>The Liar Paradox</h1>
 
         <p>
             A number of seemingly unrelated results in formal linguistics,
@@ -17,9 +17,7 @@
             true and therefore not a lie which is an obvious self-contradiction.
             So the sentence, "I am lying" can be neither true nor false. In the
             terminology of formal linguistics and truth-functional semantics it
-            cannot be assigned a truth-value. (Which is as simple a refutation
-            of the viability of truth-functional semantics as anyone should
-            need, but I digress....)
+            cannot be assigned a truth-value.
         </p>
 
         <p>
@@ -36,9 +34,80 @@
             utterances where an utterance, itself, is self-referential, with no
             explicit utterer required. "This sentence is false" is another
             simple example of the liar paradox, without attributing the
-            falsehood to any particular speaker. It is a sentence referring to
-            its own truth value that gives rise to the paradox.
+            falsehood to any particular speaker. It is a sentence denying its
+            own truth value that gives rise to the paradox.
         </p>
+
+        <h2>Other Paradoxes</h2>
+
+        <p>
+            Many historically significant results in various fields of
+            mathematics such as Set Theory are similar to the liar paradox in
+            that they turn on using a definition which denies itself within the
+            context of a given expression. <i>Russell's Paradox</i> is a simple
+            example, which showed that Frege's so-called "naive" set-theory had
+            a defective axiom:
+        </p>
+
+        <math display="block">
+            <mtable>
+               <mtr>
+                    <mtd>
+                        <mrow>
+                            <mi>S</mi>
+                            <mo>&notin;</mo>
+                            <mi>S</mi>
+                        </mrow>
+                        <mo>&leftrightarrow;</mo>
+                        <mrow>
+                            <mi>S</mi>
+                            <mo>&in;</mo>
+                            <mi>S</mi>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                 <mtr>
+                    <mtd>
+                        <mtext>where</mtext>
+                        <mspace width="0.5em" />
+                        <mrow>
+                            <mi>S</mi>
+                            <mo>=</mo>
+                            <mrow>
+                                <mo>{</mo>
+                                <mi>s</mi>
+                                <mo>|</mo>
+                                <mrow>
+                                    <mi>s</mi>
+                                    <mo>&notin;</mo>
+                                    <mi>s</mi>
+                                </mrow>
+                                <mo>}</mo>
+                            </mrow>
+                        </mrow>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+
+        <p>
+            I.e. the set of all sets that are not elements of themselves cannot
+            exist, because if it did it would both have to be a member of itself
+            and not a member of itself. (If <i>S</i> were a member of itself,
+            that contradicts the property defining <i>S</i> and so it could not
+            be a member of itself. But if <i>S</i> is not a member of itself,
+            then it matches the property defining it, meaning it would have to
+            be in itself.) So even though the preceding formal definition of
+            <i>S</i> is well-formed within the grammar of Set Theory, it is
+            undecidable precisely because <i>S</i>'s definition uses <i>s</i>
+            in the same pathologically self-referential way as the liar paradox.
+            Thus Russell showed that the axiom from Frege's proposed version of
+            Set Theory stating that <em>evey well-defined property defines a set
+            of elements which have that property</em> leads to
+            self-contradiction in the specific case of <i>S</i>.
+        </p>
+
+        <h2>Incompleteness</h2>
 
         <aside>
             A language is said to be <dfn id="incomplete">incomplete</dfn>
@@ -57,7 +126,7 @@
             Formal languages of the kind used by mathematicions and computer
             programmers can also construct self-referencing expressions and so
             are susceptible to the same kind of semantic failure as the liar
-            paradox. Consider Alonzo Church's <i>Lambda Calculus</i>. It gave
+            paradox. Consider Alonzo Church's <i>&lambda;-Calculus</i>. It gave
             rise to the very idea of a programming language before digital
             computers had been invented, in the same way (and as part of the
             same line of mathematical inquiry) as Alan Turing's
@@ -68,7 +137,7 @@
             Age was built.) Haskell Curry showed that, despite its essential
             utility not only in helping resolve the original abstract questions
             regarding the nature of computable numbers for which Church had
-            created it, the Lambda Calculus is logically <i>incomplete</i>
+            created it, the &lambda;-Calculus is logically <i>incomplete</i>
             precisely because it can be used to construct self-referential
             <i>fixed-point combinators</i> such as <i>Y</i>:
         </p>
@@ -80,21 +149,32 @@
                 <mo>&lambda;</mo>
                 <mi>f</mi>
                 <mo>.</mo>
-                <template v-for="count in 2">
-                    <mrow>
-                        <mo>(</mo>
-                        <mo>&lambda;</mo>
-                        <mi>x</mi>
-                        <mo>.</mo>
-                        <mi>f</mi>
-                        <mo>(</mo>
-                        <mi>x</mi>
-                        <mspace width="0.5em" />
-                        <mi>x</mi>
-                        <mo>)</mo>
-                        <mo>)</mo>
-                    </mrow>
-                </template>
+                <mrow>
+                    <mo>(</mo>
+                    <mo>&lambda;</mo>
+                    <mi>x</mi>
+                    <mo>.</mo>
+                    <mi>f</mi>
+                    <mo>(</mo>
+                    <mi>x</mi>
+                    <mspace width="0.5em" />
+                    <mi>x</mi>
+                    <mo>)</mo>
+                    <mo>)</mo>
+                </mrow>
+                <mrow>
+                    <mo>(</mo>
+                    <mo>&lambda;</mo>
+                    <mi>x</mi>
+                    <mo>.</mo>
+                    <mi>f</mi>
+                    <mo>(</mo>
+                    <mi>x</mi>
+                    <mspace width="0.5em" />
+                    <mi>x</mi>
+                    <mo>)</mo>
+                    <mo>)</mo>
+                </mrow>
             </mrow>
         </math>
 
@@ -104,7 +184,7 @@
             students' theses and dissertaions across many university
             Mathematics, Linguistics, Philosphy and Computer Science
             departments. But suffice it to say here that it allows one to define
-            functions within the grammar of the Lambda Calculus that call
+            functions within the grammar of the &lambda;-Calculus that call
             themselves, which is a neat trick given the deliberate and
             ostentatious simplicity of Church's formalism. I.e. it can be shown
             that, given the preceding definition of Y, it is possible to define
@@ -127,8 +207,8 @@
         </math>
 
         <aside>
-            Note that Y is not the only fixed-point combinator in the Lambda
-            Calculus, but it is the simplest and most famous one. It is
+            Note that Y is not the only fixed-point combinator in the
+            &lambda;-Calculus, but it is the simplest and most famous one. It is
             possible, for example, to create similar combinators that allow for
             mutually-recursive functions (i.e. sets of functions which call each
             other) in addition to individual functions that call themselves.
@@ -138,7 +218,7 @@
             This allows one to define self-calling functions like <i>!</i> (the
             <i>factorial</i> function) and the formula to produce the Fibonacci
             series. It is also exactly what is necessary to construct
-            well-formed lambda expressions which do not produce any results,
+            well-formed &lambda;-expressions which do not produce any results,
             just as the liar paradox arises from grammatically correct
             utterances in natural language that cannot be assigned a truth value
             through the same kind of problematic self-reference. Such
@@ -163,26 +243,22 @@
             structured programming languages rely instrinsically on self
             reference in order to be Turing complete. The functional programming
             paradigm and <abbr>CPS</abbr> (<dfn title="CPS">Continuation Passing
-            Style</dfn>) place recursion at the center of good programming
+                Style</dfn>) place recursion at the center of good programming
             style. Here is a simple example of implementing <i>5!</i> in
-            <i>Scheme</i> using recursion:
+            <i>Scheme</i> using tail recursion:
         </p>
 
         <pre>
 (let factorial ((a 1)
-    (n 5))
-    (if (< n 2) a (factorial (* a n) (- n 1)) ) ) ;=> 120
+                (n 5))
+    (if (< n 2)
+        a
+        (factorial (* a n)
+                   (- n 1)
+        )
+    )
+) ;=> 120
         </pre>
-
-        <p>
-            Since <code>let</code> is syntactic sugar for <code>lambda</code>,
-            the preceding definition of <i>5!</i> could be replaced by an
-            invocation of a Scheme implementation of <i>Y</i>. Such a definition
-            would be far longer than the idiomatic Scheme expression, much more
-            difficult to understand, and substantially less efficient at run
-            time. But both versions would return the number 120 as their result
-            when executed.
-        </p>
 
     </div>
 
