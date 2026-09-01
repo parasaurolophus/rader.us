@@ -145,7 +145,7 @@
                         <mspace width="1em" />
                         <mrow>
                             <mi>x</mi>
-                            <mo>&gt;</mo>
+                            <mo>&lt;</mo>
                             <mn>0</mn>
                         </mrow>
                     </mtd>
