@@ -7,9 +7,10 @@
 </template>
 
 <script setup>
-import { computed, onMounted, useTemplateRef } from 'vue'
+import { computed, inject, onMounted, useTemplateRef, watch } from 'vue'
 import mermaid from 'mermaid'
 
+const refreshDiagrams = inject('refreshDiagrams')
 const diagramElement = useTemplateRef('diagramElement')
 const diagramSource = computed(() => diagramElement?.value.innerText ?? `flowchart LR
 n1@{ shape: braces, label: "uninitialized" }`)
@@ -65,4 +66,5 @@ function renderModel() {
 }
 
 onMounted(renderModel)
+watch(refreshDiagrams, renderModel)
 </script>

@@ -23,6 +23,22 @@
 }
 
 :root {
+
+    /* panel dimensions & offsets */
+    --top: 1vh;
+    --left: 1vw;
+    --right: 1vw;
+    --bottom: 1vh;
+    --headerheight: 4lh;
+    --footerheight: 2lh;
+    --sidebarwidth: 25em;
+    --maintop: calc(var(--top) + var(--headerheight) + 1vh);
+    --mainright: calc(var(--left) + var(--sidebarwidth) + 1vw);
+    --mainbottom: calc(var(--bottom) + var(--footerheight) + 1vh);
+}
+
+.dark-theme {
+
     /* base colors */
     --foreground: rgb(224 224 224);
     --background: rgb(32 32 32);
@@ -36,18 +52,23 @@
     /* accent colors */
     --primary: cyan;
     --secondary: magenta;
+}
 
-    /* panel dimensions & offsets */
-    --top: 1vh;
-    --left: 1vw;
-    --right: 1vw;
-    --bottom: 1vh;
-    --headerheight: 4lh;
-    --footerheight: 2lh;
-    --sidebarwidth: 25em;
-    --maintop: calc(var(--top) + var(--headerheight) + 1vh);
-    --mainright: calc(var(--left) + var(--sidebarwidth) + 1vw);
-    --mainbottom: calc(var(--bottom) + var(--footerheight) + 1vh);
+.light-theme {
+
+    /* base colors */
+    --background: rgb(224 224 224);
+    --foureground: rgb(32 32 32);
+    --highlight: rgb(from var(--foreground) 64 64 64);
+
+    /* semantic colors */
+    --success: green;
+    --warning: goldenrod;
+    --failure: darkred;
+
+    /* accent colors */
+    --primary: blue;
+    --secondary: purple;
 }
 
 * {
@@ -227,4 +248,21 @@ tr {
     font-style: italic;
     font-weight: bold;
     font-size: 90%;
+}
+
+/* svg */
+
+text {
+    font-family: 'Latin Modern Math';
+    font-size: 1em;
+    fill: currentColor;
+}
+
+line {
+    stroke: currentColor;
+    stroke-width: 4;
+}
+
+circle {
+    fill: currentColor;
 }

@@ -11,6 +11,7 @@
         <a id="hyperfollowqr" :href="otherLinks.hyperFollow.url" target="_blank">
             <QrComponent v-model="otherLinks.hyperFollow.url" />
         </a>
+        <ToggleThemeButton />
     </div>
 </template>
 
@@ -34,6 +35,7 @@
 <script setup>
 import BreadCrumbs from '@/components/BreadCrumbs.vue'
 import QrComponent from '@/components/QrComponent.vue'
+import ToggleThemeButton from '@/components//ToggleThemeButton.vue'
 import { inject } from 'vue'
 
 const otherLinks = inject('otherLinks')

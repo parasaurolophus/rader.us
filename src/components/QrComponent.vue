@@ -8,9 +8,11 @@
 <style scoped>
 .container {
     display: inline-block;
-    color: black;
-    background-color: white;
     border-radius: 0;
+}
+
+.dark-theme .container {
+    background-color: var(--foreground);
 }
 
 .small {

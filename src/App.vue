@@ -27,10 +27,12 @@ footer>* {
 <script setup>
 import mermaid from 'mermaid'
 import { RouterView } from 'vue-router'
-import { provide, ref } from 'vue'
+import { onMounted, provide, ref, watch } from 'vue'
 import FooterBar from './components/FooterBar.vue'
 import SideBar from '@/components/SideBar.vue'
 import TitleBar from '@/components/TitleBar.vue'
+
+const currentTheme = ref('dark-theme')
 
 const musicLinks = ref({
     amazonMusic: {
@@ -78,6 +80,8 @@ const otherLinks = ref({
     },
 })
 
+const refreshDiagrams = ref(0)
+
 const softwareLinks = ref({
     github: {
         title: 'GitHub',
@@ -85,21 +89,40 @@ const softwareLinks = ref({
     },
 })
 
+function initializeMermaid() {
+
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: currentTheme.value === 'dark-theme' ? 'dark' : 'default',
+        securityLevel: 'loose',
+        htmlLabels: false,
+    })
+
+    refreshDiagrams.value += 1
+}
+
 function mermaidClick(arg) {
 
     console.log(`mermaid click ${arg}`)
 }
 
+function toggleTheme() {
+
+    const newTheme = currentTheme.value === 'dark-theme' ? 'light-theme' : 'dark-theme'
+
+    document.getElementsByTagName('body')[0].classList.replace(currentTheme.value, newTheme)
+    currentTheme.value = newTheme
+}
+
+provide('currentTheme', currentTheme)
 provide('musicLinks', musicLinks)
 provide('otherLinks', otherLinks)
+provide('refreshDiagrams', refreshDiagrams)
 provide('softwareLinks', softwareLinks)
+provide('toggleTheme', toggleTheme)
 
 mermaidHandler = mermaidClick
 
-mermaid.initialize({
-    startOnLoad: false,
-    theme: 'dark',
-    securityLevel: 'loose',
-    htmlLabels: false,
-})
+onMounted(initializeMermaid)
+watch(currentTheme, initializeMermaid)
 </script>
