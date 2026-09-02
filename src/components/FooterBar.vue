@@ -8,34 +8,9 @@
             &copy; Kirk Rader 2023-2026
         </span>
 
-        <math>
-            <mrow>
-                <mn>&Omega;</mn>
-                <mo>=</mo>
-                <mrow>
-                    <mi>&omega;</mi>
-                    <mi>&omega;</mi>
-                </mrow>
-            </mrow>
-            <mrow>
-                <mspace width="0.5em" />
-                <mtext>where</mtext>
-                <mspace width="0.5em" />
-            </mrow>
-            <mrow>
-                <mi>&omega;</mi>
-                <mo>=</mo>
-                <mrow>
-                    <mo>&lambda;</mo>
-                    <mi>x</mi>
-                    <mo>.</mo>
-                    <mrow>
-                        <mi>x</mi>
-                        <mi>x</mi>
-                    </mrow>
-                </mrow>
-            </mrow>
-        </math>
+        <div>
+            <OmegaFormula />
+        </div>
 
     </div>
 
@@ -49,3 +24,7 @@
     justify-content: space-around;
 }
 </style>
+
+<script setup>
+import OmegaFormula from '@/components/logic/OmegaFormula.vue'
+</script>

@@ -665,7 +665,7 @@ graph LR
             <li>
                 ...and so on for more exotic types of modules such as
                 <i>envelope generators</i>, <i>ring modulators</i>, <i>sample
-                and hold units</i> etc.
+                    and hold units</i> etc.
             </li>
 
         </ul>
@@ -797,8 +797,8 @@ graph LR
         </p>
 
         <p>
-            And here is an extremely simple example of what is npossible using
-            FM synthsis. Like the preceding example, it is the output of a VCO
+            And here is an extremely simple example of what is possible using FM
+            synthsis. Like the preceding example, it is the output of a VCO
             emitting a sine wave. In this case, however, the first VCO's
             frequency is being modulated by feeding the output of a second sine
             wave, whose base frequency is tuned to the same frequency as the
@@ -903,7 +903,7 @@ graph LR
             However, other triggers can be used as the gate signals for ADSR.
             Many of the my compositions "play themselves" by using a single
             "clock" signal to drive both <i>envelope generator</i> and <i>sample
-            and hold</i> units simultaneously, where a <i>sample and hold</i>
+                and hold</i> units simultaneously, where a <i>sample and hold</i>
             unit emits a control voltage based on periodically "sampling" an
             input voltage and "holding" its output at that level until it is
             time for the next "sample."
@@ -1424,37 +1424,7 @@ end
             Its "logo" is the following expression of the &lambda;-calculus:
         </p>
 
-        <math display="block">
-            <mtable>
-                <mtr>
-                    <mtd>
-                        <mtext>Let</mtext>
-                        <mspace width="0.5em" />
-                        <mi>&Omega;</mi>
-                        <mo>=</mo>
-                        <mi>&omega;</mi>
-                        <mspace width="0.5em" />
-                        <mi>&omega;</mi>
-                    </mtd>
-                </mtr>
-                <mtr>
-                    <mtd>
-                        <mtext>where</mtext>
-                        <mspace width="0.5em" />
-                        <mi>&omega;</mi>
-                        <mo>=</mo>
-                        <mrow>
-                            <mo>&lambda;</mo>
-                            <mi>x</mi>
-                            <mo>.</mo>
-                            <mi>x</mi>
-                            <mspace width="0.5em" />
-                            <mi>x</mi>
-                        </mrow>
-                    </mtd>
-                </mtr>
-            </mtable>
-        </math>
+        <OmegaFormula display="block" />
 
         <p>
             &omega; is a function which calls itself indefinitely, meaning that
@@ -1495,6 +1465,7 @@ video {
 <script setup>
 import MdiIcon from '@/components/MdiIcon.vue'
 import MermaidDiagram from '@/components/MermaidDiagram.vue'
+import OmegaFormula from '@/components/logic/OmegaFormula.vue'
 import { mdiPlay, mdiPause } from '@mdi/js'
 import { onMounted, ref, useTemplateRef } from 'vue'
 

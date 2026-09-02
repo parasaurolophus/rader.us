@@ -49,53 +49,14 @@
             a defective axiom:
         </p>
 
-        <math display="block">
-            <mtable>
-               <mtr>
-                    <mtd>
-                        <mrow>
-                            <mi>S</mi>
-                            <mo>&notin;</mo>
-                            <mi>S</mi>
-                        </mrow>
-                        <mo>&leftrightarrow;</mo>
-                        <mrow>
-                            <mi>S</mi>
-                            <mo>&in;</mo>
-                            <mi>S</mi>
-                        </mrow>
-                    </mtd>
-                </mtr>
-                 <mtr>
-                    <mtd>
-                        <mtext>where</mtext>
-                        <mspace width="0.5em" />
-                        <mrow>
-                            <mi>S</mi>
-                            <mo>=</mo>
-                            <mrow>
-                                <mo>{</mo>
-                                <mi>s</mi>
-                                <mo>|</mo>
-                                <mrow>
-                                    <mi>s</mi>
-                                    <mo>&notin;</mo>
-                                    <mi>s</mi>
-                                </mrow>
-                                <mo>}</mo>
-                            </mrow>
-                        </mrow>
-                    </mtd>
-                </mtr>
-            </mtable>
-        </math>
+        <RusselParadox />
 
         <p>
-            I.e. the set of all sets that are not elements of themselves cannot
+            I.e. the set of all sets that are not members of themselves cannot
             exist, because if it did it would both have to be a member of itself
             and not a member of itself. (If <i>S</i> were a member of itself,
             that contradicts the property defining <i>S</i> and so it could not
-            be a member of itself. But if <i>S</i> is not a member of itself,
+            be a in itself. But if <i>S</i> is not a member of itself,
             then it matches the property defining it, meaning it would have to
             be in itself.) So even though the preceding formal definition of
             <i>S</i> is well-formed within the grammar of Set Theory, it is
@@ -142,41 +103,7 @@
             <i>fixed-point combinators</i> such as <i>Y</i>:
         </p>
 
-        <math display="block">
-            <mi>Y</mi>
-            <mo>=</mo>
-            <mrow>
-                <mo>&lambda;</mo>
-                <mi>f</mi>
-                <mo>.</mo>
-                <mrow>
-                    <mo>(</mo>
-                    <mo>&lambda;</mo>
-                    <mi>x</mi>
-                    <mo>.</mo>
-                    <mi>f</mi>
-                    <mo>(</mo>
-                    <mi>x</mi>
-                    <mspace width="0.5em" />
-                    <mi>x</mi>
-                    <mo>)</mo>
-                    <mo>)</mo>
-                </mrow>
-                <mrow>
-                    <mo>(</mo>
-                    <mo>&lambda;</mo>
-                    <mi>x</mi>
-                    <mo>.</mo>
-                    <mi>f</mi>
-                    <mo>(</mo>
-                    <mi>x</mi>
-                    <mspace width="0.5em" />
-                    <mi>x</mi>
-                    <mo>)</mo>
-                    <mo>)</mo>
-                </mrow>
-            </mrow>
-        </math>
+        <YCombinator />
 
         <p>
             A detailed explanation of the meaning and utility of the Y
@@ -186,25 +113,8 @@
             departments. But suffice it to say here that it allows one to define
             functions within the grammar of the &lambda;-Calculus that call
             themselves, which is a neat trick given the deliberate and
-            ostentatious simplicity of Church's formalism. I.e. it can be shown
-            that, given the preceding definition of Y, it is possible to define
-            functions such that:
+            ostentatious simplicity of Church's formalism.
         </p>
-
-        <math display="block">
-            <mrow>
-                <mi>Y</mi>
-                <mi>g</mi>
-            </mrow>
-            <mo>&equiv;</mo>
-            <mrow>
-                <mi>g</mi>
-                <mo>(</mo>
-                <mi>Y</mi>
-                <mi>g</mi>
-                <mo>)</mo>
-            </mrow>
-        </math>
 
         <aside>
             Note that Y is not the only fixed-point combinator in the
@@ -243,7 +153,7 @@
             structured programming languages rely instrinsically on self
             reference in order to be Turing complete. The functional programming
             paradigm and <abbr>CPS</abbr> (<dfn title="CPS">Continuation Passing
-                Style</dfn>) place recursion at the center of good programming
+            Style</dfn>) place recursion at the center of good programming
             style. Here is a simple example of implementing <i>5!</i> in
             <i>Scheme</i> using tail recursion:
         </p>
@@ -263,3 +173,8 @@
     </div>
 
 </template>
+
+<script setup>
+import RusselParadox from '@/components/logic/RusselParadox.vue'
+import YCombinator from '@/components/logic/YCombinator.vue'
+</script>

@@ -11,63 +11,7 @@
             result of &pm;&infin; because:
         </p>
 
-        <math display="block">
-
-            <mrow>
-                <munder>
-                    <mo>lim</mo>
-                    <mrow>
-                        <mi>x</mi>
-                        <mo>&rarr;</mo>
-                        <mrow>
-                            <mo>&pm;</mo>
-                            <mn>&infin;</mn>
-                        </mrow>
-                    </mrow>
-                </munder>
-                <mo>(</mo>
-                <mfrac>
-                    <mn>1</mn>
-                    <mi>x</mi>
-                </mfrac>
-                <mo>)</mo>
-                <mo>=</mo>
-                <mrow>
-                    <mo>&pm;</mo>
-                    <mn>0</mn>
-                </mrow>
-            </mrow>
-
-            <mpadded width="1em" lspace="0.5em">
-                <mo>&equiv;</mo>
-            </mpadded>
-
-            <mrow>
-                <munder>
-                    <mo>lim</mo>
-                    <mrow>
-                        <mi>x</mi>
-                        <mo>&rarr;</mo>
-                        <mrow>
-                            <mo>&pm;</mo>
-                            <mn>0</mn>
-                        </mrow>
-                    </mrow>
-                </munder>
-                <mo>(</mo>
-                <mfrac>
-                    <mn>1</mn>
-                    <mi>x</mi>
-                </mfrac>
-                <mo>)</mo>
-                <mo>=</mo>
-                <mrow>
-                    <mo>&pm;</mo>
-                    <mn>&infin;</mn>
-                </mrow>
-            </mrow>
-
-        </math>
+        <DivisionByZero />
 
         <p>
             since the latter is the algebraic inverse of the former.
@@ -77,20 +21,7 @@
             However:
         </p>
 
-        <math display="block">
-            <mfrac>
-                <mrow>
-                    <mo>&pm;</mo>
-                    <mn>0</mn>
-                </mrow>
-                <mrow>
-                    <mo>&pm;</mo>
-                    <mn>0</mn>
-                </mrow>
-            </mfrac>
-            <mo>&equiv;</mo>
-            <mn>NaN</mn>
-        </math>
+        <ZeroOverZero />
 
         <p>
             due to conflicting axioms.
@@ -99,7 +30,7 @@
         <ul>
             <li>
                 On the one hand, dividing any number by 0 ought to produce an
-                infinite quotient, as shown above.
+                infinite quotient, as previously discussed.
             </li>
             <li>
                 On the other hand, any number divided by itself ought to produce
@@ -108,14 +39,9 @@
         </ul>
 
         <p>
-            Since <math>
-                <mfrac>
-                    <mn>0</mn>
-                    <mn>0</mn>
-                </mfrac>
-            </math> cannot be both 1 and &infin;, it must be neither. Since
-            there are no other possibilities, the actual result is
-            <code>NaN</code> ("not a number").
+            Since <InlineZeroOverZero /> cannot be both 1 and &infin;, it must
+            be neither. Because there are no other possibilities, the actual
+            result is <code>NaN</code> ("not a number").
         </p>
 
         <p>
@@ -125,34 +51,15 @@
             returned, such as:
         </p>
 
-        <math display="block">
-            <mtable>
-                <mtr>
-                    <mtd>
-                        <msqrt>
-                            <mpadded height="1em">
-                                <mo>&minus;</mo>
-                                <mi>x</mi>
-                            </mpadded>
-                        </msqrt>
-                        <mo>&equiv;</mo>
-                        <mn>NaN</mn>
-                    </mtd>
-                </mtr>
-                <mtr>
-                    <mtd>
-                        <mtext>where</mtext>
-                        <mspace width="1em" />
-                        <mrow>
-                            <mi>x</mi>
-                            <mo>&lt;</mo>
-                            <mn>0</mn>
-                        </mrow>
-                    </mtd>
-                </mtr>
-            </mtable>
-        </math>
+        <NaN />
 
     </div>
 
 </template>
+
+<script setup lang="ts">
+import DivisionByZero from '@/pages/logic/ieee754/DivisionByZero.vue'
+import NaN from '@/pages/logic/ieee754/NaN.vue'
+import ZeroOverZero from '@/pages/logic/ieee754/ZeroOverZero.vue'
+import InlineZeroOverZero from './InlineZeroOverZero.vue';
+</script>
