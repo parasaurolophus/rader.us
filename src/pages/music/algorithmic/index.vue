@@ -141,11 +141,11 @@
             operating in reverse. A microphone consists of a membrane which
             vibrates in resonance to changes in air pressure, just like a
             person's eardrums vibrate in resonance to sound waves. The
-            microphone transduces those vibrations into -- you guessed it! -- a
-            continuously varying electric voltage. That electric signal is fed
-            into a device which stores the changes in voltage as changes to
-            whatever recording medium is in use: vibrations in the cutting
-            needle for a vinyl disk template, changes in intensity of
+            microphone transduces those vibrations into &mdash; you guessed it!
+            &mdash; a continuously varying electric voltage. That electric
+            signal is fed into a device which stores the changes in voltage as
+            changes to whatever recording medium is in use: vibrations in the
+            cutting needle for a vinyl disk template, changes in intensity of
             electromagnets in the recording head of a tape machine, etc.
         </p>
 
@@ -368,14 +368,14 @@ graph LR
         <p>
             It is perceived as being the same pitch as the 440 Hz sine wave. It
             has a noticeably different quality to its sound, however, as if it
-            were being played by a different musical instrument -- e.g. like the
-            difference between a flute and oboe. Human hearing is such that
-            differently shaped waves are perceived as sounding distinctively
-            different from one another, even at the same pitch and amplitude.
-            Note also that even though the sawtooth wave has the same overall
-            amplitude when graphed as the first sine wave, above, it actually
-            sounds a bit louder when played back. This is due to the presence of
-            <i>overtones</i>, discussed later.
+            were being played by a different musical instrument &mdash; e.g.
+            like the difference between a flute and oboe. Human hearing is such
+            that differently shaped waves are perceived as sounding
+            distinctively different from one another, even at the same pitch and
+            amplitude. Note also that even though the sawtooth wave has the same
+            overall amplitude when graphed as the first sine wave, above, it
+            actually sounds a bit louder when played back. This is due to the
+            presence of <i>overtones</i>, discussed later.
         </p>
 
         <p>
@@ -476,10 +476,10 @@ graph LR
 
         <p>
             As a consequence of the physical properties of whatever is producing
-            a sound -- vocal chords buzzing, sticks or mallets striking drum
-            heads, bows scraping across strings, etc. -- a sound's wave form and
-            overall amplitude will change over time in various ways. Consider
-            what happens when a stick strikes a drum.
+            a sound &mdash; vocal chords buzzing, sticks or mallets striking
+            drum heads, bows scraping across strings, etc. &mdash; a sound's
+            wave form and overall amplitude will change over time in various
+            ways. Consider what happens when a stick strikes a drum.
         </p>
 
         <p>
@@ -500,10 +500,10 @@ graph LR
             the bow and the string causes the string to vibrate at a frequency
             that is determined by a combination of factors including the
             string's elasticity, length and taughtness. The strength of the
-            vibrations -- i.e. the amplitude of the wave form it produces -- are
-            determined by the amount of energy imparted by the bow, which is
-            affected by the speed at which it is moving and the amount of
-            pressure applied. Again thanks to classical physics, the string's
+            vibrations &mdash; i.e. the amplitude of the wave form it produces
+            &mdash; are determined by the amount of energy imparted by the bow,
+            which is affected by the speed at which it is moving and the amount
+            of pressure applied. Again thanks to classical physics, the string's
             own inertia means that it takes a bit of time for the vibrations to
             emanate from the point at which the bow makes contact and reach
             maximum amplitude along its entire length. This causes a small but
@@ -584,16 +584,16 @@ graph LR
             as quickly. Depending on various physcal characteristcs, such as the
             differences between the construction and operation of a snare drum
             and a cymbal or piano, a percussion instrument might or might not
-            have any appreciable release -- the time it takes for the sound to
-            die out completely after its initial decay. Drum heads' vibrations
-            damp out to below audible amplitude nearly as fast as they begin
-            when struck, while a piano's strings can "ring on" for quite some
-            time if allowed to do so by use of the sustain pedal. Either way,
-            the defining characteristic of a percussion instrument is that it
-            has no true sustain (despite the name of a piano's pedal). By
-            comparison, human voices as well as wind and bowed instruments can
-            have appreciable sustain levels, determined by the breath control of
-            the performers or the lengths of their bows.
+            have any appreciable release &mdash; the time it takes for the sound
+            to die out completely after its initial decay. Drum heads'
+            vibrations damp out to below audible amplitude nearly as fast as
+            they begin when struck, while a piano's strings can "ring on" for
+            quite some time if allowed to do so by use of the sustain pedal.
+            Either way, the defining characteristic of a percussion instrument
+            is that it has no true sustain (despite the name of a piano's
+            pedal). By comparison, human voices as well as wind and bowed
+            instruments can have appreciable sustain levels, determined by the
+            breath control of the performers or the lengths of their bows.
         </p>
 
         <p>
@@ -1346,10 +1346,10 @@ end
         <ul>
             <li>
                 Any possible algorithm can be expressed as a formula of Church's
-                <i>&lambda;-Calculus</i>.
+                <i>λ-Calculus</i>.
             </li>
             <li>
-                Any well-formed formula of the &lambda;-Calculus can be
+                Any well-formed formula of the λ-Calculus can be
                 "embodied" as one of Turing's <i>a-machines</i>.
             </li>
             <li>
@@ -1421,15 +1421,21 @@ end
         <p>
             (consisting of tracks I recorded in the late 1970's through the mid
             1980's) are testaments to the conceptual origin of my musical style.
-            Its "logo" is the following expression of the &lambda;-calculus:
+            Its "logo" is the following expression of the λ-calculus:
         </p>
 
         <OmegaFormula display="block" />
 
         <p>
-            &omega; is a function which calls itself indefinitely, meaning that
-            &Omega; will never receive any definite value within a finite amount
-            of time. Such self-recursion resulting in an infinitely evolving
+            <math>
+                <mn>Ω</mn>
+            </math>
+            is a function that calls itself indefinitely, meaning that
+            <math>
+                <mn>Ω</mn>
+            </math>
+            will never receive any definite value within a finite amount of
+            time. Such self-recursion resulting in an infinitely evolving
             outcome is analogous to using techniques like FM synthesis, which
             mix together elements between the audio and control paths of a patch
             to achieve complex sonic outputs from simple, mutually referential

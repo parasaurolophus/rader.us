@@ -5,7 +5,7 @@
     <div class="footer">
 
         <span>
-            &copy; Kirk Rader 2023-2026
+            © Kirk Rader 2023-2026
         </span>
 
         <div>

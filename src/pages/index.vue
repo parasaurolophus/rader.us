@@ -8,42 +8,39 @@
 
         <div class="columns">
 
+            <RouterLink :to="{ name: 'liar' }"> What</RouterLink>
+
             <div>
                 <YCombinator />
             </div>
 
-            <p>
-                <RouterLink :to="{ name: 'liar' }">
-                    and
-                </RouterLink>
-            </p>
+            <RouterLink :to="{ name: 'liar' }">and</RouterLink>
 
             <div>
                 <RusselParadox />
             </div>
 
-        </div>
+            <RouterLink :to="{ name: 'liar' }">have in common</RouterLink>
 
-        <hr>
+        </div>
 
         <strong>How Software Is Done</strong>
 
         <EnterpriseSoftwareDevelopment />
 
-        <hr>
+        <strong>The Axiom That Changed the World</strong>
 
-        <strong>The Postulate That Changed the World</strong>
+        <RouterLink :to="{ name: 'computability' }">
+            <ParallelPostulate />
+        </RouterLink>
 
-        <div class="columns">
-            <div>
-                <ParallelPostulate />
-            </div>
-            <div class="text">
-                The point <i>C</i> is on the same side of line <i>AB</i> as
-                angles <i>&alpha;</i> and <i>&beta;</i> when both angles are
-                less than 90&deg;.
-            </div>
-        </div>
+        <strong>Ummm... Errr... Music?</strong>
+
+        <p>
+            <RouterLink :to="{ name: 'algorithmic' }">
+                No, really...
+            </RouterLink>
+        </p>
 
     </div>
 
@@ -70,7 +67,7 @@
 
 <script setup>
 import EnterpriseSoftwareDevelopment from '@/components/software/EnterpriseSoftwareDevelopment.vue'
-import ParallelPostulate from '@/components/logic/ParallelPostulate.vue'
-import RusselParadox from '@/components/logic/RusselParadox.vue'
-import YCombinator from '@/components/logic/YCombinator.vue'
+import ParallelPostulate from '@/pages/logic/computability/ParallelPostulate.vue'
+import RusselParadox from '@/pages/logic/liar/RusselParadox.vue'
+import YCombinator from '@/pages/logic/liar/YCombinator.vue'
 </script>

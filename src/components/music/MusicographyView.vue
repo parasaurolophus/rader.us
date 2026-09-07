@@ -1,17 +1,17 @@
 <!-- Copyright (c) Kirk Rader 2026 -->
 
 <template>
-    <DetailsComponent v-for="year of years">
-        <template #summary>
+    <details v-for="year of years" name="musicography">
+        <summary>
             {{ year[0][0][YEAR] }}
-        </template>
-        <DetailsComponent v-for="album of year">
-            <template #summary>
+        </summary>
+        <details v-for="album of year" name="album">
+            <summary>
                 {{ album[0][ALBUM] }}
-            </template>
-            <template #subtitle>
+            </summary>
+            <div class="subtitle">
                 UPC {{ album[0][UPC] }}
-            </template>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -28,14 +28,13 @@
                     </tr>
                 </tbody>
             </table>
-        </DetailsComponent>
-    </DetailsComponent>
+        </details>
+    </details>
 </template>
 
 <script setup>
 import { onMounted, ref } from 'vue'
 import data from '/assets/musicography.tsv?raw'
-import DetailsComponent from '@/components/DetailsComponent.vue'
 
 const RELEASE = 0
 const YEAR = 1

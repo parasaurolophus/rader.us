@@ -23,11 +23,11 @@ const routes = [
     },
 
     {
-        path: '/logic/ieee',
-        name: 'ieee',
-        component: () => import('./pages/logic/ieee754/index.vue'),
+        path: '/logic/computability',
+        name: 'computability',
+        component: () => import('./pages/logic/computability/index.vue'),
         meta: {
-            title: 'IEEE 754',
+            title: 'Computability',
         },
     },
 

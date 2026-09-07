@@ -166,20 +166,13 @@ code,
 }
 
 details {
-    border: 1px solid var(--background);
-}
-
-details:open {
-    border-color: var(--foreground);
-}
-
-details:not(:open) {
-    border-color: var(--background);
+    font-weight: bolder;
+    font-size: 90%;
 }
 
 details>*:not(summary) {
-    margin: 0.25em;
-    padding: 0.25em;
+    margin-left: 1em;
+    font-weight: normal;
 }
 
 input {
@@ -190,26 +183,15 @@ math {
     font-family: 'Latin Modern Math';
 }
 
-summary {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: start;
-    padding: 0.5em 1em;
-}
-
-summary:hover {
-    background-color: var(--highlight);
-}
-
-summary>* {
-    display: inline-block;
-}
-
 td,
 th {
     border-radius: 0;
     padding: 0.25em;
+}
+
+summary {
+    cursor: pointer;
+    font-style: bold;
 }
 
 thead tr,
@@ -247,7 +229,7 @@ tr {
 .subtitle {
     font-style: italic;
     font-weight: bold;
-    font-size: 90%;
+    font-size: 80%;
 }
 
 /* svg */
