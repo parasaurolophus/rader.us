@@ -1,11 +1,9 @@
 <!-- Copyright (c) Kirk Rader 2026 -->
 
 <template>
-    <div>
+    <div class="container">
         <template v-for="(destination, index) of path">
-            <span v-if="index > 0" class="separator">
-                &gt;
-            </span>
+            <MdiIcon v-if="index > 0" :path="mdiPlay" class="separator" />
             <span v-if="destination.to === null" class="label">{{ destination.title }}</span>
             <RouterLink v-else :to="destination.to">{{ destination.title }}</RouterLink>
         </template>
@@ -13,6 +11,11 @@
 </template>
 
 <style scoped>
+.container {
+    display: flex;
+    align-items: center;
+}
+
 .separator {
     margin: 0 0.25em;
 }
@@ -25,6 +28,8 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { mdiPlay } from '@mdi/js'
+import MdiIcon from '@/components/MdiIcon.vue'
 
 const path = computed(computePath)
 const route = useRoute()
@@ -50,9 +55,14 @@ function computePath() {
     }
 
     return uri.map((s, i, u) => {
+
+        const url = toUrl(i, u)
+        const r = router.resolve(url)
+        const title = r?.meta?.title ?? r?.name ?? s
+
         return {
-            title: s,
-            to: toUrl(i, u)
+            title: title,
+            to: url,
         }
     })
 }
