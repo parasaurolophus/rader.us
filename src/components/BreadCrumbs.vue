@@ -39,11 +39,6 @@ function computePath() {
 
     let uri = route.path.split('/')
 
-    if (uri[0] === '') {
-
-        uri[0] = 'home'
-    }
-
     if (uri[uri.length - 1] === '') {
 
         uri.pop()
@@ -51,20 +46,28 @@ function computePath() {
 
     if (uri.length === 1) {
 
-        return [{ title: 'home', to: null }]
+        return [{
+            title: getTitle({ name: 'home' }, 'home'),
+            to: null,
+        }]
     }
 
     return uri.map((s, i, u) => {
 
         const url = toUrl(i, u)
-        const r = router.resolve(url)
-        const title = r?.meta?.title ?? r?.name ?? s
 
         return {
-            title: title,
+            title: getTitle(url, s),
             to: url,
         }
     })
+}
+
+function getTitle(to, s) {
+
+    const r = router.resolve(to)
+
+    return r?.meta?.title ?? r?.name ?? s
 }
 
 function toUrl(index, uri) {
