@@ -29,7 +29,7 @@ import FooterBar from './components/FooterBar.vue'
 import SideBar from '@/components/SideBar.vue'
 import TitleBar from '@/components/TitleBar.vue'
 import mermaid from 'mermaid'
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute, useRouter } from 'vue-router'
 import { onMounted, provide, ref, watch } from 'vue'
 
 const currentTheme = ref('dark-theme')
@@ -81,6 +81,8 @@ const otherLinks = ref({
 })
 
 const refreshDiagrams = ref(0)
+const route = useRoute()
+const router = useRouter()
 
 const softwareLinks = ref({
     github: {
@@ -123,6 +125,17 @@ provide('toggleTheme', toggleTheme)
 
 mermaidHandler = mermaidClick
 
-onMounted(initializeMermaid)
+onMounted(() => {
+
+    router.afterEach(()=>{
+
+        const sidebar = document.getElementById('sidebar')
+
+        sidebar.style.display = 'none'
+    })
+
+    initializeMermaid()
+})
+
 watch(currentTheme, initializeMermaid)
 </script>
