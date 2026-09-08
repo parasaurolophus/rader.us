@@ -2,16 +2,16 @@
 
 <template>
     <div class="titlebar">
+        <a id="qr" :href="otherLinks.hyperFollow.url" target="_blank">
+            <QrComponent v-model="otherLinks.hyperFollow.url" />
+        </a>
         <div>
             <div class="title">
                 Kirk Rader
             </div>
             <BreadCrumbs />
         </div>
-        <a id="hyperfollowqr" :href="otherLinks.hyperFollow.url" target="_blank">
-            <QrComponent v-model="otherLinks.hyperFollow.url" />
-        </a>
-        <MdiIcon :path="mdiThemeLightDark" class="button" @click="toggleTheme()" />
+        <MdiIcon id="theme-button" :path="mdiThemeLightDark" class="button" @click="toggleTheme()" />
         <MdiIcon :path="mdiMenu" class="button" @click="toggleSidebar()" />
     </div>
 </template>
@@ -20,6 +20,10 @@
 .button {
     cursor: pointer;
     margin-left: 1em;
+}
+
+#qr {
+    margin-right: 1em;
 }
 
 .title {
@@ -32,7 +36,7 @@
     align-items: center;
 }
 
-#hyperfollowqr {
+#theme-button {
     margin-left: auto;
 }
 </style>

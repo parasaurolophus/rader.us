@@ -12,7 +12,7 @@
 }
 
 .dark-theme .container {
-    background-color: var(--foreground);
+    background-color: white;
 }
 
 .small {

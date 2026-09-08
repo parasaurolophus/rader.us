@@ -76,6 +76,20 @@
     box-shadow: none;
 }
 
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--secondary);
+}
+
+a:active,
+a:hover {
+    text-decoration: underline;
+}
+
 aside {
     float: right;
     width: 30%;
@@ -90,10 +104,83 @@ aside i {
     font-style: normal;
 }
 
+blockquote {
+    font-style: italic;
+}
+
+blockquote i {
+    font-style: normal;
+}
+
 body {
     background-color: var(--background);
     color: var(--foreground);
     font-family: 'Noto Sans Mono', monospace;
+}
+
+.clickable,
+.copyable {
+
+    color: var(--secondary)
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.copyable {
+    cursor: copy;
+}
+
+code,
+.code {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: white;
+}
+
+details {
+    font-size: 90%;
+}
+
+details>*:not(summary) {
+    margin-left: 1em;
+}
+
+footer {
+    position: fixed;
+    left: var(--left);
+    right: var(--right);
+    height: var(--footerheight);
+    bottom: var(--bottom);
+    border-style: solid;
+}
+
+header {
+    position: fixed;
+    top: var(--top);
+    left: var(--left);
+    right: var(--right);
+    height: var(--headerheight);
+    border-style: solid;
+}
+
+input {
+    accent-color: var(--primary);
+}
+
+main {
+    position: fixed;
+    overflow: auto;
+    top: var(--maintop);
+    left: var(--left);
+    right: var(--right);
+    bottom: var(--mainbottom);
+    border-style: solid;
+}
+
+math {
+    font-family: 'Latin Modern Math';
 }
 
 #sidebar {
@@ -112,90 +199,15 @@ body {
     border-radius: 0;
 }
 
-header {
-    position: fixed;
-    top: var(--top);
-    left: var(--left);
-    right: var(--right);
-    height: var(--headerheight);
-    border-style: solid;
-}
-
-main {
-    position: fixed;
-    overflow: auto;
-    top: var(--maintop);
-    left: var(--left);
-    right: var(--right);
-    bottom: var(--mainbottom);
-    border-style: solid;
-}
-
-footer {
-    position: fixed;
-    left: var(--left);
-    right: var(--right);
-    height: var(--footerheight);
-    bottom: var(--bottom);
-    border-style: solid;
-}
-
-a {
-    color: var(--primary);
-    text-decoration: none;
-}
-
-a:visited {
-    color: var(--secondary);
-}
-
-a:active,
-a:hover {
-    text-decoration: underline;
-}
-
-blockquote {
-    font-style: italic;
-}
-
-blockquote i {
-    font-style: normal;
-}
-
-code,
-.code {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    color: white;
-}
-
-details {
-    font-weight: bolder;
-    font-size: 90%;
-}
-
-details>*:not(summary) {
-    margin-left: 1em;
-    font-weight: normal;
-}
-
-input {
-    accent-color: var(--primary);
-}
-
-math {
-    font-family: 'Latin Modern Math';
+summary {
+    cursor: pointer;
+    font-style: bold;
 }
 
 td,
 th {
     border-radius: 0;
     padding: 0.25em;
-}
-
-summary {
-    cursor: pointer;
-    font-style: bold;
 }
 
 thead tr,
@@ -205,20 +217,6 @@ tbody tr:nth-child(even) {
 
 tr {
     border-radius: 0;
-}
-
-.clickable,
-.copyable {
-
-    color: var(--secondary)
-}
-
-.clickable {
-    cursor: pointer;
-}
-
-.copyable {
-    cursor: copy;
 }
 
 /*
