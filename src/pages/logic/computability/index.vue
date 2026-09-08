@@ -19,7 +19,7 @@
                 Once upon a time, there was brief but intense interest in a branch
                 of mathematics called Computability Theory. The essential question
                 of Computability Theory is, "What makes a number computable?" That
-                question even arises based on the recognition that if you take the
+                question arises based on the recognition that if you take the
                 notion of <a href="#continuum">the continuum</a> seriously &mdash;
                 as is required, for example, for mathematical notions like
                 <i>limits</i> and <i>derivatives</i> to make sense &mdash; then
@@ -44,9 +44,9 @@
             </ol>
 
             <p>
-                The first of the preceding claims, that the <a href="#cardinal">cardinality</a> of the set of real
-                numbers, ℝ,
-                is not countable, was shown by Georg Cantor and others in the
+                The first of the preceding claims, that the <a href="#cardinality">cardinality</a> of the set of real
+                numbers,
+                ℝ, is not countable, was shown by Georg Cantor and others in the
                 late 19th century. The second was shown in the early 20th
                 century by Kurt Gödel and others. Specifically, any formal
                 language with a finite number of rules for combining a finite
@@ -141,6 +141,51 @@
                 make themselves fine with that. Any other way lies madness.
             </p>
 
+            <p>
+                The discipline of Computablity Theory was founded in the 1930's
+                by Alonzo Church and Alan Turing. Church took a formal approach.
+                He defined a deliberately extremely simple formal language,
+                λ-Calculus, for defining <a href="#function">functions</a> in a
+                highly abstract fashion. Church's hypothesis was that the result
+                of evaluating every possible value of every well-formed formula
+                of λ-Calculus was identical to the set of computable numbers.
+                Turing used thought-experiments based on idealized devices he
+                called <i>a-machines</i> (<i>a</i> for <i>automatic</i> or
+                <i>automaton</i>; it was Church who first started calling them
+                <i>Turing machines</i>). These were, again, extremely simple
+                mechanisms for generating sequences of digits according to
+                well-defined rules. The only reason one could not build an
+                actual a-machine was that in order satisfy the desired results
+                for Computability Theory they would have to be capable of
+                producing infinitely long sequences. Turing's hypothesis was
+                that the set of all possible outputs of all correctly
+                implemented a-machines was identical to the set of computable
+                numbers. These two hypotheses have come to be known together as
+                the Church-Turing Thesis, and the initial question of
+                Computability Theory was considered settled, when it was shown
+                that both approaches produce the same results.
+            </p>
+
+            <p>
+                Church's and Turing's work might have ended up as little more
+                than a footnote in the history of mathematics. In fact, their
+                work ushered in the Information Age. The way the equivalence of
+                their two approaches was proven was to show that the behavior of
+                any a-machine could be represented as an expression of
+                λ-Calculus and, conversely, that any expression of λ-Calculus
+                could be used as a set of instructions for determining the
+                behavior of an a-machine. Between them, they invented the notion
+                of a programmable digital computer and a programming language as
+                a side-effect of purely abstract mathematical inquiries on the
+                nature of certain sets of numbers. (Anonymous function in most
+                programming languages are referred to as "lambdas" due to
+                λ-Calculus. The classical Von Neumann Architecture for digital
+                computers was directly inspired by the idea of embodying a
+                restricted, i.e. finite, version of Turing's a-machines using
+                electronic circuits rather than mechanical components and paper
+                tapes, as in Turing's writings on Computability Theory.)
+            </p>
+
             <h2>A Not-So-Brief History of How This Happened</h2>
 
             <p>
@@ -231,15 +276,17 @@
                 <a id="bijective"></a>
                 <p>
                     A bijective mapping is one that is both <a href="#injective">injective</a> and <a
-                        href="#surjective">surjective</a>. Since this establishes a 1:1 relationship between every
-                    element of the domain and a unique corresponding element of the co-domain, the <a
-                        href="#cardinal">cardinalities</a> of both sets are considered equal.
+                        href="#surjective">surjective</a>. Since this establishes a
+                    1:1 relationship between every element of the domain and a
+                    unique corresponding element of the co-domain, the <a href="#cardinality">cardinalities</a> of both
+                    sets are
+                    considered equal.
                 </p>
             </details>
 
             <details name="definitions">
-                <summary><dfn>Cardinal Numbers</dfn></summary>
-                <a id="cardinal"></a>
+                <summary><dfn>Cardinality</dfn></summary>
+                <a id="cardinality"></a>
                 <p>
                     The cardinality of a finite set is the number of
                     elements it contains. E.g. the cardinality of
@@ -255,16 +302,35 @@
                     is 3.
                 </p>
                 <p>
-                    For infinite sets, cardinality is defined by
-                    constructing mappings, i.e. <a href="#function">functions</a>. For example, if a <a
-                        href="#bijective">bijective mapping</a> can be shown to
-                    exist between two infinite sets that shows they have the
-                    same cardinality. Cardinalities can be ordered by
-                    showing that mappings between various sets can be at
-                    best <a href="#injective">injective</a> or <a href="#surjective">surjective</a>. This, in turn,
-                    is
-                    used to define a sequence of infinite <a href="#ordinal"> ordinal numbers</a> analogous to the
-                    ordering defined by the sequence of natural numbers.
+                    For infinite sets, cardinality is defined by constructing
+                    mappings, i.e. <a href="#function">functions</a>. For
+                    example, if a <a href="#bijective">bijective mapping</a> can
+                    be shown to exist between two infinite sets that shows they
+                    have the same cardinality. Cardinalities can be ordered by
+                    showing that mappings between various sets can be at best <a href="#injective">injective</a> or <a
+                        href="#surjective">surjective</a>. This, in turn, is used to
+                    define a sequence of infinite <a href="#ordinal"> ordinal
+                        numbers</a> analogous to the ordering defined by the
+                    sequence of natural numbers.
+                </p>
+            </details>
+
+            <details name="definitions">
+                <summary><dfn>Completed Infinity</dfn></summary>
+                <a id="infinity"></a>
+                <p>
+                    The term <i>completed infinity</i> may refer to a set whose
+                    <a href="#cardinality">cardinality</a> is infinite, or to
+                    such a set's cardinality when used in a numerical context.
+                    For most of the history of Mathematics in the Islamic and
+                    Western European tradition, the very notion of a completed
+                    infinity was anathema. One was not allowed to talk about
+                    things like "the set of natural numbers." Even where
+                    infinite or infinitessimal quantities were found to be
+                    useful, such as <i>limits</i> in Calculus or proofs by
+                    mathematical induction, mathematicians took pains to
+                    describe them in terms of non-terminating processes rather
+                    than as definite numbers or actual collections.
                 </p>
             </details>
 
@@ -272,20 +338,34 @@
                 <summary><dfn>Continuum</dfn></summary>
                 <a id="continuum"></a>
                 <p>
-                    The <i>continuum</i> is what you might have been taught
-                    to refer to as "the number line" in elementary school. A
-                    set of numbers is continuous if there are an infinite
-                    number of values between any two members of the set. The
-                    set of natural numbers, ℕ, is not continuous
-                    because there is no natural number whose value is
-                    greater than 1 and less than 2, nor a number greater
-                    than 2 and less than 3, and so on. The real numbers,
-                    ℝ, are assumed to be continuous by definition. One
-                    consequence of this assumption is that any possible
-                    sequence of digits conforming to the rules of
-                    mathematical notation denotes a particular real
-                    quantity, which may or may not correspond to any natural
-                    or rational number.
+                    The <i>continuum</i> is what you might have been taught to
+                    refer to as "the number line" in elementary school. A set of
+                    numbers is continuous if there are an infinite number of
+                    values between any two members of the set. The set of
+                    natural numbers, ℕ, is not continuous because there is no
+                    natural number whose value is greater than 1 and less than
+                    2, nor a number greater than 2 and less than 3, and so on.
+                    The real numbers, ℝ, are assumed to be continuous by
+                    definition. One consequence of this assumption is that any
+                    possible sequence of digits conforming to the rules of
+                    mathematical notation denotes a particular real quantity,
+                    which may or may not correspond to any natural or rational
+                    number, or even a computable number. In fact, the nature of
+                    the continuum implies that only an infinitessimal percentage
+                    of real numbers are computable. This begs two questions:
+                </p>
+
+                <ol>
+                    <li>What distinguishes the subset of computable numbers></li>
+                    <li>How "real" are non-computable numbers></li>
+                </ol>
+
+                <p>
+                    The first of the preceding questions launched the field of
+                    Computability Theory. The second is asked less often, but is
+                    of increasing significance for <a href="#metamathematics">metamathematical</a> theories on
+                    which scientists and engineers rely as technologies advance
+                    that analyze and utilize quantum effects.
                 </p>
             </details>
 
@@ -297,7 +377,7 @@
                     define an <a href="#injective">injective mapping</a>
                     from the set of natural numbers, <i>ℕ</i> onto
                     <i>S</i>. Every finite set is countable. An infinite set is
-                    countable if it is possible to construct <a href="#bijective">bijective mapping</a> between it and
+                    countable if it is possible to construct a <a href="#bijective">bijective mapping</a> between it and
                     ℕ.
                 </p>
             </details>
@@ -357,9 +437,8 @@
                     element of its range. For any two sets, <i>A</i> and
                     <i>B</i>, if an injective mapping from <i>A</i> to <i>B</i>
                     exists, but not a <a href="#surjective">surjective
-                    mapping</a> then <i>A</i> has a <a
-                    href="#cardinal">cardinality</a> less than or equal to that
-                    of <i>B</i>.
+                        mapping</a> then <i>A</i> has a <a href="#cardinality">cardinality</a> less than or equal to
+                    that of <i>B</i>.
                 </p>
             </details>
 
@@ -598,17 +677,16 @@
             </details>
 
             <details name="definitions">
-                <summary><dfn>Ordinal Numbers</dfn></summary>
+                <summary><dfn>Ordinal</dfn></summary>
                 <a id="ordinal"></a>
                 <p>
-                    Since <a href="#cardinal">cardinality</a> provides a way
-                    of assigning magnitudes to infinite sets analogous to
-                    the number of elements contained in finite sets, such
-                    magnitudes can be treated like an ordered set of
-                    infinite quantities analagous to the ordered set of
-                    natural numbers. The first such infinite ordinal
-                    corresponds to the cardinality of ℕ and is
-                    conventionally notated as
+                    Since <a href="#cardinality">cardinality</a> provides a way
+                    of assigning magnitudes to infinite sets analogous to the
+                    number of elements contained in finite sets, such magnitudes
+                    can be treated like an ordered set of infinite quantities
+                    analagous to the ordered set of natural numbers. The first
+                    such infinite ordinal corresponds to the cardinality of ℕ
+                    and is conventionally notated as
                     <math>
                         <msub>
                             <mi>ℵ</mi>
