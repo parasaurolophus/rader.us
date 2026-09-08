@@ -25,12 +25,12 @@ footer>* {
 </style>
 
 <script setup>
-import mermaid from 'mermaid'
-import { RouterView } from 'vue-router'
-import { onMounted, provide, ref, watch } from 'vue'
 import FooterBar from './components/FooterBar.vue'
 import SideBar from '@/components/SideBar.vue'
 import TitleBar from '@/components/TitleBar.vue'
+import mermaid from 'mermaid'
+import { RouterView } from 'vue-router'
+import { onMounted, provide, ref, watch } from 'vue'
 
 const currentTheme = ref('dark-theme')
 

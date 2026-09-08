@@ -33,7 +33,6 @@
     --footerheight: 2lh;
     --sidebarwidth: 25em;
     --maintop: calc(var(--top) + var(--headerheight) + 1vh);
-    --mainright: calc(var(--left) + var(--sidebarwidth) + 1vw);
     --mainbottom: calc(var(--bottom) + var(--footerheight) + 1vh);
 }
 
@@ -58,8 +57,8 @@
 
     /* base colors */
     --background: rgb(224 224 224);
-    --foureground: rgb(32 32 32);
-    --highlight: rgb(from var(--foreground) 64 64 64);
+    --foreground: rgb(32 32 32);
+    --highlight: rgb(192 192 192);
 
     /* semantic colors */
     --success: green;
@@ -98,7 +97,9 @@ body {
 }
 
 #sidebar {
+    display: none;
     position: fixed;
+    background-color: var(--highlight);
     overflow: auto;
     top: var(--maintop);
     right: var(--right);
@@ -106,6 +107,9 @@ body {
     bottom: var(--mainbottom);
     border-style: solid;
     overflow: auto;
+    z-index: 10;
+    border: none;
+    border-radius: 0;
 }
 
 header {
@@ -122,7 +126,7 @@ main {
     overflow: auto;
     top: var(--maintop);
     left: var(--left);
-    right: var(--mainright);
+    right: var(--right);
     bottom: var(--mainbottom);
     border-style: solid;
 }

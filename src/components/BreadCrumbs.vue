@@ -65,7 +65,7 @@ function computePath() {
 
 function getTitle(to, s) {
 
-    const r = router.resolve(to)
+    const r = router.resolve(to || { name: 'home' })
 
     return r?.meta?.title ?? r?.name ?? s
 }
