@@ -11,8 +11,10 @@
             </div>
             <BreadCrumbs />
         </div>
-        <MdiIcon id="theme-button" :path="mdiThemeLightDark" class="button" @click="toggleTheme()" />
-        <MdiIcon :path="mdiMenu" class="button" @click="toggleSidebar()" />
+        <MdiIcon :path="mdiThemeLightDark" class="button right" @click="toggleTheme()" />
+        <video autoplay loop muted disablepictureinpicture class="button" @click="toggleSidebar()">
+            <source src="/logo64.webm" />
+        </video>
     </div>
 </template>
 
@@ -26,6 +28,10 @@
     margin-right: 1em;
 }
 
+.right {
+    margin-left: auto;
+}
+
 .title {
     font-size: xx-large;
 }
@@ -34,10 +40,6 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-}
-
-#theme-button {
-    margin-left: auto;
 }
 </style>
 

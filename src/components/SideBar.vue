@@ -2,7 +2,10 @@
 
 <template>
     <div class="sidebar">
-        <img id="portrait" src="/kirk.png">
+        <!-- <img id="portrait" src="/kirk.png"> -->
+        <video autoplay loop muted>
+            <source src="/logo256.webm" />
+        </video>
         <RouteTree :root="root" :links="links" />
     </div>
 </template>
