@@ -16,19 +16,19 @@
 }
 
 .small {
-    width: 32px;
+    width: 28px;
 }
 
 .medium {
-    width: 64px;
+    width: 56px;
 }
 
 .large {
-    width: 128px;
+    width: 112px;
 }
 
 .x-large {
-    width: 256px;
+    width: 224px;
 }
 </style>
 
