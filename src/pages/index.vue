@@ -4,6 +4,14 @@
 
     <div>
 
+        <strong>Ummm... Errr... Music?</strong>
+
+        <p>
+            <RouterLink :to="{ name: 'algorithmic' }">
+                No, really...
+            </RouterLink>
+        </p>
+
         <strong>This Statement Is False</strong>
 
         <div class="columns">
@@ -29,14 +37,6 @@
         <RouterLink :to="{ name: 'computability' }">
             <ParallelPostulate />
         </RouterLink>
-
-        <strong>Ummm... Errr... Music?</strong>
-
-        <p>
-            <RouterLink :to="{ name: 'algorithmic' }">
-                No, really...
-            </RouterLink>
-        </p>
 
     </div>
 

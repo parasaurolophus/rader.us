@@ -58,7 +58,7 @@ function computePath() {
 
         return {
             title: getTitle(url, s),
-            to: url,
+            to: i === u.length - 1 ? null : url,
         }
     })
 }
@@ -77,11 +77,9 @@ function toUrl(index, uri) {
         return { name: 'home' }
     }
 
-    if (index === uri.length - 1) {
+    return uri.slice(1, index + 1).reduce((a, s, i, u) => {
 
-        return null
-    }
-
-    return uri.slice(1, index + 1).reduce((a, s, i, u) => a.concat(s, i < u.length - 1 ? '/' : ''), '/')
+        return a.concat(s, i < u.length - 1 ? '/' : '')
+    }, '/')
 }
 </script>
