@@ -71,9 +71,8 @@
 }
 
 * {
-    border-radius: 1em;
     border-width: 1px;
-    box-shadow: none;
+    border-color: var(--foreground);
 }
 
 a {
@@ -97,6 +96,8 @@ aside {
     margin-left: 1em;
     padding-left: 1em;
     border-left-style: solid;
+    border-width: 1px;
+    border-color: var(--foreground);
 }
 
 aside dfn,
@@ -153,7 +154,7 @@ footer {
     right: var(--right);
     height: var(--footerheight);
     bottom: var(--bottom);
-    border-style: solid;
+    border-top-style: solid;
 }
 
 header {
@@ -162,7 +163,7 @@ header {
     left: var(--left);
     right: var(--right);
     height: var(--headerheight);
-    border-style: solid;
+    border-bottom-style: solid;
 }
 
 input {
@@ -176,7 +177,6 @@ main {
     left: var(--left);
     right: var(--right);
     bottom: var(--mainbottom);
-    border-style: solid;
 }
 
 math {
@@ -192,11 +192,8 @@ math {
     right: var(--right);
     width: var(--sidebarwidth);
     bottom: var(--mainbottom);
-    border-style: solid;
     overflow: auto;
     z-index: 10;
-    border: none;
-    border-radius: 0;
 }
 
 summary {
@@ -206,17 +203,12 @@ summary {
 
 td,
 th {
-    border-radius: 0;
     padding: 0.25em;
 }
 
 thead tr,
 tbody tr:nth-child(even) {
     background-color: var(--highlight);
-}
-
-tr {
-    border-radius: 0;
 }
 
 /*
