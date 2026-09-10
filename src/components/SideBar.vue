@@ -2,7 +2,6 @@
 
 <template>
     <div class="sidebar">
-        <!-- <img id="portrait" src="/kirk.png"> -->
         <video autoplay loop muted>
             <source src="/logo256.webm" />
         </video>
@@ -15,24 +14,6 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-}
-
-#portrait {
-    width: calc(0.9 * var(--sidebarwidth));
-    height: calc(0.9 * var(--sidebarwidth));
-}
-
-fieldset {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-around;
-    border-style: solid;
-    margin: 1vh 1vw;
-}
-
-fieldset>* {
-    margin: 1vh 1vw;
 }
 </style>
 

@@ -24,10 +24,6 @@
 
         </div>
 
-        <strong>How Software Is Done</strong>
-
-        <EnterpriseSoftwareDevelopment />
-
         <strong>The Axiom That Changed the World</strong>
 
         <RouterLink :to="{ name: 'computability' }">
@@ -66,7 +62,6 @@
 </style>
 
 <script setup>
-import EnterpriseSoftwareDevelopment from '@/components/software/EnterpriseSoftwareDevelopment.vue'
 import ParallelPostulate from '@/pages/logic/computability/ParallelPostulate.vue'
 import RusselParadox from '@/pages/logic/liar/RusselParadox.vue'
 import YCombinator from '@/pages/logic/liar/YCombinator.vue'

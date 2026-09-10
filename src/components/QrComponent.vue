@@ -8,7 +8,6 @@
 <style scoped>
 .container {
     display: inline-block;
-    border-radius: 0;
 }
 
 .dark-theme .container {
