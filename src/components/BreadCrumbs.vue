@@ -31,11 +31,10 @@ import { useRoute, useRouter } from 'vue-router'
 import { mdiPlay } from '@mdi/js'
 import MdiIcon from '@/components/MdiIcon.vue'
 
-const path = computed(computePath)
 const route = useRoute()
 const router = useRouter()
 
-function computePath() {
+const path = computed(() => {
 
     let uri = route.path.split('/')
 
@@ -46,8 +45,16 @@ function computePath() {
 
     if (uri.length === 1) {
 
+        if (uri[0] === '') {
+
+            return [{
+                title: getTitle({ name: 'home' }, 'home'),
+                to: null,
+            }]
+        }
+
         return [{
-            title: getTitle({ name: 'home' }, 'home'),
+            title: getTitle(route.path, uri[0]),
             to: null,
         }]
     }
@@ -61,11 +68,11 @@ function computePath() {
             to: i === u.length - 1 ? null : url,
         }
     })
-}
+})
 
 function getTitle(to, s) {
 
-    const r = router.resolve(to || { name: 'home' })
+    const r = router.resolve(to === '' ? '/' : to)
 
     return r?.meta?.title ?? r?.name ?? s
 }

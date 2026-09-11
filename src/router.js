@@ -22,14 +22,14 @@ const routes = [
         },
     },
 
-    {
-        path: '/logic/computability',
-        name: 'computability',
-        component: () => import('./pages/logic/computability/index.vue'),
-        meta: {
-            title: 'Computability',
-        },
-    },
+    // {
+    //     path: '/logic/computability',
+    //     name: 'computability',
+    //     component: () => import('./pages/logic/computability/index.vue'),
+    //     meta: {
+    //         title: 'Computability',
+    //     },
+    // },
 
     {
         path: '/logic/liar',

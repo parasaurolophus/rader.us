@@ -177,13 +177,14 @@
                 behavior of an a-machine. Between them, they invented the notion
                 of a programmable digital computer and a programming language as
                 a side-effect of purely abstract mathematical inquiries on the
-                nature of certain sets of numbers. (Anonymous function in most
-                programming languages are referred to as "lambdas" due to
-                λ-Calculus. The classical Von Neumann Architecture for digital
-                computers was directly inspired by the idea of embodying a
-                restricted, i.e. finite, version of Turing's a-machines using
-                electronic circuits rather than mechanical components and paper
-                tapes, as in Turing's writings on Computability Theory.)
+                nature of certain sets of numbers. (Common programming-language
+                nomenclature like "lambda" and "closure" are due to their
+                ultimate derivation from λ-Calculus. The classical Von Neumann
+                Architecture for digital computers was directly inspired by the
+                idea of embodying a restricted, i.e. finite, version of Turing's
+                a-machines using electronic circuits rather than mechanical
+                components and paper tapes, as in Turing's thought experiments
+                regarding Computability Theory.)
             </p>
 
             <h2>A Not-So-Brief History of How This Happened</h2>
@@ -329,8 +330,8 @@
                     infinite or infinitessimal quantities were found to be
                     useful, such as <i>limits</i> in Calculus or proofs by
                     mathematical induction, mathematicians took pains to
-                    describe them in terms of non-terminating processes rather
-                    than as definite numbers or actual collections.
+                    describe them as being non-terminating processes rather than
+                    as definite numbers or actual collections.
                 </p>
             </details>
 
@@ -386,20 +387,33 @@
                 <summary><dfn>Function</dfn></summary>
                 <a id="function"></a>
                 <p>
-                    In Set Theory, a function is a set of pairs where the
-                    set consisting of the first member of each pair is
-                    called the function's domain and the set consisting of
-                    the second member of each pair is called its co-domain
-                    or range. Any set of pairs defines a function. Functions
-                    with distinctive constraints such as <a href="#injective">injective</a>, <a
-                        href="#surjective">surjective</a> and <a href="#bijective">bijective</a> mappings are
-                    frequently
-                    used to prove relationships between various infinite
-                    sets.
+                    <strong>In Set Theory</strong>, a function is a set of pairs
+                    where the set consisting of the first member of each pair is
+                    called the function's domain and the set consisting of the
+                    second member of each pair is called its co-domain or range.
+                    Any set of pairs defines a function. Functions with
+                    distinctive constraints such as <a href="#injective">injective</a>, <a
+                        href="#surjective">surjective</a> and <a href="#bijective">bijective</a> mappings are frequently
+                    used
+                    to prove relationships between various infinite sets.
                 </p>
                 <p>
-                    In Church's λ-Calculus, functions are the values denoted by
-                    λ expressions. For example,
+                    <strong>In Church's λ-Calculus</strong>, functions are
+                    primitive values which may be applied to paramerts and which
+                    may be defined by λ abstractions. For example,
+                    <math>
+                        <mi>f</mi>
+                        <mi>x</mi>
+                    </math>
+                    is a term that applies the function
+                    <math>
+                        <mi>f</mi>
+                    </math>
+                    to the parameter
+                    <math>
+                        <mi>x</mi>
+                    </math>
+                    and
                     <math>
                         <mo>λ</mo>
                         <mi>x</mi>
@@ -425,6 +439,23 @@
                         </mrow>
                     </math>
                     applies that function to itself.
+                </p>
+                <p>
+                    What the two definitions of the word <i>function</i> share
+                    is the idea of associating an "input" value to an "output."
+                    For set-theoretic mappings, the association may be defined
+                    explicitly (i.e. <i>by extension</i>) simply by listing a
+                    set of pairs such that the first element of each pair is an
+                    "input" (member of the function's domain) and the second
+                    element of each pair is the associated "output" (member of
+                    the function's range). For infinite mappings, the
+                    association must be specified by a rule (i.e. <i>by
+                        intension</i>) for determining the "output" (member of the
+                    function's range) given any member of the domain. The
+                    λ-Calculus is a formal language for defining such rules in a
+                    perfectly general way, where both the domain and range
+                    consist solely of the abstract concept of "association,"
+                    itself.
                 </p>
             </details>
 
@@ -656,23 +687,80 @@
                     </mrow>
                 </math>
                 <p>
-                    The set of real numbers, ℝ, is harder to define
-                    because it represents a mathematical abstraction with
-                    little or no <a href="#metamathematics">metamathematical</a> reality.
-                    Historically, it is understood as the set of points in
-                    the <a href="#continuum">continuum</a>, which is hardly
-                    helpful. It can also be visualized as the set of all
-                    possible sequences of digits that conform to
-                    conventional mathematical notation for real numbers,
-                    which verges on but just barely manages to avoid
-                    circularity.
+                    The set of real numbers, ℝ, is harder to define because it
+                    represents a mathematical abstraction with little or no <a
+                        href="#metamathematics">metamathematical</a> reality.
+                    Historically, it was &mdash; vagueyly &mdash; understood as
+                    the set of points in the <a href="#continuum">continuum</a>,
+                    which is hardly helpful. It can also be visualized as the
+                    set of all possible sequences of digits that conform to
+                    conventional mathematical notation for real numbers, which
+                    verges on but just barely manages to avoid circularity.
+                </p>
+                <p>
+                    In modern times, ℝ is understood as a <i>field</i> that is
+                    <i>Dedekind-complete</i>. Saying that ℝ is a field is just a
+                    compact way of saying that the set of real numbers conforms
+                    to basic axioms necessary for arithmetic, e.g. that it is
+                    totally ordered, supports addition and multiplication
+                    operators with the usual properties like reflexivity,
+                    transitivity and so on. The tricky bit is
+                    <i>completeness</i>, which is necessary for the set to be
+                    continuous. A set is <i>Dedekind-complete</i> if it has the
+                    <i>least upper bound</i> property. This property relies on
+                    ℝ's total ordering while allowing certain operations to be
+                    well-defined for a particular real number even though there
+                    are always an uncountable number of real numbers within any
+                    finiite segment of the coninuum, no matter how small.
+                </p>
+                <p>
+                    Note that the preceding properties of ℝ can only be
+                    asserted, not demonstrated by construction in the same sense
+                    that you can construct a right angle using a straight-edge
+                    and compass. Nor can they be proven logically using
+                    mathematical induction, in the way that many properties of
+                    ℕ, ℤ and ℚ can be. The only reason we feel so confident that
+                    ℝ is continuous is because we are used to extrapolating from
+                    everyday experience into realms beyond the reach of our
+                    senses. Before the development of atomic theory, it was
+                    possible to imagine that they only limit to how small you
+                    could sub-divide material objects was technological. We knew
+                    that there were practical limits to how many times you could
+                    cut a length of string into halves, quarters, eighths and
+                    so. But we could imagine that this was simply a limit based
+                    on how fine a blade we could craft and how tiny a fiber we
+                    could see with our eyes and manipulate with our fingers. At
+                    some point, people realized that the objects with which we
+                    interact at the scale at which our senses operate can only
+                    be sub-divided so far until they stop being just smaller
+                    segments of the same object. With the right technology, one
+                    can divide a piece of alloay into smaller and smaller
+                    pieces. But some point, you will stop obtaining smaller
+                    pieces of the same alloy and, instead, start separating out
+                    the constituent element metals of which the alloy is
+                    composed. Continue that process further and you begin to
+                    break down individual atoms of each element into its
+                    constituent protons, neutrons and electrons. Continue
+                    further and you begin to break down these sub-atomic
+                    particles into quarks and other inmates of the "particle
+                    zoo" of the Standard Moel. If any version of M-Theory is
+                    correct, at some point you will reach a fundamental,
+                    indivisible core of strings, or n-dimensional membranes or
+                    who knows what. Long before then you will have transitioned
+                    from the gross scale of matter where classical, continuous
+                    properties seem to exist to the quantum level where
+                    everything is discrete. The world is digital at most
+                    fundamental level, at least according to Quantum Physics,
+                    not analog. Unless a century and a half of physics is just
+                    flat-out wrong, the continuum can only be regarded as a
+                    convenient mathematical abstraction.
                 </p>
                 <p>
                     While incredibly useful for mathematical theories like
                     Calculus, with all their <a href="#metamathematics">metamathematical</a> utility in
                     science and engineering, the notion of <a href="#continuum">continuum</a>, itself, is incredibly
-                    problematic and directly gives rise to the issues
-                    addressed by Computability Theory.
+                    problematic and directly gives rise to the issues addressed
+                    by Computability Theory.
                 </p>
             </details>
 

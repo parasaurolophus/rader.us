@@ -8,7 +8,7 @@
             © Kirk Rader 2023-2026
         </span>
 
-        <div>
+        <div id="omega">
             <OmegaFormula />
         </div>
 
@@ -22,6 +22,13 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-around;
+}
+
+@media (max-width: 600px) {
+
+    #omega {
+        display: none;
+    }
 }
 </style>
 
