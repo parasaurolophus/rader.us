@@ -28,7 +28,7 @@
     display: none;
 }
 
-@media (width >= 1200px) {
+@media (width >=1200px) {
 
     #omega {
         display: block;

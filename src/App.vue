@@ -15,15 +15,6 @@
     </footer>
 </template>
 
-<style scoped>
-header>*,
-main>*,
-#sidebar>*,
-footer>* {
-    padding: 1rem;
-}
-</style>
-
 <script setup>
 import FooterBar from './components/FooterBar.vue'
 import SideBar from '@/components/SideBar.vue'
