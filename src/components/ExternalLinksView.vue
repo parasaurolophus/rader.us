@@ -33,12 +33,12 @@
     align-items: center;
     justify-content: center;
     width: max-content;
-    max-width: 20em;
+    max-width: 20rem;
 }
 
 .wrapper>* {
-    margin: 1em;
-    padding: 1em;
+    margin: 1rem;
+    padding: 1rem;
 }
 </style>
 

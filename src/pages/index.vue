@@ -2,7 +2,7 @@
 
 <template>
     <div class="container">
-        <img id="portrait" src="/kirk.png">
+        <img id="portrait" src="/kirk-small.png">
         <RouteTree id="menu" />
     </div>
 </template>
@@ -12,31 +12,26 @@
     text-wrap: nowrap;
 }
 
-@media (width < 600px) {
-
-    .container {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: start;
-    }
-
-    #portrait {
-        width: 50vw;
-    }
+.container {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: start;
 }
 
-@media (width >=600px) {
+@media (width >=1200px) {
 
     .container {
-        display: flex;
         flex-flow: row nowrap;
-        align-items: center;
-        justify-content: start;
+        justify-content: center;
+    }
+
+    #menu {
+        margin-right: auto;
     }
 
     #portrait {
-        width: 20em;
+        margin-left: auto;
     }
 }
 </style>

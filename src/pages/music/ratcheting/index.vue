@@ -247,7 +247,7 @@ img {
     max-width: 97%;
 }
 .notes {
-    margin-left: 1em;
+    margin-left: 1rem;
     font-style: italic;
 }
 

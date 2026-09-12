@@ -558,23 +558,23 @@
                 </p>
                 <math display="block">
                     <mi>ℕ</mi>
-                    <mspace width="0.2em" />
+                    <mspace width="0.2rem" />
                     <mo>=</mo>
-                    <mspace width="0.2em" />
+                    <mspace width="0.2rem" />
                     <mrow>
                         <mo>{</mo>
                         <mi>n</mi>
                         <mo>:</mo>
-                        <mspace width="0.2em" />
+                        <mspace width="0.2rem" />
                         <mrow>
                             <mrow>
                                 <mi>n</mi>
                                 <mo>=</mo>
                                 <mn>0</mn>
                             </mrow>
-                            <mspace width="0.2em" />
+                            <mspace width="0.2rem" />
                             <mo>∨</mo>
-                            <mspace width="0.2em" />
+                            <mspace width="0.2rem" />
                             <mrow>
                                 <mo>∃</mo>
                                 <mi>m</mi>
@@ -585,9 +585,9 @@
                                         <mo>∈</mo>
                                         <mi>ℕ</mi>
                                     </mrow>
-                                    <mspace width="0.2em" />
+                                    <mspace width="0.2rem" />
                                     <mo>∧</mo>
-                                    <mspace width="0.2em" />
+                                    <mspace width="0.2rem" />
                                     <mrow>
                                         <mi>n</mi>
                                         <mo>=</mo>
@@ -660,9 +660,9 @@
                         <mo>=</mo>
                         <mn>0</mn>
                     </mrow>
-                    <mspace width="0.2em" />
+                    <mspace width="0.2rem" />
                     <mo>≡</mo>
-                    <mspace width="0.2em" />
+                    <mspace width="0.2rem" />
                     <mrow>
                         <mrow>
                             <mrow>
@@ -811,7 +811,7 @@
 #definitions {
     position: absolute;
     overflow: auto;
-    padding: 0 1em;
+    padding: 0 1rem;
 }
 
 #computability {

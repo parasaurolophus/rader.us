@@ -38,11 +38,11 @@
 .columns>* {
     display: inline-block;
     width: max-content;
-    margin: 0.5em;
-    padding: 0.5em;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
 
 .text {
-    max-width: 20em;
+    max-width: 20rem;
 }
 </style>

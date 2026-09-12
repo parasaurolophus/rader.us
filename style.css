@@ -31,7 +31,7 @@
     --bottom: 1vh;
     --headerheight: 4lh;
     --footerheight: 2lh;
-    --sidebarwidth: 25em;
+    --sidebarwidth: 25rem;
     --maintop: calc(var(--top) + var(--headerheight) + 1vh);
     --mainbottom: calc(var(--bottom) + var(--footerheight) + 1vh);
 }
@@ -93,8 +93,8 @@ aside {
     float: right;
     width: 30%;
     font-style: italic;
-    margin-left: 1em;
-    padding-left: 1em;
+    margin-left: 1rem;
+    padding-left: 1rem;
     border-left-style: solid;
     border-width: 1px;
     border-color: var(--foreground);
@@ -145,7 +145,7 @@ details {
 }
 
 details>*:not(summary) {
-    margin-left: 1em;
+    margin-left: 1rem;
 }
 
 footer {
@@ -203,7 +203,7 @@ summary {
 
 td,
 th {
-    padding: 0.25em;
+    padding: 0.25rem;
 }
 
 thead tr,
@@ -230,7 +230,7 @@ tbody tr:nth-child(even) {
 
 text {
     font-family: 'Latin Modern Math';
-    font-size: 1em;
+    font-size: 1rem;
     fill: currentColor;
 }
 

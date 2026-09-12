@@ -20,7 +20,7 @@ header>*,
 main>*,
 #sidebar>*,
 footer>* {
-    padding: 1em;
+    padding: 1rem;
 }
 </style>
 
@@ -81,8 +81,6 @@ const otherLinks = ref({
 })
 
 const refreshDiagrams = ref(0)
-const route = useRoute()
-const router = useRouter()
 
 const softwareLinks = ref({
     github: {
@@ -125,17 +123,7 @@ provide('toggleTheme', toggleTheme)
 
 mermaidHandler = mermaidClick
 
-onMounted(() => {
-
-    router.afterEach(()=>{
-
-        const sidebar = document.getElementById('sidebar')
-
-        sidebar.style.display = 'none'
-    })
-
-    initializeMermaid()
-})
+onMounted(() => initializeMermaid)
 
 watch(currentTheme, initializeMermaid)
 </script>

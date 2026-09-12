@@ -24,10 +24,14 @@
     justify-content: space-around;
 }
 
-@media (max-width: 600px) {
+#omega {
+    display: none;
+}
+
+@media (width >= 1200px) {
 
     #omega {
-        display: none;
+        display: block;
     }
 }
 </style>

@@ -13,11 +13,13 @@
 <style scoped>
 .container {
     display: flex;
+    flex-flow: row nowrap;
     align-items: center;
+    justify-content: start;
 }
 
 .separator {
-    margin: 0 0.25em;
+    margin: 0 0.25rem;
 }
 
 .label {

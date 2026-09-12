@@ -17,10 +17,10 @@
                 <component :is="display === 'block' ? 'mtd' : 'mrow'">
                     <template v-if="display === 'inline'">
                         <mtext>,</mtext>
-                        <mspace width="0.5em" />
+                        <mspace width="0.5rem" />
                     </template>
                     <mtext>where</mtext>
-                    <mspace width="0.5em" />
+                    <mspace width="0.5rem" />
                     <mrow>
                         <mi>ω</mi>
                         <mo>=</mo>

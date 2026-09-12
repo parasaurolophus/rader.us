@@ -21,11 +21,11 @@
 <style scoped>
 .button {
     cursor: pointer;
-    margin-left: 1em;
+    margin-left: 1rem;
 }
 
 #qr {
-    margin-right: 1em;
+    margin-right: 1rem;
 }
 
 .right {
@@ -41,22 +41,38 @@
     flex-flow: row nowrap;
     align-items: center;
 }
+
+@media print {
+    #sidebar {
+        display: none;
+    }
+}
 </style>
 
 <script setup>
 import BreadCrumbs from '@/components/BreadCrumbs.vue'
 import QrComponent from '@/components/QrComponent.vue'
 import MdiIcon from '@/components/MdiIcon.vue'
-import { mdiThemeLightDark, mdiMenu } from '@mdi/js'
-import { inject } from 'vue'
+import { mdiThemeLightDark } from '@mdi/js'
+import { inject, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 
 const otherLinks = inject('otherLinks')
+const router = useRouter()
 const toggleTheme = inject('toggleTheme')
 
 function toggleSidebar() {
 
-    const sidebar = document.getElementById('sidebar')
-
     sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block'
 }
+
+function hideSidebar() {
+
+    sidebar.style.display = 'none'
+}
+
+onMounted(() => {
+
+    router.afterEach(hideSidebar)
+})
 </script>
