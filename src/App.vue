@@ -123,7 +123,7 @@ provide('toggleTheme', toggleTheme)
 
 mermaidHandler = mermaidClick
 
-onMounted(() => initializeMermaid)
+onMounted(initializeMermaid)
 
 watch(currentTheme, initializeMermaid)
 </script>
