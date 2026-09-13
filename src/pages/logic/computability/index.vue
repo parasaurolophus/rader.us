@@ -2,833 +2,839 @@
 
 <template>
 
-    <div id="container">
+    <div>
+        <h1>Computablity Theory</h1>
 
-        <div id="computability">
+        <p class="subtitle">Or, How Not-So-Real Numbers Changed Everything</p>
 
-            <h1>Computability</h1>
+        <p>
+            Computer Science, as an academic discipline is a direct outgrowth of
+            earlier work in a fairly obscure branch of pure mathematics known as
+            <i>Computability Theory</i>. The primary work on computability was
+            carried out in the 1930's by Alonzo Church in the United States and
+            Alan Turing in the United Kingdom. Between them, they not only
+            resolved the original, central question of what makes a number
+            computable, as an unintended side effect they invented the formal
+            mechanisms defining a programming language and a programmable device
+            on which to run it. Referring to anonymous functions in any programming
+            language as lambdas" is a direct reference to Church's
+            <i>&lambda;-Calculus</i>. Talking about electronic computing devices
+            as "machines" and the basic set of operations such a device can
+            perform as "machine language" is a direct reference to Turing's
+            work.
+        </p>
 
-            <p>
-                <strong>
-                    ...or why most real numbers are not as real as you think,
-                    and yet still managed to change everything.
-                </strong>
-            </p>
+        <h2>From Euclid to Cantor</h2>
 
-            <p>
-                Once upon a time, there was brief but intense interest in a branch
-                of mathematics called Computability Theory. The essential question
-                of Computability Theory is, "What makes a number computable?" That
-                question arises based on the recognition that if you take the
-                notion of <a href="#continuum">the continuum</a> seriously &mdash;
-                as is required, for example, for mathematical notions like
-                <i>limits</i> and <i>derivatives</i> to make sense &mdash; then
-                there exists for only an infinitessimal subset of all the real
-                numbers any mathematical formula that can be used to compute
-                their values. This turns out to be case because:
-            </p>
+        <p>
+            To understand the underlying problem which Church and Turing were
+            trying to solve through their work on computability requires delving
+            into a very long succession of mathematical cononundrums which
+            begins, like so much else, in ancient Greece. Here is a very
+            abbreviated version of this history.
+        </p>
 
-            <ol>
+        <p>
+            From the time at which Euclid's <i>Elements</i> was first written
+            onwards, mathematicians in the Islamic and Western European
+            tradition were slightly obsessed with the fifth of Euclid's axioms
+            of Geometry, which came to be known as the <i>parallel postulate</i>
+            (despite the word "parallel" appearing nowhere in Euclid's original
+            version of it.) The reason that the fifth axiom caused so much
+            discussion is that it looks and sounds nothing like the preceding
+            four axioms. While the first four axioms are very short, obvious
+            declarative sentences (at least when translated from the ancient
+            Greek dialect used in Euclid's text into modern terminology):
+        </p>
 
-                <li>
-                    The number of points on the continuum between any two
-                    points is not <a href="#countable">countable</a>.
-                </li>
+        <ol>
+            <li>
+                Any two points can be joined by a straight line.
+            </li>
+            <li>
+                Any line can be extended indefinitely from either of its ends.
+            </li>
+            <li>
+                Any line can be rotated around either of its ends to form a
+                circle.
+            </li>
+            <li>
+                All right (i.e. 90°) angles are equal.
+            </li>
+        </ol>
 
-                <li>
-                    There are only a countable number of formulas of any
-                    mathematical language that can be used to perform
-                    computations.
-                </li>
+        <p>
+            The first three of the preceding axioms refer to the basic
+            operations of geometric construction using a straight-edge and
+            compass. The fourth is simply a special case, applied to right
+            angles, of the general principle that things with identical
+            properties are identical to each other.
+        </p>
 
-            </ol>
+        <p>
+            The fifth postulate, on the other hand, is much wordier and requires
+            more thought to work out what it is even saying.
+        </p>
 
-            <p>
-                The first of the preceding claims, that the <a href="#cardinality">cardinality</a> of the set of real
-                numbers,
-                ℝ, is not countable, was shown by Georg Cantor and others in the
-                late 19th century. The second was shown in the early 20th
-                century by Kurt Gödel and others. Specifically, any formal
-                language with a finite number of rules for combining a finite
-                number of symbols into well-formed formulas can produce only a
-                countable number of such formulas, so any mapping from
-                mathematical forumals to any continuous set of real numbers can
-                be at best <a href="#injective">injective</a> and never <a href="#surjective">surjective</a>.
-            </p>
+        <ol start="5">
+            <li>
+                If two lines that cross a given a line are extended
+                indefinitely, the two lines will eventually intersect on the
+                side of the given one where the angles formed by their
+                intersection with the given one add up to less than the sum of
+                two right angles.
+            </li>
+        </ol>
 
-            <p>
-                Taken together, the two observations about the relative
-                cardinalities of the sets of real numbers and the number of
-                formulas available to compute their values, shows that almost no
-                point on the continuum corresponds to a value that can be
-                characterized mathematically in any useful way. If one considers
-                only logical validity, rather than empirical truth, as being
-                important for any given mathematical outcome then all of the
-                preceding are simply interesting properties of certain abstract
-                mathematical entities. When considering <a href="#metamathematics">metamathematical</a> theories of the
-                kind used by scientists and engineers, these observations should
-                give one pause (to say the least).
-            </p>
+        <p>
+            Most people find a diagram helpful:
+        </p>
 
-            <p>
-                Quantum Physics, famously, has caused much philosophical angst for
-                as long as it has existed. Albert Einstein coined the concept of
-                <i>quanta</i> in describing certain properties of light as
-                resulting from non-continuous properties of photons. But despite
-                having been as responsible as any single individual for having
-                invented it, Einstein was very slow to embrace many of the core
-                concepts of Quantum Mechanics ("rolling dice with the universe,"
-                "spooky action at a distance") even as more and more
-                experimental evidence piled up confirming things like
-                non-determinism and entanglement.
-            </p>
+        <ParallelPostulate />
 
-            <p>
-                But here's the thing: what appear to be the most paradoxical
-                aspects of modern physics are only paradoxical when failing to
-                account for some really basic principles of <a href="#metaphysics">metaphysics</a> and metamathematics.
-                Nothing
-                should be <em>less</em> surprising than the discovery that
-                things like billiard balls are not made of particles that behave
-                just like tinier billiard balls caroming off one another.
-                Generally speaking, individual parts rarely resemble wholes.
-                There is nothing clock-like about an individual cog, spring or
-                lever even when a collection of such items can be fit together
-                to make a clock. To claim that there is anything particle-like
-                or wave-like about an electron and then express mystification
-                that an electron can somehow be both a particle and a wave is to
-                miss entirely that it would be quite mystifying to discover that
-                actual particles or waves in matter operating at the scale
-                perceptible to human senses are composed of <em>literal</em>
-                particles or waves operating at sub-atomic scale. Rather than
-                being mystified at the outcome of things like double-slit
-                experiments, scientists should have simply observed that, "well,
-                of course, things like photons and electrons can't
-                <em>really</em> be either particles or waves even though it is
-                sometimes useful to treat them analogically like one or the
-                other for the purposes of this experiment or that."
-            </p>
+        <p>
+            When visualized that way, the fifth axiom seems as intuitively valid
+            as the first four. But it still seems like a very different kind of
+            beast. So different, in fact, that starting in Euclid's time and for
+            millenia onward there were numerous attempts to either show that it
+            was actually a theorem hiding some set of simpler axioms under its
+            skirts or else find some way of replacing it with another axiom
+            whose style is more in keeping with the other four. The most famous
+            example of the latter approach is Playfair's axiom, which can be
+            expressed in contemporary English as:
+        </p>
 
-            <p>
-                When trying to understand and explain the nature of reality far
-                below the threshold perciptible to human senses, it is all too
-                easy to forget that one is <em>always</em> reasoning by
-                abstraction and analogy. The mathematical tools available to
-                scientists all are based on the notion of a continuum. But the
-                whole point of Quantum Physics is that the deepestest, smallest
-                levels of reality that we can explore experimentally are
-                non-continuous. How could one expect there not to be some
-                counter-intuitve results along the way? When viewed from this
-                perspective, even some "settled" questions suddenly feel less
-                certain. For example, Bell-type experiments have consistently
-                shown that hidden variables are nowhere to be found in nature.
-                But the reasoning underlying them is built on a dizzying edifice
-                of mathematics that is rooted in Calculus. I do not claim to
-                know that Bell inequalities are or are not a good model of how
-                to test for hidden variables in reality. I simply find the
-                argument that they are somehow conclusive not very convincing
-                because they ignore the fundamental question of whether or not
-                real numbers can, in principle, provide a reliable basis for a
-                metamathematical theory of Quantum Physics in the first place.
-                Bell-type experiments require supremely exacting setup and
-                measurement. Measurement requires assigning numeric values to
-                properties of the subjects of the experiments. Exact values can
-                only be assigned using computable numbers. Intuitively, it seems
-                that there could be enough wiggle room between the cracks left
-                when applying continuous mathematical functions to
-                non-continuous reality in which to hide some local variables.
-                Can anyone ever really know? Maybe not. Everyone should just
-                make themselves fine with that. Any other way lies madness.
-            </p>
+        <blockquote>
+            Given a line and a point not on that line, at most one line can be
+            drawn through the point that does not intersect the given line.
 
-            <p>
-                The discipline of Computablity Theory was founded in the 1930's
-                by Alonzo Church and Alan Turing. Church took a formal approach.
-                He defined a deliberately extremely simple formal language,
-                λ-Calculus, for defining <a href="#function">functions</a> in a
-                highly abstract fashion. Church's hypothesis was that the result
-                of evaluating every possible value of every well-formed formula
-                of λ-Calculus was identical to the set of computable numbers.
-                Turing used thought-experiments based on idealized devices he
-                called <i>a-machines</i> (<i>a</i> for <i>automatic</i> or
-                <i>automaton</i>; it was Church who first started calling them
-                <i>Turing machines</i>). These were, again, extremely simple
-                mechanisms for generating sequences of digits according to
-                well-defined rules. The only reason one could not build an
-                actual a-machine was that in order satisfy the desired results
-                for Computability Theory they would have to be capable of
-                producing infinitely long sequences. Turing's hypothesis was
-                that the set of all possible outputs of all correctly
-                implemented a-machines was identical to the set of computable
-                numbers. These two hypotheses have come to be known together as
-                the Church-Turing Thesis, and the initial question of
-                Computability Theory was considered settled, when it was shown
-                that both approaches produce the same results.
-            </p>
+            <i>John Playfair</i>
+        </blockquote>
 
-            <p>
-                Church's and Turing's work might have ended up as little more
-                than a footnote in the history of mathematics. In fact, their
-                work ushered in the Information Age. The way the equivalence of
-                their two approaches was proven was to show that the behavior of
-                any a-machine could be represented as an expression of
-                λ-Calculus and, conversely, that any expression of λ-Calculus
-                could be used as a set of instructions for determining the
-                behavior of an a-machine. Between them, they invented the notion
-                of a programmable digital computer and a programming language as
-                a side-effect of purely abstract mathematical inquiries on the
-                nature of certain sets of numbers. (Common programming-language
-                nomenclature like "lambda" and "closure" are due to their
-                ultimate derivation from λ-Calculus. The classical Von Neumann
-                Architecture for digital computers was directly inspired by the
-                idea of embodying a restricted, i.e. finite, version of Turing's
-                a-machines using electronic circuits rather than mechanical
-                components and paper tapes, as in Turing's thought experiments
-                regarding Computability Theory.)
-            </p>
+        <p>
+            Playfair showed that the phrase "at most one line" is sufficient to
+            serve as a replacement for Euclid's parallel postulate when taken
+            together with the other axioms and "postulates" of planar geometry.
+            In fact, the stronger "exactly one line" is true, among the many
+            theorems that can be proven whether using Euclid's or Playfair's
+            version of the fifth axiom.
+        </p>
 
-            <h2>A Not-So-Brief History of How This Happened</h2>
+        <p>
+            What does any of this have to do with Computability Theory, let
+            alone Computer Science? The history of mathematics consists of
+            literally thousands of years' worth of successive, incremental
+            refinement of earlier theories. Questions that were first posed in
+            the 3rd Century BCE were still being considered in the 19th Century
+            CE. Along the way, the tools and modes of thought mathematicians
+            employed when tackling these kinds of questions were utterly
+            transformed. In Euclid's time, Mathematics was considered to be a
+            science not different in kind from Physics or Chemistry. That
+            <math>
+                <mrow>
+                    <mn>2</mn>
+                    <mo>+</mo>
+                    <mn>2</mn>
+                </mrow>
+                <mo>=</mo>
+                <mn>4</mn>
+            </math>
+            was understood in classical times as nothing different from the fact
+            that if you hold two pebbles in your hand and then pick up two more,
+            you will be holding four pebbles. Even though Euclid's
+            <i>Elements</i> is considered to be one of the earliest known
+            examples of a truly axiomatic treatment of a branch of Mathematics,
+            the approach taken is firmly rooted in this empiricist world view.
+            Hence its first three axioms' fundamental reliance on
+            "constructions" using straight-edge and compass in the method of
+            proving many of its theorems.
+        </p>
 
-            <p>
-                From time immemorial, mathematicians in the Islamic and Western
-                European tradition were wary of Euclid's fifth "postulate" in
-                his axiomatic treatment of planar Geometry:
-            </p>
+        <aside>
+            At the time, the kinds of "Non-Euclidean Geometries" pioneered by
+            Lobachevsky and Riemann were considered to be abstractions that did
+            not correspond with "reality" in the way that Euclid's, apparently,
+            does (at least when drawing figures on a flat sheet of paper). As
+            physicists used the kinds of mathematical tools afforded by these
+            new approaches to form theories related to phenomena outside the
+            scale at which human senses operate, they discovered that when
+            considered at the cosmologically enormous scale of General
+            Relativity or the ultra-microscopic scale of Quantum Mechanics, the
+            real world often presents features better described in non-Euclidean
+            terms. More on this, later...
+        </aside>
 
-            <blockquote>
-                <p>
-                    That, if a straight line falling on two straight lines make
-                    the interior angles on the same side less than two right
-                    angles, the two straight lines, if produced indefinitely,
-                    meet on that side on which are the angles less than the two
-                    right angles.
-                </p>
-                <p>
-                    - Euclid, <i>Elements</i>, translated by Heath [1908]
-                </p>
+        <p>
+            By the 1800's, empiricism was seen as a limitation to a mathematical
+            theory rather than its grounding and ultimate source of truth.
+            Attempts like Playfair's to come up with "better" axioms than
+            Euclid's inspired even more audacious projects. In particular,
+            Nicolai Lobachevsky and Bernhard Riemann went beyond Playfair in not
+            just creating alternative versions of the axioms of planar geometry
+            that could produce an equivalent set of theorems to Euclid's.
+            Lobachevsky and Riemann, working indepently, showed (among many
+            other things) that it was possible to define an infinite number of
+            alternative Geometries, each of which produced different sets of
+            theorems from the others, but where each was just as internally
+            consistent with itself as Euclid's.
+        </p>
 
-            </blockquote>
+        <p>
+            This helped crystalize a change that had already been under way for
+            some while. From that time onward, the focus of Mathematics shifted
+            firmly and finally away from empirical truth to logical validity. In
+            order to embrace the mathematically powerful and useful results of
+            Lobachevsky's and Riemann's theories, mathematicians had to renounce
+            any requirement for a mathematical structure to correspond to
+            observable phenomena. From a 19th Century perspective, while only
+            Euclidean Geometry was "true" in terms of constructions performable
+            in the real world, all of the literally boundless number of
+            alternative non-Euclidean Geometries are equally "valid" in the
+            sense of each producing its own unique set of provably consistent
+            theorems.
+        </p>
 
-            <aside>
-                <blockquote>
-                    <p>
-                        In a plane, given a line and a point not on it, at most
-                        one line parallel to the given line can be drawn through
-                        the point.
-                    </p>
-                    <p>
-                        - Playfair [1846]
-                    </p>
-                </blockquote>
-            </aside>
+        <p>
+            One effect of this shift of focus was to introduce the concept
+            of <i>Metamathematics</i>. Metamathematics posits a conceptual
+            mapping from particular Mathematical theories to some set of
+            observable features of objects in the real world. I.e. while all
+            Geometries are equally valid from an abstract Mathematical point of
+            view, it is a Metamathetical theory that gives Euclidean a special
+            status as also being a true description of figures drawn on a flat
+            sheet of paper using straigt-edge and compass. This notion is not
+            specific to Geometry. Number Theory is the study of <i>groups</i>
+            and <i>fields</i> with features which make them similar to
+            Arithmetic, while Arithmetic enjoys the metamathematical status of
+            corresponding to what happens when you count actual objects in the
+            real world. And so on across all the branches of Mathematics.
+        </p>
 
-            <p>
-                Everyone recognized that the "parallel postulate," as it came to
-                be known despite the word "parallel" not appearing anywhere in
-                it, was necessary &mdash; or something equivalent, like
-                Playfair's Axiom (which <em>does</em> mention parallel lines)
-                &mdash; in order to make Euclid's system work. The trouble is
-                that the first four of Euclid's axioms are extremely short,
-                declarative statements that need no explanation or justification
-                to be understood and accepted intuitively. Expressed in
-                contemporary English:
-            </p>
+        <aside>
+            Leibnitz' and Newton's arguments denying infinite quantities were,
+            of course, poppycock. If you accept that your theory acknowledges
+            the existence of infinitessimal differences it thereby acknowledges
+            the existence of infinite differences, as well. The one is simply
+            the algebraic inverse of the other:
 
-            <div>
-                <ol>
-
-                    <li>
-                        Any two points can be joined by a straight line.
-                    </li>
-
-                    <li>
-                        Any line can be extended indefinitely from either end.
-                    </li>
-
-                    <li>
-                        A line can be rotated around one end to form a circle.
-                    </li>
-
-                    <li>
-                        All right (i.e. 90°) angles are equal to each other.
-                    </li>
-
-                </ol>
-            </div>
-
-            <p>
-                By comparison, the fifth axiom is long and complex, and most
-                people benefit from a diagram in order to understand what it is
-                even saying:
-            </p>
-
-            <ParallelPostulate />
-
-        </div>
-
-        <div id="definitions">
-
-            <p class="title">
-                Definitions
-            </p>
-
-            <details name="definitions">
-                <summary><dfn>Bijective Mapping</dfn></summary>
-                <a id="bijective"></a>
-                <p>
-                    A bijective mapping is one that is both <a href="#injective">injective</a> and <a
-                        href="#surjective">surjective</a>. Since this establishes a
-                    1:1 relationship between every element of the domain and a
-                    unique corresponding element of the co-domain, the <a href="#cardinality">cardinalities</a> of both
-                    sets are
-                    considered equal.
-                </p>
-            </details>
-
-            <details name="definitions">
-                <summary><dfn>Cardinality</dfn></summary>
-                <a id="cardinality"></a>
-                <p>
-                    The cardinality of a finite set is the number of
-                    elements it contains. E.g. the cardinality of
-                    <math>
-                        <mo>{</mo>
-                        <mi>a</mi>
-                        <mo>,</mo>
-                        <mi>b</mi>
-                        <mo>,</mo>
-                        <mi>c</mi>
-                        <mo>}</mo>
-                    </math>
-                    is 3.
-                </p>
-                <p>
-                    For infinite sets, cardinality is defined by constructing
-                    mappings, i.e. <a href="#function">functions</a>. For
-                    example, if a <a href="#bijective">bijective mapping</a> can
-                    be shown to exist between two infinite sets that shows they
-                    have the same cardinality. Cardinalities can be ordered by
-                    showing that mappings between various sets can be at best <a href="#injective">injective</a> or <a
-                        href="#surjective">surjective</a>. This, in turn, is used to
-                    define a sequence of infinite <a href="#ordinal"> ordinal
-                        numbers</a> analogous to the ordering defined by the
-                    sequence of natural numbers.
-                </p>
-            </details>
-
-            <details name="definitions">
-                <summary><dfn>Completed Infinity</dfn></summary>
-                <a id="infinity"></a>
-                <p>
-                    The term <i>completed infinity</i> may refer to a set whose
-                    <a href="#cardinality">cardinality</a> is infinite, or to
-                    such a set's cardinality when used in a numerical context.
-                    For most of the history of Mathematics in the Islamic and
-                    Western European tradition, the very notion of a completed
-                    infinity was anathema. One was not allowed to talk about
-                    things like "the set of natural numbers." Even where
-                    infinite or infinitessimal quantities were found to be
-                    useful, such as <i>limits</i> in Calculus or proofs by
-                    mathematical induction, mathematicians took pains to
-                    describe them as being non-terminating processes rather than
-                    as definite numbers or actual collections.
-                </p>
-            </details>
-
-            <details name="definitions">
-                <summary><dfn>Continuum</dfn></summary>
-                <a id="continuum"></a>
-                <p>
-                    The <i>continuum</i> is what you might have been taught to
-                    refer to as "the number line" in elementary school. A set of
-                    numbers is continuous if there are an infinite number of
-                    values between any two members of the set. The set of
-                    natural numbers, ℕ, is not continuous because there is no
-                    natural number whose value is greater than 1 and less than
-                    2, nor a number greater than 2 and less than 3, and so on.
-                    The real numbers, ℝ, are assumed to be continuous by
-                    definition. One consequence of this assumption is that any
-                    possible sequence of digits conforming to the rules of
-                    mathematical notation denotes a particular real quantity,
-                    which may or may not correspond to any natural or rational
-                    number, or even a computable number. In fact, the nature of
-                    the continuum implies that only an infinitessimal percentage
-                    of real numbers are computable. This begs two questions:
-                </p>
-
-                <ol>
-                    <li>What distinguishes the subset of computable numbers></li>
-                    <li>How "real" are non-computable numbers></li>
-                </ol>
-
-                <p>
-                    The first of the preceding questions launched the field of
-                    Computability Theory. The second is asked less often, but is
-                    of increasing significance for <a href="#metamathematics">metamathematical</a> theories on
-                    which scientists and engineers rely as technologies advance
-                    that analyze and utilize quantum effects.
-                </p>
-            </details>
-
-            <details name="definitions">
-                <summary><dfn>Countable</dfn></summary>
-                <a id="countable"></a>
-                <p>
-                    Any set, <i>S</i>, is countable if it is possible to
-                    define an <a href="#injective">injective mapping</a>
-                    from the set of natural numbers, <i>ℕ</i> onto
-                    <i>S</i>. Every finite set is countable. An infinite set is
-                    countable if it is possible to construct a <a href="#bijective">bijective mapping</a> between it and
-                    ℕ.
-                </p>
-            </details>
-
-            <details name="definitions">
-                <summary><dfn>Function</dfn></summary>
-                <a id="function"></a>
-                <p>
-                    <strong>In Set Theory</strong>, a function is a set of pairs
-                    where the set consisting of the first member of each pair is
-                    called the function's domain and the set consisting of the
-                    second member of each pair is called its co-domain or range.
-                    Any set of pairs defines a function. Functions with
-                    distinctive constraints such as <a href="#injective">injective</a>, <a
-                        href="#surjective">surjective</a> and <a href="#bijective">bijective</a> mappings are frequently
-                    used
-                    to prove relationships between various infinite sets.
-                </p>
-                <p>
-                    <strong>In Church's λ-Calculus</strong>, functions are
-                    primitive values which may be applied to paramerts and which
-                    may be defined by λ abstractions. For example,
-                    <math>
-                        <mi>f</mi>
-                        <mi>x</mi>
-                    </math>
-                    is a term that applies the function
-                    <math>
-                        <mi>f</mi>
-                    </math>
-                    to the parameter
-                    <math>
-                        <mi>x</mi>
-                    </math>
-                    and
-                    <math>
-                        <mo>λ</mo>
-                        <mi>x</mi>
-                        <mo>.</mo>
-                        <mrow>
-                            <mi>x</mi>
-                            <mi>x</mi>
-                        </mrow>
-                    </math>
-                    defines a function that applies whatever function is
-                    passed as a parameter to itself. The term,
-                    <math>
-                        <mrow v-for="count in 2">
-                            <mo>(</mo>
-                            <mo>λ</mo>
-                            <mi>x</mi>
-                            <mo>.</mo>
-                            <mrow>
-                                <mi>x</mi>
-                                <mi>x</mi>
-                            </mrow>
-                            <mo>)</mo>
-                        </mrow>
-                    </math>
-                    applies that function to itself.
-                </p>
-                <p>
-                    What the two definitions of the word <i>function</i> share
-                    is the idea of associating an "input" value to an "output."
-                    For set-theoretic mappings, the association may be defined
-                    explicitly (i.e. <i>by extension</i>) simply by listing a
-                    set of pairs such that the first element of each pair is an
-                    "input" (member of the function's domain) and the second
-                    element of each pair is the associated "output" (member of
-                    the function's range). For infinite mappings, the
-                    association must be specified by a rule (i.e. <i>by
-                        intension</i>) for determining the "output" (member of the
-                    function's range) given any member of the domain. The
-                    λ-Calculus is a formal language for defining such rules in a
-                    perfectly general way, where both the domain and range
-                    consist solely of the abstract concept of "association,"
-                    itself.
-                </p>
-            </details>
-
-            <details name="definitions">
-                <summary><dfn>Injective Mapping</dfn></summary>
-                <a id="injective"></a>
-                <p>
-                    An injective mapping is a <a href="#function">function</a>
-                    that assigns a unique element from its domain to every
-                    element of its range. For any two sets, <i>A</i> and
-                    <i>B</i>, if an injective mapping from <i>A</i> to <i>B</i>
-                    exists, but not a <a href="#surjective">surjective
-                        mapping</a> then <i>A</i> has a <a href="#cardinality">cardinality</a> less than or equal to
-                    that of <i>B</i>.
-                </p>
-            </details>
-
-            <details name="definitions">
-                <summary><dfn>Metamathematics</dfn></summary>
-                <a id="metamathematics"></a>
-                <p>
-                    Once mathematicians replaced empirical verifiabily with
-                    logical validity as the ultimate goal of mathematical
-                    theories, scientists and engineers came under the obligation
-                    of embracing additional theories &mdash; consciously or not
-                    &mdash; mapping features of a given mathematical theory to
-                    features of the real world. Such a mapping is referred to as
-                    a <i>metamathematical theory</i>. Historically, the
-                    metamathematical theory was usually baked into any
-                    presentation of a mathematical theory such that the
-                    distinction was rarely noticed. The first three of Euclid's
-                    axioms, for example, are all equally understandable as
-                    axioms and as directions for performing constructions with
-                    straight-edge and compass. It was only after mathematics had
-                    evolved to the point that theories were developed for things
-                    which manifestly can never be constructed in the real world,
-                    like infinite sets, that the distinction between mathematics
-                    and metamathematics became a topic of serious, explicit
-                    philosophical discussion.
-                </p>
-                <p>
-                    Of course, this revelation did not happen all at once.
-                    Leibnitz and Newton, for example, both went to some
-                    pains to try to stave off accusations that their
-                    versions of Calculus implied the existence of infinite
-                    quantities when, of course, they actually do. (Calculus
-                    is all about infinitessimal differences in quantity and
-                    the simple algebraic inverse of an infinitessimal is an
-                    infinite quantity.)
-                </p>
-            </details>
-
-            <details name="definitions">
-                <summary><dfn>Metaphysics</dfn></summary>
-                <a id="metaphysics"></a>
-                <p>
-                    The term <i>metaphysics</i> here is being used in the
-                    technical sense of that branch of Analytic Philosophy
-                    concerned with the ultimate nature of reality. It should not
-                    be confused with popular usage having to do with mystical or
-                    spiritual beliefs. Traditional conundrums of Metaphysics as
-                    an academic discipline arise from the closely related field
-                    of Epistemology, the study of what it is possible to know.
-                    The historical dialectic between Realism and Idealism, for
-                    example, involving the sounds falling tress make in
-                    uninhabited forests lives on in fringe scientific theories
-                    that claim Quantum Physics implies that we are living in a
-                    multiverse (vs the Copenhagen interpretation, which simply
-                    begs for a move like Berkeley's attempt to rescue his
-                    version of Idealism by claiming that God functions as a
-                    universal observer by which objective reality is maintained)
-                    or that we are all just NPC's in some super-intelligence's
-                    virtual reality game. Is it not more plausible to think that
-                    there is just something missing from our understanding of
-                    concepts like superposition and quantum indeterminacy than
-                    that existence depends on an observer? If the latter were
-                    true, it is hard to see how an appeal to religion can be
-                    avoided in order to reconcile the possibility of the Big
-                    Bang occuring before any physical observer could, in
-                    principle, exist. (This is a perfect example of why
-                    discussions of academic Metaphysics are so easily conflated
-                    with "metaphysics" of the sage-burning, crystal-brandishing
-                    persuasion.)
-                </p>
-            </details>
-
-            <details name="definitions">
-                <summary><a kd="number"></a><dfn>Number</dfn></summary>
-                <p>
-                    Traditionally, mathematicians have discussed various
-                    named sets of numbers, grouped according to how their
-                    elements are constructed.
-                </p>
-                <p>
-                    The set of <i>natural numbers</i>, ℕ, is defined
-                    inductively. (Historically, ℕ was usually defined
-                    so as to exclude 0 while in modern times it is conventional
-                    to start the indcution with 0. From a Philosophical point of
-                    view, it makes no substantive difference.)
-                </p>
-                <math display="block">
-                    <mi>ℕ</mi>
-                    <mspace width="0.2rem" />
-                    <mo>=</mo>
-                    <mspace width="0.2rem" />
+            <math display="block">
+                <mrow>
                     <mrow>
-                        <mo>{</mo>
-                        <mi>n</mi>
-                        <mo>:</mo>
-                        <mspace width="0.2rem" />
-                        <mrow>
+                        <munder>
+                            <mo>lim</mo>
                             <mrow>
-                                <mi>n</mi>
-                                <mo>=</mo>
+                                <mi>x</mi>
+                                <mo>&rightarrow;</mo>
+                                <mn>&infin;</mn>
+                            </mrow>
+                        </munder>
+                        <mo>(</mo>
+                        <mfrac>
+                            <mn>1</mn>
+                            <mi>x</mi>
+                        </mfrac>
+                        <mo>)</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mn>0</mn>
+                </mrow>
+                <mo>&equiv;</mo>
+                <mrow>
+                    <mrow>
+                        <munder>
+                            <mo>lim</mo>
+                            <mrow>
+                                <mi>x</mi>
+                                <mo>&rightarrow;</mo>
                                 <mn>0</mn>
                             </mrow>
-                            <mspace width="0.2rem" />
-                            <mo>∨</mo>
-                            <mspace width="0.2rem" />
-                            <mrow>
-                                <mo>∃</mo>
-                                <mi>m</mi>
-                                <mrow>
-                                    <mo>(</mo>
-                                    <mrow>
-                                        <mi>m</mi>
-                                        <mo>∈</mo>
-                                        <mi>ℕ</mi>
-                                    </mrow>
-                                    <mspace width="0.2rem" />
-                                    <mo>∧</mo>
-                                    <mspace width="0.2rem" />
-                                    <mrow>
-                                        <mi>n</mi>
-                                        <mo>=</mo>
-                                        <mrow>
-                                            <mi>m</mi>
-                                            <mo>+</mo>
-                                            <mn>1</mn>
-                                        </mrow>
-                                    </mrow>
-                                    <mo>)</mo>
-                                </mrow>
-                            </mrow>
-                        </mrow>
-                        <mo>}</mo>
-                    </mrow>
-                </math>
-                <p>
-                    Informally, ℕ is the set consiting of 0 and
-                    every number that can be obtained by adding one to some
-                    existing element of ℕ.
-                </p>
-                <p>
-                    To continue informally, the set of integers, ℤ,
-                    is the union of ℕ and the set that results from
-                    negating every element of ℕ. (Historically,
-                    many arguments that refer to ℕ actually apply
-                    to ℤ.)
-                </p>
-                <p>
-                    The set of rational numbers, ℚ, contains all
-                    possible pairs of elements from ℤ with the
-                    exception of pairs where the second (denominator) member
-                    is 0.
-                </p>
-
-                <p>
-                    Note that if one accepts
-                    <math>
-                        <mn>∞</mn>
-                    </math> as a legitimate member of
-                    ℚ then the only pair that needs exclusion is
-                    <math>
-                        <mo>&lt;</mo>
-                        <mn>0</mn>
-                        <mo>,</mo>
-                        <mn>0</mn>
-                        <mo>&gt;</mo>
-                    </math> since
-                </p>
-                <math display="block">
-                    <mrow>
-                        <mrow>
-                            <mrow>
-                                <munder>
-                                    <mo>lim</mo>
-                                    <mrow>
-                                        <mi>x</mi>
-                                        <mo>→</mo>
-                                        <mn>∞</mn>
-                                    </mrow>
-                                </munder>
-                                <mo>(</mo>
-                                <mfrac>
-                                    <mn>1</mn>
-                                    <mn>x</mn>
-                                </mfrac>
-                                <mo>)</mo>
-                            </mrow>
-                        </mrow>
-                        <mo>=</mo>
-                        <mn>0</mn>
-                    </mrow>
-                    <mspace width="0.2rem" />
-                    <mo>≡</mo>
-                    <mspace width="0.2rem" />
-                    <mrow>
-                        <mrow>
-                            <mrow>
-                                <munder>
-                                    <mo>lim</mo>
-                                    <mrow>
-                                        <mi>x</mi>
-                                        <mo>→</mo>
-                                        <mn>0</mn>
-                                    </mrow>
-                                </munder>
-                                <mo>(</mo>
-                                <mfrac>
-                                    <mn>1</mn>
-                                    <mn>x</mn>
-                                </mfrac>
-                                <mo>)</mo>
-                            </mrow>
-                        </mrow>
-                        <mo>=</mo>
-                        <mn>∞</mn>
-                    </mrow>
-                </math>
-                <p>
-                    The set of real numbers, ℝ, is harder to define because it
-                    represents a mathematical abstraction with little or no <a
-                        href="#metamathematics">metamathematical</a> reality.
-                    Historically, it was &mdash; vagueyly &mdash; understood as
-                    the set of points in the <a href="#continuum">continuum</a>,
-                    which is hardly helpful. It can also be visualized as the
-                    set of all possible sequences of digits that conform to
-                    conventional mathematical notation for real numbers, which
-                    verges on but just barely manages to avoid circularity.
-                </p>
-                <p>
-                    In modern times, ℝ is understood as a <i>field</i> that is
-                    <i>Dedekind-complete</i>. Saying that ℝ is a field is just a
-                    compact way of saying that the set of real numbers conforms
-                    to basic axioms necessary for arithmetic, e.g. that it is
-                    totally ordered, supports addition and multiplication
-                    operators with the usual properties like reflexivity,
-                    transitivity and so on. The tricky bit is
-                    <i>completeness</i>, which is necessary for the set to be
-                    continuous. A set is <i>Dedekind-complete</i> if it has the
-                    <i>least upper bound</i> property. This property relies on
-                    ℝ's total ordering while allowing certain operations to be
-                    well-defined for a particular real number even though there
-                    are always an uncountable number of real numbers within any
-                    finiite segment of the coninuum, no matter how small.
-                </p>
-                <p>
-                    Note that the preceding properties of ℝ can only be
-                    asserted, not demonstrated by construction in the same sense
-                    that you can construct a right angle using a straight-edge
-                    and compass. Nor can they be proven logically using
-                    mathematical induction, in the way that many properties of
-                    ℕ, ℤ and ℚ can be. The only reason we feel so confident that
-                    ℝ is continuous is because we are used to extrapolating from
-                    everyday experience into realms beyond the reach of our
-                    senses. Before the development of atomic theory, it was
-                    possible to imagine that they only limit to how small you
-                    could sub-divide material objects was technological. We knew
-                    that there were practical limits to how many times you could
-                    cut a length of string into halves, quarters, eighths and
-                    so. But we could imagine that this was simply a limit based
-                    on how fine a blade we could craft and how tiny a fiber we
-                    could see with our eyes and manipulate with our fingers. At
-                    some point, people realized that the objects with which we
-                    interact at the scale at which our senses operate can only
-                    be sub-divided so far until they stop being just smaller
-                    segments of the same object. With the right technology, one
-                    can divide a piece of alloay into smaller and smaller
-                    pieces. But some point, you will stop obtaining smaller
-                    pieces of the same alloy and, instead, start separating out
-                    the constituent element metals of which the alloy is
-                    composed. Continue that process further and you begin to
-                    break down individual atoms of each element into its
-                    constituent protons, neutrons and electrons. Continue
-                    further and you begin to break down these sub-atomic
-                    particles into quarks and other inmates of the "particle
-                    zoo" of the Standard Moel. If any version of M-Theory is
-                    correct, at some point you will reach a fundamental,
-                    indivisible core of strings, or n-dimensional membranes or
-                    who knows what. Long before then you will have transitioned
-                    from the gross scale of matter where classical, continuous
-                    properties seem to exist to the quantum level where
-                    everything is discrete. The world is digital at most
-                    fundamental level, at least according to Quantum Physics,
-                    not analog. Unless a century and a half of physics is just
-                    flat-out wrong, the continuum can only be regarded as a
-                    convenient mathematical abstraction.
-                </p>
-                <p>
-                    While incredibly useful for mathematical theories like
-                    Calculus, with all their <a href="#metamathematics">metamathematical</a> utility in
-                    science and engineering, the notion of <a href="#continuum">continuum</a>, itself, is incredibly
-                    problematic and directly gives rise to the issues addressed
-                    by Computability Theory.
-                </p>
-            </details>
-
-            <details name="definitions">
-                <summary><dfn>Ordinal</dfn></summary>
-                <a id="ordinal"></a>
-                <p>
-                    Since <a href="#cardinality">cardinality</a> provides a way
-                    of assigning magnitudes to infinite sets analogous to the
-                    number of elements contained in finite sets, such magnitudes
-                    can be treated like an ordered set of infinite quantities
-                    analagous to the ordered set of natural numbers. The first
-                    such infinite ordinal corresponds to the cardinality of ℕ
-                    and is conventionally notated as
-                    <math>
-                        <msub>
-                            <mi>ℵ</mi>
-                            <mn>0</mn>
-                        </msub>
-                    </math>. According to the <a href="#continuum">continuum
-                        hypothesis</a>, the next infinite ordinal,
-                    <math>
-                        <msub>
-                            <mi>ℵ</mi>
+                        </munder>
+                        <mo>(</mo>
+                        <mfrac>
                             <mn>1</mn>
-                        </msub>
-                    </math>, is the cardinality of ℝ.
-                </p>
-            </details>
+                            <mi>x</mi>
+                        </mfrac>
+                        <mo>)</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mn>&infin;</mn>
+                </mrow>
+            </math>
 
-            <details name="definitions">
-                <summary><dfn>Surjective Mapping</dfn></summary>
-                <a id="surjective"></a>
-                <p>
-                    A surjective mapping is a <a href="#function">function</a> that assigns every element
-                    of its domain to a unqiue element of its range.
-                </p>
-            </details>
+            Again, much more on this, below...
+        </aside>
 
-        </div>
+        <p>
+            Which brings us to Georg Cantor and Set Theory. From time
+            immemorial, most mathematicians in the tradition stretching back to
+            ancient Greece were dismissive of the concept of a "completed
+            infinity" &mdash; i.e. a set with an infinite number of members. One
+            can never, after all, hold an infinite number of pebbles in one's
+            hands. Even Leibnitz and Newton who, centuries before Cantor,
+            independently invented Differential Calculus, expended a fair amount
+            of intellectual effort attempting to show that even though the
+            concepts of <i>limits</i> and <i>derivatives</i> are all about
+            infinitessimal differences in magnitude this somehow did not imply
+            the existence of infinite quantities. After the breakthroughs by
+            Lobachevsky's and Riemann's generation of mathematicians, subsequent
+            generations were liberated to pursue mathematical inquiries divorced
+            from Metamathematical constraints. Cantor, in particular, explored
+            the properties of infinite sets &mdash; simply stipulating that they
+            exist in the first place, at least for the purposes of "pure"
+            mathematics.
+        </p>
+
+        <p>
+            The first challenge Cantor faced was to define what the "size" of a
+            set with an infinite number of members even means. Cantor asserted
+            that every set has a <i>cardinality</i>. The cardinality of a set is
+            often denoted by surrounding the name of the set with magnitude
+            bars, such as
+            <math>
+                <mo>|</mo>
+                <mi>A</mi>
+                <mo>|</mo>
+            </math>.
+        </p>
+        <p>
+            For sets with only a finite number of members, the notion is
+            intuitive:
+        </p>
+
+        <math display="block">
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mrow>
+                            <mo>|</mo>
+                            <mi>A</mi>
+                            <mo>|</mo>
+                        </mrow>
+                        <mo>=</mo>
+                        <mn>3</mn>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mtext>where</mtext>
+                        <mspace width="0.5em" />
+                        <mrow>
+                            <mi>A</mi>
+                            <mo>=</mo>
+                            <mrow>
+                                <mo>{</mo>
+                                <mi>a</mi>
+                                <mo>,</mo>
+                                <mi>b</mi>
+                                <mo>,</mo>
+                                <mi>c</mi>
+                                <mo>}</mo>
+                            </mrow>
+                        </mrow>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+
+        <p>
+            I.e. the cardinality of a set with three elements is 3. The
+            definition of cardinality for sets with infinitely many members is
+            trickier. Sets like
+            <math>
+                <mi>A</mi>
+            </math>, above, can be defined by <i>extension</i>, in other words
+            by listing their elements. Since no such explicit list is possible
+            for an infinite set it must be defined by <i>intention</i>, i.e. by
+            stating a rule by which its members can be identified iteratively.
+            The set of natural numbers,
+            <math>
+                <mi>&naturals;</mi>
+            </math>, is defined:
+        </p>
+
+        <math display="block">
+            <mi>&naturals;</mi>
+            <mo>=</mo>
+            <mrow>
+                <mo>{</mo>
+                <mi>n</mi>
+                <mo>:</mo>
+                <mrow>
+                    <mo>(</mo>
+                    <mi>n</mi>
+                    <mo>=</mo>
+                    <mn>0</mn>
+                    <mo>)</mo>
+                    <mo>&or;</mo>
+                    <mrow>
+                        <mo>&exist;</mo>
+                        <mi>m</mi>
+                        <mo>(</mo>
+                        <mo>(</mo>
+                        <mi>m</mi>
+                        <mo>&in;</mo>
+                        <mi>&naturals;</mi>
+                        <mo>)</mo>
+                        <mo>&and;</mo>
+                        <mrow>
+                            <mo>(</mo>
+                            <mi>n</mi>
+                            <mo>=</mo>
+                            <mi>m</mi>
+                            <mo>+</mo>
+                            <mn>1</mn>
+                            <mo>)</mo>
+                        </mrow>
+                        <mo>)</mo>
+                    </mrow>
+                </mrow>
+                <mo>}</mo>
+            </mrow>
+        </math>
+
+        <p>
+            Informally, <math>
+                <mi>&naturals;</mi>
+            </math> is the set consisting
+            of 0 and every number that can be obtained by adding 1 to another
+            member of <math>
+                <mi>&naturals;</mi>
+            </math>. Historically,
+            mathematicians would have denied the legitimacy of referring to
+            <math>
+                <mi>&naturals;</mi>
+            </math> as a set in the first place, let
+            alone consider how many elements it contains. They would, at best,
+            have said that the limit of indefinitely carrying out the successor function that
+            is the intention of <math>
+                <mi>&naturals;</mi>
+            </math> might be
+            denoted <math>
+                <mn>&infin;</mn>
+            </math>, while hastening to disclaim
+            <math>
+                <mn>&infin;</mn>
+            </math> as being a number in the same way that
+            any particular natural number represents a specific quantity. Thanks
+            to the shift away from empiricism, it had finally become tolerable
+            by Cantor's day to explore the theoretical ramifications of sets of
+            axioms for which there were no obvious metamathematical theory. He
+            reasoned that if <math>
+                <mi>&naturals;</mi>
+            </math> is a set, it must
+            make sense to talk about
+            <math>
+                <mo>|</mo>
+                <mi>&naturals;</mi>
+                <mo>|</mo>
+            </math> without regard to whether or not that cardinality
+            corresponded to any finite number. To do so, he reasoned by analogy
+            to finite sets.
+        </p>
+
+        <p>
+            Returning to the previously defined set,
+            <math>
+                <mi>A</mi>
+            </math>, with cardinality 3, consider how that cardinality compares
+            to other finite sets. If
+            <math>
+                <mi>B</mi>
+                <mo>=</mo>
+                <mrow>
+                    <mo>{</mo>
+                    <mi>d</mi>
+                    <mo>,</mo>
+                    <mi>e</mi>
+                    <mo>,</mo>
+                    <mi>f</mi>
+                    <mo>}</mo>
+                </mrow>
+            </math> then
+            <math>
+                <mrow>
+                    <mo>|</mo>
+                    <mi>A</mi>
+                    <mo>|</mo>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                    <mo>|</mo>
+                    <mi>B</mi>
+                    <mo>|</mo>
+                </mrow>
+                <mo>=</mo>
+                <mn>3</mn>
+            </math>. Further, note that if the cardinalities of two finite sets
+            are equal then it is possible to construct a <i>bijective
+                function</i>, a 1:1 mapping, between their respective members. One
+            example of such a mapping for
+            <math>
+                <mi>A</mi>
+            </math> and
+            <math>
+                <mi>B</mi>
+            </math> is:
+        </p>
+
+        <math display="block">
+            <mo>{</mo>
+            <mrow>
+                <mo>&lt;</mo>
+                <mi>a</mi>
+                <mo>,</mo>
+                <mi>d</mi>
+                <mo>&gt;</mo>
+            </mrow>
+            <mo>,</mo>
+            <mrow>
+                <mo>&lt;</mo>
+                <mi>b</mi>
+                <mo>,</mo>
+                <mi>e</mi>
+                <mo>&gt;</mo>
+            </mrow>
+            <mo>,</mo>
+            <mrow>
+                <mo>&lt;</mo>
+                <mi>c</mi>
+                <mo>,</mo>
+                <mi>f</mi>
+                <mo>&gt;</mo>
+            </mrow>
+            <mo>}</mo>
+        </math>
+
+        <p>
+            Cantor extended that reasoning to infinite cardinalities. He
+            asserted that two sets have the same cardinality if it is possible
+            to construct a bijective mapping between their elements without
+            regard to whether their cardinalities are finite or infinite.
+        </p>
+
+        <p>
+            Other kinds of mappings between elements of sets imply other
+            relationships between cardinalities. If it is possible to construct
+            a surjective mapping from one set to another, the first set's
+            cardinality must be greater than or equal to that of the second set.
+            Conversely, if it is possible to construct an injective mapping, the
+            first set's cardinality must be less than or equal to the second
+            set's. Finally, if it can be shown that an injective or surjective
+            mapping is possible but a bijective one is not, then the two
+            cardinalities cannot be equal.
+        </p>
+
+        <p>
+            This implies the counter-intuitive idea that if infinite sets are
+            allowed by a mathematical theory to exist, then there is at least
+            the possibility of their being an infinite number of different
+            infinite quantities which can be ordered in the same way that the
+            elements of <math>
+                <mi>&naturals;</mi>
+            </math> can be ordered. Cantor
+            went on to show that, indeed, according to the traditional notion of
+            <i>real numbers</i> existing on a <i>continuum</i>,
+            <math>
+                <mi>&reals;</mi>
+            </math>, any mapping from
+            <math>
+                <mi>&naturals;</mi>
+            </math> to
+            <math>
+                <mi>&reals;</mi>
+            </math>
+            can be, at best, injective. Therefore,
+            <math>
+                <mrow>
+                    <mo>|</mo>
+                    <mi>&naturals;</mi>
+                    <mo>|</mo>
+                </mrow>
+                <mo>&lt;</mo>
+                <mrow>
+                    <mo>|</mo>
+                    <mi>&reals;</mi>
+                    <mo>|</mo>
+                </mrow>
+            </math>. This further implies that, since other theorems of Set
+            Theory state that there can be no "greatest" cardinality just as
+            there can be no greatest natural number (no matter how high you have
+            counted up, you can always count up one more), there are not just
+            two distinct infinite cardinalities but infinitely many,
+            well-ordered cardinalities. Cantor referred to this ordered set of
+            infinite cardinalities as the set of <i>ordinal numbers</i> with the
+            cardinality of
+            <math>
+                <mi>&naturals;</mi>
+            </math>
+            being the least ordinal number in the same way that 0 is the least
+            natural number. He used "aleph numbers" to denote ordinal numbers
+            where
+            <math>
+                <msub>
+                    <mn>&aleph;</mn>
+                    <mn>0</mn>
+                </msub>
+            </math>, corresponding to the cadinality of
+            <math>
+                <mi>&naturals;</mi>
+            </math>, is the first ordinal, the next higher ordinal is
+            <math>
+                <msub>
+                    <mn>&aleph;</mn>
+                    <mn>1</mn>
+                </msub>
+            </math> and so on. The <i>continuum hypothesis</i> in Set Theory
+            states that there is no set with a cardinality greater than that of
+            <math>
+                <mi>&naturals;</mi>
+            </math> and less than that of
+            <math>
+                <mi>&reals;</mi>
+            </math>, making the cardianlity of
+            <math>
+                <mi>&reals;</mi>
+            </math> equal to
+            <math>
+                <msub>
+                    <mn>&aleph;</mn>
+                    <mn>1</mn>
+                </msub>
+            </math>.
+        </p>
+
+        <p>
+            Cantor presented multiple proofs that the cardinality of
+            <math>
+                <mn>&naturals;</mn>
+            </math> is less than that of
+            <math>
+                <mn>&reals;</mn>
+            </math>. The easiest to visualize is a <i>reductio ad absurdum</i>
+            argument showing that starting with the assumption that you have
+            already constructed a bijective mapping between the members of
+            <math>
+                <mi>&naturals;</mi>
+            </math> and any continuous subset of
+            <math>
+                <mi>&reals;</mi>
+            </math> you can always construct another real
+            number within the continuous subset that cannot yet have been mapped
+            by your supposedly bijective function. This proves that the mapping
+            was only injective, after all.
+        </p>
+
+        <h2>How Real Is the Real Number Line?</h2>
+
+        <p>
+            This brings us, at last, to Computability Theory. Since the
+            cardinalities of the sets of natural and real numbers are both
+            infinite, the only way you can say anything meaningful about the
+            relationship between them is through inductively defined mappings.
+            But Cantor showed that, given the traditional definition of what it
+            means for the set real numbers to be "continuous" (in the way that
+            the set of natural numbers is <i>not</i> continuous) deductively
+            proves that any inductively defined mapping from
+            <math>
+                <mi>&naturals;</mi>
+            </math> to <math>
+                <mi>&reals;</mi>
+            </math>
+            will leave out infintely many real numbers, no matter how tiny the
+            difference is between the least and greatest member of the
+            continuous subset of real numbers. In the language of Set Theory,
+            any continuous subset of <math>
+                <mn>&reals;</mn>
+            </math> is not
+            <i>countable</i>, where to be "countable" means a bijective mapping
+            is possible between members of a given set and the members of
+            <math>
+                <mi>&natural;</mi>
+            </math>.
+        </p>
+
+        <p>
+            But here's the thing. Building on Cantor's work, other
+            mathematicians (principally Kurt G&ouml;del but others, as well),
+            showed that any formal language of the kinds used by mathematicians
+            to perform computations can have at most a countable number of
+            well-formed formulas. I.e. any language whose grammar consists of a
+            finite number of rules for combining a finite number of symbols into
+            syntactically correct and meaningful formulas can produce no more
+            such formulas than there are members of
+            <math>
+                <mi>&naturals;</mi>
+            </math>. Together with the proof that even
+            a tiny continuous subset of <math>
+                <mi>&reals;</mi>
+            </math> is not
+            countable, this means that the percentage of real numbers that can
+            be computed, i.e. characterized by some mathematical formula, is
+            infinitessimally small compared to the cardinality of
+            <math>
+                <mi>&reals;</mi>
+            </math> as a whole. If you take the notion of
+            <i>continuum</i> seriously, then only a negligible fraction of real
+            numbers correspond to a number about which math or science has
+            anything to say.
+        </p>
+
+        <p>
+            This begs the question, what's so special about those precious few
+            real numbers that makes their values computable? Thought about
+            qaulitatively, it is impossible to imagine where even to begin. But
+            Church, Turing and their contemporaries decided that they could at
+            least tackle the question quantitatively in the sense of finding
+            ways to construct the set of computable numbers comparable to the
+            way in which a set with infinite cardinality can be defined
+            inductively, by intention. This might or might not shed any light on
+            the qualitative question, but it led to extremely significant
+            results either way.
+        </p>
+
+        <p>
+            Church's approach was purely formal. He defined a mathematical
+            language, &lambda;-Calculus for describing computations. Church's
+            thesis was that the set of computable numbers is identical to the
+            values of all possible well-formed &lambda; formulas. Turing's
+            approach was based on thought experiments involving what he called
+            <i>a-machines</i> (it was Church who first started referring to them
+            as "Turing machines.") Turing's thesis was that the set of outputs
+            of all possible a-machines identical to the set of computable
+            numbers. What came to be known as the Church-Turing Thesis is that
+            their two approaches are equivalent, i.e. they produce the same set
+            of computable numbers. The world accepted that the initial question
+            of Computability Theory was settled when the Church-Turing Thesis
+            was proven to be true. The proof of the Church-Turing Thesis turns
+            on showing that any well-formed formula of &lambda;-Calculus can be
+            used as the "blueprint" for an equivalent a-machine, and vice versa;
+            i.e. the rules governing any a-machine can be "encoded" in the form
+            of a well-formed formula of &lambda;-Calculus.
+        </p>
+
+        <aside>
+            While FORTRAN is widely credited as being the first programming
+            language to be used for real-world applications, work on Lisp at MIT
+            actually started earlier and has had a much more profound and
+            lasting influence on the design of programming languages, generally.
+            Lisp began as a project to "embody" &lambda;-Calculus directly as a
+            practical programming language in exactly the same way that modern
+            digital computers "embody" a-machines.
+        </aside>
+
+        <p>
+            This gave mathematicians something to say about the abstract notion
+            of "computability." It also gave engineers a way of thinking about
+            the design of physical computational aids that went far beyond the
+            then-current state-of-the-art. You can never build an actual Turing
+            machine because you would need an infinite amount of data storage
+            (an infinitely long paper tape in Turing's thought experiments). But
+            it is trivial to use Turing's conceptual framework for a
+            general-purpose computing device to create an actual digital
+            computer capable of tackling computations with a finite number of
+            steps, requiring only a finite number of digts of precision.
+            Similarly, Church's &lambda;-Calculus provided the prototype for
+            designing high-level programming languages, making it possible to
+            think about programming in ways that would be extremely challenging
+            when operating only at the level of a given machine's base
+            instruction set, modeled on Turing's a-machines.
+        </p>
+
+        <p>
+            Backing up to what Cantor actually proved about infinite
+            cardinalities and how that shaped the Church-Turing Thesis, it must
+            be emphaized that while Cantor's arguments are perfectly valid, that
+            says nothing about any metamathematical implications for measurable
+            features of the real world. General Relativity and Quantum Physics
+            each have been treated as implying some very counter-intuitive, if
+            not outrageously implausible, things. And they don't even agree on
+            their implausibilities, at least according to the average
+            popular-science level of discussion about them. But mystification
+            about modern Physics' putative contradiction of common-sense is
+            mostly based on very bad metaphysics and metamathematics. Actually,
+            nothing should be <i>less</i> surprising than that, for example,
+            things like billiard balls are not made of tinier things that behave
+            just like tinier billiard balls caroming off one another. It is easy
+            to forget that when operating outside the scale at which human
+            senses operate, and therefore with which are habits of thought
+            evolved to cope, we are always reasoning by analogy and abstraction.
+            A pile of gears, springs, levers and such has no properties by which
+            to tell time even when it could be used as parts from which to
+            construct a perfectly serviceable chronometer. That is a
+            metaphysical insight worthy of the first day in any undergraduate
+            course on Metaphysics. So why is it so hard to fathom that
+            subatomics particles, constituent parts of actual waves and
+            macroscopic particles of matter, can exhibit some features that make
+            them appear a bit wave-like when analyzed one way and other features
+            that make them appear a bit particle-like when analyzed another way
+            really not very much like the kinds of waves and particles that
+            inspire the analogies in the first place? It would be more
+            startling, suggesting some kind of hard to maintain, infinite,
+            reductive regression, if it turned out that waves and particles were
+            made of microscopic waves and particles. This is similar to the
+            "mind-body" promblem that once consomed so much of Western European
+            Philospers' time and effort. In trying to make sense of how
+            something non-material could interact and control a material body,
+            some philosophers resorted to this kind of fruitless reductivitism.
+            Descartes, for example, seemed serious in suggesting that the pineal
+            gland, of all things, was where the soul resided and was the central
+            command center from which it exerted control over the body, using
+            the rest of the brain as an intermediary. As if localizing the mind
+            to a tiny brain-witnin-a-brain actually did anything to resolve the
+            "mind-body" problem in the first place. The only real way to resolve
+            the "mind-body" problem is, of course, to recognize that the entire
+            question is based on a false premise. The question disappears
+            entirely when one regards mental function as an epiphenomenon of
+            neural function. But that was a move Descartes, as a devout
+            Catholic, could not allow himself to make. Physicists should simply
+            free themselves of the superstition that reasoning by analogy from
+            everyday experience in a domain where classical physics makes sense
+            when doing particle physics can lead to anything but confusion and
+            blind alleys. Ditto when reasoning by analogy at the cosmological
+            scale. Double ditto for the supposed contradictions reasoning by
+            analogy between the subatomic and cosmological scales. Physicists
+            would do well to stick to Physics and leave Metaphysics to the
+            professionals in the Philosophy department.
+        </p>
+
+        <p>
+            This applies to all the supposedly mind-bending properties of matter
+            and energy when considered at the quantum level. Physicists choose
+            to forget, or were never taught, that the entire edifice of advanced
+            Mathematics on which their discipline relies depends on mathematical
+            tools with very specific metamathematical foundations. Cantor's
+            proofs, and Church's and Turing's subsequent insights, can be viewed
+            as explaining why the continuum is not a countable set of numbers.
+            It does so by simply stipulating that the continuum exists in the
+            first place. Quantum Physics, on the other hand, demonstrates that
+            reality is not continuous when viewed at ultra small scales. The
+            best way to look at Cantor's proofs is as higlighting limits (pun
+            intended) to the utility of the notion of a continuum from the
+            outset. Physicists should recalibrate their thinking by taking their
+            own results seriously. Re-working the metamathematical framework
+            used by working physicists could have far-reaching effects.
+            Differential Calculus and mathematical structures that rely on it
+            are ideal for the purposes of Classical Mechanics (for which it was
+            designed!) but should only be used for Quantum Mechanics with
+            extreme care, if at all. Fully eschewing the notion of "continuity"
+            could help resolve puzzling aspects of modern physics like
+            entanglement and whether or not indeterminacy really has a "tail
+            problem." A measuable property is, by definition, computable. If
+            not, one could not design an experiment to take the measurement in
+            the first place. Might the gaps in the continuum left between
+            computable numbers be big enough to conceal some hidden variables?
+            No-one knows, at at the time of this writing, but it seems
+            sufficiently plausible to temper the enthusiasm for the (slightly
+            circular, to start with) claims about qubits in quantum computers
+            offering confirmation that particles in the real world display Bell
+            inequalities of the sort that suppoedly clinch the argument in favor
+            of "spooky action at a distance."
+        </p>
 
     </div>
 
 </template>
 
-<style scoped>
-#computability,
-#definitions {
-    position: absolute;
-    overflow: auto;
-    padding: 0 1rem;
-}
-
-#computability {
-    left: 0;
-    top: 0;
-    width: 60%;
-    height: 100%;
-}
-
-#definitions {
-    right: 0;
-    top: 0;
-    width: 33%;
-    height: 100%;
-}
-</style>
-
-<script setup>
+<script setup lang="ts">
 import ParallelPostulate from '@/pages/logic/computability/ParallelPostulate.vue'
 </script>
