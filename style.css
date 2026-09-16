@@ -25,15 +25,8 @@
 :root {
 
     /* panel dimensions & offsets */
-    --top: 1vh;
-    --left: 1vw;
-    --right: 1vw;
-    --bottom: 1vh;
     --headerheight: 4lh;
     --footerheight: 2lh;
-    --sidebarwidth: 25rem;
-    --maintop: calc(var(--top) + var(--headerheight) + 1vh);
-    --mainbottom: calc(var(--bottom) + var(--footerheight) + 1vh);
 }
 
 .dark-theme {
@@ -101,16 +94,15 @@ aside {
 }
 
 aside dfn,
-aside i {
+aside i,
+aside em,
+blockquote i,
+blockquote em {
     font-style: normal;
 }
 
 blockquote {
     font-style: italic;
-}
-
-blockquote i {
-    font-style: normal;
 }
 
 body {
@@ -150,18 +142,18 @@ details>*:not(summary) {
 
 footer {
     position: fixed;
-    left: var(--left);
-    right: var(--right);
+    left: 0;
+    right: 0;
     height: var(--footerheight);
-    bottom: var(--bottom);
+    bottom: 0;
     border-top-style: solid;
 }
 
 header {
     position: fixed;
-    top: var(--top);
-    left: var(--left);
-    right: var(--right);
+    top: 0;
+    left: 0;
+    right: 0;
     height: var(--headerheight);
     border-bottom-style: solid;
 }
@@ -173,10 +165,10 @@ input {
 main {
     position: fixed;
     overflow: auto;
-    top: var(--maintop);
-    left: var(--left);
-    right: var(--right);
-    bottom: var(--mainbottom);
+    top: var(--headerheight);
+    left: 0;
+    right: 0;
+    bottom: var(--footerheight);
 }
 
 math {
@@ -188,10 +180,10 @@ math {
     position: fixed;
     background-color: var(--highlight);
     overflow: auto;
-    top: var(--maintop);
-    right: var(--right);
-    width: var(--sidebarwidth);
-    bottom: var(--mainbottom);
+    top: calc(var(--headerheight) + 1px);
+    left: 0;
+    width: fit-content;
+    bottom: calc(var(--footerheight) + 1px);
     overflow: auto;
     z-index: 10;
 }

@@ -14,6 +14,8 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    margin: 0 0.5rem;
+    padding: 0 0.5rem;
 }
 </style>
 

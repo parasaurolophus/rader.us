@@ -23,16 +23,15 @@
 
     .container {
         flex-flow: row nowrap;
-        justify-content: center;
     }
 
-    #menu {
+    /* #menu {
         margin-right: auto;
     }
 
     #portrait {
         margin-left: auto;
-    }
+    } */
 }
 </style>
 

@@ -2,9 +2,9 @@
 
 <template>
     <div class="titlebar">
-        <a id="qr" :href="otherLinks.hyperFollow.url" target="_blank">
-            <QrComponent v-model="otherLinks.hyperFollow.url" />
-        </a>
+        <video autoplay loop muted disablepictureinpicture class="button" @click="toggleSidebar()">
+            <source src="/logo64.webm" />
+        </video>
         <div>
             <div class="title">
                 Kirk Rader
@@ -12,20 +12,19 @@
             <BreadCrumbs />
         </div>
         <MdiIcon :path="mdiThemeLightDark" class="button right" @click="toggleTheme()" />
-        <video autoplay loop muted disablepictureinpicture class="button" @click="toggleSidebar()">
-            <source src="/logo64.webm" />
-        </video>
+        <a id="qr" :href="otherLinks.hyperFollow.url" target="_blank">
+            <QrComponent v-model="otherLinks.hyperFollow.url" />
+        </a>
     </div>
 </template>
 
 <style scoped>
 .button {
     cursor: pointer;
-    margin-left: 1rem;
 }
 
 #qr {
-    margin-right: 1rem;
+    margin: 0 1rem;
 }
 
 .right {
@@ -40,6 +39,8 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    justify-content: start;
+    height: 100%;
 }
 
 @media print {

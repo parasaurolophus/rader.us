@@ -2,26 +2,27 @@
 
 <template>
 
-    <div class="footer">
+    <div class="container">
 
         <span>
             © Kirk Rader 2023-2026
         </span>
 
-        <div id="omega">
+        <span id="omega">
             <OmegaFormula />
-        </div>
+        </span>
 
     </div>
 
 </template>
 
 <style scoped>
-.footer {
+.container {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-around;
+    height: 100%;
 }
 
 #omega {
@@ -31,7 +32,7 @@
 @media (width >=1200px) {
 
     #omega {
-        display: block;
+        display: inline-block;
     }
 }
 </style>

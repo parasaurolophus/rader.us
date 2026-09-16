@@ -5,7 +5,9 @@
         <TitleBar />
     </header>
     <main>
-        <RouterView />
+        <div class="main">
+            <RouterView />
+        </div>
     </main>
     <div id="sidebar">
         <SideBar />
@@ -14,6 +16,13 @@
         <FooterBar />
     </footer>
 </template>
+
+<style scoped>
+.main {
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+</style>
 
 <script setup>
 import FooterBar from './components/FooterBar.vue'
