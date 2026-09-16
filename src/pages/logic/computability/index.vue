@@ -632,24 +632,26 @@
             infinite, the only way you can say anything meaningful about the
             relationship between them is through inductively defined mappings.
             But Cantor showed that, given the traditional definition of what it
-            means for the set real numbers to be "continuous" (in the way that
-            the set of natural numbers is <i>not</i> continuous) deductively
-            proves that any inductively defined mapping from
+            means for the set of real numbers to be "continuous" (in the way
+            that the set of natural numbers is <i>not</i> continuous)
+            deductively proves that any inductively defined mapping from
             <math>
                 <mi>&naturals;</mi>
-            </math> to <math>
+            </math> to any continuous subset of
+            <math>
                 <mi>&reals;</mi>
             </math>
             will leave out infintely many real numbers, no matter how tiny the
             difference is between the least and greatest member of the
             continuous subset of real numbers. In the language of Set Theory,
-            any continuous subset of <math>
+            any continuous subset of
+            <math>
                 <mn>&reals;</mn>
             </math> is not
             <i>countable</i>, where to be "countable" means a bijective mapping
             is possible between members of a given set and the members of
             <math>
-                <mi>&natural;</mi>
+                <mi>&naturals;</mi>
             </math>.
         </p>
 
@@ -675,21 +677,29 @@
                 <mi>&reals;</mi>
             </math> as a whole. If you take the notion of
             <i>continuum</i> seriously, then only a negligible fraction of real
-            numbers correspond to a number about which math or science has
+            numbers corresponds to numbers about which math or science has
             anything to say.
         </p>
 
         <p>
             This begs the question, what's so special about those precious few
-            real numbers that makes their values computable? Thought about
-            qaulitatively, it is impossible to imagine where even to begin. But
-            Church, Turing and their contemporaries decided that they could at
-            least tackle the question quantitatively in the sense of finding
-            ways to construct the set of computable numbers comparable to the
-            way in which a set with infinite cardinality can be defined
-            inductively, by intention. This might or might not shed any light on
-            the qualitative question, but it led to extremely significant
-            results either way.
+            real numbers that makes their values computable? Church, Turing and
+            their contemporaries tackled the question by finding ways to
+            construct the set of computable numbers comparable to the way in
+            which a set with infinite cardinality can be defined by intention.
+            I.e. by describing a method for generating numbers that can produce
+            at least a countable number of outputs. Their theses were that the
+            set of numbers produced by their respective methods is each
+            identical to the set of computable numbers. Note that there is a
+            circularity to any claim that Church or Turing proved that their
+            methods produce the set of computable numbers. What they actually
+            did was to provide models of computation that each produce a
+            countable number of values. The claim that the given countable set
+            of values is identical to the computable real numbers can only be a
+            (highly plausible!) appeal to intuition. Mathematicians generally
+            accepted the core question of Computability Theory to have been
+            settled by the fact that Church's and Turing's approaches each
+            produce the same set of values, as described below.
         </p>
 
         <p>
@@ -700,16 +710,16 @@
             approach was based on thought experiments involving what he called
             <i>a-machines</i> (it was Church who first started referring to them
             as "Turing machines.") Turing's thesis was that the set of outputs
-            of all possible a-machines identical to the set of computable
+            of all possible a-machines is identical to the set of computable
             numbers. What came to be known as the Church-Turing Thesis is that
             their two approaches are equivalent, i.e. they produce the same set
             of computable numbers. The world accepted that the initial question
             of Computability Theory was settled when the Church-Turing Thesis
             was proven to be true. The proof of the Church-Turing Thesis turns
             on showing that any well-formed formula of &lambda;-Calculus can be
-            used as the "blueprint" for an equivalent a-machine, and vice versa;
-            i.e. the rules governing any a-machine can be "encoded" in the form
-            of a well-formed formula of &lambda;-Calculus.
+            used as the "blueprint" for constructing an equivalent a-machine,
+            and vice versa; i.e. the rules governing any a-machine can be
+            "encoded" in the form of a well-formed formula of &lambda;-Calculus.
         </p>
 
         <aside>
@@ -751,50 +761,56 @@
             their implausibilities, at least according to the average
             popular-science level of discussion about them. But mystification
             about modern Physics' putative contradiction of common-sense is
-            mostly based on very bad metaphysics and metamathematics. Actually,
-            nothing should be <i>less</i> surprising than that, for example,
-            things like billiard balls are not made of tinier things that behave
-            just like tinier billiard balls caroming off one another. It is easy
-            to forget that when operating outside the scale at which human
-            senses operate, and therefore with which are habits of thought
-            evolved to cope, we are always reasoning by analogy and abstraction.
+            mostly based on very bad metaphysics and metamathematics. Nothing
+            should be <em>less</em> surprising than that, for example, things
+            like billiard balls are not made of tinier things that behave just
+            like tinier billiard balls caroming off one another. It is easy to
+            forget that when operating outside the scale at which human senses
+            operate, and therefore with which our habits of thought evolved to
+            cope, we are <em>always</em> reasoning by analogy and abstraction.
+        </p>
+
+        <p>
             A pile of gears, springs, levers and such has no properties by which
-            to tell time even when it could be used as parts from which to
-            construct a perfectly serviceable chronometer. That is a
-            metaphysical insight worthy of the first day in any undergraduate
-            course on Metaphysics. So why is it so hard to fathom that
-            subatomics particles, constituent parts of actual waves and
-            macroscopic particles of matter, can exhibit some features that make
-            them appear a bit wave-like when analyzed one way and other features
-            that make them appear a bit particle-like when analyzed another way
-            really not very much like the kinds of waves and particles that
-            inspire the analogies in the first place? It would be more
-            startling, suggesting some kind of hard to maintain, infinite,
-            reductive regression, if it turned out that waves and particles were
-            made of microscopic waves and particles. This is similar to the
-            "mind-body" promblem that once consomed so much of Western European
-            Philospers' time and effort. In trying to make sense of how
-            something non-material could interact and control a material body,
-            some philosophers resorted to this kind of fruitless reductivitism.
-            Descartes, for example, seemed serious in suggesting that the pineal
-            gland, of all things, was where the soul resided and was the central
-            command center from which it exerted control over the body, using
-            the rest of the brain as an intermediary. As if localizing the mind
-            to a tiny brain-witnin-a-brain actually did anything to resolve the
+            to tell time even when the contents of that pile could be used as
+            parts from which to construct a perfectly serviceable chronometer.
+            That is a metaphysical insight worthy of the first day in any
+            undergraduate course on Metaphysics. So why is it so hard to fathom
+            that subatomic particles, constituent parts of actual waves and
+            particles of matter, are extremely unlikely to themselves be
+            particles or waves even when they can exhibit some features that
+            make them appear a bit wave-like when analyzed one way and other
+            features that make them appear a bit particle-like when analyzed
+            another way? It would be more startling, suggesting some kind of
+            infinitely reductive regression, if it turned out that macroscopic
+            waves and particles were made of microscopic waves and particles.
+            This is similar to the "mind-body" promblem that once consomed so
+            much of Western European Philospers' time and effort. In trying to
+            make sense of how something non-material could interact and control
+            a material body, some philosophers resorted to this kind of
+            fruitless reductionism. Descartes, for example, seemed serious in
+            suggesting that the pineal gland, of all things, was where the soul
+            resided and was the central command center from which it exerted
+            control over the body, using the rest of the brain as an
+            intermediary. As if localizing the mind to a tiny
+            brain-witnin-a-brain actually did anything to resolve the
             "mind-body" problem in the first place. The only real way to resolve
             the "mind-body" problem is, of course, to recognize that the entire
             question is based on a false premise. The question disappears
             entirely when one regards mental function as an epiphenomenon of
             neural function. But that was a move Descartes, as a devout
-            Catholic, could not allow himself to make. Physicists should simply
-            free themselves of the superstition that reasoning by analogy from
-            everyday experience in a domain where classical physics makes sense
-            when doing particle physics can lead to anything but confusion and
-            blind alleys. Ditto when reasoning by analogy at the cosmological
-            scale. Double ditto for the supposed contradictions reasoning by
-            analogy between the subatomic and cosmological scales. Physicists
-            would do well to stick to Physics and leave Metaphysics to the
-            professionals in the Philosophy department.
+            Catholic, could not allow himself to make since it eliminates
+            anything like a "soul," existing separately and potentially
+            independently of a body, from consideration. Physicists should
+            simply free themselves of the superstition that reasoning by too
+            much by analogy from everyday experience in a domain where classical
+            physics makes sense when doing physics at ultra-microscopic scales
+            can lead to anything but confusion and blind alleys. Ditto when
+            reasoning by analogy at the cosmological scale. Double ditto for the
+            supposed contradictions reasoning by analogy between the subatomic
+            and cosmological scales. Physicists would do well to stick to
+            Physics and leave Metaphysics to the professionals in the Philosophy
+            department.
         </p>
 
         <p>
@@ -804,31 +820,33 @@
             Mathematics on which their discipline relies depends on mathematical
             tools with very specific metamathematical foundations. Cantor's
             proofs, and Church's and Turing's subsequent insights, can be viewed
-            as explaining why the continuum is not a countable set of numbers.
-            It does so by simply stipulating that the continuum exists in the
-            first place. Quantum Physics, on the other hand, demonstrates that
-            reality is not continuous when viewed at ultra small scales. The
-            best way to look at Cantor's proofs is as higlighting limits (pun
-            intended) to the utility of the notion of a continuum from the
-            outset. Physicists should recalibrate their thinking by taking their
-            own results seriously. Re-working the metamathematical framework
-            used by working physicists could have far-reaching effects.
-            Differential Calculus and mathematical structures that rely on it
-            are ideal for the purposes of Classical Mechanics (for which it was
-            designed!) but should only be used for Quantum Mechanics with
-            extreme care, if at all. Fully eschewing the notion of "continuity"
-            could help resolve puzzling aspects of modern physics like
-            entanglement and whether or not indeterminacy really has a "tail
-            problem." A measuable property is, by definition, computable. If
-            not, one could not design an experiment to take the measurement in
-            the first place. Might the gaps in the continuum left between
-            computable numbers be big enough to conceal some hidden variables?
-            No-one knows, at at the time of this writing, but it seems
-            sufficiently plausible to temper the enthusiasm for the (slightly
-            circular, to start with) claims about qubits in quantum computers
-            offering confirmation that particles in the real world display Bell
-            inequalities of the sort that suppoedly clinch the argument in favor
-            of "spooky action at a distance."
+            as perfectly valid proofs of why the continuum is not a countable
+            set of numbers. But note well: they do so by simply stipulating that
+            the continuum exists in the first place. Quantum Physics, on the
+            other hand, demonstrates that reality is not continuous when viewed
+            at ultra small scales. The best way to look at Cantor's proofs from
+            a strictly scientific, rather than mathematical, point of view is as
+            higlighting limits (pun intended) to the utility of the notion of a
+            continuum from the outset. Physicists should recalibrate their
+            thinking by taking their own results seriously. Re-working the
+            metamathematical framework used by theoretical physicists could have
+            far-reaching effects. Differential Calculus and mathematical
+            structures that rely on it are ideal for the purposes of Classical
+            Mechanics (for which they were designed in the first place) but
+            should only be used for Quantum Mechanics with extreme care, if at
+            all. Fully eschewing the notion of "continuity" could help resolve
+            puzzling aspects of modern physics like entanglement and whether or
+            not indeterminacy really has a "tail problem." A measuable property
+            is, by definition, computable. If not, one could not design an
+            experiment to take the measurement in the first place. Might the
+            gaps in the continuum left between computable numbers be big enough
+            to conceal some hidden variables? No-one knows, at the time of this
+            writing, but it seems sufficiently plausible to temper the
+            enthusiasm for the (slightly circular, to start with) claims about
+            qubits in quantum computers offering confirmation that quantum
+            effects in the real world display Bell inequalities of the sort that
+            suppoedly clinch the argument in favor of "spooky action at a
+            distance."
         </p>
 
     </div>

@@ -1,29 +1,22 @@
 <!-- Copyright (c) Kirk Rader 2026 -->
 
 <template>
-
-    <p>
-        Choose a streaming service on which to hear my stuff:
-    </p>
-
     <fieldset v-if="selectedLink" class="wrapper">
         <legend>{{ selectedLink.title }}</legend>
-        <a :href="selectedLink.url" target="_blank">
-            <QrComponent v-model="selectedLink.url" :size="size" />
-        </a>
         <select v-model="selectedLink">
             <template v-for="link of links ?? []">
                 <option :value="link">{{ link.title }}</option>
             </template>
         </select>
-    </fieldset>
-
-    <p v-if="selectedLink">
         <a :href="selectedLink.url" target="_blank">
-            {{ selectedLink.url }}
+            <QrComponent v-model="selectedLink.url" :size="size" />
         </a>
-    </p>
-
+        <span v-if="selectedLink">
+            <a :href="selectedLink.url" target="_blank">
+                {{ selectedLink.url }}
+            </a>
+        </span>
+    </fieldset>
 </template>
 
 <style scoped>
@@ -33,7 +26,7 @@
     align-items: center;
     justify-content: center;
     width: max-content;
-    max-width: 20rem;
+    max-width: 100%;
 }
 
 .wrapper>* {

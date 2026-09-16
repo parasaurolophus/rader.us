@@ -4,25 +4,26 @@
 
     <div>
 
-        <h1>Music</h1>
-
         <div class="columns">
 
             <div class="column">
+                <h1>Music</h1>
                 <RouteTree />
             </div>
 
             <div class="column">
-                <p>
-                    <ExternalLinksView v-model="links" size="x-large" />
-                </p>
-                <p>
-                    <i>
-                        ...or search for
-                        "<CopyableSpan>Kirk Rader</CopyableSpan>"
-                        on the music service you prefer
-                    </i>
-                </p>
+
+                <div>
+                    Choose a streaming service on which to hear my stuff&hellip;
+                    at your own risk!
+                </div>
+
+                <ExternalLinksView v-model="links" size="x-large" />
+
+                <div>
+                    Or search for "<CopyableSpan>Kirk Rader</CopyableSpan>" on
+                    the music service you prefer.
+                </div>
             </div>
 
         </div>
@@ -34,16 +35,7 @@
 <style scoped>
 .columns {
     display: grid;
-    grid-template-columns: 49% 49%;
-}
-
-.column {
-    display: flex;
-    flex-flow: column wrap;
-}
-
-.column:not(:first-child) {
-    align-items: center;
+    grid-template-columns: 48% 48%;
 }
 </style>
 

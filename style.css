@@ -182,7 +182,7 @@ math {
     overflow: auto;
     top: calc(var(--headerheight) + 1px);
     left: 0;
-    width: fit-content;
+    width: max-content;
     bottom: calc(var(--footerheight) + 1px);
     overflow: auto;
     z-index: 10;
