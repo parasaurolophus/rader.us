@@ -37,7 +37,7 @@
 
 <script setup>
 import QrComponent from '@/components/QrComponent.vue'
-import { onMounted, ref, toRaw, watch } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 
 const { size } = defineProps({
 

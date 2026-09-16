@@ -46,7 +46,6 @@ import RouteTree from '@/components/RouteTree'
 import { inject, onMounted, ref, watch } from 'vue'
 
 const musicLinks = inject('musicLinks')
-const otherLinks = inject('otherLinks')
 const links = ref([])
 
 function update() {

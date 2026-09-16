@@ -3,19 +3,15 @@
 <template>
     <div class="container">
         <img id="portrait" src="/kirk-small.png">
-        <RouteTree id="menu" />
+        <ExpandedRoutesList />
     </div>
 </template>
 
 <style scoped>
-#menu {
-    text-wrap: nowrap;
-}
-
 .container {
     display: flex;
-    align-items: center;
     flex-flow: column nowrap;
+    align-items: center;
     justify-content: start;
 }
 
@@ -24,17 +20,9 @@
     .container {
         flex-flow: row nowrap;
     }
-
-    /* #menu {
-        margin-right: auto;
-    }
-
-    #portrait {
-        margin-left: auto;
-    } */
 }
 </style>
 
 <script setup>
-import RouteTree from '@/components/RouteTree'
+import ExpandedRoutesList from '@/components/ExpandedRoutesList.vue';
 </script>
