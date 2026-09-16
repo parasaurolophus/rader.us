@@ -2,7 +2,7 @@
 
 <template>
     <div class="titlebar">
-        <video autoplay loop muted disablepictureinpicture class="button" @click="toggleSidebar()">
+        <video autoplay loop muted disablepictureinpicture class="button" @click.stop.prevent="toggleSidebar()">
             <source src="/logo64.webm" />
         </video>
         <div>
@@ -58,6 +58,7 @@ import { mdiThemeLightDark } from '@mdi/js'
 import { inject, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
+const hideSidebar = inject('hideSidebar')
 const otherLinks = inject('otherLinks')
 const router = useRouter()
 const toggleTheme = inject('toggleTheme')
@@ -65,11 +66,6 @@ const toggleTheme = inject('toggleTheme')
 function toggleSidebar() {
 
     sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block'
-}
-
-function hideSidebar() {
-
-    sidebar.style.display = 'none'
 }
 
 onMounted(() => {
