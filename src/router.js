@@ -34,7 +34,7 @@ const routes = [
     {
         path: '/logic/computability/lambda',
         name: 'lambda',
-        component: ()=>import('./pages/logic/computability/LambdaCalculus.vue'),
+        component: () => import('./pages/logic/computability/LambdaCalculus.vue'),
         meta: {
             title: 'λ-Calculus'
         },
@@ -91,6 +91,15 @@ const routes = [
         component: () => import('./pages/music/ratcheting/index.vue'),
         meta: {
             title: 'Ratcheting',
+        },
+    },
+
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'catchall',
+        redirect: '/',
+        meta: {
+            hide: true,
         },
     },
 ]

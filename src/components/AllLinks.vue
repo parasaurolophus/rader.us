@@ -17,16 +17,6 @@ const namedRoutes = computed(() => router.getRoutes().filter(route => route.name
 
 function compareRoutes(a, b) {
 
-    // if (a.name === 'home') {
-
-    //     return b.name === 'home' ? 0 : -1
-    // }
-
-    // if (b.name === 'home') {
-
-    //     return 1
-    // }
-
     return a.path.localeCompare(b.path)
 }
 </script>

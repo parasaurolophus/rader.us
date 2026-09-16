@@ -30,7 +30,7 @@ export default {
         function buildRouteItems(route) {
 
             const re = new RegExp(`^${route.path === '/' ? '' : route.path}/[^/]+$`)
-            const children = router.getRoutes().filter(r => re.test(r.path))
+            const children = router.getRoutes().filter(r => !r.meta.hide && re.test(r.path))
 
             children.sort((a, b) => a.path.localeCompare(b.path))
 
