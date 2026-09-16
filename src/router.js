@@ -1,6 +1,6 @@
 // Copyright (c) Kirk Rader 2026
 
-import { createRouterMatcher, createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
 
@@ -28,6 +28,15 @@ const routes = [
         component: () => import('./pages/logic/computability/index.vue'),
         meta: {
             title: 'Computability',
+        },
+    },
+
+    {
+        path: '/logic/computability/lambda',
+        name: 'lambda',
+        component: ()=>import('./pages/logic/computability/LambdaCalculus.vue'),
+        meta: {
+            title: 'λ-Calculus'
         },
     },
 
@@ -87,6 +96,6 @@ const routes = [
 ]
 
 export const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes,
 })
