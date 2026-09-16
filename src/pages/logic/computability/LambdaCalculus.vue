@@ -27,77 +27,9 @@
             </li>
         </ul>
 
-        <h2>Grammar</h2>
+        <aside>
 
-        <p>
-            The "strict" grammar for &lambda;-Calculus can be expressed with just a
-            handful of BNF productions:
-        </p>
-
-        <pre>
-            term := name | application | abstraction
-            name := a | ... | z
-            application := (term term)
-            abstraction := (&lambda; name . term)
-        </pre>
-
-        <p>
-            Use of a name is <i>bound</i> when it occurs within the scope of a
-            &lambda; abstraction (i.e. inside the parentheses, following the
-            dot) with that name appearing between the &lambda; operator and the
-            dot. A name is <i>free</i> otherwise. A term is <i>closed</i> if it
-            contains no free names. A term is <i>open</i> otherwise. Only closed
-            terms can be used in computation since there is no way to determine
-            the value referenced by a free name. Note that where &lambda;
-            abstractions are involved, a term may be locally free in an inner
-            scope but bound by some outer abstraction within which the given one
-            occurs.
-        </p>
-
-        <p>
-            For example, <math>
-                <mi>f</mi>
-            </math> is free in
-            <math>
-                <mo>(</mo>
-                <mo>&lambda;</mo>
-                <mo>x</mo>
-                <mo>.</mo>
-                <mrow>
-                    <mo>(</mo>
-                    <mi>f</mi>
-                    <mspace width="0.5em" />
-                    <mi>x</mi>
-                    <mo>)</mo>
-                </mrow>
-                <mo>)</mo>
-            </math>
-            but is bound in
-            <math>
-                <mo>(</mo>
-                <mo>&lambda;</mo>
-                <mi>f</mi>
-                <mi>.</mi>
-                <mo>(</mo>
-                <mo>&lambda;</mo>
-                <mo>x</mo>
-                <mo>.</mo>
-                <mrow>
-                    <mo>(</mo>
-                    <mi>f</mi>
-                    <mspace width="0.5em" />
-                    <mi>x</mi>
-                    <mo>)</mo>
-                </mrow>
-                <mo>)</mo>
-                <mo>)</mo>
-            </math>. This must be taken into account when performing operations
-            like &alpha; or &eta; conversions.
-        </p>
-
-        <details>
-
-            <summary>Conversions and Reductions</summary>
+            <span class="title" id="conversions">Conversions and Reductions</span>
 
             <p>
                 In order to prove certain theorems in Computability Theory as
@@ -172,9 +104,9 @@
                                     <mrow>
                                         <mo>(</mo>
                                         <mo>&lambda;</mo>
-                                        <mi>x</mi>
+                                        <mi>y</mi>
                                         <mo>.</mo>
-                                        <mi>x</mi>
+                                        <mi>y</mi>
                                         <mo>)</mo>
                                     </mrow>
                                     <mi>b</mi>
@@ -191,9 +123,9 @@
                             <mrow>
                                 <mo>(</mo>
                                 <mo>&lambda;</mo>
-                                <mi>x</mi>
+                                <mi>y</mi>
                                 <mo>.</mo>
-                                <mi>x</mi>
+                                <mi>y</mi>
                                 <mo>)</mo>
                             </mrow>
                             <mi>b</mi>
@@ -238,7 +170,75 @@
                 results.
             </p>
 
-        </details>
+        </aside>
+
+        <h2>Grammar</h2>
+
+        <p>
+            The "strict" grammar for &lambda;-Calculus can be expressed with just a
+            handful of BNF productions:
+        </p>
+
+        <pre>
+            term := name | application | abstraction
+            name := a | ... | z
+            application := (term term)
+            abstraction := (&lambda; name . term)
+        </pre>
+
+        <p>
+            Use of a name is <i>bound</i> when it occurs within the scope of a
+            &lambda; abstraction (i.e. inside the parentheses, following the
+            dot) with that name appearing between the &lambda; operator and the
+            dot. A name is <i>free</i> otherwise. A term is <i>closed</i> if it
+            contains no free names. A term is <i>open</i> otherwise. Only closed
+            terms can be used in computation since there is no way to determine
+            the value referenced by a free name. Note that where &lambda;
+            abstractions are involved, a term may be locally free in an inner
+            scope but bound by some outer abstraction within which the given one
+            occurs.
+        </p>
+
+        <p>
+            For example, <math>
+                <mi>f</mi>
+            </math> is free in
+            <math>
+                <mo>(</mo>
+                <mo>&lambda;</mo>
+                <mo>x</mo>
+                <mo>.</mo>
+                <mrow>
+                    <mo>(</mo>
+                    <mi>f</mi>
+                    <mspace width="0.5em" />
+                    <mi>x</mi>
+                    <mo>)</mo>
+                </mrow>
+                <mo>)</mo>
+            </math>
+            but is bound in
+            <math>
+                <mo>(</mo>
+                <mo>&lambda;</mo>
+                <mi>f</mi>
+                <mi>.</mi>
+                <mo>(</mo>
+                <mo>&lambda;</mo>
+                <mo>x</mo>
+                <mo>.</mo>
+                <mrow>
+                    <mo>(</mo>
+                    <mi>f</mi>
+                    <mspace width="0.5em" />
+                    <mi>x</mi>
+                    <mo>)</mo>
+                </mrow>
+                <mo>)</mo>
+                <mo>)</mo>
+            </math>. This must be taken into account when performing operations
+            like <a href="#conversions">&alpha; or &eta; conversions</a>.
+        </p>
 
         <h3>Informal Syntax</h3>
 
@@ -378,9 +378,10 @@
 
         <p>
             These more relaxed conventions are used througout these pages, along
-            with even more relaxed implicit conversion of Church Numerals (see
-            below) and mathematical operations on them into conventional
-            arithmetical notation in the bodies of &lambda; abstractions.
+            with even more relaxed implicit conversion of Church Numerals (<a
+            href="#numerals">see below</a>) and mathematical operations on them
+            into conventional arithmetical notation in the bodies of &lambda;
+            abstractions.
         </p>
 
         <p class="indent">
@@ -706,15 +707,15 @@
                 :to="{ name: 'liar' }">incomplete</router-link>).
         </p>
 
-        <h2>Church Numerals</h2>
+        <h2 id="numerals">Church Numerals</h2>
 
         <p>
             In order to accomplish the purpose for which Church created
             &lambda;-Calculus, he needed to create a model of numbers and
-            arithmetic operations using them. Since the only native data type in
-            Church's original &lambda;-Calculus are funtions, <i>Church
-                Numerals</i> model natural numbers by applying a given function the
-            corresponding number of times:
+            arithmetic operations using only &lambda; formulas. Since the only
+            native data type in Church's original &lambda;-Calculus are
+            functions, <i>Church Numerals</i> model natural numbers by applying
+            a given function the corresponding number of times:
         </p>
 
         <math display="block">
@@ -852,7 +853,7 @@
             is shorthand for applying
             <math>
                 <mi>f</mi>
-            </math>
+            </math>,
             <math>
                 <mi>n</mi>
             </math>
@@ -880,10 +881,11 @@
             Church then defined a convention for modeling arithmetic operations
             by composing such functions. In the end, he provided a model of
             numerical calculation sufficient to prove that the value for any
-            formula of arithmetic could be encoded as a &lambda; expression. The
-            same can be done for Boolean values, the logical connectives of the
-            Sentential Calculus, and so on. Church achieved his goal of defining
-            a general-purpose abstraction of the concept of
+            formula of arithmetic could be encoded as a &lambda; expression
+            involving Church numerals. The same can be done for Boolean values,
+            the logical connectives of the Sentential Calculus, and so on.
+            Church thus achieved his goal of defining a general-purpose
+            abstraction of the concept of
             <router-link :to="{ name: 'computability' }">
                 "computation."
             </router-link>
@@ -907,6 +909,6 @@
 }
 </style>
 
-<script setup lang="ts">
-import YCombinator from '../liar/YCombinator.vue';
+<script setup>
+import YCombinator from '@/pages/logic/liar/YCombinator.vue'
 </script>
