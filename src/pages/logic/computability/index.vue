@@ -16,22 +16,22 @@
             resolved the original, central question of what makes a number
             computable, as an unintended side effect they invented the formal
             mechanisms defining a programming language and a programmable device
-            on which to run it. Referring to anonymous functions in any programming
-            language as lambdas" is a direct reference to Church's
+            on which to run it. Referring to anonymous functions in any
+            programming language as "lambdas" is a direct reference to Church's
             <i>&lambda;-Calculus</i>. Talking about electronic computing devices
             as "machines" and the basic set of operations such a device can
             perform as "machine language" is a direct reference to Turing's
-            work.
+            thought experiments involving <i>a-machines</i>.
         </p>
 
         <h2>From Euclid to Cantor</h2>
 
         <p>
-            To understand the underlying problem which Church and Turing were
-            trying to solve through their work on computability requires delving
-            into a very long succession of mathematical cononundrums which
-            begins, like so much else, in ancient Greece. Here is a very
-            abbreviated version of this history.
+            To understand the underlying problem which Church and Turing set out
+            to solve through their work on computability requires delving into a
+            very long succession of mathematical cononundrums which begins, like
+            so much else, in ancient Greece. Here is a very abbreviated version
+            of this history.
         </p>
 
         <p>

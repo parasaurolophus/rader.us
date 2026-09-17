@@ -95,6 +95,15 @@ const routes = [
     },
 
     {
+        path: '/software',
+        name: 'software',
+        component: () => import('./pages/software/index.vue'),
+        meta: {
+            title: 'Software Development',
+        },
+    },
+
+    {
         path: '/:pathMatch(.*)*',
         name: 'catchall',
         component: () => import('./pages/CaltchAll.vue'),
