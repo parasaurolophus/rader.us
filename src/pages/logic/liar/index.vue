@@ -87,20 +87,22 @@
             Formal languages of the kind used by mathematicions and computer
             programmers can also construct self-referencing expressions and so
             are susceptible to the same kind of semantic failure as the liar
-            paradox. Consider Alonzo Church's <i>λ-Calculus</i>. It gave
-            rise to the very idea of a programming language before digital
+            paradox. Consider Alonzo Church's
+            <router-link :to="{ name: 'liar' }">λ-Calculus</router-link>. It
+            gave rise to the very idea of a programming language before digital
             computers had been invented, in the same way (and as part of the
             same line of mathematical inquiry) as Alan Turing's
             <i>a-machines</i> gave rise to the idea of such digitally
-            programmable devices. (Turing was Church's student and subsequent
-            collaborator in the field of <i>Computability Theory</i>. Between
-            them, they laid the mathematical foundation on which the Information
-            Age was built.) Haskell Curry showed that, despite its essential
-            utility not only in helping resolve the original abstract questions
-            regarding the nature of computable numbers for which Church had
-            created it, the λ-Calculus is logically <i>incomplete</i>
-            precisely because it can be used to construct self-referential
-            <i>fixed-point combinators</i> such as <i>Y</i>:
+            programmable devices. (Church was Turing's thesis advisor. They
+            subsequently collaborated in the field of
+            <router-link :to="{ name: 'computability' }">Computability Theory</router-link>.
+            Between them, they laid the mathematical foundation on
+            which the Information Age was built.) Haskell Curry showed that,
+            despite its essential utility not only in helping resolve the
+            original abstract questions regarding the nature of computable
+            numbers for which Church had created it, the λ-Calculus is logically
+            <i>incomplete</i> precisely because it can be used to construct
+            self-referential <i>fixed-point combinators</i> such as <i>Y</i>:
         </p>
 
         <YCombinator display="block" />

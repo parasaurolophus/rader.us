@@ -97,8 +97,9 @@ const routes = [
     {
         path: '/:pathMatch(.*)*',
         name: 'catchall',
-        redirect: '/',
+        component: () => import('./pages/CaltchAll.vue'),
         meta: {
+            title: '404',
             hide: true,
         },
     },
