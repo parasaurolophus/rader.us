@@ -1,168 +1,42 @@
 // Copyright (c) 2026 Kirk Rader
 
-function Flowchart(type = 'flowchart', direction = 'LR', curve = 'monotoneY') {
+import mermaid from 'mermaid'
 
-    Object.defineProperties(this, {
+// "mutex" that isn't actually thread-safe, but good enough for single-threaded
+// javascript
+let renderLocked = false
+const renderQueue = []
 
-        addClass: {
-            value: function (name, ...nodes) {
+async function renderDiagram(svgId, source, element) {
 
-                function appendNodes(previous, current, index) {
+    // check "mutex"
+    if (renderLocked) {
 
-                    return previous.concat(index > 0 ? ',' : '', current)
-                }
+        // defer this invocation until after all previous invocations have
+        // completed
+        renderQueue.push(() => renderDiagram(svgId, source, element))
+        return
+    }
 
-                const line = `class ${nodes.reduce(appendNodes, '')} ${name}`
+    try {
 
-                this.addLine('classes', line)
-            },
-            configurable: false,
-            writable: false,
-            enumerable: true,
-        },
+        // await mermaid.render() with the critical section locked
+        renderLocked = true
+        const { svg, bindFunctions } = await mermaid.render(svgId, source)
+        element.innerHTML = svg
+        bindFunctions?.(element)
 
-        addClassDef: {
-            value: function (name, definition) {
+    } finally {
 
-                this.addLine('classDefs', `classDef ${name} ${definition}`)
-            },
-            configurable: false,
-            writable: false,
-            enumerable: true,
-        },
+        // unlock the "mutex" when exiting the critical section
+        renderLocked = false
+    }
 
-        addClick: {
-            value: function (node, arg) {
+    // invoke the next deferred invocation, if any
+    if (renderQueue.length > 0) {
 
-                this.addLine('clicks', `click ${node} call mermaidCallback(${arg})`)
-            },
-            configurable: false,
-            writable: false,
-            enumerable: true,
-        },
-
-        addEdge: {
-            value: function (from, arrow, to) {
-
-                const edge = `e${this.counter++}`
-
-                this.addLine('edges', `${from} ${edge}@${arrow} ${to}`)
-                return edge
-            },
-            configurable: false,
-            writable: false,
-            enumerable: true,
-        },
-
-        addLink: {
-            value: function (node, url, target) {
-
-                if (target) {
-
-                    this.addLine('clicks', `click ${node} href "${url}" ${target}`)
-
-                } else {
-
-                    this.addLine('clicks', `click ${node} href "${url}"`)
-                }
-            },
-            configurable: false,
-            writable: false,
-            enumerable: true,
-        },
-
-        addNode: {
-            value: function (label) {
-
-                const node = `n${this.counter++}`
-
-                this.addLine('lines', `${node}${label}`)
-                return node
-            },
-            configurable: false,
-            writable: false,
-            enumerable: true,
-        },
-
-        addSubgraph: {
-            value: function (label, body) {
-
-                const s = `s${this.counter++}`
-
-                this.addLine('lines', `subgraph ${s}${label}`)
-                body(this)
-                this.addLine('lines', 'end')
-                return s
-            },
-            configurable: false,
-            writable: false,
-            enumerable: true,
-        },
-
-        classDefs: {
-            value: '',
-            configurable: true,
-            writable: true,
-            enumerable: false,
-        },
-
-        classes: {
-            value: '',
-            configurable: true,
-            writable: true,
-            enumerable: false,
-        },
-
-        clicks: {
-            value: '',
-            configurable: true,
-            writable: true,
-            enumerable: false,
-        },
-
-        counter: {
-            value: 0,
-            configurable: true,
-            writable: true,
-            enumerable: false,
-        },
-
-        edges: {
-            value: '',
-            configurable: true,
-            writable: true,
-            enumerable: false,
-        },
-
-        lines: {
-            value: `---
-config:
-  flowchart:
-    curve: ${curve ?? 'basis'}
----
-${type ?? 'flowchart'} ${direction ?? 'LR'}
-`,
-            configurable: true,
-            writable: true,
-            enumerable: false,
-        },
-
-        source: {
-            get: function () {
-                return this.lines.concat(...
-                    this.edges,
-                    this.classes,
-                    this.clicks,
-                    this.classDefs)
-            },
-            enumerable: true,
-        },
-    })
+        renderQueue.shift()()
+    }
 }
 
-Flowchart.prototype.addLine = function (key, line) {
-
-    this[key] = this[key].concat(`${line}\n`)
-}
-
-export { Flowchart }
+export { renderDiagram }
