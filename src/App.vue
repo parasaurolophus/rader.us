@@ -35,6 +35,11 @@ import { RouterView } from 'vue-router'
 import { onMounted, provide, ref, watch } from 'vue'
 
 const currentTheme = ref('dark-theme')
+const isLargeScreen = ref(false)
+const largeScreenQuery = window.matchMedia('(width >= 1200px)')
+
+isLargeScreen.value = largeScreenQuery.matches
+largeScreenQuery.addEventListener('change', onLargeScreenChanged)
 
 const musicLinks = ref({
     amazonMusic: {
@@ -76,20 +81,13 @@ const otherLinks = ref({
         title: 'HyperFollow',
         url: 'https://hyperfollow.com/kirkrader',
     },
-    undecidable: {
-        title: 'Undecidable',
-        url: 'https://music.apple.com/us/album/undecidable-ep/417090158?itscg=30200&itsct=music_box_link&ls=1&app=music&mttnsubad=417090158',
-    },
-})
-
-const refreshDiagrams = ref(0)
-
-const softwareLinks = ref({
     github: {
         title: 'GitHub',
         url: 'https://github.com/parasaurolophus',
     },
 })
+
+const refreshDiagrams = ref(0)
 
 function hideSidebar() {
 
@@ -115,6 +113,11 @@ function mermaidClick(arg) {
     console.log(`mermaid click ${arg}`)
 }
 
+function onLargeScreenChanged(event) {
+
+    isLargeScreen.value = event.target.matches
+}
+
 function toggleTheme() {
 
     const newTheme = currentTheme.value === 'dark-theme' ? 'light-theme' : 'dark-theme'
@@ -125,10 +128,10 @@ function toggleTheme() {
 
 provide('currentTheme', currentTheme)
 provide('hideSidebar', hideSidebar)
+provide('isLargeScreen', isLargeScreen)
 provide('musicLinks', musicLinks)
 provide('otherLinks', otherLinks)
 provide('refreshDiagrams', refreshDiagrams)
-provide('softwareLinks', softwareLinks)
 provide('toggleTheme', toggleTheme)
 
 mermaidHandler = mermaidClick

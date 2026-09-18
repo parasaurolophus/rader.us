@@ -1,8 +1,10 @@
 <!-- Copyright (c) Kirk Rader 2026 -->
 
 <template>
-    <div ref="svg" :class="`container ${size}`">
-    </div>
+    <a :href="text" target="_blank">
+        <div ref="svg" :class="`container ${size}`">
+        </div>
+    </a>
 </template>
 
 <style scoped>

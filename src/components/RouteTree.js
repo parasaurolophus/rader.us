@@ -9,9 +9,8 @@ export default {
 
     setup(props) {
 
-        const route = useRoute()
         const router = useRouter()
-        const root = props.root ?? route
+        const root = props.root ?? useRoute()
         const links = props.links ?? []
 
         function buildAnchor(url, title) {

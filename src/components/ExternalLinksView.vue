@@ -8,14 +8,7 @@
                 <option :value="link">{{ link.title }}</option>
             </template>
         </select>
-        <a :href="selectedLink.url" target="_blank">
-            <QrComponent v-model="selectedLink.url" :size="size" />
-        </a>
-        <span v-if="selectedLink">
-            <a :href="selectedLink.url" target="_blank">
-                {{ selectedLink.url }}
-            </a>
-        </span>
+        <QrComponent v-model="selectedLink.url" :size="size" />
     </fieldset>
 </template>
 

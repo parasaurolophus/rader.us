@@ -6,12 +6,14 @@
 
         <div class="columns">
 
-            <div class="column">
+            <div>
                 <h1>Music</h1>
                 <RouteTree />
             </div>
 
-            <div class="column">
+            <hr v-if="!isLargeScreen">
+
+            <div class="links">
 
                 <div>
                     Choose a streaming service on which to hear my stuff&hellip;
@@ -20,10 +22,10 @@
 
                 <ExternalLinksView v-model="links" size="x-large" />
 
-                <div>
+                <p>
                     Or search for "<CopyableSpan>Kirk Rader</CopyableSpan>" on
                     the music service you prefer.
-                </div>
+                </p>
             </div>
 
         </div>
@@ -33,9 +35,20 @@
 </template>
 
 <style scoped>
-.columns {
-    display: grid;
-    grid-template-columns: 48% 48%;
+@media (width >=1200px) {
+
+    .columns {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .links {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 </style>
 
@@ -43,16 +56,18 @@
 import CopyableSpan from '@/components/CopyableSpan.vue'
 import ExternalLinksView from '@/components/ExternalLinksView.vue'
 import RouteTree from '@/components/RouteTree'
-import { inject, onMounted, ref, watch } from 'vue'
+import { inject, onMounted, onUnmounted, ref, watch } from 'vue'
 
-const musicLinks = inject('musicLinks')
+let largeScreenQuery = null
 const links = ref([])
+const isLargeScreen = inject('isLargeScreen')
+const musicLinks = inject('musicLinks')
 
-function update() {
+function updateLinks() {
 
     links.value = Object.values(musicLinks.value)
 }
 
-onMounted(update)
-watch(musicLinks, update)
+onMounted(updateLinks)
+watch(musicLinks, updateLinks)
 </script>

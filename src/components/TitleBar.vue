@@ -12,9 +12,7 @@
             <BreadCrumbs />
         </div>
         <MdiIcon :path="mdiThemeLightDark" class="button right" @click="toggleTheme()" />
-        <a id="qr" :href="otherLinks.hyperFollow.url" target="_blank">
-            <QrComponent v-model="otherLinks.hyperFollow.url" />
-        </a>
+        <QrComponent id="qr" v-model="otherLinks.hyperFollow.url" />
     </div>
 </template>
 
