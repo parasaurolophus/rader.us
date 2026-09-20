@@ -98,13 +98,21 @@
             sound.
         </p>
 
-        <aside>
-            [For completeness, a digital recording stores the representation of
-            the vibrations as a series of binary numbers which then undergoes
-            digital to analog conversion (DAC) to become an audio signal
-            conveyed as a varying voltage... but let's leave that aside for now
-            since we are concentrating here on analog synthesis and playback.]
-        </aside>
+        <DetailsView>
+
+            <template #summary>
+                Digital Recording
+            </template>
+
+            <p>
+                [For completeness, a digital recording stores the representation of
+                the vibrations as a series of binary numbers which then undergoes
+                digital to analog conversion (DAC) to become an audio signal
+                conveyed as a varying voltage... but let's leave that aside for now
+                since we are concentrating here on analog synthesis and playback.]
+            </p>
+
+        </DetailsView>
 
         <p>
             In the same way, an analog tape stores acoustic vibrations as
@@ -159,21 +167,21 @@
 
         <MermaidDiagram svg-id="diagram1">
             <pre>
----
-title: Traditional Analog Recording and Playback
----
-graph LR
+        ---
+        title: Traditional Analog Recording and Playback
+        ---
+        graph LR
 
-    recorder[recording /<br>playback<br>device]
+        recorder[recording /<br>playback<br>device]
 
-    instrument -->|soundwaves| ears
-    instrument -->|soundwaves| microphone
-    microphone -->|voltage| amplifier
-    amplifier -->|voltage| recorder
-    recorder -->|voltage| amplifier
-    amplifier -->|voltage| speaker
-    speaker -->|soundwaves| ears
-        </pre>
+        instrument -->|soundwaves| ears
+        instrument -->|soundwaves| microphone
+        microphone -->|voltage| amplifier
+        amplifier -->|voltage| recorder
+        recorder -->|voltage| amplifier
+        amplifier -->|voltage| speaker
+        speaker -->|soundwaves| ears
+    </pre>
         </MermaidDiagram>
 
         <p>
@@ -185,19 +193,19 @@ graph LR
 
         <MermaidDiagram svg-id="diagram02">
             <pre>
----
-title: Analog Synthesis
----
-graph LR
+        ---
+        title: Analog Synthesis
+        ---
+        graph LR
 
-    recorder[recording /<br>playback<br>device]
+        recorder[recording /<br>playback<br>device]
 
-    synthesizer -->|voltage| amplifier
-    amplifier -->|voltage| recorder
-    recorder -->|voltage| amplifier
-    amplifier -->|voltage| speaker
-    speaker -->|soundwaves| ears
-        </pre>
+        synthesizer -->|voltage| amplifier
+        amplifier -->|voltage| recorder
+        recorder -->|voltage| amplifier
+        amplifier -->|voltage| speaker
+        speaker -->|soundwaves| ears
+    </pre>
         </MermaidDiagram>
 
         <p>
@@ -769,10 +777,10 @@ graph LR
 
         <MermaidDiagram svg-id="vibrato">
             <pre>
-graph LR
+        graph LR
 
-    LFO -.->|"CV<br>(frequency)"| VCO
-    VCO -->|audio| VCA
+        LFO -.->|"CV<br>(frequency)"| VCO
+        VCO -->|audio| VCA
     </pre>
         </MermaidDiagram>
 
@@ -815,17 +823,17 @@ graph LR
 
         <MermaidDiagram svg-id="sineVsineVsine">
             <pre>
-graph LR
+        graph LR
 
-    lfo[LFO]
-    vco1[VCO 1]
-    vco2[VCO 2]
-    vca[VCA]
+        lfo[LFO]
+        vco1[VCO 1]
+        vco2[VCO 2]
+        vca[VCA]
 
-    lfo .->|"CV<br>(frequency)"| vco2
-    vco2 .->|"CV<br>(frequency)"| vco1
-    vco1 -->|audio| vca
-</pre>
+        lfo .->|"CV<br>(frequency)"| vco2
+        vco2 .->|"CV<br>(frequency)"| vco1
+        vco1 -->|audio| vca
+    </pre>
         </MermaidDiagram>
 
         <p>
@@ -915,11 +923,11 @@ graph LR
 
         <MermaidDiagram svg-id="smooth">
             <pre>
-graph LR
+        graph LR
 
-    LFO -.->|"CV<br>(sawtooth)"| VCO
-    VCO -->|audio| VCA
-        </pre>
+        LFO -.->|"CV<br>(sawtooth)"| VCO
+        VCO -->|audio| VCA
+    </pre>
         </MermaidDiagram>
 
         <p>
@@ -946,15 +954,15 @@ graph LR
 
         <MermaidDiagram svg-id="steps">
             <pre>
-graph LR
+        graph LR
 
-    sh["S&H"]
+        sh["S&H"]
 
-    LFO -.->|"CV<br>(sawtooth)"| sh
-    clock -.-> sh
-    sh -.->|"CV"| VCO
-    VCO -->|audio| VCA
-        </pre>
+        LFO -.->|"CV<br>(sawtooth)"| sh
+        clock -.-> sh
+        sh -.->|"CV"| VCO
+        VCO -->|audio| VCA
+    </pre>
         </MermaidDiagram>
 
         <p>
@@ -1049,16 +1057,16 @@ graph LR
 
         <MermaidDiagram svg-id="random">
             <pre>
-graph LR
+        graph LR
 
-    sh["S&H"]
-    ng[Noise Generator]
+        sh["S&H"]
+        ng[Noise Generator]
 
-    ng -.->|CV| sh
-    clock -.-> sh
-    sh -.->|"CV"| VCO
-    VCO -->|audio| VCA
-        </pre>
+        ng -.->|CV| sh
+        clock -.-> sh
+        sh -.->|"CV"| VCO
+        VCO -->|audio| VCA
+    </pre>
         </MermaidDiagram>
 
         <h2>Example 01</h2>
@@ -1126,131 +1134,131 @@ graph LR
         </p>
 
         <pre>
-# Copyright 2024 Kirk Rader
+    # Copyright 2024 Kirk Rader
 
-# Example 03
+    # Example 03
 
-use_random_seed 10
-use_random_source :white
+    use_random_seed 10
+    use_random_source :white
 
-terminate = false
+    terminate = false
 
-# master clock
-in_thread do
-  with_bpm 120 do
+    # master clock
+    in_thread do
+    with_bpm 120 do
     midi (hz_to_midi 440)
     sleep 10
     180.times do
-      cue :master
-      sleep 1
+    cue :master
+    sleep 1
     end
-  ensure
+    ensure
     terminate = true
     cue :master
     sleep 1
     midi_all_notes_off
-  end
-end
+    end
+    end
 
-# track 1 (low toms hard)
-comment do
-  in_thread do
+    # track 1 (low toms hard)
+    comment do
+    in_thread do
     with_bpm 120 do
-      beats = (spread 2, 5).rotate(2)
-      loop do
-        sync :master
-        stop if terminate
-        tick
-        midi 36 if beats.look
-      end
+    beats = (spread 2, 5).rotate(2)
+    loop do
+    sync :master
+    stop if terminate
+    tick
+    midi 36 if beats.look
+    end
     ensure
-      midi 36
-      sleep 1
+    midi 36
+    sleep 1
     end
-  end
-end
-
-# track 2 (low toms soft)
-comment do
-  in_thread do
-    with_bpm 120 do
-      beats = (spread 2, 5).rotate(2)
-      loop do
-        sync :master
-        stop if terminate
-        tick
-        midi 36 if !beats.look
-      end
     end
-  end
-end
-
-# track 3 (high toms hard)
-comment do
-  in_thread do
-    with_bpm 120 do
-      beats = (spread 3, 7).rotate(1)
-      loop do
-        sync :master
-        stop if terminate
-        tick
-        midi 48 if beats.look
-      end
     end
-  end
-end
 
-# track 4 (high toms soft)
-comment do
-  in_thread do
+    # track 2 (low toms soft)
+    comment do
+    in_thread do
     with_bpm 120 do
-      beats = (spread 3, 7).rotate(1)
-      loop do
-        sync :master
-        stop if terminate
-        tick
-        midi 48 if !beats.look
-      end
+    beats = (spread 2, 5).rotate(2)
+    loop do
+    sync :master
+    stop if terminate
+    tick
+    midi 36 if !beats.look
     end
-  end
-end
+    end
+    end
+    end
 
-# track 5 (bass)
-comment do
-  in_thread do
+    # track 3 (high toms hard)
+    comment do
+    in_thread do
     with_bpm 120 do
-      notes = (range 20, 31).shuffle
-      loop do
-        sync :master
-        stop if terminate
-        tick
-        midi notes.look
-      end
+    beats = (spread 3, 7).rotate(1)
+    loop do
+    sync :master
+    stop if terminate
+    tick
+    midi 48 if beats.look
+    end
+    end
+    end
+    end
+
+    # track 4 (high toms soft)
+    comment do
+    in_thread do
+    with_bpm 120 do
+    beats = (spread 3, 7).rotate(1)
+    loop do
+    sync :master
+    stop if terminate
+    tick
+    midi 48 if !beats.look
+    end
+    end
+    end
+    end
+
+    # track 5 (bass)
+    comment do
+    in_thread do
+    with_bpm 120 do
+    notes = (range 20, 31).shuffle
+    loop do
+    sync :master
+    stop if terminate
+    tick
+    midi notes.look
+    end
     ensure
-      midi 20
-      sleep 1
+    midi 20
+    sleep 1
     end
-  end
-end
+    end
+    end
 
-# track 6 (baritone)
-uncomment do
-  in_thread do
+    # track 6 (baritone)
+    uncomment do
+    in_thread do
     with_bpm 120 do
-      notes = (range 37, 48).shuffle
-      loop do
-        sync :master
-        stop if terminate
-        tick
-        midi notes.look
-      end
-    ensure
-      midi 48
-      sleep 1
+    notes = (range 37, 48).shuffle
+    loop do
+    sync :master
+    stop if terminate
+    tick
+    midi notes.look
     end
-  end
-end
-    </pre>
+    ensure
+    midi 48
+    sleep 1
+    end
+    end
+    end
+</pre>
 
         <h2>Summary</h2>
 
@@ -1469,6 +1477,7 @@ video {
 </style>
 
 <script setup>
+import DetailsView from '@/components/DetailsView.vue'
 import MdiIcon from '@/components/MdiIcon.vue'
 import MermaidDiagram from '@/components/MermaidDiagram.vue'
 import OmegaFormula from '@/components/logic/OmegaFormula.vue'

@@ -32,6 +32,27 @@
     </details>
 </template>
 
+<style scoped>
+details {
+    font-size: 90%;
+}
+
+details>*:not(summary) {
+    margin-left: 1rem;
+}
+
+.subtitle {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 80%;
+}
+
+summary {
+    cursor: pointer;
+    font-style: bold;
+}
+</style>
+
 <script setup>
 import { onMounted, ref } from 'vue'
 import data from '/assets/musicography.tsv?raw'

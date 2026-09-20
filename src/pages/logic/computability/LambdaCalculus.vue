@@ -27,9 +27,13 @@
             </li>
         </ul>
 
-        <aside>
+        <DetailsView>
 
-            <span class="title" id="conversions">Conversions and Reductions</span>
+            <a id="conversions"></a>
+
+            <template #summary>
+                Conversions and Reductions
+            </template>
 
             <p>
                 In order to prove certain theorems in Computability Theory as
@@ -170,7 +174,7 @@
                 results.
             </p>
 
-        </aside>
+        </DetailsView>
 
         <h2>Grammar</h2>
 
@@ -180,11 +184,11 @@
         </p>
 
         <pre>
-            term := name | application | abstraction
-            name := a | ... | z
-            application := (term term)
-            abstraction := (&lambda; name . term)
-        </pre>
+    term := name | application | abstraction
+    name := a | ... | z
+    application := (term term)
+    abstraction := (&lambda; name . term)
+</pre>
 
         <p>
             Use of a name is <i>bound</i> when it occurs within the scope of a
@@ -378,8 +382,8 @@
 
         <p>
             These more relaxed conventions are used througout these pages, along
-            with even more relaxed implicit conversion of Church Numerals (<a
-            href="#numerals">see below</a>) and mathematical operations on them
+            with even more relaxed implicit conversion of Church Numerals (<a href="#numerals">see below</a>) and
+            mathematical operations on them
             into conventional arithmetical notation in the bodies of &lambda;
             abstractions.
         </p>
@@ -646,7 +650,58 @@
             Curry's famous <i>Y combinator</i>:
         </p>
 
-        <YCombinator display="block" />
+        <math display="block">
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mrow>
+                            <mi>Y</mi>
+                            <mi>f</mi>
+                        </mrow>
+                        <mo>&equiv;</mo>
+                        <mrow>
+                            <mi>f</mi>
+                            <mo>(</mo>
+                            <mi>Y</mi>
+                            <mi>f</mi>
+                            <mo>)</mo>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mtext>where</mtext>
+                        <mspace width="0.5em" />
+                        <mi>Y</mi>
+                        <mo>=</mo>
+                        <mrow>
+                            <mrow>
+                                <mo>λ</mo>
+                                <mi>y</mi>
+                            </mrow>
+                            <mo>.</mo>
+                            <mrow v-for="count in 2">
+                                <mo>(</mo>
+                                <mrow>
+                                    <mo>λ</mo>
+                                    <mi>x</mi>
+                                </mrow>
+                                <mo>.</mo>
+                                <mrow>
+                                    <mi>y</mi>
+                                    <mo>(</mo>
+                                    <mi>x</mi>
+                                    <mspace width="0.5em" />
+                                    <mi>x</mi>
+                                    <mo>)</mo>
+                                </mrow>
+                                <mo>)</mo>
+                            </mrow>
+                        </mrow>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
 
         <p>
             Curry showed that self-recursion (a function applying itself during
@@ -661,7 +716,7 @@
             <mrow>
                 <mrow>
                     <mo>λ</mo>
-                    <mi>g</mi>
+                    <mi>y</mi>
                 </mrow>
                 <mo>.</mo>
                 <mrow v-for="count in 2">
@@ -672,7 +727,7 @@
                     </mrow>
                     <mo>.</mo>
                     <mrow>
-                        <mi>g</mi>
+                        <mi>y</mi>
                         <mo>(</mo>
                         <mi>x</mi>
                         <mspace width="0.5em" />
@@ -910,5 +965,5 @@
 </style>
 
 <script setup>
-import YCombinator from '@/pages/logic/liar/YCombinator.vue'
+import DetailsView from '@/components/DetailsView.vue'
 </script>

@@ -82,20 +82,6 @@ a:hover {
     text-decoration: underline;
 }
 
-aside {
-    float: right;
-    width: 30%;
-    font-style: italic;
-    margin-left: 1rem;
-    padding-left: 1rem;
-    border-left-style: solid;
-    border-width: 1px;
-    border-color: var(--foreground);
-}
-
-aside dfn,
-aside i,
-aside em,
 blockquote i,
 blockquote em {
     font-style: normal;
@@ -111,33 +97,10 @@ body {
     font-family: 'Noto Sans Mono', monospace;
 }
 
-.clickable,
-.copyable {
-
-    color: var(--secondary)
-}
-
-.clickable {
-    cursor: pointer;
-}
-
-.copyable {
-    cursor: copy;
-}
-
-code,
-.code {
+code {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     color: white;
-}
-
-details {
-    font-size: 90%;
-}
-
-details>*:not(summary) {
-    margin-left: 1rem;
 }
 
 footer {
@@ -188,11 +151,6 @@ math {
     z-index: 10;
 }
 
-summary {
-    cursor: pointer;
-    font-style: bold;
-}
-
 td,
 th {
     padding: 0.25rem;
@@ -203,34 +161,17 @@ tbody tr:nth-child(even) {
     background-color: var(--highlight);
 }
 
-/*
- * styles for "cards"
- */
-
-.title {
-    font-weight: bolder;
-    font-size: 110%;
-}
-
-.subtitle {
-    font-style: italic;
-    font-weight: bold;
-    font-size: 80%;
-}
-
-/* svg */
-
-text {
+svg text {
     font-family: 'Latin Modern Math';
     font-size: 1rem;
     fill: currentColor;
 }
 
-line {
+svg line {
     stroke: currentColor;
     stroke-width: 4;
 }
 
-circle {
+svg circle {
     fill: currentColor;
 }

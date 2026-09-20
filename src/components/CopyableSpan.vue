@@ -7,6 +7,14 @@
     <dialog ref="copied" closedby="any">copied</dialog>
 </template>
 
+<style scoped>
+.copyable {
+
+    color: var(--secondary);
+    cursor: copy;
+}
+</style>
+
 <script setup>
 import { useTemplateRef } from 'vue'
 

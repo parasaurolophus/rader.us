@@ -64,11 +64,17 @@
         </ol>
 
         <p>
-            The first three of the preceding axioms refer to the basic
+            The first three of the preceding axioms correspond to the basic
             operations of geometric construction using a straight-edge and
-            compass. The fourth is simply a special case, applied to right
-            angles, of the general principle that things with identical
-            properties are identical to each other.
+            compass. Viewed one way, the fourth axiom is simply a special case,
+            applied to right angles, of the general principle that things with
+            identical properties are identical to each other. The actual point
+            (no pun intended) of the fourth axiom, however, is to constrain
+            Euclid's system of geometry to a flat plane (hence the term "planar
+            geometry"). Informally, the fourth axiom guarantees that the surface
+            on which the constructions implied by the first three are performed
+            on a flat sheet of paper rather than, for example, the surface of a
+            sphere.
         </p>
 
         <p>
@@ -107,8 +113,6 @@
         <blockquote>
             Given a line and a point not on that line, at most one line can be
             drawn through the point that does not intersect the given line.
-
-            <i>John Playfair</i>
         </blockquote>
 
         <p>
@@ -150,20 +154,6 @@
             proving many of its theorems.
         </p>
 
-        <aside>
-            At the time, the kinds of "Non-Euclidean Geometries" pioneered by
-            Lobachevsky and Riemann were considered to be abstractions that did
-            not correspond with "reality" in the way that Euclid's, apparently,
-            does (at least when drawing figures on a flat sheet of paper). As
-            physicists used the kinds of mathematical tools afforded by these
-            new approaches to form theories related to phenomena outside the
-            scale at which human senses operate, they discovered that when
-            considered at the cosmologically enormous scale of General
-            Relativity or the ultra-microscopic scale of Quantum Mechanics, the
-            real world often presents features better described in non-Euclidean
-            terms. More on this, later...
-        </aside>
-
         <p>
             By the 1800's, empiricism was seen as a limitation to a mathematical
             theory rather than its grounding and ultimate source of truth.
@@ -200,22 +190,72 @@
             mapping from particular Mathematical theories to some set of
             observable features of objects in the real world. I.e. while all
             Geometries are equally valid from an abstract Mathematical point of
-            view, it is a Metamathetical theory that gives Euclidean a special
+            view, it is a Metamathetical theory that gives Euclidean Geometry a special
             status as also being a true description of figures drawn on a flat
-            sheet of paper using straigt-edge and compass. This notion is not
+            sheet of paper using straight-edge and compass. This notion is not
             specific to Geometry. Number Theory is the study of <i>groups</i>
             and <i>fields</i> with features which make them similar to
-            Arithmetic, while Arithmetic enjoys the metamathematical status of
-            corresponding to what happens when you count actual objects in the
-            real world. And so on across all the branches of Mathematics.
+            Arithmetic while Arithmetic, specifically, enjoys the
+            metamathematical status of corresponding to what happens when you
+            count actual objects in the real world. And so on across all the
+            branches of Mathematics.
         </p>
 
-        <aside>
-            Leibnitz' and Newton's arguments denying infinite quantities were,
-            of course, poppycock. If you accept that your theory acknowledges
-            the existence of infinitessimal differences it thereby acknowledges
-            the existence of infinite differences, as well. The one is simply
-            the algebraic inverse of the other:
+        <DetailsView>
+
+            <template #summary>
+                The Metamathematics of Non-Euclidean Geometry
+            </template>
+
+            <p>
+                At the time, the kinds of "Non-Euclidean Geometries" pioneered
+                by Lobachevsky and Riemann were considered to be abstractions
+                that did not correspond with "reality" in the way that Euclid's,
+                apparently, does (at least when drawing figures on a flat sheet
+                of paper). As physicists used the kinds of mathematical tools
+                afforded by these new approaches to form theories related to
+                phenomena outside the scale at which human senses operate, they
+                discovered that when considered at the cosmologically enormous
+                scale of General Relativity or the ultra-microscopic scale of
+                Quantum Mechanics, the real world often presents features better
+                described in non-Euclidean terms. More on this, later...
+            </p>
+
+        </DetailsView>
+
+        <p>
+            Which brings us to Georg Cantor and Set Theory. From time
+            immemorial, most mathematicians in the tradition stretching back to
+            ancient Greece were dismissive of the concept of a "completed
+            infinity" &mdash; i.e. a set with an infinite number of members. One
+            can never, after all, hold an infinite number of pebbles in one's
+            hands. Even Leibnitz and Newton who, centuries before Cantor,
+            independently invented Differential Calculus, expended a fair amount
+            of intellectual effort attempting to show that even though the
+            concepts of <i>limits</i> and <i>derivatives</i> are all about
+            infinitessimal differences in magnitude this somehow did not imply
+            the existence of infinite quantities. After the breakthroughs by
+            Lobachevsky's and Riemann's generation of mathematicians, subsequent
+            generations were liberated to pursue mathematical inquiries divorced
+            from Metamathematical constraints. Cantor, in particular, explored
+            the properties of infinite sets &mdash; simply stipulating that they
+            exist in the first place, at least for the purposes of "pure"
+            mathematics.
+        </p>
+
+        <DetailsView>
+
+            <template #summary>
+                Infinitessimal and Infinite Quantities
+            </template>
+
+            <p>
+                Leibnitz' and Newton's arguments denying infinite quantities
+                were, of course, poppycock. If you accept that your theory
+                acknowledges the existence of infinitessimal differences it
+                thereby acknowledges the existence of infinite differences, as
+                well. The one is simply the arithmetic inverse of the other:
+            </p>
 
             <math display="block">
                 <mrow>
@@ -261,28 +301,11 @@
                 </mrow>
             </math>
 
-            Again, much more on this, below...
-        </aside>
+            <p>
+                Again, much more on this, below...
+            </p>
 
-        <p>
-            Which brings us to Georg Cantor and Set Theory. From time
-            immemorial, most mathematicians in the tradition stretching back to
-            ancient Greece were dismissive of the concept of a "completed
-            infinity" &mdash; i.e. a set with an infinite number of members. One
-            can never, after all, hold an infinite number of pebbles in one's
-            hands. Even Leibnitz and Newton who, centuries before Cantor,
-            independently invented Differential Calculus, expended a fair amount
-            of intellectual effort attempting to show that even though the
-            concepts of <i>limits</i> and <i>derivatives</i> are all about
-            infinitessimal differences in magnitude this somehow did not imply
-            the existence of infinite quantities. After the breakthroughs by
-            Lobachevsky's and Riemann's generation of mathematicians, subsequent
-            generations were liberated to pursue mathematical inquiries divorced
-            from Metamathematical constraints. Cantor, in particular, explored
-            the properties of infinite sets &mdash; simply stipulating that they
-            exist in the first place, at least for the purposes of "pure"
-            mathematics.
-        </p>
+        </DetailsView>
 
         <p>
             The first challenge Cantor faced was to define what the "size" of a
@@ -624,6 +647,106 @@
             was only injective, after all.
         </p>
 
+        <DetailsView>
+
+            <template #summary>
+                Digit Sequences
+            </template>
+
+            <p>
+                The most often cited of Cantor's proofs that it is always
+                possible to construct a real number that cannot already be
+                contained in any countable subset of
+                <math>
+                    <mi>&reals;</mi>
+                </math>
+                turns on the ability to treat any sequence of digits as the
+                representation of a real number. Suppose
+                <math>
+                    <mi>S</mi>
+                </math>
+                is the continuous subset of real numbers between 0 and 1. Since
+                we assume
+                <math>
+                    <mi>S</mi>
+                </math>
+                is countable, we can refer to the first element of
+                <math>
+                    <mi>S</mi>
+                </math>
+                as the element that maps to 0, the second element of
+                <math>
+                    <mi>S</mi>
+                </math>
+                as being the element that maps to 1, and so on. To construct a
+                number between 0 and 1 that cannot already be in
+                <math>
+                    <mi>S</mi>
+                </math>
+                start a new sequence of digets. For the first element of your
+                new sequence, choose any digit other than the first digit of the
+                first element of
+                <math>
+                    <mi>S</mi>
+                </math>. For the second digit in your new sequence, choose any
+                digit other than the second digit of the second element of
+                <math>
+                    <mi>S</mi>
+                </math>. This process can be repeated indefinitely, choosing any
+                digit other than the <i>n</i>th digit of the <i>n</i>th elemeent
+                of
+                <math>
+                    <mi>S</mi>
+                </math>
+                as the <i>n</i>th element of the new sequence. This process
+                generates a sequence of digits guaranteed to differ in at least
+                one digit from every element of
+                <math>
+                    <mi>S</mi>
+                </math>
+                which means that the new sequence could not already be in
+                <math>
+                    <mi>S</mi>
+                </math>. Thus, the continuous subset of real numbers between 0
+                and 1 turns out not to be countable even on the assumption that
+                it is countable, completing the <i>reductio ad absurdum</i>
+                argument.
+            </p>
+
+            <p>
+                But consider what has actually been shown. If one makes the same
+                sort of assumptions that underly the continuum hypothesis,
+                Cantor's proofs suggest not merely that <math>
+                    <mi>R</mi>
+                </math>
+                is not countable, but there is an sbsurdity lurking wihtin the
+                concept of continuity, itself. Inherent in the idea of a
+                continuous set of numbers is the idea that every argument which
+                purports to say anything about all of them will fail in ways
+                similar to those highlighted by Cantor. For example, one of the
+                defining characteristics of a continuous set of numbers, as
+                shown by Dedekind, is that any such set with an upper bound must
+                have a least upper bound. But that further implies that it has
+                more than one upper bound (in fact, uncountably many upper
+                bounds) which is a counter-intuitive use of the phrase "upper
+                bound," to say the least. Again, all of these proofs of
+                counter-intuitive properteries of trans-finite set are logically
+                valid, but can only be considered "true" on the assumption that
+                such sets exist in the first place. When it comes to the
+                continuum, modern physics strongly suggests that there just is
+                no such thing in the real world. In fact, it has been recognized
+                since ancient times that taking the idea of the continuum too
+                seriously leads to absurdities like Zeno's Paradox and its many
+                variations. (Even if the number of subdivisions of spacetime
+                between two events is countably infinite, the limit of the sum
+                of those subdivisions is the actual, finite distance with no
+                paradox. Throw in the uncountably many non-computable intervals
+                between each of the countably-many intervals implied by a
+                continuum and things get metamathematically far trickier.)
+            </p>
+
+        </DetailsView>
+
         <h2>How Real Is the Real Number Line?</h2>
 
         <p>
@@ -722,16 +845,6 @@
             "encoded" in the form of a well-formed formula of &lambda;-Calculus.
         </p>
 
-        <aside>
-            While FORTRAN is widely credited as being the first programming
-            language to be used for real-world applications, work on Lisp at MIT
-            actually started earlier and has had a much more profound and
-            lasting influence on the design of programming languages, generally.
-            Lisp began as a project to "embody" &lambda;-Calculus directly as a
-            practical programming language in exactly the same way that modern
-            digital computers "embody" a-machines.
-        </aside>
-
         <p>
             This gave mathematicians something to say about the abstract notion
             of "computability." It also gave engineers a way of thinking about
@@ -750,6 +863,24 @@
             instruction set, modeled on Turing's a-machines.
         </p>
 
+        <DetailsView>
+
+            <template #summary>
+                FORTRAN and Lisp
+            </template>
+
+            <p>
+                While FORTRAN is widely credited as being the first programming
+                language to be used for real-world applications, work on Lisp at
+                MIT actually started earlier and has had a much more profound
+                and lasting influence on the design of programming languages,
+                generally. Lisp began as a project to "embody" &lambda;-Calculus
+                directly as a practical programming language in exactly the same
+                way that modern digital computers "embody" a-machines.
+            </p>
+
+        </DetailsView>
+
         <p>
             Backing up to what Cantor actually proved about infinite
             cardinalities and how that shaped the Church-Turing Thesis, it must
@@ -764,10 +895,10 @@
             mostly based on very bad metaphysics and metamathematics. Nothing
             should be <em>less</em> surprising than that, for example, things
             like billiard balls are not made of tinier things that behave just
-            like tinier billiard balls caroming off one another. It is easy to
+            like little billiard balls caroming off one another. It is easy to
             forget that when operating outside the scale at which human senses
             operate, and therefore with which our habits of thought evolved to
-            cope, we are <em>always</em> reasoning by analogy and abstraction.
+            cope, we are <em>always</em> reasoning by abstraction and analogy.
         </p>
 
         <p>
@@ -800,17 +931,16 @@
             entirely when one regards mental function as an epiphenomenon of
             neural function. But that was a move Descartes, as a devout
             Catholic, could not allow himself to make since it eliminates
-            anything like a "soul," existing separately and potentially
-            independently of a body, from consideration. Physicists should
-            simply free themselves of the superstition that reasoning by too
-            much by analogy from everyday experience in a domain where classical
-            physics makes sense when doing physics at ultra-microscopic scales
-            can lead to anything but confusion and blind alleys. Ditto when
-            reasoning by analogy at the cosmological scale. Double ditto for the
-            supposed contradictions reasoning by analogy between the subatomic
-            and cosmological scales. Physicists would do well to stick to
-            Physics and leave Metaphysics to the professionals in the Philosophy
-            department.
+            anything like a "soul" that exists separately and independently of a
+            body, from consideration. Physicists should simply free themselves
+            of the superstition that reasoning too much by analogy from everyday
+            experience in a domain where classical physics makes sense when
+            doing physics at ultra-microscopic scales can lead to anything but
+            confusion and blind alleys. Ditto when reasoning by analogy at the
+            cosmological scale. Double ditto for the supposed contradictions
+            reasoning by analogy between the subatomic and cosmological scales.
+            In short, Physicists would do well to stick to Physics and leave
+            Metaphysics to the professionals in the Philosophy department.
         </p>
 
         <p>
@@ -837,22 +967,31 @@
             all. Fully eschewing the notion of "continuity" could help resolve
             puzzling aspects of modern physics like entanglement and whether or
             not indeterminacy really has a "tail problem." A measuable property
-            is, by definition, computable. If not, one could not design an
-            experiment to take the measurement in the first place. Might the
-            gaps in the continuum left between computable numbers be big enough
-            to conceal some hidden variables? No-one knows, at the time of this
-            writing, but it seems sufficiently plausible to temper the
-            enthusiasm for the (slightly circular, to start with) claims about
-            qubits in quantum computers offering confirmation that quantum
-            effects in the real world display Bell inequalities of the sort that
-            suppoedly clinch the argument in favor of "spooky action at a
-            distance."
+            is quantified, by definition, using a computable number. If not, one
+            could never design an experiment to take the measurement in the
+            first place. Might the gaps in the continuum left between computable
+            numbers be big enough to conceal some hidden variables? No-one
+            knows, at the time of this writing, but it seems sufficiently
+            plausible to temper the enthusiasm for the (slightly circular, to
+            start with) claims about qubits in quantum computers offering
+            confirmation that quantum effects in the real world display Bell
+            inequalities of the sort that suppoedly clinch the argument in favor
+            of "spooky action at a distance."
         </p>
 
     </div>
 
 </template>
 
-<script setup lang="ts">
+<style scoped>
+.subtitle {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 110%;
+}
+</style>
+
+<script setup>
+import DetailsView from '@/components/DetailsView.vue'
 import ParallelPostulate from '@/pages/logic/computability/ParallelPostulate.vue'
 </script>

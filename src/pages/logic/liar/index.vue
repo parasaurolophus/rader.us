@@ -49,7 +49,44 @@
             a defective axiom:
         </p>
 
-        <RusselParadox display="block" />
+        <math display="block">
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mrow>
+                            <mi>S</mi>
+                            <mo>∈</mo>
+                            <mi>S</mi>
+                        </mrow>
+                        <mo>↔</mo>
+                        <mrow>
+                            <mi>S</mi>
+                            <mo>∉</mo>
+                            <mi>S</mi>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mtext>where</mtext>
+                        <mspace width="0.5rem" />
+                        <mrow>
+                            <mi>S</mi>
+                            <mo>=</mo>
+                            <mo>{</mo>
+                            <mi>s</mi>
+                            <mo>:</mo>
+                            <mrow>
+                                <mi>s</mi>
+                                <mo>∉</mo>
+                                <mi>s</mi>
+                            </mrow>
+                            <mo>}</mo>
+                        </mrow>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
 
         <p>
             I.e. the set of all sets that are not members of themselves cannot
@@ -70,80 +107,192 @@
 
         <h2>Incompleteness</h2>
 
-        <aside>
-            A language is said to be <dfn id="incomplete">incomplete</dfn>
-            if its grammar is such that it can be used to construct well-formed
-            expressions which cannot be assigned a value using the rules of the
-            language, itself. The liar paradox demonstrates that natural
-            languages like ancient Greek and modern English are incomplete. Kurt
-            Gödel proved that all formal languages with certain properties
-            (exactly the properties that make them useful for general-purpose
-            mathematical, scientific and engineering applications) are also
-            incomplete because they can be used to form self-referential
-            expressions analogous to "This sentence is false."
-        </aside>
+        <DetailsView>
+
+            <template #summary>
+                Undecidability and Incompleteness
+            </template>
+
+            <p>
+                A formula of a language is <i>undecidable</i> if it cannot be
+                assigned a value according to the rules of the given language,
+                despite being well-formed. A language <i>incomplete</i> if its
+                grammar is such that it can be used to construct any undecidable
+                formulas. The liar paradox demonstrates that natural languages
+                like ancient Greek and modern English are incomplete. Kurt Gödel
+                proved that all formal languages with certain properties
+                (exactly the properties that make them useful for
+                general-purpose mathematical, scientific and engineering
+                applications) are also incomplete because they can be used to
+                form self-referential expressions analogous to "This sentence is
+                false."
+            </p>
+
+        </DetailsView>
 
         <p>
             Formal languages of the kind used by mathematicions and computer
             programmers can also construct self-referencing expressions and so
             are susceptible to the same kind of semantic failure as the liar
-            paradox. Consider Alonzo Church's
-            <router-link :to="{ name: 'liar' }">λ-Calculus</router-link>. It
-            gave rise to the very idea of a programming language before digital
-            computers had been invented, in the same way (and as part of the
-            same line of mathematical inquiry) as Alan Turing's
-            <i>a-machines</i> gave rise to the idea of such digitally
-            programmable devices. (Church was Turing's thesis advisor. They
-            subsequently collaborated in the field of
-            <router-link :to="{ name: 'computability' }">Computability Theory</router-link>.
-            Between them, they laid the mathematical foundation on
-            which the Information Age was built.) Haskell Curry showed that,
-            despite its essential utility not only in helping resolve the
-            original abstract questions regarding the nature of computable
-            numbers for which Church had created it, the λ-Calculus is logically
-            <i>incomplete</i> precisely because it can be used to construct
-            self-referential <i>fixed-point combinators</i> such as <i>Y</i>:
+            paradox. Consider Alonzo Church's <router-link :to="{
+                name: 'liar'
+            }">λ-Calculus</router-link>. It gave rise to the very idea of a
+            programming language before digital computers had been invented, in
+            the same way (and as part of the same line of mathematical inquiry)
+            as Alan Turing's <i>a-machines</i> gave rise to the idea of such
+            digitally programmable devices. (Church was Turing's thesis advisor.
+            They subsequently collaborated in the field of <router-link :to="{
+                name: 'computability'
+            }">Computability Theory</router-link>. Between
+            them, they laid the mathematical foundation on which the Information
+            Age was built.) Haskell Curry showed that, despite its essential
+            utility not only in helping resolve the original abstract questions
+            regarding the nature of computable numbers for which Church had
+            created it, the λ-Calculus is logically incomplete precisely because
+            it can be used to construct self-referential <i>fixed-point
+                combinators</i> such as <i>y</i>:
         </p>
 
-        <YCombinator display="block" />
+        <math display="block">
+            <mtext>Let</mtext>
+            <mspace width="0.5em" />
+            <mi>Y</mi>
+            <mo>=</mo>
+            <mrow>
+                <mrow>
+                    <mo>λ</mo>
+                    <mi>y</mi>
+                </mrow>
+                <mo>.</mo>
+                <mrow v-for="count in 2">
+                    <mo>(</mo>
+                    <mrow>
+                        <mo>λ</mo>
+                        <mi>x</mi>
+                    </mrow>
+                    <mo>.</mo>
+                    <mrow>
+                        <mi>y</mi>
+                        <mo>(</mo>
+                        <mi>x</mi>
+                        <mspace width="0.5em" />
+                        <mi>x</mi>
+                        <mo>)</mo>
+                    </mrow>
+                    <mo>)</mo>
+                </mrow>
+            </mrow>
+        </math>
 
         <p>
-            A detailed explanation of the meaning and utility of the <i>Y</i>
-            combinator, shown above, has been the subject of countless graduate
-            students' theses and dissertaions across many university
-            Mathematics, Linguistics, Philosphy and Computer Science
-            departments. But suffice it to say here that it allows one to define
-            functions within the grammar of the λ-Calculus that call
-            themselves, which is a neat trick given the deliberate and
-            ostentatious simplicity of Church's formalism.
+            (Pause to take a dramatically deep breath.) Y is a function that
+            when passed a function, <i>x</i>, applies the result of applying
+            itself to the result of applying <i>x</i> to <i>x</i> to the result
+            of applying itself to the result of applying <i>x</i> to <i>x</i>.
+            Seriously.
         </p>
 
-        <aside>
-            Note that <i>Y</i> is not the only fixed-point combinator in the
-            λ-Calculus, but it is the simplest and most famous one. It is
-            possible, for example, to create similar combinators that allow for
-            mutually-recursive functions (i.e. sets of functions which call each
-            other) in addition to individual functions that call themselves like
-            <i>Y</i>.
-        </aside>
+        <DetailsView>
+
+            <template #summary>
+                Fixed-Point Combinators
+            </template>
+
+            <p>
+                A <i>fixed point</i> of a function is a value that maps to
+                itself. I.e. if <i>x</i> is a fixed point of the function
+                <i>f</i> then:
+            </p>
+
+            <math display="block">
+                <mi>x</mi>
+                <mo>=</mo>
+                <mrow>
+                    <mi>f</mi>
+                    <mo>(</mo>
+                    <mi>x</mi>
+                    <mo>)</mo>
+                </mrow>
+            </math>
+
+            <p>
+                Not all functions have fixed points. The successor function, for
+                example, has no fixed point because:
+            </p>
+
+            <math display="block">
+                <mo>&forall;</mo>
+                <mi>n</mi>
+                <mo>(</mo>
+                <mi>n</mi>
+                <mo>&NotEqual;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo>)</mo>
+            </math>
+
+            <p>
+                A <i>fixed-point combinator</i> is a higher-order function (a
+                function which takes a function as its parameter) that returns a
+                fixed point of its parameter, assuming that the given parameter
+                has a fixed point in the first place. The defining
+                characteristic of a fixed-point combinator, <i>F</i> is that:
+            </p>
+
+            <math display="block">
+                <mrow>
+                    <mi>F</mi>
+                    <mo>(</mo>
+                    <mi>f</mi>
+                    <mi>)</mi>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                    <mi>f</mi>
+                    <mo>(</mo>
+                    <mrow>
+                        <mi>F</mi>
+                        <mo>(</mo>
+                        <mi>f</mi>
+                        <mo>)</mo>
+                    </mrow>
+                    <mo>)</mo>
+                </mrow>
+            </math>
+
+        </DetailsView>
+
+        <p>
+            A detailed explanation of the meaning and utility of the <i>Y
+                combinator</i>, shown above, has been the subject of countless
+            graduate students' theses and dissertaions across many university
+            Mathematics, Linguistics, Philosphy and Computer Science
+            departments. But suffice it to say here that it allows one to define
+            functions within the grammar of the λ-Calculus that call themselves,
+            which is a neat trick given the deliberate and ostentatious
+            simplicity of Church's formalism.
+        </p>
 
         <p>
             This allows one to define self-calling functions like <i>!</i> (the
             <i>factorial</i> function) and the formula to produce the Fibonacci
             series. It is also exactly what is necessary to construct
-            well-formed λ-expressions which do not produce any results,
-            just as the liar paradox arises from grammatically correct
-            utterances in natural language that cannot be assigned a truth value
-            through the same kind of problematic self-reference. Such
-            self-reference is not confined to the abstract universe of formal
-            languages. The original proof that there is no general solution to
-            the <i>halting problem</i> relied on pointing out the paradoxical
-            behavior of certain kinds of programs when they were assigned to
-            analyze their own source code. Even at the applied level of actual
-            computer programs written in real-world programming languages,
-            self-reference is incredibly useful while leaving code written by
-            unwary programmers vulnerable to bugs ranging from stack-overflows
-            to infinite loops.
+            well-formed λ-expressions which do not produce any results, just as
+            the liar paradox arises from grammatically correct utterances in
+            natural language that cannot be assigned a truth value through the
+            same kind of problematic self-reference. Such self-reference is not
+            confined to the abstract universe of formal languages. The original
+            proof that there is no general solution to the <i>halting
+                problem</i> relied on pointing out the paradoxical behavior of
+            certain kinds of programs when they were assigned to analyze their
+            own source code. Even at the applied level of actual computer
+            programs written in real-world programming languages, self-reference
+            is incredibly useful while leaving code written by unwary
+            programmers vulnerable to bugs ranging from stack-overflows to
+            infinite loops.
         </p>
 
         <p>
@@ -155,19 +304,17 @@
             between looping constructs and tail-recursion, so even the most
             basic structured programming languages rely instrinsically on self
             reference in order to be Turing complete. The functional programming
-            paradigm and <abbr>CPS</abbr> (<dfn title="CPS">Continuation Passing
-                Style</dfn>) place recursion at the center of good programming
-            style. Here is a simple example of implementing <i>5!</i> in
-            <i>Scheme</i> using tail recursion:
+            paradigm and CPS (Continuation Passing Style) place recursion at the
+            center of good programming style. Here is a simple example of
+            implementing <i>5!</i> in <i>Scheme</i> using tail recursion:
         </p>
 
         <pre>
 (let factorial ((a 1)
                 (n 5))
     (if (< n 2)
-        a
-        (factorial (* a n)
-                   (- n 1)))) ;=> 120
+      a
+      (factorial (* a n) (- n 1))))
         </pre>
 
     </div>
@@ -175,6 +322,5 @@
 </template>
 
 <script setup>
-import RusselParadox from '@/pages/logic/liar/RusselParadox.vue'
-import YCombinator from '@/pages/logic/liar/YCombinator.vue'
+import DetailsView from '@/components/DetailsView.vue'
 </script>
