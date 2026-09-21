@@ -306,21 +306,29 @@
             reference in order to be Turing complete. The functional programming
             paradigm and CPS (Continuation Passing Style) place recursion at the
             center of good programming style. Here is a simple example of
-            implementing <i>5!</i> in <i>Scheme</i> using tail recursion:
+            implementing <i>10,000!</i> in <i>Scheme</i> using tail recursion to
+            prevent stack overflow:
         </p>
 
-        <pre>
-(let factorial ((a 1)
-                (n 5))
-    (if (< n 2)
-      a
-      (factorial (* a n) (- n 1))))
-        </pre>
+        <highlightjs :code="factorial" class="source" />
 
     </div>
 
 </template>
 
+<style scoped>
+.source {
+    border-style: solid;
+}
+</style>
+
 <script setup>
 import DetailsView from '@/components/DetailsView.vue'
+
+const factorial = `;; 10,000!
+(let factorial ((a 1)
+                (n 10000))
+    (if (< n 2)
+      a
+      (factorial (* a n) (- n 1))))`
 </script>
