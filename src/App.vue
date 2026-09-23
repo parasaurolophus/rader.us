@@ -5,8 +5,8 @@
         <TitleBar />
     </header>
     <main>
-        <div id="sidebar">
-            <SideBar />
+        <div id="table-of-contents">
+            <TableOfContents />
         </div>
         <div id="current-page">
             <RouterView />
@@ -22,7 +22,7 @@
     margin-left: 0;
 }
 
-#sidebar {
+#table-of-contents {
 
     border-right: none;
 }
@@ -33,7 +33,7 @@
         margin-left: 1rem;
     }
 
-    #sidebar {
+    #table-of-contents {
         border-right: solid;
     }
 }
@@ -41,7 +41,7 @@
 
 <script setup>
 import FooterBar from './components/FooterBar.vue'
-import SideBar from '@/components/SideBar.vue'
+import TableOfContents from '@/components/TableOfContents.vue'
 import TitleBar from '@/components/TitleBar.vue'
 import mermaid from 'mermaid'
 import { RouterView } from 'vue-router'
