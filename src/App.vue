@@ -1,28 +1,41 @@
 <!-- Copyright (c) Kirk Rader 2026 -->
 
 <template>
-    <div @click="hideSidebar">
-        <header>
-            <TitleBar />
-        </header>
-        <main>
-            <div class="main">
-                <RouterView />
-            </div>
-        </main>
+    <header>
+        <TitleBar />
+    </header>
+    <main>
         <div id="sidebar">
             <SideBar />
         </div>
-        <footer>
-            <FooterBar />
-        </footer>
-    </div>
+        <div id="current-page">
+            <RouterView />
+        </div>
+    </main>
+    <footer>
+        <FooterBar />
+    </footer>
 </template>
 
 <style scoped>
-.main {
-    margin: 0.5rem;
-    padding: 0.5rem;
+#current-page {
+    margin-left: 0;
+}
+
+#sidebar {
+
+    border-right: none;
+}
+
+@media (width >=1200px) {
+
+    #current-page {
+        margin-left: 1rem;
+    }
+
+    #sidebar {
+        border-right: solid;
+    }
 }
 </style>
 
@@ -89,13 +102,6 @@ const otherLinks = ref({
 
 const refreshDiagrams = ref(0)
 
-function hideSidebar() {
-
-    const sidebar = document.getElementById('sidebar')
-
-    sidebar.style.display = 'none'
-}
-
 function initializeMermaid() {
 
     mermaid.initialize({
@@ -127,7 +133,6 @@ function toggleTheme() {
 }
 
 provide('currentTheme', currentTheme)
-provide('hideSidebar', hideSidebar)
 provide('isLargeScreen', isLargeScreen)
 provide('musicLinks', musicLinks)
 provide('otherLinks', otherLinks)

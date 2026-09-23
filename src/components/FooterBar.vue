@@ -2,29 +2,44 @@
 
 <template>
 
-    <div class="container">
+    <span>
+        © Kirk Rader 2023-2026
+    </span>
 
-        <span>
-            © Kirk Rader 2023-2026
-        </span>
-
-        <span id="omega">
-            <OmegaFormula />
-        </span>
-
-    </div>
+    <span id="omega">
+        <math>
+            <mrow>
+                <mi>&Omega;</mi>
+                <mo>=</mo>
+                <mrow>
+                    <mi>&omega;</mi>
+                    <mspace width="0.5em" />
+                    <mi>&omega;</mi>
+                </mrow>
+            </mrow>
+            <mspace width="0.5em" />
+            <mtext>where</mtext>
+            <mspace width="0.5em" />
+            <mrow>
+                <mi>&omega;</mi>
+                <mo>=</mo>
+                <mrow>
+                    <mo>&lambda;</mo>
+                    <mi>x</mi>
+                    <mo>.</mo>
+                    <mrow>
+                        <mi>x</mi>
+                        <mspace width="0.5em" />
+                        <mi>x</mi>
+                    </mrow>
+                </mrow>
+            </mrow>
+        </math>
+    </span>
 
 </template>
 
 <style scoped>
-.container {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-}
-
 #omega {
     display: none;
 }
@@ -36,7 +51,3 @@
     }
 }
 </style>
-
-<script setup>
-import OmegaFormula from '@/components/logic/OmegaFormula.vue'
-</script>

@@ -109,6 +109,10 @@ footer {
     right: 0;
     height: var(--footerheight);
     bottom: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
     border-top-style: solid;
 }
 
@@ -118,6 +122,12 @@ header {
     left: 0;
     right: 0;
     height: var(--headerheight);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: start;
+    padding-left: 1rem;
+    padding-right: 1rem;
     border-bottom-style: solid;
 }
 
@@ -132,23 +142,21 @@ main {
     left: 0;
     right: 0;
     bottom: var(--footerheight);
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
+    padding: 1rem;
+}
+
+@media (width >=1200px) {
+
+    main {
+        flex-flow: row nowrap;
+    }
 }
 
 math {
     font-family: 'Latin Modern Math';
-}
-
-#sidebar {
-    display: none;
-    position: fixed;
-    background-color: var(--highlight);
-    overflow: auto;
-    top: calc(var(--headerheight) + 1px);
-    left: 0;
-    width: max-content;
-    bottom: calc(var(--footerheight) + 1px);
-    overflow: auto;
-    z-index: 10;
 }
 
 td,
