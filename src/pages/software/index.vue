@@ -58,5 +58,5 @@
 </style>
 
 <script setup>
-import SDLC from '@/components/software/SDLC.vue'
+import SDLC from '@/pages/software/SDLC.vue'
 </script>
