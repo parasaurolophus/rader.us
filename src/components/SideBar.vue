@@ -25,7 +25,7 @@ summary {
 <script setup>
 import ExpandedRoutesList from '@/components/ExpandedRoutesList.vue'
 import { onMounted, onUnmounted, useTemplateRef } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 
 const details = useTemplateRef('details')
 const router = useRouter()
@@ -38,9 +38,7 @@ function onWindowWidthEvent(event) {
 
 function updateDetails() {
 
-    const route = useRoute()
-
-    if (route.name === 'home') {
+    if (router.currentRoute.value.name === 'home') {
 
         details.value.open = true
     }
@@ -48,7 +46,7 @@ function updateDetails() {
 
 function windowWidthEventHandler(query) {
 
-    details.value.open = query.matches
+    details.value.open = query.matches || router.currentRoute.value.name === 'home'
 }
 
 onMounted(() => {
