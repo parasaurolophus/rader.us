@@ -1432,7 +1432,45 @@
             Its "logo" is the following expression of the λ-calculus:
         </p>
 
-        <OmegaFormula display="block" />
+        <math display="block">
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mtext>Let</mtext>
+                        <mspace width="0.5em" />
+                        <mrow>
+                            <mi>&Omega;</mi>
+                            <mo>=</mo>
+                            <mrow>
+                                <mi>&omega;</mi>
+                                <mspace width="0.5em" />
+                                <mi>&omega;</mi>
+                            </mrow>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mtext>where</mtext>
+                        <mspace width="0.5em" />
+                        <mrow>
+                            <mi>&omega;</mi>
+                            <mo>=</mo>
+                            <mrow>
+                                <mo>&lambda;</mo>
+                                <mi>x</mi>
+                                <mo>.</mo>
+                                <mrow>
+                                    <mi>x</mi>
+                                    <mspace width="0.5em" />
+                                    <mi>x</mi>
+                                </mrow>
+                            </mrow>
+                        </mrow>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
 
         <p>
             <math>
@@ -1480,7 +1518,6 @@ video {
 import DetailsView from '@/components/DetailsView.vue'
 import MdiIcon from '@/components/MdiIcon.vue'
 import MermaidDiagram from '@/components/MermaidDiagram.vue'
-import OmegaFormula from '@/components/logic/OmegaFormula.vue'
 import { mdiPlay, mdiPause } from '@mdi/js'
 import { onMounted, ref, useTemplateRef } from 'vue'
 
