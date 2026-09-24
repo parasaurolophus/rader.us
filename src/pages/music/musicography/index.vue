@@ -13,5 +13,5 @@
 </template>
 
 <script setup>
-import MusicographyView from '@/components/music/MusicographyView.vue'
+import MusicographyView from '@/pages/music/musicography/MusicographyView.vue'
 </script>
