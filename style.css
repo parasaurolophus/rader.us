@@ -34,7 +34,7 @@
     /* base colors */
     --foreground: rgb(224 224 224);
     --background: rgb(32 32 32);
-    --highlight: rgb(from var(--background) 64 64 64);
+    --highlight: hsl(from var(--background) h s calc(l + 10));
 
     /* semantic colors */
     --success: lightgreen;
@@ -51,7 +51,7 @@
     /* base colors */
     --background: rgb(224 224 224);
     --foreground: rgb(32 32 32);
-    --highlight: rgb(192 192 192);
+    --highlight: hsl(from var(--background) h s calc(l - 10));
 
     /* semantic colors */
     --success: green;

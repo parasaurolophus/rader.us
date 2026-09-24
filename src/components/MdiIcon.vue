@@ -13,7 +13,7 @@ svg {
 
 path {
     fill: currentColor;
-    stroke: currentColor;
+    stroke: rgb(from currentColor r g b / 50%);
 }
 </style>
 
