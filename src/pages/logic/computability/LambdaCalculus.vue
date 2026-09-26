@@ -183,12 +183,7 @@
             handful of BNF productions:
         </p>
 
-        <pre>
-    term := name | application | abstraction
-    name := a | ... | z
-    application := (term term)
-    abstraction := (&lambda; name . term)
-</pre>
+        <highlightjs :code="bnf" language="bnf" />
 
         <p>
             Use of a name is <i>bound</i> when it occurs within the scope of a
@@ -966,4 +961,9 @@
 
 <script setup>
 import DetailsView from '@/components/DetailsView.vue'
+
+const bnf = `<term> ::= <name> | <application> | <abstraction>
+<name> ::= "a" | ... | "z"
+<application> ::= "(" <term> <term> ")"
+<abstraction> ::= "(" "λ" <name> "." <term> ")"`
 </script>

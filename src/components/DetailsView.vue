@@ -27,12 +27,6 @@
     margin-left: 1rem;
 }
 
-.details-view>summary {
-
-    font-weight: bold;
-    cursor: pointer;
-}
-
 .details-view>summary,
 .details-view i,
 .details-view em,

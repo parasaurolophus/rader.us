@@ -4,59 +4,38 @@
 
     <div>
 
-        <div class="container">
+        <h1>Software Development</h1>
 
-            <div class="text">
+        <h2>Examples</h2>
 
-                <h1>Software Development</h1>
-
-                <p>
-                    Forget trendy (or no longer so trendy) "methodologies"
-                    hawked by pricey consultants. If you are developing
-                    enterprise-scale software successfully, this is what you are
-                    really doing.
-                </p>
-
-                <p>
-                    Note that the various boxes represent functional areas of
-                    concern, not necessarily distinct teams. A challenge every
-                    organization faces as it grows is that these areas of
-                    concern can too easily harden into silos. Successful
-                    organizations encourage continous communication and
-                    collaboration, as depicted in this diagram through numerous
-                    bi-directional dependencies.
-                </p>
-
-            </div>
-
-            <SDLC class="diagram" />
-
-        </div>
+        <details v-for="example in examples" :key="example.url" name="software">
+            <summary>{{ example.summary }} ({{ example.language }})</summary>
+            <highlightjs v-if="example.code" :code="example.code" :language="example.language" />
+            <FetchCode v-if="example.url" :url="example.url" :language="example.language" />
+            <a v-if="example.repository" :href="example.repository" target="_blank">
+                {{ example.repository }}
+            </a>
+        </details>
 
     </div>
 
 </template>
 
-<style scoped>
-@media (orientation: landscape) {
-
-    .container {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: start;
-    }
-
-    .text {
-        width: 50%;
-        margin-right: 1rem;
-    }
-
-    .diagram {
-        width: 27.5rem;
-    }
-}
-</style>
-
 <script setup>
-import SDLC from '@/pages/software/SDLC.vue'
+import FetchCode from '@/components/FetchCode.vue'
+
+const examples = [
+    {
+        url: 'https://raw.githubusercontent.com/parasaurolophus/plug-in-favicon/refs/heads/main/plug-in-favicon.scm',
+        summary: 'GIMP Plug-In',
+        language: 'scheme',
+        repository: 'https://github.com/parasaurolophus/plug-in-favicon',
+    },
+    {
+        url: 'https://raw.githubusercontent.com/parasaurolophus/scheme/refs/heads/main/engines.scm',
+        summary: 'Engines from Continuations',
+        language: 'scheme',
+        repository: 'https://github.com/parasaurolophus/scheme',
+    },
+]
 </script>

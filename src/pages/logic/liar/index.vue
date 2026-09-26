@@ -310,17 +310,18 @@
             prevent stack overflow:
         </p>
 
-        <highlightjs :code="factorial" class="source" />
+        <highlightjs :code="factorial" language="scheme" />
+
+        <p>
+            "Named <code>let</code>" is the standard mechanism in Scheme for
+            looping. For example, see multiple uses of
+            <highlightjs :code="namedLet" language="scheme"/> in
+            <RouterLink :to="{ name: 'software', hash: '#gimp-plugin' }">GIMP plug-in</RouterLink>
+        </p>
 
     </div>
 
 </template>
-
-<style scoped>
-.source {
-    border-style: solid;
-}
-</style>
 
 <script setup>
 import DetailsView from '@/components/DetailsView.vue'
@@ -331,4 +332,6 @@ const factorial = `;; 10,000!
     (if (< n 2)
       a
       (factorial (* a n) (- n 1))))`
+
+const namedLet = `(let loop (...) ...)`
 </script>

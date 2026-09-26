@@ -165,24 +165,7 @@
             into a voltage:
         </p>
 
-        <MermaidDiagram svg-id="diagram1">
-            <pre>
-        ---
-        title: Traditional Analog Recording and Playback
-        ---
-        graph LR
-
-        recorder[recording /<br>playback<br>device]
-
-        instrument -->|soundwaves| ears
-        instrument -->|soundwaves| microphone
-        microphone -->|voltage| amplifier
-        amplifier -->|voltage| recorder
-        recorder -->|voltage| amplifier
-        amplifier -->|voltage| speaker
-        speaker -->|soundwaves| ears
-    </pre>
-        </MermaidDiagram>
+        <MermaidDiagram svg-id="diagram1" v-model="analogReordingDiagram" />
 
         <p>
             Analog synthesizers are electronic devices for directly creating
@@ -191,22 +174,7 @@
             acoustical vibrations was involved.
         </p>
 
-        <MermaidDiagram svg-id="diagram02">
-            <pre>
-        ---
-        title: Analog Synthesis
-        ---
-        graph LR
-
-        recorder[recording /<br>playback<br>device]
-
-        synthesizer -->|voltage| amplifier
-        amplifier -->|voltage| recorder
-        recorder -->|voltage| amplifier
-        amplifier -->|voltage| speaker
-        speaker -->|soundwaves| ears
-    </pre>
-        </MermaidDiagram>
+        <MermaidDiagram svg-id="diagram02" v-model="analogSynthesisPatch" />
 
         <p>
             Any time a term like <i>signal</i>. <i>signal path</i>, <i>audio</i> or
@@ -775,14 +743,7 @@
             decreases in pitch, producing vibrato from a patch like:
         </p>
 
-        <MermaidDiagram svg-id="vibrato">
-            <pre>
-        graph LR
-
-        LFO -.->|"CV<br>(frequency)"| VCO
-        VCO -->|audio| VCA
-    </pre>
-        </MermaidDiagram>
+        <MermaidDiagram svg-id="vibrato" v-model="vibratoPatch" />
 
         <h4>Uniquely Electronic Techniques</h4>
 
@@ -821,20 +782,7 @@
             the first two VCO's frequencies:
         </p>
 
-        <MermaidDiagram svg-id="sineVsineVsine">
-            <pre>
-        graph LR
-
-        lfo[LFO]
-        vco1[VCO 1]
-        vco2[VCO 2]
-        vca[VCA]
-
-        lfo .->|"CV<br>(frequency)"| vco2
-        vco2 .->|"CV<br>(frequency)"| vco1
-        vco1 -->|audio| vca
-    </pre>
-        </MermaidDiagram>
+        <MermaidDiagram svg-id="sineVsineVsine" v-model="interferencePatternPatch" />
 
         <p>
             Sine vs Sine vs Sine
@@ -921,14 +869,7 @@
             To illustrate, consider a patch like:
         </p>
 
-        <MermaidDiagram svg-id="smooth">
-            <pre>
-        graph LR
-
-        LFO -.->|"CV<br>(sawtooth)"| VCO
-        VCO -->|audio| VCA
-    </pre>
-        </MermaidDiagram>
+        <MermaidDiagram svg-id="smooth" v-model="smoothPatch" />
 
         <p>
             The preceding will produce a sound like:
@@ -952,18 +893,7 @@
             Adding a sample and hold (S&H) unit to the patch:
         </p>
 
-        <MermaidDiagram svg-id="steps">
-            <pre>
-        graph LR
-
-        sh["S&H"]
-
-        LFO -.->|"CV<br>(sawtooth)"| sh
-        clock -.-> sh
-        sh -.->|"CV"| VCO
-        VCO -->|audio| VCA
-    </pre>
-        </MermaidDiagram>
+        <MermaidDiagram svg-id="steps" v-model="stepsPatch" />
 
         <p>
             will cause the output to sound something like:
@@ -1055,19 +985,7 @@
             </audio>
         </p>
 
-        <MermaidDiagram svg-id="random">
-            <pre>
-        graph LR
-
-        sh["S&H"]
-        ng[Noise Generator]
-
-        ng -.->|CV| sh
-        clock -.-> sh
-        sh -.->|"CV"| VCO
-        VCO -->|audio| VCA
-    </pre>
-        </MermaidDiagram>
+        <MermaidDiagram svg-id="random" v-model="randomMelody" />
 
         <h2>Example 01</h2>
 
@@ -1133,132 +1051,7 @@
             <a href="https://sonic-pi.net/" target="_blank">Sonic PI</a>:
         </p>
 
-        <pre>
-    # Copyright 2024 Kirk Rader
-
-    # Example 03
-
-    use_random_seed 10
-    use_random_source :white
-
-    terminate = false
-
-    # master clock
-    in_thread do
-    with_bpm 120 do
-    midi (hz_to_midi 440)
-    sleep 10
-    180.times do
-    cue :master
-    sleep 1
-    end
-    ensure
-    terminate = true
-    cue :master
-    sleep 1
-    midi_all_notes_off
-    end
-    end
-
-    # track 1 (low toms hard)
-    comment do
-    in_thread do
-    with_bpm 120 do
-    beats = (spread 2, 5).rotate(2)
-    loop do
-    sync :master
-    stop if terminate
-    tick
-    midi 36 if beats.look
-    end
-    ensure
-    midi 36
-    sleep 1
-    end
-    end
-    end
-
-    # track 2 (low toms soft)
-    comment do
-    in_thread do
-    with_bpm 120 do
-    beats = (spread 2, 5).rotate(2)
-    loop do
-    sync :master
-    stop if terminate
-    tick
-    midi 36 if !beats.look
-    end
-    end
-    end
-    end
-
-    # track 3 (high toms hard)
-    comment do
-    in_thread do
-    with_bpm 120 do
-    beats = (spread 3, 7).rotate(1)
-    loop do
-    sync :master
-    stop if terminate
-    tick
-    midi 48 if beats.look
-    end
-    end
-    end
-    end
-
-    # track 4 (high toms soft)
-    comment do
-    in_thread do
-    with_bpm 120 do
-    beats = (spread 3, 7).rotate(1)
-    loop do
-    sync :master
-    stop if terminate
-    tick
-    midi 48 if !beats.look
-    end
-    end
-    end
-    end
-
-    # track 5 (bass)
-    comment do
-    in_thread do
-    with_bpm 120 do
-    notes = (range 20, 31).shuffle
-    loop do
-    sync :master
-    stop if terminate
-    tick
-    midi notes.look
-    end
-    ensure
-    midi 20
-    sleep 1
-    end
-    end
-    end
-
-    # track 6 (baritone)
-    uncomment do
-    in_thread do
-    with_bpm 120 do
-    notes = (range 37, 48).shuffle
-    loop do
-    sync :master
-    stop if terminate
-    tick
-    midi notes.look
-    end
-    ensure
-    midi 48
-    sleep 1
-    end
-    end
-    end
-</pre>
+        <highlightjs :code="example3source" language="ruby" />
 
         <h2>Summary</h2>
 
@@ -1523,6 +1316,219 @@ import { onMounted, ref, useTemplateRef } from 'vue'
 
 const exampleVideo = useTemplateRef('exampleVideo')
 const paused = ref(true)
+
+const example3source = `# Copyright (c) Kirk Rader 2024
+
+# Example 03
+
+use_random_seed 10
+use_random_source :white
+
+terminate = false
+
+# master clock
+in_thread do
+    with_bpm 120 do
+        midi (hz_to_midi 440)
+        sleep 10
+        180.times do
+            cue :master
+            sleep 1
+        end
+    ensure
+        terminate = true
+        cue :master
+        sleep 1
+        midi_all_notes_off
+    end
+end
+
+# track 1 (low toms hard)
+comment do
+    in_thread do
+        with_bpm 120 do
+            beats = (spread 2, 5).rotate(2)
+            loop do
+                sync :master
+                stop if terminate
+                tick
+                midi 36 if beats.look
+            end
+        ensure
+            midi 36
+            sleep 1
+        end
+    end
+end
+
+# track 2 (low toms soft)
+comment do
+    in_thread do
+        with_bpm 120 do
+            beats = (spread 2, 5).rotate(2)
+                loop do
+                sync :master
+                stop if terminate
+                tick
+                midi 36 if !beats.look
+            end
+        end
+    end
+end
+
+# track 3 (high toms hard)
+comment do
+    in_thread do
+        with_bpm 120 do
+            beats = (spread 3, 7).rotate(1)
+            loop do
+                sync :master
+                stop if terminate
+                tick
+                midi 48 if beats.look
+            end
+        end
+    end
+end
+
+# track 4 (high toms soft)
+comment do
+    in_thread do
+        with_bpm 120 do
+            beats = (spread 3, 7).rotate(1)
+            loop do
+                sync :master
+                stop if terminate
+                tick
+                midi 48 if !beats.look
+            end
+        end
+    end
+end
+
+# track 5 (bass)
+comment do
+    in_thread do
+        with_bpm 120 do
+        notes = (range 20, 31).shuffle
+        loop do
+            sync :master
+            stop if terminate
+            tick
+            midi notes.look
+        end
+        ensure
+            midi 20
+            sleep 1
+        end
+    end
+end
+
+# track 6 (baritone)
+uncomment do
+    in_thread do
+        with_bpm 120 do
+            notes = (range 37, 48).shuffle
+            loop do
+                sync :master
+                stop if terminate
+                tick
+                midi notes.look
+            end
+        ensure
+            midi 48
+            sleep 1
+        end
+    end
+end`
+
+const analogReordingDiagram = ref(`---
+title: Traditional Analog Recording and Playback
+---
+graph LR
+
+    recorder[recording /<br>playback<br>device]
+
+    instrument -->|soundwaves| ears
+    instrument -->|soundwaves| microphone
+    microphone -->|voltage| amplifier
+    amplifier -->|voltage| recorder
+    recorder -->|voltage| amplifier
+    amplifier -->|voltage| speaker
+    speaker -->|soundwaves| ears`)
+
+const analogSynthesisPatch = ref(`---
+title: Analog Synthesis
+---
+graph LR
+
+    recorder[recording /<br>playback<br>device]
+
+    synthesizer -->|voltage| amplifier
+    amplifier -->|voltage| recorder
+    recorder -->|voltage| amplifier
+    amplifier -->|voltage| speaker
+    speaker -->|soundwaves| ears`)
+
+const vibratoPatch = ref(`---
+title: Vibrato Patch
+---
+graph LR
+
+    LFO -.->|"CV<br>(frequency)"| VCO
+    VCO -->|audio| VCA
+`)
+
+const interferencePatternPatch = ref(`---
+title: Interference Pattern Patch
+---
+graph LR
+
+    lfo[LFO]
+    vco1[VCO 1]
+    vco2[VCO 2]
+    vca[VCA]
+
+    lfo .->|"CV<br>(frequency)"| vco2
+    vco2 .->|"CV<br>(frequency)"| vco1
+    vco1 -->|audio| vca
+`)
+
+const smoothPatch = ref(`---
+title: Patch for Smoothly Ramping Pitch
+---
+graph LR
+
+    LFO -.->|"CV<br>(sawtooth)"| VCO
+    VCO -->|audio| VCA
+`)
+
+const stepsPatch = ref(`---
+title: Patch for Stair Stepping Pitches
+---
+graph LR
+
+        sh["S&H"]
+
+        LFO -.->|"CV<br>(sawtooth)"| sh
+        clock -.->|trigger| sh
+        sh -.->|"CV"| VCO
+        VCO -->|audio| VCA
+`)
+
+const randomMelody = ref(`---
+title: Patch for Random Pitches
+---
+graph LR
+
+        sh["S&H"]
+        ng[Noise Generator]
+
+        ng -.->|CV| sh
+        clock -.->|trigger| sh
+        sh -.->|"CV"| VCO
+        VCO -->|audio| VCA
+`)
 
 function toggleExampleVideo() {
 

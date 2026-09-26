@@ -5,10 +5,8 @@
         <TitleBar />
     </header>
     <main>
-        <div id="table-of-contents">
-            <TableOfContents />
-        </div>
-        <div id="current-page">
+        <TableOfContents />
+        <div>
             <RouterView />
         </div>
     </main>
@@ -16,28 +14,6 @@
         <FooterBar />
     </footer>
 </template>
-
-<style scoped>
-#current-page {
-    margin-left: 0;
-}
-
-#table-of-contents {
-
-    border-right: none;
-}
-
-@media (width >=1200px) {
-
-    #current-page {
-        margin-left: 1rem;
-    }
-
-    #table-of-contents {
-        border-right: solid;
-    }
-}
-</style>
 
 <script setup>
 import FooterBar from './components/FooterBar.vue'

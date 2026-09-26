@@ -16,10 +16,6 @@
     width: max-content;
     margin-right: 1rem;
 }
-
-summary {
-    cursor: pointer;
-}
 </style>
 
 <script setup>

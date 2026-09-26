@@ -37,20 +37,7 @@
         the gate trigger of an envelope generator:
     </p>
 
-    <MermaidDiagram svg-id="patch1">
-        <pre>
-graph TB
-
-    sequencer[960 sequencer]
-    envelope[envelope<br>generator]
-
-    sequencer -->|"<i>A</i> (CV)"| VCO
-    sequencer -->|"oscillator (gate)"| envelope
-    VCO -->|audio| VCF
-    envelope -->|CV| VCF
-    VCF -->|audio| VCA
-    </pre>
-    </MermaidDiagram>
+    <MermaidDiagram svg-id="patch1" v-model="patch1" />
 
     <p>
         The result might sound like:
@@ -92,22 +79,7 @@ graph TB
         one of the 960's CV outputs controls the fequency of the second LFO:
     </p>
 
-    <MermaidDiagram svg-id="patch2">
-        <pre>
-graph TB
-
-    sequencer[960 sequencer]
-    envelope[envelope<br>generator]
-
-    sequencer -->|"A (CV)"| VCO
-    sequencer -->|"B (CV)"| LFO
-    sequencer -->|"oscillator<br>(V-trigger / sync)"| LFO
-    LFO -->|"rectangle wave (gate)"| envelope
-    VCO -->|audio| VCF
-    envelope -->|CV| VCF
-    VCF -->|audio| VCA
-        </pre>
-    </MermaidDiagram>
+    <MermaidDiagram svg-id="patch2" v-model="patch2" />
 
     <p>
         Note that the preceding requires a bit of fiddling with the relative
@@ -141,36 +113,7 @@ graph TB
         which looks schematically like:
     </p>
 
-    <MermaidDiagram svg-id="patch3">
-        <pre>
-graph TB
-
-    sequencer[960 sequencer]
-    vco1[2600's VCO 1]
-    vco2[2600's VCO 2]
-    lfo[921 in LFO mode]
-    preamp[2600's pre-amp]
-    splitter["2600's voltage processor<br>(splitter)"]
-    envelope1[2600's ADSR]
-    envelope2[2600's AR]
-    vcf[2600's VCF]
-    vca[2600's VCA]
-
-    sequencer -->|"<i>A</i> (CV)"| vco1
-    sequencer -->|"<i>B</i> (CV)"| vco2
-    sequencer -->|"<i>C</i> (CV)"| lfo
-    sequencer -->|"oscillator<br>(V-trigger)"| lfo
-    lfo -->|"rectangle wave"| preamp
-    preamp --> splitter
-    splitter -->|gate| envelope1
-    splitter -->|gate| envelope2
-    vco1 -->|audio| vcf
-    vco2 -->|audio| vcf
-    envelope1 -->|CV| vcf
-    envelope2 -->|CV| vca
-    vcf -->|audio| vca
-    </pre>
-</MermaidDiagram>
+    <MermaidDiagram svg-id="patch3" v-model="patch3" />
 
     <div class="notes">
 
@@ -246,6 +189,7 @@ img {
     width: max-content;
     max-width: 97%;
 }
+
 .notes {
     margin-left: 1rem;
     font-style: italic;
@@ -258,4 +202,68 @@ img {
 
 <script setup>
 import MermaidDiagram from '@/components/MermaidDiagram.vue'
+import { ref } from 'vue'
+
+const patch1 = ref(`---
+title: Example 1 Patch
+---
+graph TB
+
+    sequencer[960 sequencer]
+    envelope[envelope<br>generator]
+
+    sequencer -->|"<i>A</i> (CV)"| VCO
+    sequencer -->|"oscillator (gate)"| envelope
+    VCO -->|audio| VCF
+    envelope -->|CV| VCF
+    VCF -->|audio| VCA
+`)
+
+const patch2 = ref(`---
+title: Example 2 Patch
+---
+graph TB
+
+    sequencer[960 sequencer]
+    envelope[envelope<br>generator]
+
+    sequencer -->|"A (CV)"| VCO
+    sequencer -->|"B (CV)"| LFO
+    sequencer -->|"oscillator<br>(V-trigger / sync)"| LFO
+    LFO -->|"rectangle wave (gate)"| envelope
+    VCO -->|audio| VCF
+    envelope -->|CV| VCF
+    VCF -->|audio| VCA
+`)
+
+const patch3 = ref(`---
+title: Example 3 Patch
+---
+graph TB
+
+    sequencer[960 sequencer]
+    vco1[2600's VCO 1]
+    vco2[2600's VCO 2]
+    lfo[921 in LFO mode]
+    preamp[2600's pre-amp]
+    splitter["2600's voltage processor<br>(splitter)"]
+    envelope1[2600's ADSR]
+    envelope2[2600's AR]
+    vcf[2600's VCF]
+    vca[2600's VCA]
+
+    sequencer -->|"<i>A</i> (CV)"| vco1
+    sequencer -->|"<i>B</i> (CV)"| vco2
+    sequencer -->|"<i>C</i> (CV)"| lfo
+    sequencer -->|"oscillator<br>(V-trigger)"| lfo
+    lfo -->|"rectangle wave"| preamp
+    preamp --> splitter
+    splitter -->|gate| envelope1
+    splitter -->|gate| envelope2
+    vco1 -->|audio| vcf
+    vco2 -->|audio| vcf
+    envelope1 -->|CV| vcf
+    envelope2 -->|CV| vca
+    vcf -->|audio| vca
+`)
 </script>

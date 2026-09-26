@@ -159,14 +159,9 @@ math {
     font-family: 'Latin Modern Math';
 }
 
-td,
-th {
-    padding: 0.25rem;
-}
-
-thead tr,
-tbody tr:nth-child(even) {
-    background-color: var(--highlight);
+summary {
+    cursor: pointer;
+    font-weight: bold;
 }
 
 svg text {
@@ -182,4 +177,14 @@ svg line {
 
 svg circle {
     fill: currentColor;
+}
+
+td,
+th {
+    padding: 0.25rem;
+}
+
+thead tr,
+tbody tr:nth-child(even) {
+    background-color: var(--highlight);
 }

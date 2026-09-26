@@ -2,9 +2,15 @@
 
 <template>
 
-    <MermaidDiagram svg-id="sdlc">
-        <pre>
----
+    <MermaidDiagram svg-id="sdlc" v-model="source" />
+
+</template>
+
+<script setup>
+import MermaidDiagram from '@/components/MermaidDiagram.vue'
+import { ref } from 'vue'
+
+const source = ref(`---
 title: Software Development at Enterprise Scale
 ---
 flowchart TB
@@ -31,11 +37,5 @@ flowchart TB
     test -- release --> operations
     operations -- report issues --> test
     operations -- request features --> inception
-        </pre>
-    </MermaidDiagram>
-
-</template>
-
-<script setup>
-import MermaidDiagram from '@/components/MermaidDiagram.vue'
+`)
 </script>

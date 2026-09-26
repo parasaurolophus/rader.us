@@ -46,11 +46,6 @@ details>*:not(summary) {
     font-weight: bold;
     font-size: 80%;
 }
-
-summary {
-    cursor: pointer;
-    font-style: bold;
-}
 </style>
 
 <script setup>
