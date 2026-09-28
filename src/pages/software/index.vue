@@ -37,5 +37,11 @@ const examples = [
         language: 'scheme',
         repository: 'https://github.com/parasaurolophus/scheme',
     },
+    {
+        url: 'https://raw.githubusercontent.com/parasaurolophus/go/refs/heads/main/utilities/process_batch.go',
+        summary: 'ProcessBatch',
+        language: 'go',
+        repository: 'https://github.com/parasaurolophus/go/tree/main/utilities',
+    },
 ]
 </script>
