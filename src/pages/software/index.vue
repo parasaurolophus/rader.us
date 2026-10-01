@@ -32,7 +32,7 @@ const examples = [
         repository: 'https://github.com/parasaurolophus/plug-in-favicon',
     },
     {
-        url: 'https://raw.githubusercontent.com/parasaurolophus/scheme/refs/heads/main/engines.scm',
+        url: 'https://raw.githubusercontent.com/parasaurolophus/scheme/refs/heads/main/engines.rkt',
         summary: 'Engines from Continuations',
         language: 'scheme',
         repository: 'https://github.com/parasaurolophus/scheme',
