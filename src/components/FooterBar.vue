@@ -1,9 +1,9 @@
-<!-- Copyright (c) Kirk Rader 2026 -->
+<!-- Copyright (c) 2026 Kirk Rader -->
 
 <template>
 
     <span>
-        © Kirk Rader 2023-2026
+        © 2023-2026 Kirk Rader
     </span>
 
     <span id="omega">

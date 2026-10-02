@@ -1,4 +1,4 @@
-&copy; Kirk Rader 2023-2026
+&copy; 2023-2026 Kirk Rader
 
 # rader.us
 

@@ -1,4 +1,4 @@
-<!-- Copyright (c) Kirk Rader 2026 -->
+<!-- Copyright (c) 2026 Kirk Rader -->
 
 <template>
     <details name="details-view" class="details-view">

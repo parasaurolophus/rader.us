@@ -1,4 +1,4 @@
-<!-- Copyright (c) Kirk Rader 2026 -->
+<!-- Copyright (c) 2026 Kirk Rader -->
 
 <template>
     <svg :width="24" :height="24" :view-box="`0 0 23 23`" :transform="`scale(${props.scale})`">

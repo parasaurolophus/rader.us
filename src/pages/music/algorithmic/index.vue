@@ -1,4 +1,4 @@
-<!-- Copyright (c) Kirk Rader 2023-2026 -->
+<!-- Copyright (c) 2023-2026 Kirk Rader -->
 
 <template>
 
@@ -1317,7 +1317,7 @@ import { onMounted, ref, useTemplateRef } from 'vue'
 const exampleVideo = useTemplateRef('exampleVideo')
 const paused = ref(true)
 
-const example3source = `# Copyright (c) Kirk Rader 2024
+const example3source = `# Copyright (c) 2024 Kirk Rader
 
 # Example 03
 

@@ -1,4 +1,4 @@
-<!-- Copyright (c) Kirk Rader 2024-2026 -->
+<!-- Copyright (c) 2024-2026 Kirk Rader -->
 
 <template>
 
@@ -62,7 +62,7 @@
 </template>
 
 <script setup>
-const forDennisSource = `# Copyright (c) Kirk Rader 2024
+const forDennisSource = `# Copyright (c) 2024 Kirk Rader
 
 # For Dennis
 

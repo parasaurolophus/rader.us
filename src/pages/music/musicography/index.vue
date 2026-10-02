@@ -1,4 +1,4 @@
-<!-- Copyright (c) Kirk Rader 2026v -->
+<!-- Copyright (c) 2026 Kirk Raderv -->
 
 <template>
 

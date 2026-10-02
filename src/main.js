@@ -1,4 +1,4 @@
-// Copyright (c) Kirk Rader 2026
+// Copyright (c) 2026 Kirk Rader
 
 import { createApp } from 'vue'
 import App from './App.vue'
