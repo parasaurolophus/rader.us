@@ -14,6 +14,7 @@
 <style scoped>
 .container {
     width: max-content;
+    padding-right: 1rem;
     margin-right: 1rem;
     background-color: var(--highlight);
 }
