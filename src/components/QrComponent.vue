@@ -12,10 +12,6 @@
     display: inline-block;
 }
 
-.dark-theme .container {
-    background-color: white;
-}
-
 .small {
     width: 28px;
 }

@@ -164,19 +164,18 @@ summary {
     font-weight: bold;
 }
 
-svg text {
-    font-family: 'Latin Modern Math';
-    font-size: 1rem;
-    fill: currentColor;
+svg {
+    fill: var(--foreground);
 }
 
 svg line {
-    stroke: currentColor;
+    stroke: var(--foreground);
     stroke-width: 4;
 }
 
-svg circle {
-    fill: currentColor;
+svg text {
+    font-family: 'Latin Modern Math';
+    font-size: 1rem;
 }
 
 td,
