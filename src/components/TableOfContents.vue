@@ -32,6 +32,7 @@ import { mdiMenu } from '@mdi/js'
 
 const details = useTemplateRef('details')
 const router = useRouter()
+let largeScreen = false
 let windowWidthQuery = null
 
 function onWindowWidthEvent(event) {
@@ -41,15 +42,13 @@ function onWindowWidthEvent(event) {
 
 function updateDetails() {
 
-    if (router.currentRoute.value.name === 'home') {
-
-        details.value.open = true
-    }
+    details.value.open = largeScreen || router.currentRoute.value.name === 'home'
 }
 
 function windowWidthEventHandler(query) {
 
-    details.value.open = query.matches || router.currentRoute.value.name === 'home'
+    largeScreen = query.matches
+    updateDetails()
 }
 
 onMounted(() => {
