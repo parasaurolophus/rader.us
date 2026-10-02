@@ -34,7 +34,7 @@
     /* base colors */
     --foreground: rgb(224 224 224);
     --background: rgb(32 32 32);
-    --highlight: hsl(from var(--background) h s calc(l + 10));
+    --highlight: hsl(from var(--background) h s calc(l * 1.2));
 
     /* semantic colors */
     --success: lightgreen;
@@ -51,7 +51,7 @@
     /* base colors */
     --background: rgb(224 224 224);
     --foreground: rgb(32 32 32);
-    --highlight: hsl(from var(--background) h s calc(l - 10));
+    --highlight: hsl(from var(--background) h s calc(l * 0.8));
 
     /* semantic colors */
     --success: green;
@@ -113,7 +113,6 @@ footer {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-around;
-    border-top-style: solid;
 }
 
 header {
@@ -128,7 +127,6 @@ header {
     justify-content: start;
     padding-left: 1rem;
     padding-right: 1rem;
-    border-bottom-style: solid;
 }
 
 input {

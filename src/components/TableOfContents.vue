@@ -4,7 +4,7 @@
     <div class="container">
         <details ref="details">
             <summary>
-                Table of Contents
+                <MdiIcon :path="mdiMenu" />
             </summary>
             <ExpandedRoutesList />
         </details>
@@ -15,13 +15,20 @@
 .container {
     width: max-content;
     margin-right: 1rem;
+    background-color: var(--highlight);
+}
+
+summary {
+    display: inline-block;
 }
 </style>
 
 <script setup>
 import ExpandedRoutesList from '@/components/ExpandedRoutesList.vue'
+import MdiIcon from '@/components/MdiIcon.vue'
 import { onMounted, onUnmounted, useTemplateRef } from 'vue'
 import { useRouter } from 'vue-router'
+import { mdiMenu } from '@mdi/js'
 
 const details = useTemplateRef('details')
 const router = useRouter()
