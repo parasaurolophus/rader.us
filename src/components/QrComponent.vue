@@ -1,10 +1,8 @@
-<!-- Copyright (c) 2026 Kirk Rader -->
+<!-- Copyright (c) 2023-2026 Kirk Rader -->
 
 <template>
-    <a :href="text" target="_blank">
-        <div ref="svg" :class="`container ${size}`">
-        </div>
-    </a>
+    <div ref="svg" :class="`container ${size}`">
+    </div>
 </template>
 
 <style scoped>

@@ -1,4 +1,4 @@
-<!-- Copyright (c) 2026 Kirk Rader -->
+<!-- Copyright (c) 2023-2026 Kirk Rader -->
 
 <template>
     <QrComponent id="qr" v-model="route.path" />
@@ -9,7 +9,6 @@
         <BreadCrumbs />
     </div>
     <MdiIcon :path="mdiThemeLightDark" class="button right" @click="toggleTheme()" />
-    <QrComponent id="hyperfollow" v-model="otherLinks.hyperFollow.url" />
 </template>
 
 <style scoped>
@@ -39,7 +38,6 @@ import { mdiThemeLightDark } from '@mdi/js'
 import { inject } from 'vue'
 import { useRoute } from 'vue-router'
 
-const otherLinks = inject('otherLinks')
 const route = useRoute()
 const toggleTheme = inject('toggleTheme')
 </script>

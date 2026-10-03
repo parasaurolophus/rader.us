@@ -1,4 +1,4 @@
-<!-- Copyright (c) 2026 Kirk Rader -->
+<!-- Copyright (c) 2023-2026 Kirk Rader -->
 
 <template>
     <details v-for="year of years" name="musicography">

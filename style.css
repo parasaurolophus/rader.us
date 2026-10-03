@@ -1,4 +1,4 @@
-/* Copyright (c) 2026 Kirk Rader */
+/* Copyright (c) 2023-2026 Kirk Rader */
 
 /*
  * global look and feel
@@ -144,6 +144,7 @@ main {
     flex-flow: column nowrap;
     overflow: auto;
     margin: 1rem;
+    padding-right: 1rem;
 }
 
 @media (width >=1200px) {

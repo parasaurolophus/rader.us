@@ -1,4 +1,4 @@
-<!-- Copyright (c) 2026 Kirk Rader -->
+<!-- Copyright (c) 2023-2026 Kirk Rader -->
 
 <template>
 
@@ -7,6 +7,10 @@
         <h1>Software Development</h1>
 
         <h2>Examples</h2>
+
+        <QrLink v-model="github" size="large" />
+
+        <hr>
 
         <details v-for="example in examples" :key="example.url" name="software">
             <summary>{{ example.summary }} ({{ example.language }})</summary>
@@ -23,6 +27,8 @@
 
 <script setup>
 import FetchCode from '@/components/FetchCode.vue'
+import QrLink from '@/components/QrLink.vue'
+import { ref } from 'vue'
 
 const examples = [
     {
@@ -44,4 +50,6 @@ const examples = [
         repository: 'https://github.com/parasaurolophus/go/tree/main/utilities',
     },
 ]
+
+const github = ref('https://github.com/parasaurolophus')
 </script>

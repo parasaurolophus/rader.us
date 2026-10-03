@@ -1,4 +1,4 @@
-// Copyright (c) 2026 Kirk Rader
+// Copyright (c) 2023-2026 Kirk Rader
 
 import { createRouter, createWebHistory } from 'vue-router'
 
