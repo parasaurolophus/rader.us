@@ -104,6 +104,15 @@ const routes = [
     },
 
     {
+        path: '/m2vp',
+        name: 'm2vp',
+        component: () => import('./pages/m2vp/index.vue'),
+        meta: {
+            title: 'M²VP',
+        },
+    },
+
+    {
         path: '/:pathMatch(.*)*',
         name: 'catchall',
         component: () => import('./pages/CaltchAll.vue'),
