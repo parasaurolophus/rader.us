@@ -1,7 +1,9 @@
 <!-- Copyright (c) 2023-2026 Kirk Rader -->
 
 <template>
-    <M2vpContactQr />
+    <a href="https://m2vp.org" target="_blank">
+        <M2vpContactQr />
+    </a>
 </template>
 
 <script setup>
