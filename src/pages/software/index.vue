@@ -4,26 +4,36 @@
 
     <div>
 
-        <h1>Software Development</h1>
-
-        <h2>Examples</h2>
-
         <QrLink v-model="github" size="large" />
 
-        <hr>
+        <div>
 
-        <details v-for="example in examples" :key="example.url" name="software">
-            <summary>{{ example.summary }}</summary>
-            <highlightjs v-if="example.code" :code="example.code" :language="example.language" />
-            <FetchCode v-if="example.url" :url="example.url" :language="example.language" />
-            <a v-if="example.repository" :href="example.repository" target="_blank">
-                {{ example.repository }}
-            </a>
-        </details>
+            <h1>Software Development</h1>
+
+            <h2>Examples</h2>
+
+            <hr>
+
+            <details v-for="example in examples" :key="example.url" name="software">
+                <summary>{{ example.summary }}</summary>
+                <highlightjs v-if="example.code" :code="example.code" :language="example.language" />
+                <FetchCode v-if="example.url" :url="example.url" :language="example.language" />
+                <a v-if="example.repository" :href="example.repository" target="_blank">
+                    {{ example.repository }}
+                </a>
+            </details>
+
+        </div>
 
     </div>
 
 </template>
+
+<style scoped>
+details:not(:first-child) {
+    margin-top: 1rex;
+}
+</style>
 
 <script setup>
 import FetchCode from '@/components/FetchCode.vue'
