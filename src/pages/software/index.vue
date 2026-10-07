@@ -13,7 +13,7 @@
         <hr>
 
         <details v-for="example in examples" :key="example.url" name="software">
-            <summary>{{ example.summary }} ({{ example.language }})</summary>
+            <summary>{{ example.summary }}</summary>
             <highlightjs v-if="example.code" :code="example.code" :language="example.language" />
             <FetchCode v-if="example.url" :url="example.url" :language="example.language" />
             <a v-if="example.repository" :href="example.repository" target="_blank">
@@ -33,21 +33,27 @@ import { ref } from 'vue'
 const examples = [
     {
         url: 'https://raw.githubusercontent.com/parasaurolophus/plug-in-favicon/refs/heads/main/plug-in-favicon.scm',
-        summary: 'GIMP Plug-In',
+        summary: 'GIMP plug-in (Scheme)',
         language: 'scheme',
         repository: 'https://github.com/parasaurolophus/plug-in-favicon',
     },
     {
         url: 'https://raw.githubusercontent.com/parasaurolophus/scheme/refs/heads/main/engines.rkt',
-        summary: 'Engines from Continuations',
+        summary: 'Engines from continuations (Scheme)',
         language: 'scheme',
         repository: 'https://github.com/parasaurolophus/scheme',
     },
     {
         url: 'https://raw.githubusercontent.com/parasaurolophus/go/refs/heads/main/utilities/process_batch.go',
-        summary: 'ProcessBatch',
+        summary: 'goroutines and channels (Go)',
         language: 'go',
         repository: 'https://github.com/parasaurolophus/go/tree/main/utilities',
+    },
+    {
+        url: 'https://raw.githubusercontent.com/parasaurolophus/cppExamples/refs/heads/main/src/Thread.h',
+        summary: "Wrap Linux' pthread_t in a C++ class (C++)",
+        language: 'cpp',
+        repository: 'https://github.com/parasaurolophus/cppExamples',
     },
 ]
 
