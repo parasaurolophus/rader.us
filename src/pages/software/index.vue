@@ -42,6 +42,12 @@ import { ref } from 'vue'
 
 const examples = [
     {
+        url: 'https://raw.githubusercontent.com/parasaurolophus/automation/refs/heads/main/automation-backend/index.js',
+        summary: 'Home automation server using express and Vue',
+        language: 'javascript',
+        repository: 'https://github.com/parasaurolophus/automation',
+    },
+    {
         url: 'https://raw.githubusercontent.com/parasaurolophus/plug-in-favicon/refs/heads/main/plug-in-favicon.scm',
         summary: 'GIMP plug-in (Scheme)',
         language: 'scheme',
