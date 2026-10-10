@@ -540,11 +540,161 @@
             relationships between cardinalities. If it is possible to construct
             a surjective mapping from one set to another, the first set's
             cardinality must be greater than or equal to that of the second set.
+            For example:
+        </p>
+
+        <math display="block">
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mrow>
+                            <mo>|</mo>
+                            <mi>A</mi>
+                            <mo>|</mo>
+                        </mrow>
+                        <mo>&gt;</mo>
+                        <mrow>
+                            <mo>|</mo>
+                            <mi>C</mi>
+                            <mo>|</mo>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mtext>where</mtext>
+                        <mspace width="0.5em" />
+                        <mrow>
+                            <mi>A</mi>
+                            <mo>=</mo>
+                            <mrow>
+                                <mo>{</mo>
+                                <mi>a</mi>
+                                <mo>,</mo>
+                                <mi>b</mi>
+                                <mo>,</mo>
+                                <mi>c</mi>
+                                <mo>}</mo>
+                            </mrow>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mtext>and</mtext>
+                        <mspace width="0.5em" />
+                        <mrow>
+                            <mi>C</mi>
+                            <mo>=</mo>
+                            <mrow>
+                                <mo>{</mo>
+                                <mi>d</mi>
+                                <mo>,</mo>
+                                <mi>e</mi>
+                                <mo>}</mo>
+                            </mrow>
+                        </mrow>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+
+        <p>
+            since any mapping between <math>
+                <mi>A</mi>
+            </math> and
+            <math>
+                <mi>C</mi>
+            </math> must leave out one element of
+            <math>
+                <mi>A</mi>
+            </math>.
+        </p>
+
+        <p>
             Conversely, if it is possible to construct an injective mapping, the
             first set's cardinality must be less than or equal to the second
-            set's. Finally, if it can be shown that an injective or surjective
-            mapping is possible but a bijective one is not, then the two
-            cardinalities cannot be equal.
+            set's:
+        </p>
+
+        <math display="block">
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mrow>
+                            <mo>|</mo>
+                            <mi>A</mi>
+                            <mo>|</mo>
+                        </mrow>
+                        <mo>&lt;</mo>
+                        <mrow>
+                            <mo>|</mo>
+                            <mi>D</mi>
+                            <mo>|</mo>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mtext>where</mtext>
+                        <mspace width="0.5em" />
+                        <mrow>
+                            <mi>A</mi>
+                            <mo>=</mo>
+                            <mrow>
+                                <mo>{</mo>
+                                <mi>a</mi>
+                                <mo>,</mo>
+                                <mi>b</mi>
+                                <mo>,</mo>
+                                <mi>c</mi>
+                                <mo>}</mo>
+                            </mrow>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mtext>and</mtext>
+                        <mspace width="0.5em" />
+                        <mrow>
+                            <mi>D</mi>
+                            <mo>=</mo>
+                            <mrow>
+                                <mo>{</mo>
+                                <mi>d</mi>
+                                <mo>,</mo>
+                                <mi>e</mi>
+                                <mo>,</mo>
+                                <mi>f</mi>
+                                <mo>,</mo>
+                                <mi>g</mi>
+                                <mo>}</mo>
+                            </mrow>
+                        </mrow>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+
+        <p>
+            since any mapping between
+            <math>
+                <mi>A</mi>
+            </math> and
+            <math>
+                <mi>D</mi>
+            </math> must leave out one element of
+            <math>
+                <mi>D</mi>
+            </math>.
+        </p>
+
+        <p>
+            Finally, if it can be shown that an injective or surjective mapping
+            is possible but a bijective one is not, then the two cardinalities
+            cannot be equal, again as illustrated by the two preceding
+            inequalities.
         </p>
 
         <p>
@@ -730,19 +880,19 @@
                 more than one upper bound (in fact, uncountably many upper
                 bounds) which is a counter-intuitive use of the phrase "upper
                 bound," to say the least. Again, all of these proofs of
-                counter-intuitive properteries of trans-finite set are logically
-                valid, but can only be considered "true" on the assumption that
-                such sets exist in the first place. When it comes to the
-                continuum, modern physics strongly suggests that there just is
-                no such thing in the real world. In fact, it has been recognized
-                since ancient times that taking the idea of the continuum too
-                seriously leads to absurdities like Zeno's Paradox and its many
-                variations. (Even if the number of subdivisions of spacetime
-                between two events is countably infinite, the limit of the sum
-                of those subdivisions is the actual, finite distance with no
-                paradox. Throw in the uncountably many non-computable intervals
-                between each of the countably-many intervals implied by a
-                continuum and things get metamathematically far trickier.)
+                counter-intuitive properteries of trans-finite sets are
+                logically valid, but can only be considered "true" on the
+                assumption that such sets exist in the first place. When it
+                comes to the continuum, modern physics strongly suggests that
+                there just is no such thing in the real world. In fact, it has
+                been recognized since ancient times that taking the idea of the
+                continuum too seriously leads to absurdities like Zeno's Paradox
+                and its many variations. (Even if the number of subdivisions of
+                spacetime between two events is countably infinite, the limit of
+                the sum of those subdivisions is the actual, finite distance
+                with no paradox. Throw in the uncountably many non-computable
+                intervals between each of the countably-many intervals implied
+                by a continuum and things get metamathematically far trickier.)
             </p>
 
         </DetailsView>
@@ -754,10 +904,10 @@
             cardinalities of the sets of natural and real numbers are both
             infinite, the only way you can say anything meaningful about the
             relationship between them is through inductively defined mappings.
-            But Cantor showed that, given the traditional definition of what it
-            means for the set of real numbers to be "continuous" (in the way
-            that the set of natural numbers is <i>not</i> continuous)
-            deductively proves that any inductively defined mapping from
+            But given the traditional definition of what it means for the set of
+            real numbers to be "continuous" (in the way that the set of natural
+            numbers is <i>not</i> continuous) Cantor proved that any inductively
+            defined mapping from
             <math>
                 <mi>&naturals;</mi>
             </math> to any continuous subset of
@@ -766,7 +916,7 @@
             </math>
             will leave out infintely many real numbers, no matter how tiny the
             difference is between the least and greatest member of the
-            continuous subset of real numbers. In the language of Set Theory,
+            continuous subset of real numbers. In the language of Number Theory,
             any continuous subset of
             <math>
                 <mn>&reals;</mn>
@@ -897,7 +1047,7 @@
             like billiard balls are not made of tinier things that behave just
             like little billiard balls caroming off one another. It is easy to
             forget that when operating outside the scale at which human senses
-            operate, and therefore with which our habits of thought evolved to
+            operate, and therefore at which our habits of thought evolved to
             cope, we are <em>always</em> reasoning by abstraction and analogy.
         </p>
 
@@ -915,32 +1065,32 @@
             another way? It would be more startling, suggesting some kind of
             infinitely reductive regression, if it turned out that macroscopic
             waves and particles were made of microscopic waves and particles.
-            This is similar to the "mind-body" promblem that once consomed so
+            This is similar to the "mind-body problem" that once consumed so
             much of Western European Philospers' time and effort. In trying to
-            make sense of how something non-material could interact and control
-            a material body, some philosophers resorted to this kind of
-            fruitless reductionism. Descartes, for example, seemed serious in
-            suggesting that the pineal gland, of all things, was where the soul
-            resided and was the central command center from which it exerted
-            control over the body, using the rest of the brain as an
+            make sense of how a non-material mind could interact with and
+            control a material body, some philosophers resorted to axactly this
+            kind of fruitless reductionism. Descartes, for example, seemed
+            serious in suggesting that the pineal gland, of all things, was
+            where the soul resided and was the central command center from which
+            it exerted control over the body, using the rest of the brain as an
             intermediary. As if localizing the mind to a tiny
-            brain-witnin-a-brain actually did anything to resolve the
-            "mind-body" problem in the first place. The only real way to resolve
-            the "mind-body" problem is, of course, to recognize that the entire
+            brain-witnin-a-brain actually did anything to resolve the "mind-body
+            problem" in the first place. The only real way to resolve the
+            "mind-body problem" is, of course, to recognize that the entire
             question is based on a false premise. The question disappears
             entirely when one regards mental function as an epiphenomenon of
             neural function. But that was a move Descartes, as a devout
-            Catholic, could not allow himself to make since it eliminates
-            anything like a "soul" that exists separately and independently of a
-            body, from consideration. Physicists should simply free themselves
-            of the superstition that reasoning too much by analogy from everyday
+            Catholic, could not allow himself to make since it eliminates from
+            consideration anything like a "soul" that exists separately and
+            independently of a body. Physicists should simply free themselves of
+            the superstition that reasoning too much by analogy from everyday
             experience in a domain where classical physics makes sense when
             doing physics at ultra-microscopic scales can lead to anything but
             confusion and blind alleys. Ditto when reasoning by analogy at the
             cosmological scale. Double ditto for the supposed contradictions
-            reasoning by analogy between the subatomic and cosmological scales.
-            In short, Physicists would do well to stick to Physics and leave
-            Metaphysics to the professionals in the Philosophy department.
+            when reasoning by analogy between the subatomic and cosmological
+            scales. In short, Physicists would do well to stick to Physics and
+            leave Metaphysics to the professionals in the Philosophy department.
         </p>
 
         <p>
@@ -953,30 +1103,30 @@
             as perfectly valid proofs of why the continuum is not a countable
             set of numbers. But note well: they do so by simply stipulating that
             the continuum exists in the first place. Quantum Physics, on the
-            other hand, demonstrates that reality is not continuous when viewed
-            at ultra small scales. The best way to look at Cantor's proofs from
-            a strictly scientific, rather than mathematical, point of view is as
-            higlighting limits (pun intended) to the utility of the notion of a
-            continuum from the outset. Physicists should recalibrate their
-            thinking by taking their own results seriously. Re-working the
-            metamathematical framework used by theoretical physicists could have
-            far-reaching effects. Differential Calculus and mathematical
-            structures that rely on it are ideal for the purposes of Classical
-            Mechanics (for which they were designed in the first place) but
-            should only be used for Quantum Mechanics with extreme care, if at
-            all. Fully eschewing the notion of "continuity" could help resolve
-            puzzling aspects of modern physics like entanglement and whether or
-            not indeterminacy really has a "tail problem." A measuable property
-            is quantified, by definition, using a computable number. If not, one
-            could never design an experiment to take the measurement in the
-            first place. Might the gaps in the continuum left between computable
-            numbers be big enough to conceal some hidden variables? No-one
-            knows, at the time of this writing, but it seems sufficiently
-            plausible to temper the enthusiasm for the (slightly circular, to
-            start with) claims about qubits in quantum computers offering
-            confirmation that quantum effects in the real world display Bell
-            inequalities of the sort that suppoedly clinch the argument in favor
-            of "spooky action at a distance."
+            other hand, demonstrates experimentally that reality is not
+            continuous when viewed at ultra small scales. The best way to look
+            at Cantor's proofs from a strictly scientific, rather than
+            mathematical, point of view is as higlighting limits (pun intended)
+            to the utility of the notion of a continuum from the outset.
+            Physicists should recalibrate their thinking by taking their own
+            results seriously. Re-working the metamathematical framework used by
+            theoretical physicists could have far-reaching effects. Differential
+            Calculus and mathematical structures that rely on it are ideal for
+            the purposes of Classical Mechanics (for which they were designed in
+            the first place) but should only be used for Quantum Mechanics with
+            extreme care, if at all. Fully eschewing the notion of "continuity"
+            could help resolve puzzling aspects of modern physics like
+            entanglement and whether or not indeterminacy really has a "tail
+            problem." A measuable property is quantified, by definition, using a
+            computable number. If not, one could never design an experiment to
+            take the measurement in the first place. Might the gaps in the
+            continuum left between computable numbers be big enough to conceal
+            some hidden variables? No-one knows, at the time of this writing,
+            but it seems sufficiently plausible to temper the enthusiasm for the
+            (slightly circular, to start with) claims about qubits in quantum
+            computers offering confirmation that quantum effects in the real
+            world display Bell inequalities of the sort that suppoedly clinch
+            the argument in favor of "spooky action at a distance."
         </p>
 
     </div>
