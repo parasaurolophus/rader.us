@@ -27,13 +27,13 @@
             </li>
         </ul>
 
-        <DetailsView>
+        <details>
 
             <a id="conversions"></a>
 
-            <template #summary>
+            <summary>
                 Conversions and Reductions
-            </template>
+            </summary>
 
             <p>
                 In order to prove certain theorems in Computability Theory as
@@ -174,7 +174,7 @@
                 results.
             </p>
 
-        </DetailsView>
+        </details>
 
         <h2>Grammar</h2>
 
@@ -960,8 +960,6 @@
 </style>
 
 <script setup>
-import DetailsView from '@/components/DetailsView.vue'
-
 const bnf = `<term> ::= <name> | <application> | <abstraction>
 <name> ::= "a" | ... | "z"
 <application> ::= "(" <term> <term> ")"

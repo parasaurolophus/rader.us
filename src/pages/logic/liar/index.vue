@@ -107,11 +107,11 @@
 
         <h2>Incompleteness</h2>
 
-        <DetailsView>
+        <details name="notes">
 
-            <template #summary>
+            <summary>
                 Undecidability and Incompleteness
-            </template>
+            </summary>
 
             <p>
                 A formula of a language is <i>undecidable</i> if it cannot be
@@ -128,7 +128,7 @@
                 false."
             </p>
 
-        </DetailsView>
+        </details>
 
         <p>
             Formal languages of the kind used by mathematicions and computer
@@ -192,11 +192,11 @@
             Seriously.
         </p>
 
-        <DetailsView>
+        <details name="notes">
 
-            <template #summary>
+            <summary>
                 Fixed-Point Combinators
-            </template>
+            </summary>
 
             <p>
                 A <i>fixed point</i> of a function is a value that maps to
@@ -263,7 +263,7 @@
                 </mrow>
             </math>
 
-        </DetailsView>
+        </details>
 
         <p>
             A detailed explanation of the meaning and utility of the <i>Y
@@ -315,7 +315,7 @@
         <p>
             "Named <code>let</code>" is the standard mechanism in Scheme for
             looping. For example, see multiple uses of
-            <highlightjs :code="namedLet" language="scheme"/> in
+            <highlightjs :code="namedLet" language="scheme" /> in
             <RouterLink :to="{ name: 'software', hash: '#gimp-plugin' }">GIMP plug-in</RouterLink>
         </p>
 
@@ -324,8 +324,6 @@
 </template>
 
 <script setup>
-import DetailsView from '@/components/DetailsView.vue'
-
 const factorial = `;; 10,000!
 (let factorial ((a 1)
                 (n 10000))

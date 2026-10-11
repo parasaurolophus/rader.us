@@ -201,11 +201,11 @@
             branches of Mathematics.
         </p>
 
-        <DetailsView>
+        <details name="notes">
 
-            <template #summary>
+            <summary>
                 The Metamathematics of Non-Euclidean Geometry
-            </template>
+            </summary>
 
             <p>
                 At the time, the kinds of "Non-Euclidean Geometries" pioneered
@@ -221,7 +221,7 @@
                 described in non-Euclidean terms. More on this, later...
             </p>
 
-        </DetailsView>
+        </details>
 
         <p>
             Which brings us to Georg Cantor and Set Theory. From time
@@ -243,11 +243,11 @@
             mathematics.
         </p>
 
-        <DetailsView>
+        <details name="notes">
 
-            <template #summary>
+            <summary>
                 Infinitessimal and Infinite Quantities
-            </template>
+            </summary>
 
             <p>
                 Leibnitz' and Newton's arguments denying infinite quantities
@@ -305,7 +305,7 @@
                 Again, much more on this, below...
             </p>
 
-        </DetailsView>
+        </details>
 
         <p>
             The first challenge Cantor faced was to define what the "size" of a
@@ -797,11 +797,11 @@
             was only injective, after all.
         </p>
 
-        <DetailsView>
+        <details name="notes">
 
-            <template #summary>
+            <summary>
                 Digit Sequences
-            </template>
+            </summary>
 
             <p>
                 The most often cited of Cantor's proofs that it is always
@@ -895,7 +895,7 @@
                 by a continuum and things get metamathematically far trickier.)
             </p>
 
-        </DetailsView>
+        </details>
 
         <h2>How Real Is the Real Number Line?</h2>
 
@@ -1013,11 +1013,11 @@
             instruction set, modeled on Turing's a-machines.
         </p>
 
-        <DetailsView>
+        <details name="notes">
 
-            <template #summary>
+            <summary>
                 FORTRAN and Lisp
-            </template>
+            </summary>
 
             <p>
                 While FORTRAN is widely credited as being the first programming
@@ -1029,7 +1029,7 @@
                 way that modern digital computers "embody" a-machines.
             </p>
 
-        </DetailsView>
+        </details>
 
         <p>
             Backing up to what Cantor actually proved about infinite
@@ -1142,6 +1142,5 @@
 </style>
 
 <script setup>
-import DetailsView from '@/components/DetailsView.vue'
 import ParallelPostulate from '@/pages/logic/computability/ParallelPostulate.vue'
 </script>

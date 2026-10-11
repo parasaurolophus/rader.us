@@ -2,7 +2,7 @@
 
 <template>
     <div class="container">
-        <details ref="details">
+        <details ref="details" class="hide-border">
             <summary>
                 <MdiIcon :path="mdiMenu" />
             </summary>
@@ -19,6 +19,10 @@
     background-color: var(--highlight);
 }
 
+.hide-border {
+    border-style: none;
+}
+
 summary {
     display: inline-block;
 }
@@ -27,45 +31,19 @@ summary {
 <script setup>
 import ExpandedRoutesList from '@/components/ExpandedRoutesList.vue'
 import MdiIcon from '@/components/MdiIcon.vue'
-import { onMounted, onUnmounted, useTemplateRef } from 'vue'
+import { inject, onMounted, useTemplateRef, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { mdiMenu } from '@mdi/js'
 
 const details = useTemplateRef('details')
 const router = useRouter()
-let largeScreen = false
-let windowWidthQuery = null
-
-function onWindowWidthEvent(event) {
-
-    windowWidthEventHandler(event.target)
-}
+const isLargeScreen = inject('isLargeScreen')
 
 function updateDetails() {
 
-    details.value.open = largeScreen || router.currentRoute.value.name === 'home'
+    details.value.open = isLargeScreen || router.currentRoute.value.name === 'home'
 }
 
-function windowWidthEventHandler(query) {
-
-    largeScreen = query.matches
-    updateDetails()
-}
-
-onMounted(() => {
-
-    windowWidthQuery = window.matchMedia('(width >= 1200px)')
-    windowWidthEventHandler(windowWidthQuery)
-    windowWidthQuery.addEventListener('change', onWindowWidthEvent)
-    router.afterEach(updateDetails)
-})
-
-onUnmounted(() => {
-
-    if (windowWidthQuery !== null) {
-
-        windowWidthQuery.removeEventListener('change', onWindowWidthEvent)
-        windowWidthQuery = null
-    }
-})
+onMounted(() => router.afterEach(updateDetails))
+watch(isLargeScreen, updateDetails)
 </script>

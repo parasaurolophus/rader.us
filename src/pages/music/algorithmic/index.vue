@@ -98,11 +98,11 @@
             sound.
         </p>
 
-        <DetailsView>
+        <details>
 
-            <template #summary>
+            <summary>
                 Digital Recording
-            </template>
+            </summary>
 
             <p>
                 [For completeness, a digital recording stores the representation of
@@ -112,7 +112,7 @@
                 since we are concentrating here on analog synthesis and playback.]
             </p>
 
-        </DetailsView>
+        </details>
 
         <p>
             In the same way, an analog tape stores acoustic vibrations as
@@ -1308,7 +1308,6 @@ video {
 </style>
 
 <script setup>
-import DetailsView from '@/components/DetailsView.vue'
 import MdiIcon from '@/components/MdiIcon.vue'
 import MermaidDiagram from '@/components/MermaidDiagram.vue'
 import { mdiPlay, mdiPause } from '@mdi/js'

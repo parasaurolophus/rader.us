@@ -1,11 +1,11 @@
 <!-- Copyright (c) 2023-2026 Kirk Rader -->
 
 <template>
-    <details v-for="year of years" name="musicography">
+    <details v-for="year of years" name="musicography" class="hide-border">
         <summary>
             {{ year[0][0][YEAR] }}
         </summary>
-        <details v-for="album of year" name="album">
+        <details v-for="album of year" name="album" class="hide-border">
             <summary>
                 {{ album[0][ALBUM] }}
             </summary>
@@ -33,14 +33,9 @@
 </template>
 
 <style scoped>
-details {
-    font-size: 90%;
+.hide-border {
+    border-style: none;
 }
-
-details>*:not(summary) {
-    margin-left: 1rem;
-}
-
 .subtitle {
     font-style: italic;
     font-weight: bold;

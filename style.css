@@ -103,6 +103,19 @@ code {
     color: white;
 }
 
+details {
+    padding: 1rem;
+    font-size: 90%;
+}
+
+details:open {
+    border: solid 1px var(--foreground);
+}
+
+details>*:not(summary) {
+    margin-left: 1rem;
+}
+
 footer {
     position: fixed;
     left: 0;
