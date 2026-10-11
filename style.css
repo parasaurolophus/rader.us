@@ -82,13 +82,15 @@ a:hover {
     text-decoration: underline;
 }
 
-blockquote i,
-blockquote em {
-    font-style: normal;
-}
-
 blockquote {
     font-style: italic;
+}
+
+blockquote i,
+blockquote em,
+blockquote pre,
+blockquote code {
+    font-style: normal;
 }
 
 body {
@@ -98,14 +100,12 @@ body {
 }
 
 code {
-    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    color: white;
 }
 
 details {
     padding: 1rem;
-    font-size: 90%;
+    /* font-size: 90%; */
 }
 
 details:open {

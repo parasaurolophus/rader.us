@@ -148,16 +148,8 @@
                         <mi>x</mi>
                         <mo>)</mo>
                         <mo>)</mo>
-                    </math> is interchangeable with
-                    <math>
-                        <mi>f</mi>
-                    </math> so long as
-                    <math>
-                        <mi>x</mi>
-                    </math> does not appear free anywhere within
-                    <math>
-                        <mi>f</mi>
-                    </math>.
+                    </math> is interchangeable with <i>f</i> so long as <i>x</i>
+                    does not appear free anywhere within <i>f</i>.
                 </dd>
             </dl>
 
@@ -199,9 +191,7 @@
         </p>
 
         <p>
-            For example, <math>
-                <mi>f</mi>
-            </math> is free in
+            For example, <i>f</i> is free in
             <math>
                 <mo>(</mo>
                 <mo>&lambda;</mo>
@@ -383,47 +373,49 @@
             abstractions.
         </p>
 
-        <p class="indent">
+        <blockquote>
             [As the author of this document can attest from personal experience
             while attending seminars on "Topics in Metamathematics" given by
             Church at UCLA in the 1970's, he would invariably use prefix (a.k.a.
             "Polish") notation for mathematical operations when writing informal
             &lambda; expressions on chalkboards and would never miss an
-            opportunity to discuss its advantages, primarily for the
-            opportunities it affords for eliminating even more parentheses.
-            Church's aversion to parentheses and the efforts he took to
-            minimizze any need for them in &lambda; notation makes the
-            over-abundance of parentheses in the Lisp family of programming
-            languages more than a little ironic. Historically, the reason for
-            Lisp's idiosyncratic syntax is that <i>s-exprs</i> (structured
-            expressions) were originally intended as a representation of
-            &lambda; terms used internally by Lisp interpreters and compilers.
-            Lisp's creators intended eventually to define a separate
-            representation, <i>m-exprs</i>, with a syntax modeled on Algol (the
-            progenitor of all conventional programming language syntax) for use
-            when writing actual programs in Lisp. Fortunately or unfortunately,
-            Lisp escaped into the wild before M syntax had developed far enough
-            to be useful. Programmers in the real world became sufficiently used
-            to S syntax that any motivation for the development of M syntax
-            simply evaporated in the mainstream Lisp development community.
-            Instead, a number of alternative languages with identical or nearly
-            identical semantics to Lisp were developed over the years, each with
-            its own idiosyncratic syntax (Haskell being an early example).
-            However, among the reasons that Lisp dialects have remained popular
-            with programming language theorists and prototypers to this day is
-            that S syntax was designed to be particularly easy to construct for
-            output and parse as input. This not only eases the implementation of
-            Lisp language processors, but historically allowed for treating a
-            given s-expr interchangeably as "code" or "data," in keeping with
-            Church's typeless &lambda;-Calculus. A programming language
-            interpreter's console interface is often referred to as a REPL
-            (Read-Eval-Print Loop) because, once upon a time, a Lisp
-            interpreter's outermost process entry point consisted literally of
-            <code>(while #t (print (eval (read))))</code>
+            opportunity to discuss its advantages, primarily for its ability to
+            eliminate even more parentheses. Church's aversion to parentheses
+            and the efforts he took to minimizze the need for them in &lambda;
+            notation makes the over-abundance of parentheses in the Lisp family
+            of programming languages more than a little ironic. Historically,
+            the reason for Lisp's idiosyncratic syntax is that <i>S-exprs</i>
+            (structured expressions) were originally intended as a
+            representation of &lambda; terms used internally by Lisp
+            interpreters and compilers. Lisp's creators intended eventually to
+            define a separate representation, <i>M-exprs</i>, with a syntax
+            modeled on Algol (the progenitor of all conventional programming
+            language syntax) for use when writing actual programs in Lisp.
+            Fortunately or unfortunately, Lisp escaped into the wild before M
+            syntax had developed far enough to be useful. Programmers in the
+            real world became sufficiently used to S syntax that any motivation
+            for the development of M syntax simply evaporated in the mainstream
+            Lisp development community. Instead, a number of alternative
+            languages with identical or nearly identical semantics to Lisp were
+            developed over the years, each with its own idiosyncratic syntax
+            (Haskell being an early example). However, among the reasons that
+            Lisp dialects have remained popular with programming language
+            theorists and prototypers to this day is that S syntax was designed
+            to be particularly easy to construct for output and parse as input.
+            This not only eases the implementation of Lisp language processors,
+            but historically allowed for treating a given S-expr interchangeably
+            as "code" or "data," in keeping with Church's typeless
+            &lambda;-Calculus. A programming language interpreter's console
+            interface is often referred to as a REPL (Read-Eval-Print Loop)
+            because, once upon a time, a Lisp interpreter's outermost process
+            entry point consisted literally of
+
+            <highlightjs :code="repl" language="scheme" />
+
             or its equivalent in a given Lisp dialect (and note Lisp
             implementers' following Church's lead in embracing prefix
             notation).]
-        </p>
+        </blockquote>
 
         <p>
             Examples:
@@ -436,9 +428,7 @@
                 </math>
             </dt>
             <dd>
-                The free name <math>
-                    <mi>a</mi>
-                </math>.
+                The free variable <i>a</i>.
             </dd>
             <dt>
                 <math>
@@ -466,13 +456,11 @@
                 </math>
             </dt>
             <dd>
-                Application of the identity function to
-                <math>
-                    <mi>a</mi>
-                </math>. Note that parentheses are required, in this case, due
-                to the precedence of application over abstraction though it is a
-                matter of taste whether the parentheses surround the parameter
-                (as shown above) or the function as in
+                Application of the identity function to <i>a</i>. Note that
+                parentheses are required, in this case, due to the precedence of
+                application over abstraction though it is a matter of taste
+                whether the parentheses surround the parameter (as shown above)
+                or the function as in
                 <math>
                     <mrow>
                         <mo>(</mo>
@@ -486,7 +474,7 @@
                 </math>. Church would have preferred the former while hastening
                 to point out that trailing parentheses are never actually
                 necessary where Polish notation is used and would omit it when
-                writing informally on a chalkboard which, in this, results in
+                writing informally on a chalkboard which results in
                 <math>
                     <mrow>
                         <mo>&lambda;</mo>
@@ -629,10 +617,8 @@
         <p>
             Conversely, though the first and third examples are syntactically
             parseable as &lambda; expressions, they are not semantically
-            well-formed due to the presence of the free name
-            <math>
-                <mi>a</mi>
-            </math> in each occurence.
+            well-formed due to the presence of the free name <i>a</i> in each
+            occurence.
         </p>
 
         <p>
@@ -737,24 +723,16 @@
         <p>
             Given that the point of the preceding is to use it in conjuction
             with arbitrarily complex &lambda; abstractions that end up bound to
-            its
-            <math>
-                <mi>g</mi>
-            </math> and
-            <math>
-                <mi>x</mi>
-            </math> variables, using it explicitly is nearly impossible to get
-            right and excruciating to comprehend. Succinct references using
-            abbreviations like
-            <math>
-                <mi>Y</mi>
-            </math> make it extremely clear what is going on and allow authors
-            and readers to focus on what is actually important in a given
-            formula. (In the case of the Y combinator, what is important is that
-            it simultaneously enables the definition of functions that calculate
-            things like the Fibonacci series while making it easy to demonstrate
-            that Church's simple, typeless &lambda;-Calculus is <router-link
-                :to="{ name: 'liar' }">incomplete</router-link>).
+            its <i>g</i> and <i>x</i> variables, using it explicitly is nearly
+            impossible to get right and excruciating to comprehend. Succinct
+            references using abbreviations like <i>Y</i> make it extremely clear
+            what is going on and allow authors and readers to focus on what is
+            actually important in a given formula. (In the case of the Y
+            combinator, what is important is that it simultaneously enables the
+            definition of functions that calculate things like the Fibonacci
+            series while making it easy to demonstrate that Church's simple,
+            typeless &lambda;-Calculus is
+            <RouterLink :to="{ name: 'liar' }">incomplete</RouterLink>).
         </p>
 
         <h2 id="numerals">Church Numerals</h2>
@@ -862,9 +840,7 @@
 
         <p>
             Generally, the Chuch numeral corresponding to any natural number,
-            <math>
-                <mi>n</mi>
-            </math>, is
+            <i>n</i>, is
             <math>
                 <mi>n</mi>
                 <mo>=</mo>
@@ -878,7 +854,7 @@
                     <msup>
                         <mi>f</mi>
                         <mrow>
-                            <mspace width="0.25em" />
+                            <mo>&bull;</mo>
                             <mi>n</mi>
                         </mrow>
                     </msup>
@@ -892,7 +868,7 @@
                 <msup>
                     <mi>f</mi>
                     <mrow>
-                        <mspace width="0.25em" />
+                        <mo>&bull;</mo>
                         <mi>n</mi>
                     </mrow>
                 </msup>
@@ -900,42 +876,49 @@
                 <mi>x</mi>
                 <mo>)</mo>
             </math>
-            is shorthand for applying
-            <math>
-                <mi>f</mi>
-            </math>,
-            <math>
-                <mi>n</mi>
-            </math>
-            times in succession, initially passing it
-            <math>
-                <mi>x</mi>
-            </math>. It is important to undersand that the Church number 0 isn't
-            the number zero, it is a function that returns the identity
-            function. The Church number 1 isn't the number one, it is a function
-            that takes a function that takes a function as an argument and that
-            applies its argument one time to whatever is passed as an argument
-            to <em>that</em> function. And so on. It is simply a convention to
-            equate a function that applies a given one
-            <math>
-                <mi>n</mi>
-            </math>
-            times to the number
-            <math>
-                <mi>n</mi>
-            </math>.
+            is shorthand for applying <i>f</i> to itself <i>n</i> times in
+            succession, initially passing it <i>x</i>. It is important to
+            undersand that the Church number 0 isn't the number zero, it is a
+            function that returns the identity function. The Church number 1
+            isn't the number one, it is a function that takes a function that
+            takes a function as an argument and that applies its argument one
+            time to whatever is passed as an argument to <em>that</em> function.
+            And so on. It is simply a convention to equate the number <i>n</i>
+            to a function that composes a given one to itself <i>n</i> times. In
+            particular, the convention underlying Church numeerals means that
+            there is no difference, conceptually, between the notions of the
+            number "<i>n</i>" and "counting up to <i>n</i>" (which is in keeping
+            with the inductive definition of the set of natural numbers,
+            &naturals;).
         </p>
 
         <p>
             Having defined a convention for modeling numbers as functions,
             Church then defined a convention for modeling arithmetic operations
-            by composing such functions. In the end, he provided a model of
+            by composing such functions, starting with addition. Since the
+            Church numerals for <i>m</i> and <i>n</i> correspond to functions
+            which "count up to <i>m</i>" and "count up to <i>n</i>,"
+            respectively, they can be composed to produce a function which first
+            counts up to <i>m</i> then counts up <i>n</i> more. By clever uses
+            of &beta; and &eta; conversions, the resulting function can be shown
+            to be equivalent to the Church numeral for
+            <math>
+                <mi>m</mi>
+                <mo>+</mo>
+                <mi>n</mi>
+            </math>. This can then be extended to define multiplication by
+            composing the addition function with itself. And so on for the other
+            basic operations of arithmentic. In the end, he provided a model of
             numerical calculation sufficient to prove that the value for any
             formula of arithmetic could be encoded as a &lambda; expression
-            involving Church numerals. The same can be done for Boolean values,
-            the logical connectives of the Sentential Calculus, and so on.
-            Church thus achieved his goal of defining a general-purpose
-            abstraction of the concept of
+            involving Church numerals. So the &lambda;-Calculus was shown to be
+            capable of performing all possible mathematical functions on the set
+            of rational numbers, &rationals;. Given that, the same technique can
+            be used to define trigonometric functions and similar operations on
+            irrational numbers as well as for Boolean values, the logical
+            connectives of the Sentential Calculus, and so on. Church thus
+            achieved his goal of defining a general-purpose abstraction of the
+            concept of
             <router-link :to="{ name: 'computability' }">
                 "computation."
             </router-link>
@@ -945,23 +928,12 @@
 
 </template>
 
-<style scoped>
-.indent {
-    margin-left: 2rem;
-    font-style: italic;
-}
-
-.indent i,
-.indent em,
-.indent pre,
-.indent code {
-    font-style: normal;
-}
-</style>
-
 <script setup>
 const bnf = `<term> ::= <name> | <application> | <abstraction>
 <name> ::= "a" | ... | "z"
 <application> ::= "(" <term> <term> ")"
 <abstraction> ::= "(" "λ" <name> "." <term> ")"`
+
+const repl = `(while 't
+    (print (eval (read))))`
 </script>

@@ -12,8 +12,6 @@
 
             <h2>Examples</h2>
 
-            <hr>
-
             <details v-for="example in examples" :key="example.url" name="software">
                 <summary>{{ example.summary }}</summary>
                 <highlightjs v-if="example.code" :code="example.code" :language="example.language" />
@@ -28,12 +26,6 @@
     </div>
 
 </template>
-
-<style scoped>
-details:not(:first-child) {
-    margin-top: 1rex;
-}
-</style>
 
 <script setup>
 import FetchCode from '@/components/FetchCode.vue'

@@ -6,7 +6,13 @@
             <summary>
                 <MdiIcon :path="mdiMenu" />
             </summary>
-            <ExpandedRoutesList />
+            <div>
+                <ExpandedRoutesList />
+                <template v-if="!isLargeScreen">
+                    <hr>
+                    <UndecidableLink />
+                </template>
+            </div>
         </details>
     </div>
 </template>
@@ -31,6 +37,7 @@ summary {
 <script setup>
 import ExpandedRoutesList from '@/components/ExpandedRoutesList.vue'
 import MdiIcon from '@/components/MdiIcon.vue'
+import UndecidableLink from '@/components/UndecidableLink.vue'
 import { inject, onMounted, useTemplateRef, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { mdiMenu } from '@mdi/js'
@@ -41,7 +48,7 @@ const isLargeScreen = inject('isLargeScreen')
 
 function updateDetails() {
 
-    details.value.open = isLargeScreen || router.currentRoute.value.name === 'home'
+    details.value.open = isLargeScreen.value || router.currentRoute.value.name === 'home'
 }
 
 onMounted(() => router.afterEach(updateDetails))

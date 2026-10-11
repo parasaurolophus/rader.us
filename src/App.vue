@@ -95,9 +95,9 @@ function mermaidClick(arg) {
     console.log(`mermaid click ${arg}`)
 }
 
-function onLargeScreenChanged(event) {
+function onLargeScreenChanged(query) {
 
-    isLargeScreen.value = event.target.matches
+    isLargeScreen.value = query.matches
 }
 
 function toggleTheme() {
