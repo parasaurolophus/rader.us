@@ -6,7 +6,7 @@
 
 <script setup>
 import { inject, onMounted, useTemplateRef, watch } from 'vue'
-import { renderDiagram } from '@/mermaidUtilities.js'
+import { renderDiagram } from '../mermaidUtilities.js'
 
 const diagramElement = useTemplateRef('diagramElement')
 const refreshDiagrams = inject('refreshDiagrams')

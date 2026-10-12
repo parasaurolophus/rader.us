@@ -31,22 +31,25 @@
 import encodeQR from 'qr'
 import { onMounted, useTemplateRef, watch } from 'vue'
 
-const { size } = defineProps({
+const { size, text } = defineProps({
 
     size: {
         type: String,
         default: 'medium',
     },
+
+    text: {
+        type: String,
+        required: true,
+    },
 })
 
 const svg = useTemplateRef('svg')
-const text = defineModel()
 
 function update() {
 
-    svg.value.innerHTML = encodeQR(text.value, 'svg')
+    svg.value.innerHTML = encodeQR(text, 'svg')
 }
 
 onMounted(update)
-watch(text, update)
 </script>

@@ -2,7 +2,7 @@
 
 <template>
     <a :href="url" class="container" target="_blank">
-        <QrComponent v-model="url" :size="size" />
+        <QrCode :text="url" :size="size" />
         <span>
             {{ url }}
         </span>
@@ -35,15 +35,18 @@
 </style>
 
 <script setup>
-import QrComponent from '@/components/QrComponent.vue'
+import QrCode from './QrCode.vue'
 
-const { size } = defineProps({
+const { size, url } = defineProps({
 
     size: {
         type: String,
         default: 'medium',
     },
-})
 
-const url = defineModel()
+    url: {
+        type: String,
+        required: true,
+    },
+})
 </script>

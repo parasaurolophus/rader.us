@@ -7,5 +7,5 @@
 </template>
 
 <script setup>
-import M2vpContactQr from '@/components/M2vpContactQr.vue'
+import M2vpContactQr from '../../components/M2vpContactQr.vue'
 </script>

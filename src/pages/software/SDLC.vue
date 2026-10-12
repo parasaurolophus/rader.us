@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import MermaidDiagram from '@/components/MermaidDiagram.vue'
+import MermaidDiagram from '../../components/MermaidDiagram.vue'
 import { ref } from 'vue'
 
 const source = ref(`---

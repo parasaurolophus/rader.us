@@ -25,56 +25,56 @@
 :root {
 
     /* panel dimensions & offsets */
-    --headerheight: 4lh;
-    --footerheight: 2lh;
+    --header-height: 4lh;
+    --footer-height: 2lh;
 }
 
 .dark-theme {
 
     /* base colors */
-    --foreground: rgb(224 224 224);
-    --background: rgb(32 32 32);
-    --highlight: hsl(from var(--background) h s calc(l * 1.2));
+    --foreground-color: rgb(224 224 224);
+    --background-color: rgb(32 32 32);
+    --highlight-color: hsl(from var(--background-color) h s calc(l * 1.2));
 
     /* semantic colors */
-    --success: lightgreen;
-    --warning: yellow;
-    --failure: red;
+    --success-color: lightgreen;
+    --warning-color: yellow;
+    --failure-color: red;
 
     /* accent colors */
-    --primary: cyan;
-    --secondary: magenta;
+    --primary-accent-color: cyan;
+    --secondary-accent-color: magenta;
 }
 
 .light-theme {
 
     /* base colors */
-    --background: rgb(224 224 224);
-    --foreground: rgb(32 32 32);
-    --highlight: hsl(from var(--background) h s calc(l * 0.8));
+    --background-color: rgb(224 224 224);
+    --foreground-color: rgb(32 32 32);
+    --highlight-color: hsl(from var(--background-color) h s calc(l * 0.8));
 
     /* semantic colors */
-    --success: green;
-    --warning: goldenrod;
-    --failure: darkred;
+    --success-color: green;
+    --warning-color: goldenrod;
+    --failure-color: darkred;
 
     /* accent colors */
-    --primary: blue;
-    --secondary: purple;
+    --primary-accent-color: blue;
+    --secondary-accent-color: purple;
 }
 
 * {
     border-width: 1px;
-    border-color: var(--foreground);
+    border-color: var(--foreground-color);
 }
 
 a {
-    color: var(--primary);
+    color: var(--primary-accent-color);
     text-decoration: none;
 }
 
 a:visited {
-    color: var(--secondary);
+    color: var(--secondary-accent-color);
 }
 
 a:active,
@@ -94,8 +94,8 @@ blockquote code {
 }
 
 body {
-    background-color: var(--background);
-    color: var(--foreground);
+    background-color: var(--background-color);
+    color: var(--foreground-color);
     font-family: 'Noto Sans Mono', monospace;
 }
 
@@ -109,62 +109,15 @@ details {
 }
 
 details:open {
-    border: solid 1px var(--foreground);
+    border: solid 1px var(--foreground-color);
 }
 
 details>*:not(summary) {
     margin-left: 1rem;
 }
 
-footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: var(--footerheight);
-    bottom: 0;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--headerheight);
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: start;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
 input {
-    accent-color: var(--primary);
-}
-
-main {
-    position: fixed;
-    overflow: auto;
-    top: var(--headerheight);
-    left: 0;
-    right: 0;
-    bottom: var(--footerheight);
-    display: flex;
-    flex-flow: column nowrap;
-    overflow: auto;
-    margin: 1rem;
-    padding-right: 1rem;
-}
-
-@media (width >=1200px) {
-
-    main {
-        flex-flow: row nowrap;
-    }
+    accent-color: var(--primary-accent-color);
 }
 
 math {
@@ -177,11 +130,11 @@ summary {
 }
 
 svg {
-    fill: var(--foreground);
+    fill: var(--foreground-color);
 }
 
 svg line {
-    stroke: var(--foreground);
+    stroke: var(--foreground-color);
     stroke-width: 4;
 }
 
@@ -197,5 +150,5 @@ th {
 
 thead tr,
 tbody tr:nth-child(even) {
-    background-color: var(--highlight);
+    background-color: var(--highlight-color);
 }

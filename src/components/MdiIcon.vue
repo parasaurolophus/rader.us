@@ -2,7 +2,7 @@
 
 <template>
     <svg :width="24" :height="24" :view-box="`0 0 23 23`" :transform="`scale(${props.scale})`">
-        <path :d="props.path" />
+        <path :d="props.d" />
     </svg>
 </template>
 
@@ -20,7 +20,7 @@ path {
 <script setup>
 const props = defineProps({
 
-    path: {
+    d: {
         type: String,
         required: true,
     },

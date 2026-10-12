@@ -6,7 +6,7 @@
 
         <h1>Musicography</h1>
 
-        <QrLink v-model="hyperfollow" size="large" />
+        <QrLink :url="hyperfollow" size="large" />
 
         <hr>
 
@@ -17,9 +17,8 @@
 </template>
 
 <script setup>
-import MusicographyView from '@/pages/music/musicography/MusicographyView.vue'
-import QrLink from '@/components/QrLink.vue'
-import { ref } from 'vue'
+import MusicographyView from './MusicographyView.vue'
+import QrLink from '../../../components/QrLink.vue'
 
-const hyperfollow = ref('https://hyperfollow.com/kirkrader')
+const hyperfollow = 'https://hyperfollow.com/kirkrader'
 </script>

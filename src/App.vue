@@ -2,26 +2,116 @@
 
 <template>
     <header>
-        <TitleBar />
-    </header>
-    <main>
-        <TableOfContents />
-        <div>
-            <RouterView />
+        <QrCode :text="route.path" />
+        <div id="breadcrumbs-wrapper">
+            <div class="title">
+                Kirk Rader
+            </div>
+            <BreadCrumbs />
         </div>
-    </main>
+        <MdiIcon id="theme-button" :d="mdiThemeLightDark" @click.stop.prevent="toggleTheme" />
+    </header>
+    <div id="menu-wrapper">
+        <TableOfContents />
+        <main>
+            <RouterView />
+        </main>
+    </div>
     <footer>
-        <FooterBar />
+        <span>
+            &copy; 2023-2026 Kirk Rader
+        </span>
+        <UndecidableLink v-if="isLargeScreen" />
     </footer>
 </template>
 
+<style scoped>
+#breadcrumbs-wrapper {
+    margin-left: 1rem;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: var(--footer-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: var(--highlight-color);
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: var(--highlight-color);
+}
+
+main {
+    margin-top: 1ex;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (width >=1200px) {
+
+    main {
+        margin-top: 0;
+    }
+}
+
+#menu-wrapper {
+    position: fixed;
+    left: 0;
+    top: var(--header-height);
+    right: 0;
+    bottom: var(--footer-height);
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1rem;
+}
+
+@media (width >=1200px) {
+
+    #menu-wrapper {
+        flex-flow: row nowrap;
+    }
+}
+
+#theme-button {
+    margin-left: auto;
+}
+
+.title {
+    font-size: large;
+    font-weight: bold;
+}
+</style>
+
 <script setup>
-import FooterBar from './components/FooterBar.vue'
-import TableOfContents from '@/components/TableOfContents.vue'
-import TitleBar from '@/components/TitleBar.vue'
+import BreadCrumbs from './components/BreadCrumbs.vue'
+import MdiIcon from './components/MdiIcon.vue'
+import QrCode from './components/QrCode.vue'
+import TableOfContents from './components/TableOfContents.vue'
 import mermaid from 'mermaid'
 import { RouterView } from 'vue-router'
 import { onMounted, provide, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import { mdiThemeLightDark } from '@mdi/js'
+import UndecidableLink from './components/UndecidableLink.vue'
 
 const currentTheme = ref('dark-theme')
 const isLargeScreen = ref(false)
@@ -77,6 +167,7 @@ const otherLinks = ref({
 })
 
 const refreshDiagrams = ref(0)
+const route = useRoute()
 
 function initializeMermaid() {
 

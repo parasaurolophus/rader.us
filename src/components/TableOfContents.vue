@@ -1,50 +1,46 @@
 <!-- Copyright (c) Kirk Rader -->
 
 <template>
-    <div class="container">
-        <details ref="details" class="hide-border">
-            <summary>
-                <MdiIcon :path="mdiMenu" />
-            </summary>
-            <div>
-                <ExpandedRoutesList />
-                <template v-if="!isLargeScreen">
-                    <hr>
-                    <UndecidableLink />
-                </template>
-            </div>
-        </details>
-    </div>
+    <details ref="details">
+        <summary>
+            <MdiIcon :d="mdiMenu" />
+        </summary>
+        <RouteTree :root="root" :links="links" />
+        <template v-if="!isLargeScreen">
+            <hr>
+            <UndecidableLink />
+        </template>
+    </details>
 </template>
 
 <style scoped>
-.container {
-    width: max-content;
-    padding-right: 1rem;
-    margin-right: 1rem;
-    background-color: var(--highlight);
-}
-
-.hide-border {
+details {
     border-style: none;
 }
 
+details:open {
+    background-color: var(--highlight-color);
+}
+
 summary {
-    display: inline-block;
+    display: inline;
 }
 </style>
 
 <script setup>
-import ExpandedRoutesList from '@/components/ExpandedRoutesList.vue'
-import MdiIcon from '@/components/MdiIcon.vue'
-import UndecidableLink from '@/components/UndecidableLink.vue'
-import { inject, onMounted, useTemplateRef, watch } from 'vue'
+import MdiIcon from './MdiIcon.vue'
+import RouteTree from './RouteTree.js'
+import UndecidableLink from './UndecidableLink.vue'
+import { computed, inject, onMounted, useTemplateRef, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { mdiMenu } from '@mdi/js'
 
 const details = useTemplateRef('details')
-const router = useRouter()
 const isLargeScreen = inject('isLargeScreen')
+const otherLinks = inject('otherLinks')
+const router = useRouter()
+const root = computed(() => router.resolve({ name: 'home' }))
+const links = computed(() => Object.values(otherLinks.value))
 
 function updateDetails() {
 

@@ -4,7 +4,7 @@
 
     <div>
 
-        <QrLink v-model="github" size="large" />
+        <QrLink :url="github" size="large" />
 
         <div>
 
@@ -28,9 +28,8 @@
 </template>
 
 <script setup>
-import FetchCode from '@/components/FetchCode.vue'
-import QrLink from '@/components/QrLink.vue'
-import { ref } from 'vue'
+import FetchCode from '../../components/FetchCode.vue'
+import QrLink from '../../components/QrLink.vue'
 
 const examples = [
     {
@@ -65,5 +64,5 @@ const examples = [
     },
 ]
 
-const github = ref('https://github.com/parasaurolophus')
+const github = 'https://github.com/parasaurolophus'
 </script>

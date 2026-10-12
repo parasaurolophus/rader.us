@@ -8,5 +8,5 @@
 </template>
 
 <script setup>
-import RouteTree from '@/components/RouteTree'
+import RouteTree from '../../components/RouteTree.js'
 </script>

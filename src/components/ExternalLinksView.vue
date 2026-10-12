@@ -9,7 +9,7 @@
             </template>
         </select>
         <a :href="selectedLink.url" target="_blank">
-            <QrComponent v-model="selectedLink.url" :size="size" />
+            <QrCode :text="selectedLink.url" :size="size" />
         </a>
     </fieldset>
 </template>
@@ -31,7 +31,7 @@
 </style>
 
 <script setup>
-import QrComponent from '@/components/QrComponent.vue'
+import QrCode from './QrCode.vue'
 import { onMounted, ref, watch } from 'vue'
 
 const { size } = defineProps({

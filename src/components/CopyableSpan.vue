@@ -10,7 +10,7 @@
 <style scoped>
 .copyable {
 
-    color: var(--secondary);
+    color: var(--secondary-accent-color);
     cursor: copy;
 }
 </style>

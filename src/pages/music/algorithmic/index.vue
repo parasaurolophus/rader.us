@@ -8,8 +8,8 @@
 
         <p v-if="exampleVideo" class="centerAligned">
             Go ahead. Press
-            <MdiIcon v-if="paused" :path="mdiPlay" @click="toggleExampleVideo()" />
-            <MdiIcon v-else :path="mdiPause" @click="toggleExampleVideo()" />
+            <MdiIcon v-if="paused" :d="mdiPlay" @click="toggleExampleVideo()" />
+            <MdiIcon v-else :d="mdiPause" @click="toggleExampleVideo()" />
         </p>
 
         <video ref="exampleVideo" controls @playing="paused = false" @pause="paused = true">
@@ -1308,8 +1308,8 @@ video {
 </style>
 
 <script setup>
-import MdiIcon from '@/components/MdiIcon.vue'
-import MermaidDiagram from '@/components/MermaidDiagram.vue'
+import MdiIcon from '../../../components/MdiIcon.vue'
+import MermaidDiagram from '../../../components/MermaidDiagram.vue'
 import { mdiPlay, mdiPause } from '@mdi/js'
 import { onMounted, ref, useTemplateRef } from 'vue'
 

@@ -21,8 +21,8 @@
 </template>
 
 <script setup>
-import CopyableSpan from '@/components/CopyableSpan.vue'
-import ExternalLinksView from '@/components/ExternalLinksView.vue'
+import CopyableSpan from '../../components/CopyableSpan.vue'
+import ExternalLinksView from '../../components/ExternalLinksView.vue'
 import { inject, onMounted, ref, watch } from 'vue'
 
 const links = ref([])

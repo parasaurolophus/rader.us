@@ -1142,5 +1142,5 @@
 </style>
 
 <script setup>
-import ParallelPostulate from '@/pages/logic/computability/ParallelPostulate.vue'
+import ParallelPostulate from './ParallelPostulate.vue'
 </script>
