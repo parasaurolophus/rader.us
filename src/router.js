@@ -113,6 +113,15 @@ const routes = [
     },
 
     {
+        path: '/qrgenerator',
+        name: 'qrgenerator',
+        component: () => import('./pages/QrGeneratorPage.vue'),
+        meta: {
+            title: 'QR Generator',
+        },
+    },
+
+    {
         path: '/:pathMatch(.*)*',
         name: 'catchall',
         component: () => import('./pages/CaltchAll.vue'),

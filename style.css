@@ -143,6 +143,11 @@ svg text {
     font-size: 1rem;
 }
 
+textarea {
+    background-color: var(--highlight-color);
+    color: var(--foreground-color);
+}
+
 td,
 th {
     padding: 0.25rem;
