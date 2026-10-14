@@ -115,7 +115,7 @@ import UndecidableLink from './components/UndecidableLink.vue'
 
 const currentTheme = ref('dark-theme')
 
-const currentUrl = computed(() => new URL(route.path, window.location).toString())
+const currentUrl = computed(() => new URL(route.path, window.location).href)
 const isLargeScreen = ref(false)
 const largeScreenQuery = window.matchMedia('(width >= 1200px)')
 
