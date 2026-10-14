@@ -2,16 +2,19 @@
 
 <template>
     <div>
-        <textarea v-model="text" cols="40" rows="9" spellcheck="false"></textarea>
+        <textarea v-model="text" cols="40" rows="9" spellcheck="false" class="text"></textarea>
         <div ref="svg" class="svg"></div>
     </div>
 </template>
 
 <style scoped>
+.text {
+    margin: 1rex 0;
+}
+
 .svg {
     width: 128px;
     height: 128px;
-    margin-top: 1rex;
 }
 </style>
 
