@@ -3,7 +3,7 @@
 <template>
     <div class="container">
         <span>M&sup2;VP</span>
-        <QrCode :text="vcard" size="large" />
+        <QrCode v-model="vcard" size="large" />
     </div>
 </template>
 
@@ -24,12 +24,13 @@
 
 <script setup>
 import QrCode from './QrCode.vue'
+import { ref } from 'vue'
 
-const vcard = `BEGIN:VCARD
+const vcard = ref(`BEGIN:VCARD
 VERSION:4.0
 KIND:organization
 ORG:M2VP
 EMAIL;TYPE=work:info@m2vp.org
 URL:https://m2vp.org
-END:VCARD`
+END:VCARD`)
 </script>

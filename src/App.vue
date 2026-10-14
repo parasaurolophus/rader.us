@@ -2,7 +2,7 @@
 
 <template>
     <header>
-        <QrCode :text="route.path" />
+        <QrCode v-model="route.path" />
         <div id="breadcrumbs-wrapper">
             <div class="title">
                 Kirk Rader

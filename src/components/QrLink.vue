@@ -37,16 +37,13 @@
 <script setup>
 import QrCode from './QrCode.vue'
 
-const { size, url } = defineProps({
+const { size } = defineProps({
 
     size: {
         type: String,
         default: 'medium',
     },
-
-    url: {
-        type: String,
-        required: true,
-    },
 })
+
+const url = defineModel()
 </script>

@@ -9,7 +9,7 @@
             </template>
         </select>
         <a :href="selectedLink.url" target="_blank">
-            <QrCode :text="selectedLink.url" :size="size" />
+            <QrCode v-model="selectedLink.url" :size="size" />
         </a>
     </fieldset>
 </template>
