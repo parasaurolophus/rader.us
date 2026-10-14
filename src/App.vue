@@ -2,7 +2,7 @@
 
 <template>
     <header>
-        <QrCode v-model="route.path" />
+        <QrCode v-model="currentUrl" />
         <div id="breadcrumbs-wrapper">
             <div class="title">
                 Kirk Rader
@@ -108,12 +108,14 @@ import QrCode from './components/QrCode.vue'
 import TableOfContents from './components/TableOfContents.vue'
 import mermaid from 'mermaid'
 import { RouterView } from 'vue-router'
-import { onMounted, provide, ref, watch } from 'vue'
+import { computed, onMounted, provide, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { mdiThemeLightDark } from '@mdi/js'
 import UndecidableLink from './components/UndecidableLink.vue'
 
 const currentTheme = ref('dark-theme')
+
+const currentUrl = computed(() => new URL(route.path, window.location).toString())
 const isLargeScreen = ref(false)
 const largeScreenQuery = window.matchMedia('(width >= 1200px)')
 

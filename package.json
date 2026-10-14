@@ -14,7 +14,7 @@
     "dependencies": {
         "@highlightjs/vue-plugin": "^2.1.0",
         "@mdi/js": "^7.4.47",
-        "mermaid": "^11.17.0",
+        "mermaid": "^12.2.0",
         "qr": "^0.6.0",
         "vue": "^3.5.40",
         "vue-router": "^5.2.0"
