@@ -108,19 +108,15 @@ import QrCode from './components/QrCode.vue'
 import TableOfContents from './components/TableOfContents.vue'
 import mermaid from 'mermaid'
 import { RouterView } from 'vue-router'
-import { computed, onMounted, provide, ref, watch } from 'vue'
+import { computed, onMounted, onUnmounted, provide, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { mdiThemeLightDark } from '@mdi/js'
 import UndecidableLink from './components/UndecidableLink.vue'
 
 const currentTheme = ref('dark-theme')
-
 const currentUrl = computed(() => new URL(route.path, window.location).href)
 const isLargeScreen = ref(false)
-const largeScreenQuery = window.matchMedia('(width >= 1200px)')
-
-isLargeScreen.value = largeScreenQuery.matches
-largeScreenQuery.addEventListener('change', onLargeScreenChanged)
+let largeScreenQuery = null
 
 const musicLinks = ref({
     amazonMusic: {
@@ -210,6 +206,18 @@ provide('toggleTheme', toggleTheme)
 
 mermaidHandler = mermaidClick
 
-onMounted(initializeMermaid)
+onMounted(() => {
+
+    largeScreenQuery = window.matchMedia('(width >= 1200px)')
+    onLargeScreenChanged(largeScreenQuery)
+    largeScreenQuery.addEventListener('change', onLargeScreenChanged)
+    initializeMermaid()
+})
+
+onUnmounted(() => {
+
+    largeScreenQuery.removeEventListener('change', onLargeScreenChanged)
+})
+
 watch(currentTheme, initializeMermaid)
 </script>

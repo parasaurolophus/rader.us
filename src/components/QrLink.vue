@@ -2,7 +2,7 @@
 
 <template>
     <a :href="url" class="container" target="_blank">
-        <QrCode :text="url" :size="size" />
+        <QrCode v-model="url" :size="size" />
         <span>
             {{ url }}
         </span>
