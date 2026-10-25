@@ -14,7 +14,7 @@
             carried out in the 1930's by Alonzo Church in the United States and
             Alan Turing in the United Kingdom. Between them, they not only
             resolved the original, central question of what makes a number
-            computable, as an unintended side effect they invented the formal
+            computable; as an unintended side effect they invented the formal
             mechanisms defining a programming language and a programmable device
             on which to run it. Referring to anonymous functions in any
             programming language as "lambdas" is a direct reference to Church's
@@ -42,7 +42,7 @@
             (despite the word "parallel" appearing nowhere in Euclid's original
             version of it.) The reason that the fifth axiom caused so much
             discussion is that it looks and sounds nothing like the preceding
-            four axioms. While the first four axioms are very short, obvious
+            four axioms. The first four axioms are very short, obvious
             declarative sentences (at least when translated from the ancient
             Greek dialect used in Euclid's text into modern terminology):
         </p>
@@ -162,7 +162,7 @@
             Nicolai Lobachevsky and Bernhard Riemann went beyond Playfair in not
             just creating alternative versions of the axioms of planar geometry
             that could produce an equivalent set of theorems to Euclid's.
-            Lobachevsky and Riemann, working indepently, showed (among many
+            Lobachevsky and Riemann, working independently, showed (among many
             other things) that it was possible to define an infinite number of
             alternative Geometries, each of which produced different sets of
             theorems from the others, but where each was just as internally
@@ -185,20 +185,19 @@
         </p>
 
         <p>
-            One effect of this shift of focus was to introduce the concept
-            of <i>Metamathematics</i>. Metamathematics posits a conceptual
-            mapping from particular Mathematical theories to some set of
-            observable features of objects in the real world. I.e. while all
-            Geometries are equally valid from an abstract Mathematical point of
-            view, it is a Metamathetical theory that gives Euclidean Geometry a special
-            status as also being a true description of figures drawn on a flat
-            sheet of paper using straight-edge and compass. This notion is not
-            specific to Geometry. Number Theory is the study of <i>groups</i>
-            and <i>fields</i> with features which make them similar to
-            Arithmetic while Arithmetic, specifically, enjoys the
-            metamathematical status of corresponding to what happens when you
-            count actual objects in the real world. And so on across all the
-            branches of Mathematics.
+            One effect of this shift of focus was to introduce the concept of
+            <i>Metamathematics</i>. Metamathematics posits a conceptual mapping
+            from particular Mathematical theories to some set of observable
+            features of objects in the real world. I.e. while all Geometries are
+            equally valid from an abstract Mathematical point of view, it is a
+            Metamathetical theory that gives Euclidean Geometry a special status
+            as also being a true description of figures drawn on a flat sheet of
+            paper using straight-edge and compass. This notion is not specific
+            to Geometry. Number Theory is the study of <i>groups</i> and
+            <i>fields</i> with features which make them similar to Arithmetic
+            while Arithmetic, specifically, enjoys the metamathematical status
+            of corresponding to what happens when you count actual objects in
+            the real world. And so on across all the branches of Mathematics.
         </p>
 
         <details name="notes">
@@ -736,65 +735,27 @@
             two distinct infinite cardinalities but infinitely many,
             well-ordered cardinalities. Cantor referred to this ordered set of
             infinite cardinalities as the set of <i>ordinal numbers</i> with the
-            cardinality of
-            <math>
-                <mi>&naturals;</mi>
-            </math>
-            being the least ordinal number in the same way that 0 is the least
-            natural number. He used "aleph numbers" to denote ordinal numbers
-            where
-            <math>
-                <msub>
-                    <mn>&aleph;</mn>
-                    <mn>0</mn>
-                </msub>
-            </math>, corresponding to the cadinality of
-            <math>
-                <mi>&naturals;</mi>
-            </math>, is the first ordinal, the next higher ordinal is
-            <math>
-                <msub>
-                    <mn>&aleph;</mn>
-                    <mn>1</mn>
-                </msub>
-            </math> and so on. The <i>continuum hypothesis</i> in Set Theory
-            states that there is no set with a cardinality greater than that of
-            <math>
-                <mi>&naturals;</mi>
-            </math> and less than that of
-            <math>
-                <mi>&reals;</mi>
-            </math>, making the cardianlity of
-            <math>
-                <mi>&reals;</mi>
-            </math> equal to
-            <math>
-                <msub>
-                    <mn>&aleph;</mn>
-                    <mn>1</mn>
-                </msub>
-            </math>.
+            cardinality of &naturals; being the least ordinal number in the same
+            way that 0 is the least natural number. He used "aleph numbers" to
+            denote ordinal numbers where &aleph;<sub>0</sub>, corresponding to
+            the cadinality of &naturals;, is the first ordinal. The next higher
+            ordinal is &aleph;<sub>1</sub> and so on. The <i>continuum
+            hypothesis</i> in Set Theory states that there is no set with a
+            cardinality greater than that of &naturals; and less than that of
+            &reals;, making the cardinality of &reals; equal to
+            &aleph;<sub>1</sub>.
         </p>
 
         <p>
-            Cantor presented multiple proofs that the cardinality of
-            <math>
-                <mn>&naturals;</mn>
-            </math> is less than that of
-            <math>
-                <mn>&reals;</mn>
-            </math>. The easiest to visualize is a <i>reductio ad absurdum</i>
-            argument showing that starting with the assumption that you have
-            already constructed a bijective mapping between the members of
-            <math>
-                <mi>&naturals;</mi>
-            </math> and any continuous subset of
-            <math>
-                <mi>&reals;</mi>
-            </math> you can always construct another real
-            number within the continuous subset that cannot yet have been mapped
-            by your supposedly bijective function. This proves that the mapping
-            was only injective, after all.
+            Cantor presented multiple proofs that the cardinality of &naturals;
+            is less than that of &reals;. The easiest to visualize is a
+            <i>reductio ad absurdum</i> argument showing that starting with the
+            assumption that you have already constructed a bijective mapping
+            between the members of &naturals; and any continuous subset of
+            &reals; you can always construct another real number within the
+            continuous subset that cannot yet have been mapped by your
+            supposedly bijective function. This proves that the mapping was only
+            injective, after all.
         </p>
 
         <details name="notes">
@@ -806,58 +767,25 @@
             <p>
                 The most often cited of Cantor's proofs that it is always
                 possible to construct a real number that cannot already be
-                contained in any countable subset of
-                <math>
-                    <mi>&reals;</mi>
-                </math>
-                turns on the ability to treat any sequence of digits as the
-                representation of a real number. Suppose
-                <math>
-                    <mi>S</mi>
-                </math>
-                is the continuous subset of real numbers between 0 and 1. Since
-                we assume
-                <math>
-                    <mi>S</mi>
-                </math>
-                is countable, we can refer to the first element of
-                <math>
-                    <mi>S</mi>
-                </math>
-                as the element that maps to 0, the second element of
-                <math>
-                    <mi>S</mi>
-                </math>
-                as being the element that maps to 1, and so on. To construct a
-                number between 0 and 1 that cannot already be in
-                <math>
-                    <mi>S</mi>
-                </math>
-                start a new sequence of digets. For the first element of your
-                new sequence, choose any digit other than the first digit of the
-                first element of
-                <math>
-                    <mi>S</mi>
-                </math>. For the second digit in your new sequence, choose any
+                contained in any countable subset of &reals; turns on the
+                ability to treat any sequence of digits as the representation of
+                a real number. Suppose <i>S</i> is the continuous subset of real
+                numbers between 0 and 1. Since we assume <i>S</i> is countable,
+                we can refer to the first element of <i>S</i> as the element
+                that maps to 0, the second element of <i>S</i> as being the
+                element that maps to 1, and so on. To construct a number between
+                0 and 1 that cannot already be in <i>S</i> start a new sequence
+                of digets. For the first element of your new sequence, choose
+                any digit other than the first digit of the first element of
+                <i>S</i>. For the second digit in your new sequence, choose any
                 digit other than the second digit of the second element of
-                <math>
-                    <mi>S</mi>
-                </math>. This process can be repeated indefinitely, choosing any
-                digit other than the <i>n</i>th digit of the <i>n</i>th elemeent
-                of
-                <math>
-                    <mi>S</mi>
-                </math>
-                as the <i>n</i>th element of the new sequence. This process
-                generates a sequence of digits guaranteed to differ in at least
-                one digit from every element of
-                <math>
-                    <mi>S</mi>
-                </math>
+                <i>S</i>. This process can be repeated indefinitely, choosing
+                any digit other than the <i>n</i>th digit of the <i>n</i>th
+                element of <i>S</i> as the <i>n</i>th element of the new
+                sequence. This process generates a sequence of digits guaranteed
+                to differ in at least one digit from every element of <i>S</i>
                 which means that the new sequence could not already be in
-                <math>
-                    <mi>S</mi>
-                </math>. Thus, the continuous subset of real numbers between 0
+                <i>S</i>. Thus, the continuous subset of real numbers between 0
                 and 1 turns out not to be countable even on the assumption that
                 it is countable, completing the <i>reductio ad absurdum</i>
                 argument.
@@ -866,33 +794,31 @@
             <p>
                 But consider what has actually been shown. If one makes the same
                 sort of assumptions that underly the continuum hypothesis,
-                Cantor's proofs suggest not merely that <math>
-                    <mi>R</mi>
-                </math>
-                is not countable, but there is an sbsurdity lurking wihtin the
-                concept of continuity, itself. Inherent in the idea of a
-                continuous set of numbers is the idea that every argument which
-                purports to say anything about all of them will fail in ways
-                similar to those highlighted by Cantor. For example, one of the
-                defining characteristics of a continuous set of numbers, as
-                shown by Dedekind, is that any such set with an upper bound must
-                have a least upper bound. But that further implies that it has
-                more than one upper bound (in fact, uncountably many upper
-                bounds) which is a counter-intuitive use of the phrase "upper
-                bound," to say the least. Again, all of these proofs of
-                counter-intuitive properteries of trans-finite sets are
-                logically valid, but can only be considered "true" on the
-                assumption that such sets exist in the first place. When it
-                comes to the continuum, modern physics strongly suggests that
-                there just is no such thing in the real world. In fact, it has
-                been recognized since ancient times that taking the idea of the
-                continuum too seriously leads to absurdities like Zeno's Paradox
-                and its many variations. (Even if the number of subdivisions of
-                spacetime between two events is countably infinite, the limit of
-                the sum of those subdivisions is the actual, finite distance
-                with no paradox. Throw in the uncountably many non-computable
-                intervals between each of the countably-many intervals implied
-                by a continuum and things get metamathematically far trickier.)
+                Cantor's proofs suggest not merely that &reals; is not
+                countable, but there is an sbsurdity lurking wihtin the concept
+                of continuity, itself. Inherent in the idea of a continuous set
+                of numbers is the idea that every argument which purports to say
+                anything about all of them will fail in ways similar to those
+                highlighted by Cantor. For example, one of the defining
+                characteristics of a continuous set of numbers, as shown by
+                Dedekind, is that any such set with an upper bound must have a
+                least upper bound. But that further implies that it has more
+                than one upper bound (in fact, uncountably many upper bounds)
+                which is a counter-intuitive use of the phrase "upper bound," to
+                say the least. Again, all of these proofs of counter-intuitive
+                properteries of trans-finite sets are logically valid, but can
+                only be considered "true" on the assumption that such sets exist
+                in the first place. When it comes to the continuum, modern
+                physics strongly suggests that there just is no such thing in
+                the real world. In fact, it has been recognized since ancient
+                times that taking the idea of the continuum too seriously leads
+                to absurdities like Zeno's Paradox and its many variations.
+                (Even if the number of subdivisions of spacetime between two
+                events is countably infinite, the limit of the sum of those
+                subdivisions is the actual, finite distance with no paradox.
+                Throw in the uncountably many non-computable intervals between
+                each of the countably-many intervals implied by a continuum and
+                things get metamathematically far trickier.)
             </p>
 
         </details>
@@ -907,25 +833,13 @@
             But given the traditional definition of what it means for the set of
             real numbers to be "continuous" (in the way that the set of natural
             numbers is <i>not</i> continuous) Cantor proved that any inductively
-            defined mapping from
-            <math>
-                <mi>&naturals;</mi>
-            </math> to any continuous subset of
-            <math>
-                <mi>&reals;</mi>
-            </math>
+            defined mapping from &naturals; to any continuous subset of &reals;
             will leave out infintely many real numbers, no matter how tiny the
             difference is between the least and greatest member of the
             continuous subset of real numbers. In the language of Number Theory,
-            any continuous subset of
-            <math>
-                <mn>&reals;</mn>
-            </math> is not
-            <i>countable</i>, where to be "countable" means a bijective mapping
-            is possible between members of a given set and the members of
-            <math>
-                <mi>&naturals;</mi>
-            </math>.
+            any continuous subset of &reals;  is not <i>countable</i>, where to
+            be "countable" means a bijective mapping is possible between members
+            of a given set and the members of &naturals;.
         </p>
 
         <p>
@@ -936,22 +850,14 @@
             well-formed formulas. I.e. any language whose grammar consists of a
             finite number of rules for combining a finite number of symbols into
             syntactically correct and meaningful formulas can produce no more
-            such formulas than there are members of
-            <math>
-                <mi>&naturals;</mi>
-            </math>. Together with the proof that even
-            a tiny continuous subset of <math>
-                <mi>&reals;</mi>
-            </math> is not
+            such formulas than there are members of &naturals;. Together with
+            the proof that even a tiny continuous subset of &reals; is not
             countable, this means that the percentage of real numbers that can
             be computed, i.e. characterized by some mathematical formula, is
-            infinitessimally small compared to the cardinality of
-            <math>
-                <mi>&reals;</mi>
-            </math> as a whole. If you take the notion of
-            <i>continuum</i> seriously, then only a negligible fraction of real
-            numbers corresponds to numbers about which math or science has
-            anything to say.
+            infinitessimally small compared to the cardinality of &reals; as a
+            whole. If you take the notion of <i>continuum</i> seriously, then
+            only a negligible fraction of real numbers corresponds to numbers
+            about which math or science has anything to say.
         </p>
 
         <p>

@@ -150,7 +150,7 @@
             regarding the nature of computable numbers for which Church had
             created it, the λ-Calculus is logically incomplete precisely because
             it can be used to construct self-referential <i>fixed-point
-                combinators</i> such as <i>y</i>:
+                combinators</i> such as <i>Y</i>:
         </p>
 
         <math display="block">
