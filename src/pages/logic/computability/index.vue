@@ -775,7 +775,7 @@
                 that maps to 0, the second element of <i>S</i> as being the
                 element that maps to 1, and so on. To construct a number between
                 0 and 1 that cannot already be in <i>S</i> start a new sequence
-                of digets. For the first element of your new sequence, choose
+                of digits. For the first element of your new sequence, choose
                 any digit other than the first digit of the first element of
                 <i>S</i>. For the second digit in your new sequence, choose any
                 digit other than the second digit of the second element of
@@ -795,30 +795,30 @@
                 But consider what has actually been shown. If one makes the same
                 sort of assumptions that underly the continuum hypothesis,
                 Cantor's proofs suggest not merely that &reals; is not
-                countable, but there is an sbsurdity lurking wihtin the concept
-                of continuity, itself. Inherent in the idea of a continuous set
-                of numbers is the idea that every argument which purports to say
-                anything about all of them will fail in ways similar to those
-                highlighted by Cantor. For example, one of the defining
-                characteristics of a continuous set of numbers, as shown by
-                Dedekind, is that any such set with an upper bound must have a
-                least upper bound. But that further implies that it has more
-                than one upper bound (in fact, uncountably many upper bounds)
-                which is a counter-intuitive use of the phrase "upper bound," to
-                say the least. Again, all of these proofs of counter-intuitive
-                properteries of trans-finite sets are logically valid, but can
-                only be considered "true" on the assumption that such sets exist
-                in the first place. When it comes to the continuum, modern
-                physics strongly suggests that there just is no such thing in
-                the real world. In fact, it has been recognized since ancient
-                times that taking the idea of the continuum too seriously leads
-                to absurdities like Zeno's Paradox and its many variations.
-                (Even if the number of subdivisions of spacetime between two
-                events is countably infinite, the limit of the sum of those
-                subdivisions is the actual, finite distance with no paradox.
-                Throw in the uncountably many non-computable intervals between
-                each of the countably-many intervals implied by a continuum and
-                things get metamathematically far trickier.)
+                countable, but that there is an absurdity lurking wihtin the
+                concept of continuity, itself. Inherent in the idea of a
+                continuous set of numbers is the idea that every argument which
+                purports to say anything about all of them will fail in ways
+                similar to those highlighted by Cantor. For example, one of the
+                defining characteristics of a continuous set of numbers, as
+                shown by Dedekind, is that any such set with an upper bound must
+                have a least upper bound. But that further implies that it has
+                more than one upper bound (in fact, uncountably many upper
+                bounds) which is a counter-intuitive use of the phrase "upper
+                bound," to say the least. Again, all of these proofs of
+                counter-intuitive properteries of trans-finite sets are
+                logically valid, but can only be considered "true" on the
+                assumption that such sets exist in the first place. When it
+                comes to the continuum, modern physics strongly suggests that
+                there just is no such thing in the real world. In fact, it has
+                been recognized since ancient times that taking the idea of the
+                continuum too seriously leads to absurdities like Zeno's Paradox
+                and its many variations. (Even if the number of subdivisions of
+                spacetime between two events is countably infinite, the limit of
+                the sum of those subdivisions is the actual, finite distance
+                with no paradox. Throw in the uncountably many non-computable
+                intervals between each of the countably-many intervals implied
+                by a continuum and things get metamathematically far trickier.)
             </p>
 
         </details>
