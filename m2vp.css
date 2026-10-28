@@ -1,0 +1,36 @@
+/* Copyright (c) 2026 Kirk Rader */
+
+.m2vp-logo {
+    color: #00A0FF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.m2vp-logo>hr {
+    border-color: #00A0FF;
+    border-width: 2px;
+}
+
+.m2vp-logo>*:first-child {
+    font-size: x-large;
+}
+
+.m2vp-logo>*:last-child {
+    font-size: small;
+}
+
+.m2vp-logo>*:only-child {
+    font-size: initial;
+}
+
+@media (width >=1200px) {
+
+    .m2vp-logo>*:first-child {
+        font-size: xx-large;
+    }
+
+    .m2vp-logo>*:last-child {
+        font-size: medium;
+    }
+}
