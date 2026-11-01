@@ -1,7 +1,7 @@
 // Copyright(c) 2026 Kirk Rader
 
 import { h } from 'vue'
-import { RouterLink, useRoute, useRouter } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 
 export default {
 
@@ -10,7 +10,7 @@ export default {
     setup(props) {
 
         const router = useRouter()
-        const root = props.root ?? useRoute()
+        const root = props.root ?? router.currentRoute.value
         const links = props.links ?? []
 
         function buildAnchor(url, title) {
