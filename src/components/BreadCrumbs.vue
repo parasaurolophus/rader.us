@@ -83,12 +83,12 @@ function toUrl(index, uri) {
 
     if (index === 0) {
 
-        return { name: 'home' }
+        return '/'
     }
 
     return uri.slice(1, index + 1).reduce((a, s, i, u) => {
 
-        return a.concat(s, i < u.length - 1 ? '/' : '')
-    }, '/')
+        return a.concat('/', s)
+    }, '')
 }
 </script>
