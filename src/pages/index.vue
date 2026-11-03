@@ -2,7 +2,7 @@
 
 <template>
     <div v-if="isLargeScreen">
-        <img src="/kirk-small.png">
+        <img src="/kirk-small.webp">
         <p>
             Welcome
         </p>

@@ -13,7 +13,7 @@
         eurorack module:
     </p>
 
-    <img src="./960.jpg">
+    <img src="./960.webp">
 
     <p>
         The 960's primary outputs are three control voltages, labeled <i>A</i>,
@@ -107,7 +107,7 @@
         a component from the <i>System 55</i>):
     </p>
 
-    <img src="./patch.jpg">
+    <img src="./patch.webp">
 
     <p>
         which looks schematically like:

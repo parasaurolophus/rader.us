@@ -222,7 +222,7 @@
         </p>
 
         <p>
-            <img src="./sines.png">
+            <img src="./sines.webp">
         </p>
 
         <p>
@@ -369,7 +369,7 @@
         </p>
 
         <p>
-            <img src="./sawtooth.png">
+            <img src="./sawtooth.webp">
         </p>
 
         <p>
@@ -454,7 +454,7 @@
         </p>
 
         <p>
-            <img src="./noise.png">
+            <img src="./noise.webp">
         </p>
 
         <p>
@@ -690,7 +690,7 @@
 
         </ul>
 
-        <img src="./basic-patch.png">
+        <img src="./basic-patch.webp">
 
         <p>
             Each type of module accepts input and / or produces output audio
@@ -1051,7 +1051,7 @@
             </audio>
         </p>
 
-        <img src="./Example_01_Patch.png">
+        <img src="./Example_01_Patch.webp">
 
         <p>
             <i>Example 01</i>> consists of three tracks of a couple of minutes
@@ -1059,7 +1059,7 @@
             extreme right, middle and extreme left, respectively.
         </p>
 
-        <img src="./Example_01_DAW.png">
+        <img src="./Example_01_DAW.webp">
 
         <h2>Example 02</h2>
 
@@ -1080,13 +1080,13 @@
         <p>
             Melody Patch
             <br>
-            <img src="./Example_03_Melody_Patch.png">
+            <img src="./Example_03_Melody_Patch.webp">
         </p>
 
         <p>
             Toms Patch
             <br>
-            <img src="./Example_03_Toms_Patch.png">
+            <img src="./Example_03_Toms_Patch.webp">
         </p>
 
         <p>
