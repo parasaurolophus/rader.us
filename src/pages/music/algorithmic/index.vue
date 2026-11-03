@@ -227,10 +227,10 @@
 
         <p>
             The top track contains a 440 Hz sine wave at a particular amplitude
-            (440 Hz corresponds to "concert A," the pitch used by players in an
-            orchestra so that their instruments will all be "in tune" when
-            played together). Here is what that track sounds like when played on
-            its own:
+            (440 Hz corresponds to "concert A," the pitch most commonly used by
+            players in an orchestra so that their instruments will all be "in
+            tune" when played together). Here is what that track sounds like
+            when played on its own:
         </p>
 
         <p>
@@ -253,10 +253,12 @@
                 <mi>a</mi>
                 <mrow>
                     <mo>sin</mo>
-                    <mo>(</mo>
-                    <mi>p</mi>
-                    <mi>t</mi>
-                    <mo>)</mo>
+                    <mrow>
+                        <mo>(</mo>
+                        <mi>p</mi>
+                        <mi>t</mi>
+                        <mo>)</mo>
+                    </mrow>
                 </mrow>
             </mrow>
         </math>
@@ -319,6 +321,48 @@
             tuned piano's corresponding string to vibrate at 440 Hz, the
             frequency of the first two of the preceding sine waves.
         </p>
+
+        <details>
+            <summary>Concert Pitch</summary>
+            <p>
+                That the A above middle C (a.k.a. A<sub>4</sub> because it is
+                the A note in the 4th octave above the lowest note on an 88-key
+                piano keyboard) is generally tuned to 440 Hz is a less universal
+                and more recent convention than many professional musicians
+                realize. Many Early Music and World Music ensembles use slightly
+                different frequencies for A<sub>4</sub> (generally ranging from
+                the 430's to the 460') for historical and cultural reasons. Some
+                famous musicians have simply preferred slightly different
+                frequencies for A<sub>4</sub> as a matter of taste. (Apparently
+                Leonard Bernstein was notorious among piano tuners for
+                continuing to insist on a more "traditional" frequency for
+                A<sub>4</sub> even after 440 Hz had been formally adopted by the
+                International Standards Organization in the 1950's.)
+            </p>
+
+            <p>
+                440 Hz had been proposed in the mid-nineteenth century as a
+                reference frequency for tuning musical instruments but was just
+                one among a number of competing proposed standards for decades.
+                Interestingly, proponents of using a "round" number like 440
+                cited its usefulness in generating sounds electronically that
+                far back in time. Many traditional reference frequencies are odd
+                numbers, some of them are prime numbers. Using such frequencies
+                would result in much more laborious computation when performing
+                frequency transformations, e.g. when calculating the frequencies
+                comprising a tempered scale across multiple octaves.
+            </p>
+
+            <p>
+                Conversely, analog synthesizes free composers and performers of
+                the constraints of particular reference frequencies and tunings.
+                Most of my compositions could not be said to be any particular
+                key and end up using "just" intervals simply by virtue of
+                implicitly applying simple arithmetic combinations of base
+                frequencies rather than the intervals imposed by the keys on a
+                traditional instrument.
+            </p>
+        </details>
 
         <p>
             Now consider this screen shot from the same audio editing software:
