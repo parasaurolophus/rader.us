@@ -191,12 +191,13 @@ function onLargeScreenChanged(query) {
 
 function toggleTheme() {
 
+    const newTheme = currentTheme.value === 'dark-theme' ? 'light-theme' : 'dark-theme'
+
+    document.getElementsByTagName('body')[0].classList.replace(currentTheme.value, newTheme)
+    currentTheme.value = newTheme
+
     try {
 
-        const newTheme = currentTheme.value === 'dark-theme' ? 'light-theme' : 'dark-theme'
-
-        document.getElementsByTagName('body')[0].classList.replace(currentTheme.value, newTheme)
-        currentTheme.value = newTheme
         window.localStorage.setItem('theme', newTheme)
 
     } catch (error) {

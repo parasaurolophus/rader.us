@@ -398,17 +398,17 @@
             Lisp development community. Instead, a number of alternative
             languages with identical or nearly identical semantics to Lisp were
             developed over the years, each with its own idiosyncratic syntax
-            (Haskell being an early example). However, among the reasons that
-            Lisp dialects have remained popular with programming language
-            theorists and prototypers to this day is that S syntax was designed
-            to be particularly easy to construct for output and parse as input.
-            This not only eases the implementation of Lisp language processors,
-            but historically allowed for treating a given S-expr interchangeably
-            as "code" or "data," in keeping with Church's typeless
-            &lambda;-Calculus. A programming language interpreter's console
-            interface is often referred to as a REPL (Read-Eval-Print Loop)
-            because, once upon a time, a Lisp interpreter's outermost process
-            entry point consisted literally of
+            (Haskell being an early example and Ruby being a fairly widely
+            adopted one). However, among the reasons that Lisp dialects have
+            remained popular with programming language theorists and prototypers
+            to this day is that S syntax was designed to be particularly easy to
+            construct for output and parse as input. This not only eases the
+            implementation of Lisp language processors, but historically allowed
+            for treating a given S-expr interchangeably as "code" or "data," in
+            keeping with Church's typeless &lambda;-Calculus. A programming
+            language interpreter's console interface is often referred to as a
+            REPL (Read-Eval-Print Loop) because, once upon a time, a Lisp
+            interpreter's outermost process entry point consisted literally of
 
             <highlightjs :code="repl" language="scheme" />
 
