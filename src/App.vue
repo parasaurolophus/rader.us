@@ -191,10 +191,18 @@ function onLargeScreenChanged(query) {
 
 function toggleTheme() {
 
-    const newTheme = currentTheme.value === 'dark-theme' ? 'light-theme' : 'dark-theme'
+    try {
 
-    document.getElementsByTagName('body')[0].classList.replace(currentTheme.value, newTheme)
-    currentTheme.value = newTheme
+        const newTheme = currentTheme.value === 'dark-theme' ? 'light-theme' : 'dark-theme'
+
+        document.getElementsByTagName('body')[0].classList.replace(currentTheme.value, newTheme)
+        currentTheme.value = newTheme
+        window.localStorage.setItem('theme', newTheme)
+
+    } catch (error) {
+
+        console.warn(error)
+    }
 }
 
 provide('currentTheme', currentTheme)
@@ -207,6 +215,20 @@ provide('toggleTheme', toggleTheme)
 mermaidHandler = mermaidClick
 
 onMounted(() => {
+
+    try {
+
+        const theme = window.localStorage.getItem('theme') || 'dark-theme'
+
+        if (theme !== 'dark-theme') {
+
+            toggleTheme()
+        }
+
+    } catch (error) {
+
+        console.warn(error)
+    }
 
     largeScreenQuery = window.matchMedia('(width >= 1200px)')
     onLargeScreenChanged(largeScreenQuery)
