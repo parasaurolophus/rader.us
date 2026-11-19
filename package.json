@@ -8,7 +8,8 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "clean": "clean.bat",
+        "cleanl": "./clean.sh",
+        "cleanw": "clean.bat",
         "zip": "tar -cavf dist.zip -C dist *"
     },
     "dependencies": {
