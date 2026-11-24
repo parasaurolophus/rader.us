@@ -8,7 +8,7 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "clean": "./clean",
+        "clean": "rm dist.zip ; rm -rf dist",
         "zip": "tar -cavf dist.zip -C dist *"
     },
     "dependencies": {
